@@ -1,0 +1,64 @@
+@import '../../../styles/variables';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    background-color: $primaryColor;
+    color: #ffffff;
+    padding: 0 120px;
+
+    .header-left {
+        display: flex;
+
+        .header-left-title1 {
+            margin-right: 36px;
+        }
+
+        .social-btn-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .social-btn-wrapper a {
+            display: flex;
+        }
+
+        .social-btn-wrapper a svg {
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    .header-right {
+        display: flex;
+
+        .header-right-title1 {
+            margin-right: 36px;
+        }
+
+        .header-right-phone-wrapper {
+            display: flex;
+            align-items: center;
+
+            svg {
+                margin-right: 12px;
+            }
+
+            .header-right-phone-number {
+                text-decoration: underline;
+                letter-spacing: 1px;
+            }
+        }
+
+        .header-language-switch {
+            margin-left: 118px;
+
+            .header-language-active {
+                font-weight: bold;
+            }
+        }
+    }
+}

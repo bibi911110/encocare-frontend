@@ -1,0 +1,32 @@
+@import '../../../styles/variables';
+
+.button {
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-primary {
+    background-color: $primaryColor;
+    color: white;
+    box-shadow: 0 3px 6px 0 $boxShadowColor;
+}
+
+.button-outline {
+    background-color: white;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
+    box-shadow: 0 3px 6px 0 $boxShadowColor;
+}
+
+.button-light {
+    background-color: white;
+    color: $titleColor;
+}
+
+.button-gray {
+    background-color: $secondColor;
+    color: white;
+    box-shadow: 0 3px 6px 0 $boxShadowColor;
+}

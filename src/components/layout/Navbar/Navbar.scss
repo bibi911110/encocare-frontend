@@ -1,0 +1,73 @@
+@import '../../../styles/variables';
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 77px;
+    padding: 0 120px;
+    box-shadow: 0 3px 6px 0 $boxShadowColor;
+
+    .navbar-main {
+        display: flex;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: $titleColor;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menubar {
+            .logo {
+                display: flex;
+                align-items: center;
+                height: 77px;
+                cursor: pointer;
+
+                img {
+                    height: 32px;
+                    margin: 0 20px;
+                }
+            }
+        }
+
+        .menu {
+            display: flex;
+
+            li {
+                height: 77px;
+                padding: 0 40px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $primaryColor;
+                    color: white;
+                }
+
+                &:hover a {
+                    color: white;
+                }
+
+                &:hover svg path {
+                    stroke: white;
+                }
+
+                svg {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        .sub-menu {
+            display: none;
+        }
+    }
+}
