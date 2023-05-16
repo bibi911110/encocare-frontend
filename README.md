@@ -1,2 +1,2 @@
 # encocare frontend
-react tailwindcss project for encocare frontend
+react project for encocare frontend
