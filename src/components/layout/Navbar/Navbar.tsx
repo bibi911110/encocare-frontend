@@ -48,7 +48,7 @@ const Navbar = () => {
                 {item.url ? (
                     <Link to={item.url}>{item.name}</Link>
                 ) : (
-                    <span>
+                    <span className="sub-menu-title">
                         {item.name}
                         {downArrowIcon}
                     </span>
@@ -80,8 +80,8 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-auth">
-                <Button title="Sign up" type="light" width={182} />
-                <Button title="Login" type="primary"  width={182}/>
+                <Button title="Sign up" type="light" />
+                <Button title="Login" type="primary" />
             </div>
         </nav>
     );

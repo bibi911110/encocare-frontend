@@ -1,38 +1,50 @@
 @import '../../../styles/variables';
+@import '../../../styles/mixins';
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 77px;
-    padding: 0 120px;
+    height: 69px;
+    padding: 0 108px;
     box-shadow: 0 3px 6px 0 $boxShadowColor;
+
+    @include devices(large) {
+        padding: 0 72px;
+    }
+
+    @include devices(desktop) {
+        padding: 0 36px;
+    }
+
+    @include devices(tablet) {
+        padding: 0 18px;
+
+        justify-content: center;
+    }
 
     .navbar-main {
         display: flex;
         align-items: center;
 
         a {
-            text-decoration: none;
-            color: $titleColor;
-        }
-
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+            color: #303030;
         }
 
         .menubar {
             .logo {
                 display: flex;
                 align-items: center;
-                height: 77px;
+                height: 69px;
                 cursor: pointer;
 
                 img {
-                    height: 32px;
-                    margin: 0 20px;
+                    height: 28px;
+                    margin: 0 18px;
+
+                    @include devices(tablet) {
+                        margin: 0;
+                    }
                 }
             }
         }
@@ -40,12 +52,29 @@ nav {
         .menu {
             display: flex;
 
+            @include devices(tablet) {
+                display: none;
+            }
+
             li {
-                height: 77px;
-                padding: 0 40px;
+                height: 69px;
+                padding: 0 36px;
                 display: flex;
                 align-items: center;
                 cursor: pointer;
+
+                @include devices(large) {
+                    padding: 0 22px;
+                }
+
+                @include devices(desktop) {
+                    padding: 0 10px;
+                }
+
+                .sub-menu-title {
+                    display: flex;
+                    align-items: center;
+                }
 
                 &:hover {
                     background-color: $primaryColor;
@@ -61,12 +90,34 @@ nav {
                 }
 
                 svg {
-                    margin-left: 20px;
+                    margin-left: 18px;
+                    width: 12px;
+                    height: 7px;
                 }
             }
         }
 
         .sub-menu {
+            display: none;
+        }
+    }
+
+    .navbar-auth {
+        display: flex;
+
+        button {
+            width: 162px;
+
+            @include devices(large) {
+                width: 126px;
+            }
+
+            @include devices(desktop) {
+                width: 72px;
+            }
+        }
+
+        @include devices(tablet) {
             display: none;
         }
     }

@@ -1,25 +1,42 @@
 @import '../../../styles/variables';
+@import '../../../styles/mixins';
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 48px;
+    height: 42px;
     background-color: $primaryColor;
     color: #ffffff;
-    padding: 0 120px;
+    padding: 0 108px;
+
+    @include devices(desktop) {
+        padding: 0 36px;
+    }
+
+    @include devices(tablet) {
+        padding: 0 18px;
+    }
 
     .header-left {
         display: flex;
 
         .header-left-title1 {
-            margin-right: 36px;
+            margin-right: 28px;
+
+            @include devices(tablet) {
+                display: none;
+            }
         }
 
         .social-btn-wrapper {
             display: flex;
             align-items: center;
-            gap: 32px;
+            gap: 28px;
+
+            @include devices(tablet) {
+                gap: 14px;
+            }
         }
 
         .social-btn-wrapper a {
@@ -27,8 +44,8 @@
         }
 
         .social-btn-wrapper a svg {
-            height: 20px;
-            width: 20px;
+            height: 18px;
+            width: 18px;
         }
     }
 
@@ -36,7 +53,15 @@
         display: flex;
 
         .header-right-title1 {
-            margin-right: 36px;
+            margin-right: 32px;
+
+            @include devices(desktop) {
+                margin-right: 14px;
+            }
+
+            @include devices(mobile) {
+                display: none;
+            }
         }
 
         .header-right-phone-wrapper {
@@ -44,7 +69,7 @@
             align-items: center;
 
             svg {
-                margin-right: 12px;
+                margin-right: 10px;
             }
 
             .header-right-phone-number {
@@ -54,7 +79,15 @@
         }
 
         .header-language-switch {
-            margin-left: 118px;
+            margin-left: 106px;
+
+            @include devices(desktop) {
+                margin-left: 28px;
+            }
+
+            @include devices(tablet) {
+                display: none;
+            }
 
             .header-language-active {
                 font-weight: bold;
