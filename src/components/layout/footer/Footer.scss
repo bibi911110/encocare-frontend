@@ -200,6 +200,10 @@ footer {
         text-align: center;
         color: white;
 
+        svg {
+            transform: scale(0.8);
+        }
+
         @include devices(tablet) {
             font-size: 12px;
         }

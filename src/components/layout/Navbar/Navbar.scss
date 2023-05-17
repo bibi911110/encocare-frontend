@@ -5,9 +5,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     height: 69px;
     padding: 0 108px;
     box-shadow: 0 3px 6px 0 $boxShadowColor;
+    background-color: white;
 
     @include devices(large) {
         padding: 0 72px;
@@ -19,13 +21,25 @@ nav {
 
     @include devices(tablet) {
         padding: 0 18px;
-
         justify-content: center;
+    }
+
+    .toggle-menu {
+        display: none;
+        transform: scale(0.9);
+
+        @include devices(tablet) {
+            display: block;
+            position: absolute;
+            left: 24px;
+            top: 18px;
+        }
     }
 
     .navbar-main {
         display: flex;
         align-items: center;
+        position: relative;
 
         a {
             color: #303030;
@@ -36,7 +50,6 @@ nav {
                 display: flex;
                 align-items: center;
                 height: 69px;
-                cursor: pointer;
 
                 img {
                     height: 28px;
@@ -56,7 +69,8 @@ nav {
                 display: none;
             }
 
-            li {
+            & > li {
+                position: relative;
                 height: 69px;
                 padding: 0 36px;
                 display: flex;
@@ -71,17 +85,12 @@ nav {
                     padding: 0 10px;
                 }
 
-                .sub-menu-title {
-                    display: flex;
-                    align-items: center;
-                }
-
                 &:hover {
                     background-color: $primaryColor;
                     color: white;
                 }
 
-                &:hover a {
+                &:hover > a {
                     color: white;
                 }
 
@@ -94,11 +103,33 @@ nav {
                     width: 12px;
                     height: 7px;
                 }
-            }
-        }
 
-        .sub-menu {
-            display: none;
+                .sub-menu {
+                    display: block;
+                    position: absolute;
+                    top: 69px;
+                    left: 0;
+                    background-color: white;
+                    box-shadow: 0 3px 6px 0 $boxShadowColor;
+
+                    & > li {
+                        display: flex;
+                        align-items: center;
+                        padding: 0 36px;
+                        height: 54px;
+                        white-space: nowrap;
+
+                        &:hover {
+                            background-color: $primaryColor;
+                            color: white;
+                        }
+
+                        &:hover > a {
+                            color: white;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -119,6 +150,106 @@ nav {
 
         @include devices(tablet) {
             display: none;
+        }
+    }
+}
+
+.navbar-mobile {
+    display: none;
+
+    @include devices(tablet) {
+        display: block;
+        position: fixed;
+        height: calc(100vh - 111px);
+        width: 300px;
+        background-color: white;
+        box-shadow: 0 3px 6px 0 $boxShadowColor;
+    }
+
+    .navbar-menu-wrapper {
+        height: calc(100vh - 294px);
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .mobile-menu {
+            font-size: 14px;
+
+            a {
+                color: black;
+            }
+
+            & > li {
+                .mobile-title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 49px;
+                    padding: 0 24px;
+
+                    &:hover {
+                        background-color: $primaryColor;
+
+                        a,
+                        span {
+                            color: white;
+                        }
+
+                        svg path {
+                            stroke: white;
+                        }
+                    }
+                }
+
+                .mobile-sub-menu {
+                    display: flex;
+                    flex-direction: column;
+
+                    & > li {
+                        display: flex;
+                        align-items: center;
+                        height: 49px;
+                        padding: 0 24px;
+
+                        &:hover {
+                            background-color: $primaryColor;
+
+                            a {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-mobile-buttons {
+        .auth-buttons-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+
+            button {
+                width: 234px;
+                height: 45px;
+            }
+        }
+
+        .lang-switch {
+            height: 45px;
+            margin-top: 32px;
+            background-color: $primaryColor;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .header-language-active {
+                font-weight: bold;
+            }
         }
     }
 }

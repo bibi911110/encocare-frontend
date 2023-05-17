@@ -1,4 +1,4 @@
-import { rightArrowIcon } from '../../../assets/icons/common';
+import { rightArrowIcon2 } from '../../../assets/icons/common';
 import { ButtonPropsType } from '../../../types/basicComponents';
 import './Button.scss';
 
@@ -21,7 +21,7 @@ const Button = ({ title, type, icon, className, ...props }: ButtonPropsType) => 
         buttonContent = (
             <>
                 {title}
-                <span className="button-arrow-icon">{rightArrowIcon}</span>
+                <span className="button-arrow-icon">{rightArrowIcon2}</span>
             </>
         );
     } else {

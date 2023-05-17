@@ -86,7 +86,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="copyright-section">Copyrights&nbsp;{copyrightIcon}&nbsp;&nbsp;&nbsp;2022.&nbsp;Encocare&nbsp;Inc.</div>
+            <div className="copyright-section">Copyrights&nbsp;{copyrightIcon}&nbsp;&nbsp;2022.&nbsp;Encocare&nbsp;Inc.</div>
         </footer>
     );
 };

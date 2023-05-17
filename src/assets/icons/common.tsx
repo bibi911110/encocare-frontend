@@ -27,6 +27,22 @@ export const downArrowIcon = (
 );
 
 export const rightArrowIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="6.618" height="11.235" viewBox="0 0 6.618 11.235">
+        <path
+            id="Path_60523"
+            data-name="Path 60523"
+            d="M2470,183.6l4.2,4.2,4.2-4.2"
+            transform="translate(-182.183 2479.822) rotate(-90)"
+            fill="none"
+            stroke="#303030"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+        />
+    </svg>
+);
+
+export const rightArrowIcon2 = (
     <svg xmlns="http://www.w3.org/2000/svg" width="13.645" height="14.473" viewBox="0 0 13.645 14.473">
         <g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right" transform="translate(1 1.414)">
             <path
@@ -67,5 +83,20 @@ export const copyrightIcon = (
                 fill="#048fb8"
             />
         </g>
+    </svg>
+);
+
+export const toggleMenuIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="34" height="34" viewBox="0 0 34 34">
+        <defs>
+            <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 24 24">
+                <image
+                    width="24"
+                    height="24"
+                    xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVR4nGNgGAUjCvynMqa/BaNg4MH/0VQ0CigGo6loFAxSAADz7neJCOmgHgAAAABJRU5ErkJggg=="
+                />
+            </pattern>
+        </defs>
+        <rect id="icons8-menu-24" width="34" height="34" rx="12" fill="url(#pattern)" />
     </svg>
 );

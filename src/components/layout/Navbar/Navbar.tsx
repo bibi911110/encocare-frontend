@@ -1,89 +1,181 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { downArrowIcon } from '../../../assets/icons/common';
-import logoImage from '../../../assets/images/logo.png';
-import './Navbar.scss';
 import Button from '../../common/Button/Button';
+import logoImage from '../../../assets/images/logo.png';
+import { rightArrowIcon, toggleMenuIcon, downArrowIcon } from '../../../assets/icons/common';
+import { NavbarItemPropsType, NavbarMobileItemPropsType } from '../../../types/basicComponents';
+import './Navbar.scss';
 
 const links = [
-    { name: 'Task Test', url: '/take-test' },
+    { title: 'Take Test', link: '/take-test' },
     {
-        name: 'Our Services',
-        children: [
-            { name: 'AI Powered Eye Testing', url: '/' },
-            { name: 'Ophtalmologist Prescription', url: '/' },
-            { name: 'MDM Managment', url: '/' },
-            { name: 'Remote Device Applications', url: '/' },
-            { name: 'Home Service for Visually Imapried', url: '/' },
-            { name: 'Low Vision Devices', url: '/' },
+        title: 'Our Services',
+        subLinks: [
+            { title: 'AI Powered Eye Testing', link: '/' },
+            { title: 'Ophthalmologist Prescription', link: '/' },
+            { title: 'MDM Managment', link: '/' },
+            { title: 'Remote Device Applications', link: '/' },
+            { title: 'Home Service for Visually Imapried', link: '/' },
+            { title: 'Low Vision Devices', link: '/' },
         ],
     },
     {
-        name: 'Find an Opthalmologist',
-        children: [
-            { name: 'AI Powered Eye Testing', url: '/' },
-            { name: 'Ophtalmologist Prescription', url: '/' },
-            { name: 'MDM Managment', url: '/' },
-            { name: 'Remote Device Applications', url: '/' },
-            { name: 'Home Service for Visually Imapried', url: '/' },
-            { name: 'Low Vision Devices', url: '/' },
+        title: 'Find an Opthalmologist',
+        subLinks: [
+            { title: 'AI Powered Eye Testing', link: '/' },
+            { title: 'Ophthalmologist Prescription', link: '/' },
+            { title: 'MDM Managment', link: '/' },
+            { title: 'Remote Device Applications', link: '/' },
+            { title: 'Home Service for Visually Imapried', link: '/' },
+            { title: 'Low Vision Devices', link: '/' },
         ],
     },
     {
-        name: 'Become a member',
-        children: [
-            { name: 'AI Powered Eye Testing', url: '/' },
-            { name: 'Ophtalmologist Prescription', url: '/' },
-            { name: 'MDM Managment', url: '/' },
-            { name: 'Remote Device Applications', url: '/' },
-            { name: 'Home Service for Visually Imapried', url: '/' },
-            { name: 'Low Vision Devices', url: '/' },
+        title: 'Become a member',
+        subLinks: [
+            { title: 'AI Powered Eye Testing', link: '/' },
+            { title: 'Ophthalmologist Prescription', link: '/' },
+            { title: 'MDM Managment', link: '/' },
+            { title: 'Remote Device Applications', link: '/' },
+            { title: 'Home Service for Visually Imapried', link: '/' },
+            { title: 'Low Vision Devices', link: '/' },
         ],
     },
 ];
 
-const Navbar = () => {
-    const renderItems = () =>
-        links.map((item, index) => (
-            <li key={index}>
-                {item.url ? (
-                    <Link to={item.url}>{item.name}</Link>
-                ) : (
-                    <span className="sub-menu-title">
-                        {item.name}
-                        {downArrowIcon}
-                    </span>
-                )}
-                {item.children && renderChildren(item.children)}
-            </li>
-        ));
+const NavbarItem = ({ title, link, subLinks }: NavbarItemPropsType) => {
+    const [isSubMenuOpen, setSubMenuOpen] = useState(false);
 
-    const renderChildren = (children: Array<{ name: string; url: string }>) => (
-        <ul className="sub-menu">
-            {children.map((child, index) => (
-                <li key={index}>
-                    <Link to={child.url}>{child.name}</Link>
-                </li>
-            ))}
-        </ul>
-    );
+    if (link) {
+        return (
+            <li>
+                <Link to={link}>{title}</Link>
+            </li>
+        );
+    } else {
+        return (
+            <li onMouseEnter={() => setSubMenuOpen(true)} onMouseLeave={() => setSubMenuOpen(false)}>
+                {title}
+                {downArrowIcon}
+                {isSubMenuOpen && (
+                    <ul className="sub-menu">
+                        {subLinks?.map((item) => (
+                            <li key={item.title}>
+                                <Link to={item.link}>{item.title}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </li>
+        );
+    }
+};
+
+const NavbarMobileItem = ({ title, link, subLinks, isSubMenuOpen, setSubMenuOpen }: NavbarMobileItemPropsType) => {
+    if (link) {
+        return (
+            <li>
+                <div className="mobile-title">
+                    <Link to={link}>{title}</Link>
+                </div>
+            </li>
+        );
+    } else {
+        return (
+            <li>
+                <div className="mobile-title" onClick={() => setSubMenuOpen(title)}>
+                    <span>{title}</span>
+                    {isSubMenuOpen === title ? downArrowIcon : rightArrowIcon}
+                </div>
+                {isSubMenuOpen === title && (
+                    <ul className="mobile-sub-menu">
+                        {subLinks?.map((item) => (
+                            <li key={item.title}>
+                                <Link to={item.link}>{item.title}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </li>
+        );
+    }
+};
+
+const Navbar = () => {
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [mobileSubMenuOpen, setMobileSubMenuOpen] = useState('');
+
+    const handleMobileSubMenu = (title: string) => {
+        if (mobileSubMenuOpen === title) {
+            setMobileSubMenuOpen('');
+        } else {
+            setMobileSubMenuOpen(title);
+        }
+    };
 
     return (
-        <nav>
-            <div className="navbar-main">
-                <div className="menubar">
-                    <div className="logo">
-                        <img src={logoImage} alt="encocare" />
-                    </div>
-                    <div className="toggle-menu"></div>
+        <>
+            <nav>
+                <div
+                    className="toggle-menu"
+                    onClick={() => {
+                        setMobileMenuOpen(!mobileMenuOpen);
+                    }}
+                >
+                    {toggleMenuIcon}
                 </div>
-                <ul className="menu">{renderItems()}</ul>
-            </div>
+                <div className="navbar-main">
+                    <div className="menubar">
+                        <div className="logo">
+                            <img src={logoImage} alt="encocare" />
+                        </div>
+                    </div>
+                    <ul className="menu">
+                        {links.map((item) => (
+                            <NavbarItem key={item.title} title={item.title} link={item.link} subLinks={item.subLinks} />
+                        ))}
+                    </ul>
+                </div>
 
-            <div className="navbar-auth">
-                <Button title="Sign up" type="light" />
-                <Button title="Login" type="primary" />
-            </div>
-        </nav>
+                <div className="navbar-auth">
+                    <Link to="/signup">
+                        <Button title="Sign up" type="light" />
+                    </Link>
+                    <Link to="/login">
+                        <Button title="Login" type="primary" />
+                    </Link>
+                </div>
+            </nav>
+            {mobileMenuOpen && (
+                <div className="navbar-mobile">
+                    <div className="navbar-menu-wrapper">
+                        <ul className="mobile-menu">
+                            {links.map((item) => (
+                                <NavbarMobileItem
+                                    key={item.title}
+                                    title={item.title}
+                                    link={item.link}
+                                    subLinks={item.subLinks}
+                                    isSubMenuOpen={mobileSubMenuOpen}
+                                    setSubMenuOpen={handleMobileSubMenu}
+                                />
+                            ))}
+                        </ul>
+                    </div>
+                    <div className="navbar-mobile-buttons">
+                        <div className="auth-buttons-wrapper">
+                            <Button title="Login" type="primary" />
+                            <Button title="Sign up" type="light" />
+                        </div>
+                        <div className="lang-switch">
+                            <span className="">FR</span>
+                            &nbsp;|&nbsp;
+                            <span className="header-language-active">ENG</span>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </>
     );
 };
 
