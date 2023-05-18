@@ -1,0 +1,62 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.payment-select {
+    display: flex;
+    flex-direction: column;
+    width: 364px;
+    gap: 14px;
+
+    @include devices(tablet) {
+        width: 100%;
+    }
+
+    .payment-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 55px;
+        padding: 0px 8px 0px 12px;
+        background-color: #ffffff;
+        box-shadow: 0 3px 6px $boxShadowColor;
+        border: 2px solid rgba(0, 0, 0, 0);
+        cursor: pointer;
+
+        @include devices(tablet) {
+            height: 52px;
+            width: unset;
+        }
+
+        &:hover {
+            border: 2px solid $primaryColor;
+        }
+
+        .checkbox-title {
+            display: flex;
+            align-items: center;
+
+            .payment-title {
+                margin-left: 16px;
+                font-size: 16px;
+
+                @include devices(tablet) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .payment-icon {
+            display: flex;
+            justify-content: center;
+            width: 60px;
+
+            svg {
+                transform: scale(0.9);
+            }
+        }
+    }
+
+    .payment-item-active {
+        border: 2px solid $primaryColor;
+    }
+}

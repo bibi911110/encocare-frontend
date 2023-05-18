@@ -6,6 +6,7 @@ import Login from './pages/common/Login/Login';
 import ForgetPassword from './pages/common/ForgetPassword/ForgetPassword';
 import SetPassword from './pages/common/SetPassword/SetPassword';
 import SupportUs from './pages/common/SupportUs/SupportUs';
+import Donate from './pages/common/Donate/Donate';
 
 const router = createBrowserRouter([
     {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
             { path: 'forget-password', element: <ForgetPassword /> },
             { path: 'set-password', element: <SetPassword /> },
             { path: 'support-us', element: <SupportUs /> },
+            { path: 'donate', element: <Donate /> },
         ],
     },
 ]);

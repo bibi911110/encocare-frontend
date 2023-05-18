@@ -23,17 +23,16 @@ const SupportUs = () => {
                         With a community of over 20,000 members we're continuously expanding to reach out for awareness programs and free diagnosis camps across
                         Africa!
                     </p>
-                    <div>
-                        <div className="group-wrapper">
+                    <div className="group-wrapper">
+                        <div className="white-board">
                             <img src={logoEyeImage} alt="" />
                             <div>
                                 <h3>Encocare Support Group</h3>
                                 <Link to="/">facebook.com/Encocare Support Group</Link>
                             </div>
                         </div>
+                        <SocialButton type="facebook" title="Join Facebook Support Group" />
                     </div>
-
-                    <SocialButton type="facebook" title="Join Facebook Support Group" />
                 </div>
             </div>
             <div className="right-section"></div>

@@ -342,7 +342,7 @@
                 }
 
                 & > span {
-                    font-size: 12px;
+                    font-size: 13px;
 
                     @include devices(tablet) {
                         font-size: 13px;
@@ -589,15 +589,6 @@
                 @include devices(tablet) {
                     margin: 100vw 12px 28px 12px;
                     text-align: center;
-                }
-
-                & > span {
-                    font-size: 12px;
-
-                    @include devices(tablet) {
-                        font-size: 13px;
-                        letter-spacing: 2px;
-                    }
                 }
 
                 & > h1 {
