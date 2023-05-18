@@ -1,0 +1,120 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.signup {
+    padding-left: 160px;
+    display: flex;
+    height: 768px;
+    background-color: #f6f6f7;
+
+    @include devices(desktop) {
+        padding: 0;
+    }
+
+    .form-section {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+
+        @include devices(tablet) {
+            flex: unset;
+            width: 100%;
+        }
+
+        .form-wrapper {
+            width: 420px;
+            text-align: center;
+            margin-top: 69px;
+            padding: 0 20px;
+
+            & > h1 {
+                margin: 0;
+                color: $primaryColor;
+                padding-bottom: 20px;
+
+                @include devices(tablet) {
+                    font-size: 20px;
+                }
+            }
+
+            & > p {
+                font-size: 16px;
+                padding-bottom: 20px;
+
+                @include devices(tablet) {
+                    font-size: 14px;
+                }
+            }
+
+            .social-buttons {
+                button {
+                    width: 100%;
+                    margin-bottom: 12px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            form {
+                margin-bottom: 20px;
+
+                .input-wrapper {
+                    margin-bottom: 12px;
+
+                    input {
+                        width: 100%;
+                        margin-bottom: 12px;
+                    }
+                }
+
+                button {
+                    width: 197px;
+                }
+            }
+
+            .link-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 6px;
+                margin-bottom: 20px;
+
+                & > P {
+                    font-size: 14px;
+                }
+
+                & > a {
+                    font-size: 14px;
+                    text-decoration: underline;
+                    color: $primaryColor;
+                }
+            }
+
+            .policy {
+                color: #707070;
+                font-size: 12px;
+                letter-spacing: -0.5px;
+
+                span {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .image-section {
+        flex: 1;
+        height: 100%;
+        background-image: url('../../../assets/images/bg/signup.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include devices(tablet) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.social-button {
+    height: 45px;
+    color: #ffffff;
+    font-size: 16px;
+    position: relative;
+    border: none;
+    padding: 0 8px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px $boxShadowColor;
+
+    @include devices(tablet) {
+        font-size: 14px !important;
+    }
+
+    svg {
+        position: absolute;
+    }
+}
+
+.social-facebook {
+    background-color: #014c9d;
+
+    svg {
+        top: 9px;
+        left: 8px;
+    }
+}
+
+.social-google {
+    background-color: #ea4335;
+
+    svg {
+        top: 13px;
+        left: 15px;
+    }
+}
+
+.social-twitter {
+    background-color: #55acef;
+
+    svg {
+        top: 14px;
+        left: 14px;
+    }
+}

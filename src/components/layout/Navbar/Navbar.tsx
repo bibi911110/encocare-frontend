@@ -126,9 +126,9 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-main">
                     <div className="menubar">
-                        <div className="logo">
+                        <Link className="logo" to="/">
                             <img src={logoImage} alt="encocare" />
-                        </div>
+                        </Link>
                     </div>
                     <ul className="menu">
                         {links.map((item) => (
@@ -139,10 +139,10 @@ const Navbar = () => {
 
                 <div className="navbar-auth">
                     <Link to="/signup">
-                        <Button title="Sign up" type="light" />
+                        <Button title="Sign up" type="light" buttonType="button" />
                     </Link>
                     <Link to="/login">
-                        <Button title="Login" type="primary" />
+                        <Button title="Login" type="primary" buttonType="button" />
                     </Link>
                 </div>
             </nav>
@@ -164,8 +164,12 @@ const Navbar = () => {
                     </div>
                     <div className="navbar-mobile-buttons">
                         <div className="auth-buttons-wrapper">
-                            <Button title="Login" type="primary" />
-                            <Button title="Sign up" type="light" />
+                            <Link to="/login">
+                                <Button title="Login" type="primary" buttonType="button" />
+                            </Link>
+                            <Link to="/signup">
+                                <Button title="Sign up" type="light" buttonType="button" />
+                            </Link>
                         </div>
                         <div className="lang-switch">
                             <span className="">FR</span>

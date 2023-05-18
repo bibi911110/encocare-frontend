@@ -1,0 +1,18 @@
+.form-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0;
+
+    span {
+        font-size: 13px;
+        color: #707070;
+        padding: 0 20px;
+    }
+
+    .divider {
+        width: 103px;
+        height: 1px;
+        border-bottom: 1px solid #a8a8a8;
+    }
+}

@@ -10,8 +10,8 @@ import slideImage1 from '../../../assets/images/carousel.png';
 import avatarImage1 from '../../../assets/images/avatar/1.png';
 import avatarImage2 from '../../../assets/images/avatar/2.png';
 import avatarImage3 from '../../../assets/images/avatar/3.png';
-import tabletDesktopImage from '../../../assets/images/tablet.png';
-import tabletMobileImage from '../../../assets/images/tablet-mobile.png';
+import tabletDesktopImage from '../../../assets/images/tablet/tablet-desktop.png';
+import tabletMobileImage from '../../../assets/images/tablet/tablet-mobile.png';
 import appStoreImage1 from '../../../assets/images/stores/appStore1.png';
 import appStoreImage2 from '../../../assets/images/stores/appStore2.png';
 import logoImage1 from '../../../assets/images/partners/logo1.png';
@@ -47,7 +47,7 @@ const Home = () => {
                         </h1>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna </p>
                         <div className="button-wrapper">
-                            <Button type="primary" arrow title="Get Started" />
+                            <Button type="primary" arrow title="Get Started" buttonType="button" />
                             <Link to="/">Learn more</Link>
                         </div>
                     </div>
@@ -149,7 +149,7 @@ const Home = () => {
                             <span>I agree to the terms and conditions.</span>
                         </div>
                         <div className="button-wrapper">
-                            <Button title="Start the Test" type="primary" arrow />
+                            <Button title="Start the Test" type="primary" buttonType="button" arrow />
                         </div>
                         <div className="copy-wrapper">
                             {copyIcon}
@@ -171,19 +171,19 @@ const Home = () => {
                             {eyeIcon1}
                             <h3>Cataract</h3>
                             <p>Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod</p>
-                            <Button type="primary" arrow title="Learn More" />
+                            <Button type="primary" buttonType="button" arrow title="Learn More" />
                         </div>
                         <div className="card card2">
                             {eyeIcon2}
                             <h3>Glaucoma </h3>
                             <p>Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod</p>
-                            <Button type="primary" arrow title="Learn More" />
+                            <Button type="primary" buttonType="button" arrow title="Learn More" />
                         </div>
                         <div className="card card3">
                             {eyeIcon3}
                             <h3>Macular Degenration</h3>
                             <p>Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod</p>
-                            <Button type="gray" arrow title="Learn More" className="gray-button" />
+                            <Button type="gray" buttonType="button" arrow title="Learn More" className="gray-button" />
                         </div>
                     </div>
                 </div>
@@ -203,7 +203,7 @@ const Home = () => {
                         </p>
                         <div className="input-wrapper">
                             <NormalInput placeHolder="Enter Location" />
-                            <Button title="" icon={searchIcon} type="primary" />
+                            <Button title="" icon={searchIcon} type="primary" buttonType="button" />
                             <div className="location-wrapper">
                                 {locationIcon}
                                 <Link to="/">Use Current Location</Link>
@@ -240,7 +240,7 @@ const Home = () => {
                                     {directionIcon}
                                     <Link to="/">Get Directions</Link>
                                 </div>
-                                <Button title="Connect" arrow type="primary" />
+                                <Button title="Connect" arrow type="primary" buttonType="button" />
                             </div>
                         </div>
                         <div className="card ">
@@ -261,7 +261,7 @@ const Home = () => {
                                     {directionIcon}
                                     <Link to="/">Get Directions</Link>
                                 </div>
-                                <Button title="Connect" arrow type="primary" />
+                                <Button title="Connect" arrow type="primary" buttonType="button" />
                             </div>
                         </div>
                         <div className="card ">
@@ -282,7 +282,7 @@ const Home = () => {
                                     {directionIcon}
                                     <Link to="/">Get Directions</Link>
                                 </div>
-                                <Button title="Connect" arrow type="primary" />
+                                <Button title="Connect" arrow type="primary" buttonType="button" />
                             </div>
                         </div>
                     </div>
@@ -301,7 +301,7 @@ const Home = () => {
                         our AI powered system strives to achieve perfection!
                     </p>
                     <div className="link-wrapper">
-                        <Button title="Become a partner" type="primary" arrow />
+                        <Button title="Become a partner" type="primary" arrow buttonType="button" />
                         <Link to="/">Register your clinic with us</Link>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 
 export type ButtonPropsType = {
+    buttonType: 'button' | 'submit';
     title: string;
     type: 'primary' | 'outline' | 'light' | 'gray';
     icon?: React.ReactNode;
@@ -31,4 +32,8 @@ export type CheckBoxPropsType = {
     className?: string;
     isChecked: boolean;
     onChange: () => void;
+};
+
+export type SocialButtonPropsType = {
+    type: 'facebook' | 'google' | 'twitter';
 };

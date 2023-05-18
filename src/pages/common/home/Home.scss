@@ -44,7 +44,6 @@
 
                 h1 {
                     font-size: 38px;
-                    font-weight: 100;
 
                     span {
                         color: $primaryColor;
@@ -145,7 +144,7 @@
 
             h1 {
                 font-size: 30px;
-                font-weight: 100;
+
                 margin: 0;
                 padding-bottom: 20px;
 
@@ -204,7 +203,7 @@
             & > h1 {
                 margin: 0;
                 font-size: 36px;
-                font-weight: 100;
+
                 padding-bottom: 20px;
 
                 @include devices(tablet) {
@@ -258,7 +257,7 @@
                     & > h2 {
                         margin: 0;
                         font-size: 27px;
-                        font-weight: 100;
+
                         padding-bottom: 18px;
 
                         @include devices(tablet) {
@@ -317,7 +316,7 @@
             display: flex;
             width: 1198px;
             background-color: #f6f6f7;
-            background-image: url('../../../assets/images/test-horizontal.png');
+            background-image: url('../../../assets/images/test/test-horizontal.png');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: right;
@@ -327,7 +326,7 @@
             }
 
             @include devices(tablet) {
-                background-image: url('../../../assets/images/test-vertical.png');
+                background-image: url('../../../assets/images/test/test-vertical.png');
                 background-position: top;
                 background-size: 100% auto;
             }
@@ -354,7 +353,7 @@
                 & > h1 {
                     margin: 0;
                     font-size: 27px;
-                    font-weight: 100;
+
                     padding: 24px 0px 18px 0px;
 
                     @include devices(tablet) {
@@ -445,7 +444,7 @@
 
             & > h1 {
                 font-size: 30px;
-                font-weight: 100;
+
                 margin: 14px 0;
 
                 @include devices(tablet) {
@@ -490,7 +489,7 @@
 
                     & > h3 {
                         font-size: 25px;
-                        font-weight: 100;
+
                         color: #ffffff;
                         margin: 0;
                         margin-bottom: 16px;
@@ -567,7 +566,7 @@
             display: flex;
             width: 1198px;
             background-color: #f6f6f7;
-            background-image: url('../../../assets/images/map-horizontal.png');
+            background-image: url('../../../assets/images/map/map-horizontal.png');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: right;
@@ -577,7 +576,7 @@
             }
 
             @include devices(tablet) {
-                background-image: url('../../../assets/images/map-vertical.png');
+                background-image: url('../../../assets/images/map/map-vertical.png');
                 background-position: top;
                 background-size: 100% auto;
             }
@@ -604,7 +603,7 @@
                 & > h1 {
                     margin: 0;
                     font-size: 27px;
-                    font-weight: 100;
+
                     padding: 0px 0px 18px 0px;
 
                     @include devices(tablet) {
@@ -715,7 +714,7 @@
 
             & > h1 {
                 font-size: 30px;
-                font-weight: 100;
+
                 margin: 14px 0;
                 text-align: center;
 
@@ -779,7 +778,7 @@
                             & > h3 {
                                 margin: 14px 0 10px 0;
                                 font-size: 23px;
-                                font-weight: 100;
+
                                 color: $primaryColor;
 
                                 @include devices(tablet) {
@@ -917,7 +916,7 @@
 
             & > h1 {
                 font-size: 30px;
-                font-weight: 100;
+
                 margin: 14px 0;
                 text-align: center;
 
@@ -1022,7 +1021,7 @@
 
                 & > h3 {
                     font-size: 23px;
-                    font-weight: 100;
+
                     margin: 0;
                     padding-bottom: 12px;
 
@@ -1104,7 +1103,7 @@
 
         & > h1 {
             font-size: 30px;
-            font-weight: 100;
+
             margin: 14px 0;
             text-align: center;
 

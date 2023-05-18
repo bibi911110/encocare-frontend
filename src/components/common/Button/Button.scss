@@ -2,10 +2,11 @@
 @import '../../../styles/mixins';
 
 .button {
+    position: relative;
     height: 45px;
     font-size: 16px;
     border: none;
-    padding: 0 8px;
+    padding: 0 20px;
     cursor: pointer;
 
     @include devices(tablet) {
@@ -18,8 +19,10 @@
         align-items: center;
 
         .button-arrow-icon {
-            margin-left: 20px;
+            position: absolute;
             display: flex;
+            top: 16px;
+            right: 14px;
 
             svg {
                 transform: scale(0.9);
@@ -38,17 +41,10 @@
     box-shadow: 0 3px 6px 0 $boxShadowColor;
 }
 
-.button-arrow {
-    background-color: $primaryColor;
-    color: white;
-    box-shadow: 0 3px 6px 0 $boxShadowColor;
-}
-
 .button-outline {
     background-color: white;
     color: $primaryColor;
     border: 1px solid $primaryColor;
-    box-shadow: 0 3px 6px 0 $boxShadowColor;
 }
 
 .button-light {
