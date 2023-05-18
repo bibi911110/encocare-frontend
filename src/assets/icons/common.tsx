@@ -100,3 +100,79 @@ export const toggleMenuIcon = (
         <rect id="icons8-menu-24" width="34" height="34" rx="12" fill="url(#pattern)" />
     </svg>
 );
+
+export const copyIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="13.711" height="15.876" viewBox="0 0 13.711 15.876">
+        <path
+            id="Icon_material-content-copy"
+            data-name="Icon material-content-copy"
+            d="M13.1,1.5H4.443A1.447,1.447,0,0,0,3,2.943v10.1H4.443V2.943H13.1Zm2.165,2.886H7.33A1.447,1.447,0,0,0,5.886,5.83v10.1A1.447,1.447,0,0,0,7.33,17.376h7.938a1.447,1.447,0,0,0,1.443-1.443V5.83A1.447,1.447,0,0,0,15.268,4.386Zm0,11.546H7.33V5.83h7.938Z"
+            transform="translate(-3 -1.5)"
+            fill="#0092bd"
+        />
+    </svg>
+);
+
+export const searchIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="30.621" height="30.621" viewBox="0 0 30.621 30.621">
+        <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(1.5 1.5)">
+            <path
+                id="Path_5020"
+                data-name="Path 5020"
+                d="M28.5,16.5a12,12,0,1,1-12-12A12,12,0,0,1,28.5,16.5Z"
+                transform="translate(-4.5 -4.5)"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="3"
+            />
+            <path
+                id="Path_5021"
+                data-name="Path 5021"
+                d="M31.5,31.5l-6.525-6.525"
+                transform="translate(-4.5 -4.5)"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="3"
+            />
+        </g>
+    </svg>
+);
+
+export const locationIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="17.245" height="17.245" viewBox="0 0 17.245 17.245">
+        <path
+            id="Icon_material-my-location"
+            data-name="Icon material-my-location"
+            d="M10.122,6.987a3.135,3.135,0,1,0,3.135,3.135A3.135,3.135,0,0,0,10.122,6.987ZM17.13,9.339a7.05,7.05,0,0,0-6.224-6.224V1.5H9.339V3.115A7.05,7.05,0,0,0,3.115,9.339H1.5v1.568H3.115A7.05,7.05,0,0,0,9.339,17.13v1.615h1.568V17.13a7.05,7.05,0,0,0,6.224-6.224h1.615V9.339Zm-7.008,6.271a5.487,5.487,0,1,1,5.487-5.487A5.483,5.483,0,0,1,10.122,15.609Z"
+            transform="translate(-1.5 -1.5)"
+            fill="#3ee402"
+        />
+    </svg>
+);
+
+export const directionIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+        <path
+            id="Icon_awesome-directions"
+            data-name="Icon awesome-directions"
+            d="M18.652,8.658,10.342.348a1.191,1.191,0,0,0-1.683,0L.348,8.658a1.191,1.191,0,0,0,0,1.683l8.31,8.31a1.19,1.19,0,0,0,1.683,0l8.31-8.31a1.191,1.191,0,0,0,0-1.683ZM14.9,9.124l-3.125,2.885a.3.3,0,0,1-.5-.218V9.8H7.718v2.375a.3.3,0,0,1-.3.3H6.234a.3.3,0,0,1-.3-.3V9.2A1.188,1.188,0,0,1,7.125,8.016h4.156V6.022a.3.3,0,0,1,.5-.218L14.9,8.688a.3.3,0,0,1,0,.436Z"
+            fill="#1475f5"
+        />
+    </svg>
+);
+
+export const mapIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="9.355" height="13.364" viewBox="0 0 9.355 13.364">
+        <path
+            id="Icon_material-location-on"
+            data-name="Icon material-location-on"
+            d="M12.177,3A4.674,4.674,0,0,0,7.5,7.677c0,3.508,4.677,8.686,4.677,8.686s4.677-5.178,4.677-8.686A4.674,4.674,0,0,0,12.177,3Zm0,6.348a1.67,1.67,0,1,1,1.67-1.67A1.671,1.671,0,0,1,12.177,9.348Z"
+            transform="translate(-7.5 -3)"
+            fill="#4d4d4d"
+        />
+    </svg>
+);

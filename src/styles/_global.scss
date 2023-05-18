@@ -1,0 +1,17 @@
+.desktop-only {
+    display: inherit;
+}
+
+.mobile-only {
+    display: none;
+}
+
+@include devices(tablet) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: inherit;
+    }
+}

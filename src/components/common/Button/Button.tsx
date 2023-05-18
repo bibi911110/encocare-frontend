@@ -2,7 +2,7 @@ import { rightArrowIcon2 } from '../../../assets/icons/common';
 import { ButtonPropsType } from '../../../types/basicComponents';
 import './Button.scss';
 
-const Button = ({ title, type, icon, className, ...props }: ButtonPropsType) => {
+const Button = ({ title, type, icon, arrow, className, ...props }: ButtonPropsType) => {
     let buttonContent;
     let buttonClassName = `button button-${type}`;
 
@@ -17,7 +17,7 @@ const Button = ({ title, type, icon, className, ...props }: ButtonPropsType) => 
                 {title}
             </>
         );
-    } else if (type == 'arrow') {
+    } else if (arrow) {
         buttonContent = (
             <>
                 {title}
@@ -30,7 +30,7 @@ const Button = ({ title, type, icon, className, ...props }: ButtonPropsType) => 
 
     return (
         <button className={buttonClassName} {...props}>
-            {buttonContent}
+            <div className="button-content">{buttonContent}</div>
         </button>
     );
 };

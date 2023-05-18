@@ -1,0 +1,1158 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+@import '../../../styles/global';
+
+.home {
+    .main-section {
+        display: flex;
+        flex-direction: row;
+
+        @include devices(tablet) {
+            flex-direction: column;
+        }
+
+        .title-back {
+            width: 50%;
+            height: 524px;
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+            @include devices(tablet) {
+                width: 100%;
+                height: 420px;
+                text-align: center;
+            }
+
+            .title-wrapper {
+                margin: 0 80px 0 200px;
+
+                @include devices(large) {
+                    margin: 0 60px 0 120px;
+                }
+
+                @include devices(desktop) {
+                    margin: 0 40px 0 80px;
+                }
+
+                @include devices(tablet) {
+                    margin: 0px;
+                    padding: 0 8px;
+                }
+
+                h1 {
+                    font-size: 38px;
+                    font-weight: 100;
+
+                    span {
+                        color: $primaryColor;
+                        white-space: nowrap;
+                    }
+
+                    @include devices(tablet) {
+                        font-size: 25px;
+                    }
+                }
+
+                p {
+                    margin-bottom: 30px;
+
+                    @include devices(tablet) {
+                        font-size: 14px;
+                    }
+                }
+
+                .button-wrapper {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 20px;
+
+                    button {
+                        width: 197px;
+                    }
+
+                    a {
+                        color: white;
+                        text-decoration: underline;
+                    }
+
+                    @include devices(tablet) {
+                        flex-direction: column;
+
+                        button {
+                            font-size: 14px;
+                            height: 45px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .carousel-wrapper {
+            width: 50%;
+
+            @include devices(tablet) {
+                width: 100%;
+            }
+
+            .carousel-image {
+                height: 524px;
+                object-fit: cover;
+
+                @include devices(tablet) {
+                    height: 420px;
+                }
+            }
+
+            .carousel .control-dots .dot {
+                box-shadow: unset;
+                border-radius: 0;
+                border: 1px solid $primaryColor;
+                opacity: unset;
+                background: unset;
+                width: 6px;
+                height: 6px;
+            }
+
+            .carousel .control-dots .dot.selected {
+                background: $primaryColor !important;
+            }
+            .carousel .control-dots .dot:hover {
+                background: $primaryColor !important;
+            }
+        }
+    }
+
+    .video-section {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        background-color: $primaryColor;
+        color: white;
+        padding: 82px 0;
+
+        @include devices(tablet) {
+            padding: 36px 0px 0px 0px;
+        }
+        .title-wrapper {
+            @include devices(tablet) {
+                padding: 0px 8px;
+            }
+
+            h1 {
+                font-size: 30px;
+                font-weight: 100;
+                margin: 0;
+                padding-bottom: 20px;
+
+                @include devices(tablet) {
+                    font-size: 21px;
+                }
+            }
+
+            p {
+                padding-bottom: 32px;
+
+                @include devices(tablet) {
+                    font-size: 14px;
+                    padding-bottom: 24px;
+                }
+            }
+        }
+
+        video {
+            width: 1066px;
+            height: 600px;
+
+            @include devices(desktop) {
+                width: 860px;
+                height: 484px;
+            }
+
+            @include devices(tablet) {
+                width: 100%;
+                height: 56vw;
+            }
+        }
+    }
+
+    .test1-section {
+        display: flex;
+        justify-content: center;
+        padding-top: 108px;
+        background-color: #f6f6f7;
+
+        @include devices(tablet) {
+            margin: 16px 10px;
+            padding-top: 46px;
+        }
+
+        .container {
+            width: 1066px;
+            @include devices(desktop) {
+                width: 860px;
+            }
+
+            @include devices(tablet) {
+                width: 100%;
+            }
+
+            & > h1 {
+                margin: 0;
+                font-size: 36px;
+                font-weight: 100;
+                padding-bottom: 20px;
+
+                @include devices(tablet) {
+                    font-size: 20px;
+                    padding-bottom: 48px;
+                    text-align: center;
+                }
+
+                span {
+                    color: $primaryColor;
+                }
+            }
+
+            & > p {
+                color: #4d4d4d;
+                font-size: 16px;
+                padding-bottom: 38px;
+
+                @include devices(tablet) {
+                    padding: 0px 12px;
+                    padding-bottom: 64px;
+                    font-size: 14px;
+                    text-align: center;
+                }
+            }
+
+            .link-wrapper {
+                display: flex;
+                flex-direction: row;
+                gap: 100px;
+
+                @include devices(tablet) {
+                    gap: 40px;
+                }
+
+                @include devices(mobile) {
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 20px;
+                    text-align: center;
+                }
+
+                .link-item {
+                    padding-bottom: 54px;
+
+                    @include devices(tablet) {
+                        padding: 0px 20px;
+                        padding-bottom: 54px;
+                    }
+
+                    & > h2 {
+                        margin: 0;
+                        font-size: 27px;
+                        font-weight: 100;
+                        padding-bottom: 18px;
+
+                        @include devices(tablet) {
+                            font-size: 20px;
+                        }
+                    }
+
+                    & > p {
+                        font-size: 16px;
+                        color: #4d4d4d;
+                        padding-bottom: 16px;
+
+                        @include devices(tablet) {
+                            padding-bottom: 32px;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .link {
+                        display: flex;
+                        align-items: center;
+
+                        @include devices(mobile) {
+                            justify-content: center;
+                        }
+
+                        a {
+                            color: #000000;
+                            text-decoration: underline;
+                        }
+
+                        svg {
+                            transform: scale(0.8);
+                            margin-left: 18px;
+
+                            path {
+                                stroke: #4d4d4d;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .test2-section {
+        display: flex;
+        justify-content: center;
+        padding: 120px 8px;
+
+        @include devices(tablet) {
+            padding: 16px 0 0 0;
+        }
+
+        .container {
+            display: flex;
+            width: 1198px;
+            background-color: #f6f6f7;
+            background-image: url('../../../assets/images/test-horizontal.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+
+            @include devices(desktop) {
+                width: 980px;
+            }
+
+            @include devices(tablet) {
+                background-image: url('../../../assets/images/test-vertical.png');
+                background-position: top;
+                background-size: 100% auto;
+            }
+
+            .title-wrapper {
+                position: relative;
+                flex: 1;
+                margin: 72px 70px 30px 70px;
+
+                @include devices(tablet) {
+                    margin: 72vw 10px 30px 10px;
+                    text-align: center;
+                }
+
+                & > span {
+                    font-size: 12px;
+
+                    @include devices(tablet) {
+                        font-size: 13px;
+                        letter-spacing: 2px;
+                    }
+                }
+
+                & > h1 {
+                    margin: 0;
+                    font-size: 27px;
+                    font-weight: 100;
+                    padding: 24px 0px 18px 0px;
+
+                    @include devices(tablet) {
+                        padding-left: 14px;
+                        padding-right: 14px;
+                        font-size: 25px;
+                    }
+
+                    span {
+                        color: $primaryColor;
+                    }
+                }
+
+                & > p {
+                    font-size: 16px;
+                    color: #4d4d4d;
+                    padding-bottom: 20px;
+
+                    @include devices(tablet) {
+                        font-size: 14px;
+                        padding-bottom: 46px;
+                    }
+                }
+
+                .checkbox-wrapper {
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 20px;
+
+                    & > span {
+                        margin-left: 20px;
+                        font-size: 14px;
+                    }
+
+                    @include devices(tablet) {
+                        justify-content: center;
+                    }
+                }
+
+                .button-wrapper {
+                    display: flex;
+                    justify-content: flex-start;
+
+                    @include devices(tablet) {
+                        justify-content: center;
+                    }
+
+                    button {
+                        width: 220px;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .copy-wrapper {
+                    display: flex;
+                    align-items: center;
+
+                    @include devices(tablet) {
+                        justify-content: center;
+                    }
+
+                    svg {
+                        margin-right: 24px;
+                    }
+
+                    a {
+                        font-size: 14px;
+                        text-decoration: underline;
+                        color: #000000;
+                    }
+                }
+            }
+        }
+    }
+
+    .card-section {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 0px 24px 84px 24px;
+
+        @include devices(tablet) {
+            padding: 46px 24px 104px 24px;
+        }
+
+        .container {
+            width: 1314px;
+
+            & > h1 {
+                font-size: 30px;
+                font-weight: 100;
+                margin: 14px 0;
+
+                @include devices(tablet) {
+                    font-size: 21px;
+                }
+            }
+
+            & > p {
+                color: #4d4d4d;
+                font-size: 16px;
+                padding-bottom: 36px;
+
+                @include devices(tablet) {
+                    font-size: 14px;
+                }
+            }
+
+            .card-wrapper {
+                display: flex;
+                flex-direction: row;
+                gap: 26px;
+
+                @include devices(tablet) {
+                    flex-direction: column;
+                }
+
+                .card {
+                    flex: 1;
+                    padding: 72px 12px 30px 12px;
+
+                    @include devices(tablet) {
+                        padding: 42px 12px 30px 12px;
+                    }
+
+                    & > svg {
+                        margin-bottom: 40px;
+
+                        @include devices(tablet) {
+                            margin-bottom: 23px;
+                        }
+                    }
+
+                    & > h3 {
+                        font-size: 25px;
+                        font-weight: 100;
+                        color: #ffffff;
+                        margin: 0;
+                        margin-bottom: 16px;
+
+                        @include devices(tablet) {
+                            font-size: 23px;
+                        }
+                    }
+
+                    & > p {
+                        color: white;
+                        margin-bottom: 92px;
+
+                        @include devices(tablet) {
+                            font-size: 14px;
+                            margin-bottom: 45px;
+                        }
+                    }
+
+                    & > button {
+                        width: 226px;
+                    }
+                }
+
+                .card1 {
+                    background-color: #f6f6f7;
+                    & > h3,
+                    p {
+                        color: #42474d;
+                    }
+                }
+
+                .card2 {
+                    background-color: #42474d;
+
+                    & > svg {
+                        margin-bottom: 36px;
+                    }
+                }
+
+                .card3 {
+                    background-color: $primaryColor;
+                }
+            }
+        }
+    }
+
+    .divider-section {
+        display: flex;
+        justify-content: center;
+
+        @include devices(tablet) {
+            display: none;
+        }
+
+        .divider {
+            width: 18%;
+            height: 4px;
+            border-radius: 8px;
+            background-color: $primaryColor;
+        }
+    }
+
+    .map-section {
+        display: flex;
+        justify-content: center;
+        padding: 86px 8px;
+
+        @include devices(tablet) {
+            padding: 16px 0 0 0;
+        }
+
+        .container {
+            display: flex;
+            width: 1198px;
+            background-color: #f6f6f7;
+            background-image: url('../../../assets/images/map-horizontal.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+
+            @include devices(desktop) {
+                width: 980px;
+            }
+
+            @include devices(tablet) {
+                background-image: url('../../../assets/images/map-vertical.png');
+                background-position: top;
+                background-size: 100% auto;
+            }
+
+            .title-wrapper {
+                position: relative;
+                flex: 1;
+                margin: 60px 88px 76px 88px;
+
+                @include devices(tablet) {
+                    margin: 100vw 12px 28px 12px;
+                    text-align: center;
+                }
+
+                & > span {
+                    font-size: 12px;
+
+                    @include devices(tablet) {
+                        font-size: 13px;
+                        letter-spacing: 2px;
+                    }
+                }
+
+                & > h1 {
+                    margin: 0;
+                    font-size: 27px;
+                    font-weight: 100;
+                    padding: 0px 0px 18px 0px;
+
+                    @include devices(tablet) {
+                        padding-left: 14px;
+                        padding-right: 14px;
+                        font-size: 23px;
+                    }
+
+                    span {
+                        color: $primaryColor;
+                        font-weight: bold;
+                    }
+                }
+
+                & > p {
+                    font-size: 16px;
+                    color: #4d4d4d;
+                    padding-bottom: 48px;
+
+                    @include devices(tablet) {
+                        font-size: 14px;
+                        padding-bottom: 46px;
+                    }
+                }
+
+                .input-wrapper {
+                    position: relative;
+                    padding-bottom: 20px;
+                    width: 570px;
+                    display: flex;
+
+                    @include devices(tablet) {
+                        width: 100%;
+                        padding-bottom: 60px;
+                        font-size: 14px;
+                    }
+
+                    & > input {
+                        flex: 1;
+
+                        @include devices(tablet) {
+                            padding: 11px 12px;
+                        }
+                    }
+
+                    & > button {
+                        height: 53px;
+                        width: 54px;
+
+                        @include devices(tablet) {
+                            height: 47px;
+                            width: 47px;
+
+                            svg {
+                                transform: scale(0.8);
+                            }
+                        }
+                    }
+
+                    .location-wrapper {
+                        display: flex;
+                        align-items: center;
+                        position: absolute;
+                        top: 18px;
+                        right: 76px;
+
+                        @include devices(tablet) {
+                            top: 64px;
+                            right: 8px;
+                        }
+
+                        & > svg {
+                            margin-right: 20px;
+                        }
+
+                        & > a {
+                            color: #3ee402;
+                            text-decoration: underline;
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                & > a {
+                    text-decoration: underline;
+                    font-size: 16px;
+                    color: #000000;
+
+                    @include devices(tablet) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .avatar-section {
+        display: flex;
+        justify-content: center;
+        padding: 0px 24px 84px 24px;
+
+        @include devices(tablet) {
+            padding: 46px 24px 104px 24px;
+        }
+
+        .container {
+            width: 1314px;
+
+            & > h1 {
+                font-size: 30px;
+                font-weight: 100;
+                margin: 14px 0;
+                text-align: center;
+
+                @include devices(tablet) {
+                    font-size: 23px;
+                }
+            }
+
+            & > p {
+                color: #4d4d4d;
+                font-size: 16px;
+                padding-bottom: 36px;
+                text-align: center;
+
+                @include devices(tablet) {
+                    font-size: 14px;
+                }
+            }
+
+            .card-wrapper {
+                display: flex;
+                flex-direction: row;
+                gap: 26px;
+                padding-bottom: 46px;
+
+                @include devices(tablet) {
+                    flex-direction: column;
+                }
+
+                .card {
+                    flex: 1;
+                    padding: 24px 16px;
+                    background-color: #f6f6f7;
+
+                    @include devices(tablet) {
+                        padding: 20px 14px;
+                    }
+
+                    .main {
+                        display: flex;
+                        padding-bottom: 32px;
+
+                        @include devices(tablet) {
+                            padding-bottom: 20px;
+                        }
+
+                        & > img {
+                            width: 110px;
+                            height: 110px;
+                            border-radius: 6px;
+
+                            @include devices(tablet) {
+                                width: 82px;
+                                height: 82px;
+                            }
+                        }
+
+                        .personal-info {
+                            padding-left: 14px;
+
+                            & > h3 {
+                                margin: 14px 0 10px 0;
+                                font-size: 23px;
+                                font-weight: 100;
+                                color: $primaryColor;
+
+                                @include devices(tablet) {
+                                    font-size: 16px;
+                                    margin: 4px 0;
+                                }
+                            }
+
+                            & > p {
+                                font-size: 14px;
+                                padding-bottom: 4px;
+
+                                @include devices(tablet) {
+                                    font-size: 12px;
+                                }
+                            }
+
+                            & > span {
+                                font-size: 13px;
+                                color: #4d4d4d;
+
+                                @include devices(tablet) {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+
+                    .address-wrapper {
+                        display: flex;
+                        align-items: center;
+                        padding-bottom: 24px;
+
+                        @include devices(tablet) {
+                            padding-bottom: 20px;
+                        }
+
+                        svg {
+                            margin-right: 16px;
+
+                            @include devices(tablet) {
+                                transform: scale(0.9);
+                                margin-right: 10px;
+                            }
+                        }
+
+                        & > span {
+                            color: #4d4d4d;
+                            font-size: 14px;
+                            overflow: hidden;
+
+                            @include devices(tablet) {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    .link-wrapper {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+
+                        @include devices(tablet) {
+                            justify-content: space-between;
+                        }
+
+                        .direction-wrapper {
+                            display: flex;
+                            align-items: center;
+
+                            svg {
+                                padding-right: 9px;
+
+                                @include devices(tablet) {
+                                    transform: scale(0.9);
+                                }
+                            }
+
+                            & > a {
+                                color: #1475f5;
+                                text-decoration: underline;
+                                font-size: 14px;
+
+                                @include devices(tablet) {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+
+                        & > button {
+                            width: 138px;
+
+                            @include devices(tablet) {
+                                width: 164px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .more-wrapper {
+                text-align: center;
+
+                & > a {
+                    font-size: 16px;
+                    color: $primaryColor;
+                    text-decoration: underline;
+                    text-align: center;
+
+                    @include devices(tablet) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .work-section {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 86px 0px 46px 0px;
+
+        @include devices(tablet) {
+            padding: 16px 0px 26px 0px;
+        }
+
+        .title-wrapper {
+            text-align: center;
+            padding-bottom: 70px;
+
+            @include devices(tablet) {
+                padding-bottom: 30px;
+            }
+
+            & > h1 {
+                font-size: 30px;
+                font-weight: 100;
+                margin: 14px 0;
+                text-align: center;
+
+                @include devices(tablet) {
+                    font-size: 23px;
+                }
+            }
+
+            & > p {
+                color: #4d4d4d;
+                font-size: 16px;
+                padding-bottom: 36px;
+                text-align: center;
+
+                @include devices(tablet) {
+                    font-size: 14px;
+                }
+            }
+
+            .link-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                gap: 36px;
+
+                @include devices(tablet) {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                & > button {
+                    width: 236px;
+                }
+
+                & > a {
+                    font-size: 13px;
+                    color: #000000;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .image-wrapper {
+            width: 1174px;
+            height: 366px;
+            background-color: $primaryColor;
+            color: #ffffff;
+            position: relative;
+            margin-bottom: 46px;
+            padding: 12px;
+
+            @include devices(large) {
+                overflow: hidden;
+            }
+
+            @include devices(desktop) {
+                width: 960px;
+                margin-bottom: 64px;
+            }
+
+            @include devices(tablet) {
+                width: 100%;
+                height: unset;
+                padding: 0;
+                padding-top: 36px;
+                padding-bottom: 36px;
+            }
+
+            .tablet-desktop-img {
+                position: absolute;
+                height: 338px;
+                right: -82px;
+                bottom: -4px;
+
+                @include devices(tablet) {
+                    display: none;
+                }
+            }
+
+            .tablet-mobile-img {
+                display: none;
+
+                @include devices(tablet) {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            .title {
+                position: absolute;
+                text-align: right;
+
+                @include devices(tablet) {
+                    position: unset;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-bottom: 48px;
+                }
+
+                & > h3 {
+                    font-size: 23px;
+                    font-weight: 100;
+                    margin: 0;
+                    padding-bottom: 12px;
+
+                    @include devices(tablet) {
+                        font-size: 21px;
+                    }
+                }
+
+                & > p {
+                    font-size: 14px;
+                    padding-right: 46px;
+
+                    @include devices(tablet) {
+                        padding-right: 0;
+                    }
+                }
+
+                & > span {
+                    height: 41px;
+                    width: 41px;
+                    font-size: 23px;
+                    border: 2px solid #ffffff;
+                    border-radius: 50%;
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 24px;
+
+                    @include devices(tablet) {
+                        display: flex;
+                    }
+                }
+            }
+
+            .title-1 {
+                top: 38px;
+                right: 676px;
+            }
+
+            .title-2 {
+                top: 155px;
+                right: 703px;
+            }
+
+            .title-3 {
+                top: 274px;
+                right: 692px;
+            }
+        }
+
+        .store-wrapper {
+            text-align: center;
+
+            & > p {
+                font-size: 13px;
+                margin-bottom: 28px;
+            }
+
+            .store-image-wrapper {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+
+                & > img {
+                    height: 36px;
+
+                    @include devices(tablet) {
+                        height: 28px;
+                        gap: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .partner-section {
+        text-align: center;
+
+        & > h1 {
+            font-size: 30px;
+            font-weight: 100;
+            margin: 14px 0;
+            text-align: center;
+
+            @include devices(tablet) {
+                font-size: 23px;
+            }
+        }
+
+        & > p {
+            color: #4d4d4d;
+            font-size: 16px;
+            padding-bottom: 36px;
+            text-align: center;
+
+            @include devices(tablet) {
+                font-size: 14px;
+            }
+        }
+
+        .logo-wrapper {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 170px));
+            gap: 24px;
+            padding: 0 48px 48px 48px;
+
+            @include devices(tablet) {
+                grid-template-columns: repeat(3, 1fr);
+                padding: 0 48px 76px 48px;
+            }
+
+            @include devices(mobile) {
+                padding: 0;
+                padding-bottom: 120px;
+                gap: 0;
+            }
+
+            img {
+                width: 170px;
+                height: 90px;
+
+                @include devices(tablet) {
+                    width: 108px;
+                    height: 56px;
+                }
+            }
+        }
+    }
+}

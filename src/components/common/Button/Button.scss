@@ -1,13 +1,44 @@
 @import '../../../styles/variables';
+@import '../../../styles/mixins';
 
 .button {
     height: 45px;
     font-size: 16px;
     border: none;
+    padding: 0 8px;
     cursor: pointer;
+
+    @include devices(tablet) {
+        font-size: 14px !important;
+    }
+
+    .button-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .button-arrow-icon {
+            margin-left: 20px;
+            display: flex;
+
+            svg {
+                transform: scale(0.9);
+            }
+        }
+
+        .button-icon {
+            display: flex;
+        }
+    }
 }
 
 .button-primary {
+    background-color: $primaryColor;
+    color: white;
+    box-shadow: 0 3px 6px 0 $boxShadowColor;
+}
+
+.button-arrow {
     background-color: $primaryColor;
     color: white;
     box-shadow: 0 3px 6px 0 $boxShadowColor;

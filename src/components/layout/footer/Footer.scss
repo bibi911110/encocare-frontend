@@ -9,13 +9,24 @@ footer {
         & > ul {
             display: grid;
             justify-content: center;
+            justify-items: center;
             grid-template-columns: repeat(auto-fit, minmax(162px, 162px));
-            grid-gap: 9px;
+            gap: 9px;
             text-align: center;
 
+            @include devices(desktop) {
+                grid-template-columns: repeat(6, 1fr);
+                padding: 0 48px;
+            }
+
+            @include devices(tablet) {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+            }
+
             @include devices(mobile) {
-                grid-template-columns: none;
-                gap: 16px;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 24px;
             }
 
             .link-group {

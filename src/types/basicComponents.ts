@@ -2,9 +2,10 @@ import React from 'react';
 
 export type ButtonPropsType = {
     title: string;
-    type: 'primary' | 'outline' | 'light' | 'arrow';
+    type: 'primary' | 'outline' | 'light' | 'gray';
     icon?: React.ReactNode;
     className?: string;
+    arrow?: boolean;
 };
 
 export type NormalInputPropsType = {
@@ -24,4 +25,10 @@ export type NavbarMobileItemPropsType = {
     subLinks?: Array<{ title: string; link: string }>;
     isSubMenuOpen: string;
     setSubMenuOpen: (title: string) => void;
+};
+
+export type CheckBoxPropsType = {
+    className?: string;
+    isChecked: boolean;
+    onChange: () => void;
 };
