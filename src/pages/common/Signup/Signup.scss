@@ -4,7 +4,7 @@
 .signup {
     padding-left: 160px;
     display: flex;
-    height: 768px;
+    height: max(768px, calc(100vh - 111px));
     background-color: #f6f6f7;
 
     @include devices(desktop) {

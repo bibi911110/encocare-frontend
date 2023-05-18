@@ -2,29 +2,36 @@ import { facebookButtonIcon, googleButtonIcon, twitterButtonIcon } from '../../.
 import { SocialButtonPropsType } from '../../../types/basicComponents';
 import './SocialButton.scss';
 
-const SocialButton = ({ type }: SocialButtonPropsType) => {
+const SocialButton = ({ type, authType }: SocialButtonPropsType) => {
     let buttonClassName = `social-button social-${type}`;
     let buttonContent;
+
+    let buttonTitle;
+    if (authType == 'signup') {
+        buttonTitle = `Sign up using ${type.charAt(0).toUpperCase()}${type.slice(1)}`;
+    } else if (authType == 'login') {
+        buttonTitle = `Login using ${type.charAt(0).toUpperCase()}${type.slice(1)}`;
+    }
 
     if (type == 'facebook') {
         buttonContent = (
             <>
                 {facebookButtonIcon}
-                <span>Sign up using Facebook</span>
+                <span>{buttonTitle}</span>
             </>
         );
     } else if (type == 'google') {
         buttonContent = (
             <>
                 {googleButtonIcon}
-                <span>Sign up using Google</span>
+                <span>{buttonTitle}</span>
             </>
         );
     } else if (type == 'twitter') {
         buttonContent = (
             <>
                 {twitterButtonIcon}
-                <span>Sign up using Twitter</span>
+                <span>{buttonTitle}</span>
             </>
         );
     }

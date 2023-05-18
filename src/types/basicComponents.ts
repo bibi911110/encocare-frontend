@@ -30,10 +30,9 @@ export type NavbarMobileItemPropsType = {
 
 export type CheckBoxPropsType = {
     className?: string;
-    isChecked: boolean;
-    onChange: () => void;
 };
 
 export type SocialButtonPropsType = {
+    authType: 'signup' | 'login';
     type: 'facebook' | 'google' | 'twitter';
 };

@@ -24,12 +24,6 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './Home.scss';
 
 const Home = () => {
-    const [isTestChecked, setTestChecked] = useState(false);
-
-    const handleCheckbox = () => {
-        setTestChecked(!isTestChecked);
-    };
-
     return (
         <div className="home">
             <div className="main-section">
@@ -145,7 +139,7 @@ const Home = () => {
                             tempor invidunt ut labore et dolore magna
                         </p>
                         <div className="checkbox-wrapper">
-                            <CheckBox isChecked={isTestChecked} onChange={handleCheckbox} />
+                            <CheckBox />
                             <span>I agree to the terms and conditions.</span>
                         </div>
                         <div className="button-wrapper">

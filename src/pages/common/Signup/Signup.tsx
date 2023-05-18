@@ -14,9 +14,9 @@ const Signup = () => {
                     <h1>Sign Up</h1>
                     <p>Eyesight is a beautiful gift of life! Live it to the best!</p>
                     <div className="social-buttons">
-                        <SocialButton type="facebook" />
-                        <SocialButton type="google" />
-                        <SocialButton type="twitter" />
+                        <SocialButton type="facebook" authType="signup" />
+                        <SocialButton type="google" authType="signup" />
+                        <SocialButton type="twitter" authType="signup" />
                     </div>
                     <FormDivider />
                     <form>
