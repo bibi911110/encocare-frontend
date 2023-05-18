@@ -1,0 +1,65 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.signup {
+    padding-left: 160px;
+    display: flex;
+    height: max(768px, calc(100vh - 111px));
+    background-color: #f6f6f7;
+
+    @include devices(desktop) {
+        padding: 0;
+    }
+
+    .left-section {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+
+        @include devices(tablet) {
+            flex: unset;
+            width: 100%;
+        }
+
+        .form-wrapper {
+            width: 420px;
+            text-align: center;
+            margin-top: 69px;
+            padding: 0 20px;
+
+            & > h1 {
+                font-size: 31px;
+                margin: 0;
+                color: $primaryColor;
+                padding-bottom: 20px;
+
+                @include devices(tablet) {
+                    font-size: 20px;
+                }
+            }
+
+            & > p {
+                font-size: 16px;
+                padding-bottom: 20px;
+
+                @include devices(tablet) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .right-section {
+        flex: 1;
+        height: 100%;
+        background-image: url('../../../assets/images/bg/signup.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include devices(tablet) {
+            display: none;
+        }
+    }
+}

@@ -667,7 +667,7 @@
                         display: flex;
                         align-items: center;
                         position: absolute;
-                        top: 18px;
+                        top: 17px;
                         right: 76px;
 
                         @include devices(tablet) {
@@ -682,7 +682,7 @@
                         & > a {
                             color: #3ee402;
                             text-decoration: underline;
-                            font-size: 13px;
+                            font-size: 14px;
                         }
                     }
                 }
@@ -788,7 +788,7 @@
                             }
 
                             & > p {
-                                font-size: 14px;
+                                font-size: 15px;
                                 padding-bottom: 4px;
 
                                 @include devices(tablet) {
@@ -797,7 +797,7 @@
                             }
 
                             & > span {
-                                font-size: 13px;
+                                font-size: 14px;
                                 color: #4d4d4d;
 
                                 @include devices(tablet) {
@@ -827,7 +827,7 @@
 
                         & > span {
                             color: #4d4d4d;
-                            font-size: 14px;
+                            font-size: 15px;
                             overflow: hidden;
 
                             @include devices(tablet) {
@@ -953,7 +953,7 @@
                 }
 
                 & > a {
-                    font-size: 13px;
+                    font-size: 15px;
                     color: #000000;
                     text-decoration: underline;
                 }
@@ -1076,7 +1076,7 @@
             text-align: center;
 
             & > p {
-                font-size: 13px;
+                font-size: 15px;
                 margin-bottom: 28px;
             }
 

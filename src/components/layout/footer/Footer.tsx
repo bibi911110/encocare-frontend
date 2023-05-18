@@ -82,7 +82,7 @@ const Footer = () => {
                     <p>Subscribe to our newsletter for latest updates, news and developments in the ophthalmalgia sector!</p>
                     <div className="email-input-section">
                         <NormalInput placeHolder="Email Address" />
-                        <Button title="Subscribe" type="arrow" />
+                        <Button title="Subscribe" type="primary" arrow buttonType="button" />
                     </div>
                 </div>
             </div>

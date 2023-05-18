@@ -10,14 +10,14 @@ import CheckBox from '../../../components/common/CheckBox/CheckBox';
 const Login = () => {
     return (
         <div className="login">
-            <div className="form-section">
+            <div className="left-section">
                 <div className="form-wrapper">
                     <h1>Login</h1>
                     <p>Login to the Africa's #1 Eye Testing Application</p>
                     <div className="social-buttons">
-                        <SocialButton type="facebook" authType="login" />
-                        <SocialButton type="google" authType="login" />
-                        <SocialButton type="twitter" authType="login" />
+                        <SocialButton type="facebook" title="Login using Facebook" />
+                        <SocialButton type="google" title="Login using Google" />
+                        <SocialButton type="twitter" title="Login using Twitter" />
                     </div>
                     <FormDivider />
                     <form>
@@ -32,7 +32,7 @@ const Login = () => {
                                 <Link to="/forget-password">Forgot Password?</Link>
                             </div>
                         </div>
-                        <Button buttonType="submit" title="Login" type="primary" arrow />
+                        <Button buttonType="button" title="Login" type="primary" arrow />
                     </form>
                     <div className="link-wrapper">
                         <p>Not a member?</p>
@@ -40,7 +40,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-            <div className="image-section"></div>
+            <div className="right-section"></div>
         </div>
     );
 };

@@ -1,6 +1,4 @@
 @mixin devices($breakpoint) {
-    //the name of the mixin is devices
-
     @if $breakpoint == large {
         @media only screen and (max-width: 1536px) {
             @content;

@@ -6,6 +6,7 @@
     height: 45px;
     font-size: 16px;
     border: none;
+    outline: none;
     padding: 0 20px;
     cursor: pointer;
 
@@ -21,8 +22,8 @@
         .button-arrow-icon {
             position: absolute;
             display: flex;
-            top: 16px;
-            right: 14px;
+            top: 15px;
+            right: 10%;
 
             svg {
                 transform: scale(0.9);
@@ -48,7 +49,7 @@
 }
 
 .button-light {
-    background-color: white;
+    background-color: #00000000;
     color: #303030;
 }
 

@@ -269,7 +269,7 @@ const Home = () => {
                             </div>
                             <div className="address-wrapper">
                                 {mapIcon}
-                                <span>5509 Green Rapids, Jerdeton 75864, Mozambique</span>
+                                <span>5509 Green Rapids, Jerdeton, Mozambique</span>
                             </div>
                             <div className="link-wrapper">
                                 <div className="direction-wrapper">

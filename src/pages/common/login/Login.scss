@@ -11,7 +11,7 @@
         padding: 0;
     }
 
-    .form-section {
+    .left-section {
         flex: 1;
         height: 100%;
         display: flex;
@@ -29,6 +29,7 @@
             padding: 0 20px;
 
             & > h1 {
+                font-size: 31px;
                 margin: 0;
                 color: $primaryColor;
                 padding-bottom: 20px;
@@ -100,6 +101,10 @@
 
                 button {
                     width: 197px;
+
+                    @include devices(tablet) {
+                        width: 216px;
+                    }
                 }
             }
 
@@ -133,7 +138,7 @@
         }
     }
 
-    .image-section {
+    .right-section {
         flex: 1;
         height: 100%;
         background-image: url('../../../assets/images/bg/login.png');

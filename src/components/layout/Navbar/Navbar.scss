@@ -9,7 +9,7 @@ nav {
     height: 69px;
     padding: 0 108px;
     box-shadow: 0 3px 6px 0 $boxShadowColor;
-    background-color: white;
+    background-color: #f6f6f7;
 
     @include devices(large) {
         padding: 0 72px;

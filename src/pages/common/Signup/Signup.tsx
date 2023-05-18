@@ -9,14 +9,14 @@ import './Signup.scss';
 const Signup = () => {
     return (
         <div className="signup">
-            <div className="form-section">
+            <div className="left-section">
                 <div className="form-wrapper">
                     <h1>Sign Up</h1>
                     <p>Eyesight is a beautiful gift of life! Live it to the best!</p>
                     <div className="social-buttons">
-                        <SocialButton type="facebook" authType="signup" />
-                        <SocialButton type="google" authType="signup" />
-                        <SocialButton type="twitter" authType="signup" />
+                        <SocialButton type="facebook" title="Sign up using Facebook" />
+                        <SocialButton type="google" title="Sign up using Google" />
+                        <SocialButton type="twitter" title="Sign up using Twitter" />
                     </div>
                     <FormDivider />
                     <form>
@@ -24,7 +24,7 @@ const Signup = () => {
                             <NormalInput placeHolder="Email Address" />
                             <PasswordInput placeHolder="Password" />
                         </div>
-                        <Button buttonType="submit" title="Sign Up" type="primary" arrow />
+                        <Button buttonType="button" title="Sign Up" type="primary" arrow />
                     </form>
                     <div className="link-wrapper">
                         <p>Already a member?</p>
@@ -35,7 +35,7 @@ const Signup = () => {
                     </p>
                 </div>
             </div>
-            <div className="image-section"></div>
+            <div className="right-section"></div>
         </div>
     );
 };

@@ -33,6 +33,12 @@ export type CheckBoxPropsType = {
 };
 
 export type SocialButtonPropsType = {
-    authType: 'signup' | 'login';
+    title: string;
     type: 'facebook' | 'google' | 'twitter';
+};
+
+export type ResponsiveModalPropsType = {
+    open: boolean;
+    handleOk: () => void;
+    handleCancel: () => void;
 };
