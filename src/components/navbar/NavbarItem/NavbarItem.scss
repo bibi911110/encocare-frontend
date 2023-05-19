@@ -1,0 +1,64 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.navbar-menu-item {
+    position: relative;
+    height: 69px;
+    padding: 0 36px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @include devices(large) {
+        padding: 0 22px;
+    }
+
+    @include devices(desktop) {
+        padding: 0 10px;
+    }
+
+    &:hover {
+        background-color: $primaryColor;
+        color: white;
+    }
+
+    &:hover > a {
+        color: white;
+    }
+
+    &:hover svg path {
+        stroke: white;
+    }
+
+    svg {
+        margin-left: 18px;
+        width: 12px;
+        height: 7px;
+    }
+
+    .sub-menu {
+        display: block;
+        position: absolute;
+        top: 69px;
+        left: 0;
+        background-color: white;
+        box-shadow: 0 3px 6px 0 $boxShadowColor;
+
+        & > li {
+            display: flex;
+            align-items: center;
+            padding: 0 36px;
+            height: 54px;
+            white-space: nowrap;
+
+            &:hover {
+                background-color: $primaryColor;
+                color: white;
+            }
+
+            &:hover > a {
+                color: white;
+            }
+        }
+    }
+}

@@ -62,73 +62,12 @@ nav {
             }
         }
 
-        .menu {
+        .navbar-menu {
             display: flex;
+            white-space: nowrap;
 
             @include devices(tablet) {
                 display: none;
-            }
-
-            & > li {
-                position: relative;
-                height: 69px;
-                padding: 0 36px;
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-
-                @include devices(large) {
-                    padding: 0 22px;
-                }
-
-                @include devices(desktop) {
-                    padding: 0 10px;
-                }
-
-                &:hover {
-                    background-color: $primaryColor;
-                    color: white;
-                }
-
-                &:hover > a {
-                    color: white;
-                }
-
-                &:hover svg path {
-                    stroke: white;
-                }
-
-                svg {
-                    margin-left: 18px;
-                    width: 12px;
-                    height: 7px;
-                }
-
-                .sub-menu {
-                    display: block;
-                    position: absolute;
-                    top: 69px;
-                    left: 0;
-                    background-color: white;
-                    box-shadow: 0 3px 6px 0 $boxShadowColor;
-
-                    & > li {
-                        display: flex;
-                        align-items: center;
-                        padding: 0 36px;
-                        height: 54px;
-                        white-space: nowrap;
-
-                        &:hover {
-                            background-color: $primaryColor;
-                            color: white;
-                        }
-
-                        &:hover > a {
-                            color: white;
-                        }
-                    }
-                }
             }
         }
     }
@@ -144,7 +83,7 @@ nav {
             }
 
             @include devices(desktop) {
-                width: 84px;
+                width: 100px;
             }
         }
 
@@ -171,54 +110,11 @@ nav {
         overflow-x: hidden;
         overflow-y: auto;
 
-        .mobile-menu {
+        .navbar-mobile-menu {
             font-size: 14px;
 
             a {
-                color: black;
-            }
-
-            & > li {
-                .mobile-title {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    height: 49px;
-                    padding: 0 24px;
-
-                    &:hover {
-                        background-color: $primaryColor;
-
-                        a,
-                        span {
-                            color: white;
-                        }
-
-                        svg path {
-                            stroke: white;
-                        }
-                    }
-                }
-
-                .mobile-sub-menu {
-                    display: flex;
-                    flex-direction: column;
-
-                    & > li {
-                        display: flex;
-                        align-items: center;
-                        height: 49px;
-                        padding: 0 24px;
-
-                        &:hover {
-                            background-color: $primaryColor;
-
-                            a {
-                                color: white;
-                            }
-                        }
-                    }
-                }
+                color: #000000;
             }
         }
     }

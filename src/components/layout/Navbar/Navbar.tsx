@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../common/Button/Button';
+import NavbarItem from '../../navbar/NavbarItem/NavbarItem';
+import NavbarMobileItem from '../../navbar/NavbarMobileItem/NavbarMobileItem';
 import logoImage from '../../../assets/images/logo.png';
-import { rightArrowIcon, toggleMenuIcon, downArrowIcon } from '../../../assets/icons/common';
-import { NavbarItemPropsType, NavbarMobileItemPropsType } from '../../../types/basicComponents';
+import { toggleMenuIcon } from '../../../assets/icons/common';
 import './Navbar.scss';
 
 const links = [
@@ -43,73 +44,6 @@ const links = [
     },
 ];
 
-const NavbarItem = ({ title, link, subLinks }: NavbarItemPropsType) => {
-    const [isSubMenuOpen, setSubMenuOpen] = useState(false);
-
-    if (link) {
-        return (
-            <li>
-                <Link to={link}>{title}</Link>
-            </li>
-        );
-    } else {
-        return (
-            <li onMouseEnter={() => setSubMenuOpen(true)} onMouseLeave={() => setSubMenuOpen(false)}>
-                {title}
-                {downArrowIcon}
-                {isSubMenuOpen && (
-                    <ul className="sub-menu">
-                        {subLinks?.map((item) => (
-                            <li key={item.title}>
-                                <Link to={item.link}>{item.title}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                )}
-            </li>
-        );
-    }
-};
-
-const NavbarMobileItem = ({
-    title,
-    link,
-    subLinks,
-    isSubMenuOpen,
-    setSubMenuOpen,
-    closeMobileMenu,
-}: NavbarMobileItemPropsType) => {
-    if (link) {
-        return (
-            <li>
-                <div className="mobile-title">
-                    <Link to={link} onClick={closeMobileMenu}>
-                        {title}
-                    </Link>
-                </div>
-            </li>
-        );
-    } else {
-        return (
-            <li>
-                <div className="mobile-title" onClick={() => setSubMenuOpen(title)}>
-                    <span>{title}</span>
-                    {isSubMenuOpen === title ? downArrowIcon : rightArrowIcon}
-                </div>
-                {isSubMenuOpen === title && (
-                    <ul className="mobile-sub-menu">
-                        {subLinks?.map((item) => (
-                            <li key={item.title}>
-                                <Link to={item.link}>{item.title}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                )}
-            </li>
-        );
-    }
-};
-
 const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [mobileSubMenuOpen, setMobileSubMenuOpen] = useState('');
@@ -143,7 +77,7 @@ const Navbar = () => {
                             <img src={logoImage} alt="encocare" />
                         </Link>
                     </div>
-                    <ul className="menu">
+                    <ul className="navbar-menu">
                         {links.map((item) => (
                             <NavbarItem key={item.title} title={item.title} link={item.link} subLinks={item.subLinks} />
                         ))}
@@ -152,17 +86,17 @@ const Navbar = () => {
 
                 <div className="navbar-auth">
                     <Link to="/signup">
-                        <Button title="Sign up" type="light"  />
+                        <Button title="Sign up" type="light" />
                     </Link>
                     <Link to="/login">
-                        <Button title="Login" type="primary"  />
+                        <Button title="Login" type="primary" />
                     </Link>
                 </div>
             </nav>
             {mobileMenuOpen && (
                 <div className="navbar-mobile">
                     <div className="navbar-menu-wrapper">
-                        <ul className="mobile-menu">
+                        <ul className="navbar-mobile-menu">
                             {links.map((item) => (
                                 <NavbarMobileItem
                                     key={item.title}
@@ -179,10 +113,10 @@ const Navbar = () => {
                     <div className="navbar-mobile-buttons">
                         <div className="auth-buttons-wrapper">
                             <Link to="/login" onClick={handleCloseMobileMenu}>
-                                <Button title="Login" type="primary"  />
+                                <Button title="Login" type="primary" />
                             </Link>
                             <Link to="/signup" onClick={handleCloseMobileMenu}>
-                                <Button title="Sign up" type="light"  />
+                                <Button title="Sign up" type="light" />
                             </Link>
                         </div>
                         <div className="lang-switch">

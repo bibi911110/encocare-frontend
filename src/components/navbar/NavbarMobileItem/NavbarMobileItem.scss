@@ -1,0 +1,48 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.navbar-mobile-item {
+    .navbar-mobile-item-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 49px;
+        padding: 0 24px;
+
+        &:hover {
+            background-color: $primaryColor;
+
+            a {
+                color: #ffffff !important;
+            }
+
+            span {
+                color: white !important;
+            }
+
+            svg path {
+                stroke: white !important;
+            }
+        }
+    }
+
+    .navbar-mobile-sub-menu {
+        display: flex;
+        flex-direction: column;
+
+        & > li {
+            display: flex;
+            align-items: center;
+            height: 49px;
+            padding: 0 24px;
+
+            &:hover {
+                background-color: $primaryColor;
+
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+}
