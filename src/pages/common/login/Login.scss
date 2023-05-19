@@ -108,6 +108,7 @@
 
                     @include devices(tablet) {
                         width: 216px;
+                        margin-top: max(0px, calc(100vh - 767px));
                     }
                 }
             }

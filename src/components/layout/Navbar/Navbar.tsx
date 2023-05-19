@@ -71,12 +71,21 @@ const NavbarItem = ({ title, link, subLinks }: NavbarItemPropsType) => {
     }
 };
 
-const NavbarMobileItem = ({ title, link, subLinks, isSubMenuOpen, setSubMenuOpen }: NavbarMobileItemPropsType) => {
+const NavbarMobileItem = ({
+    title,
+    link,
+    subLinks,
+    isSubMenuOpen,
+    setSubMenuOpen,
+    closeMobileMenu,
+}: NavbarMobileItemPropsType) => {
     if (link) {
         return (
             <li>
                 <div className="mobile-title">
-                    <Link to={link}>{title}</Link>
+                    <Link to={link} onClick={closeMobileMenu}>
+                        {title}
+                    </Link>
                 </div>
             </li>
         );
@@ -111,6 +120,10 @@ const Navbar = () => {
         } else {
             setMobileSubMenuOpen(title);
         }
+    };
+
+    const handleCloseMobileMenu = () => {
+        setMobileMenuOpen(false);
     };
 
     return (
@@ -158,16 +171,17 @@ const Navbar = () => {
                                     subLinks={item.subLinks}
                                     isSubMenuOpen={mobileSubMenuOpen}
                                     setSubMenuOpen={handleMobileSubMenu}
+                                    closeMobileMenu={handleCloseMobileMenu}
                                 />
                             ))}
                         </ul>
                     </div>
                     <div className="navbar-mobile-buttons">
                         <div className="auth-buttons-wrapper">
-                            <Link to="/login">
+                            <Link to="/login" onClick={handleCloseMobileMenu}>
                                 <Button title="Login" type="primary" buttonType="button" />
                             </Link>
-                            <Link to="/signup">
+                            <Link to="/signup" onClick={handleCloseMobileMenu}>
                                 <Button title="Sign up" type="light" buttonType="button" />
                             </Link>
                         </div>

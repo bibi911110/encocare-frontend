@@ -56,7 +56,8 @@ const Footer = () => {
                 <div className="logo-section">
                     <img src={logoImage} alt="encocare" />
                     <p className="description">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna
                     </p>
                     <div className="phone-number">
                         {phoneIcon}
@@ -79,14 +80,19 @@ const Footer = () => {
                 </div>
                 <div className="subscribe-detail">
                     <h1>Subscribe to our news letter!</h1>
-                    <p>Subscribe to our newsletter for latest updates, news and developments in the ophthalmalgia sector!</p>
+                    <p>
+                        Subscribe to our newsletter for latest updates, news and developments in the ophthalmalgia
+                        sector!
+                    </p>
                     <div className="email-input-section">
                         <NormalInput placeHolder="Email Address" />
                         <Button title="Subscribe" type="primary" arrow buttonType="button" />
                     </div>
                 </div>
             </div>
-            <div className="copyright-section">Copyrights&nbsp;{copyrightIcon}&nbsp;&nbsp;2022.&nbsp;Encocare&nbsp;Inc.</div>
+            <div className="copyright-section">
+                Copyrights&nbsp;{copyrightIcon}&nbsp;&nbsp;2022.&nbsp;Encocare&nbsp;Inc.
+            </div>
         </footer>
     );
 };

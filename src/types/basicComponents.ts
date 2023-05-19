@@ -27,6 +27,7 @@ export type NavbarMobileItemPropsType = {
     subLinks?: Array<{ title: string; link: string }>;
     isSubMenuOpen: string;
     setSubMenuOpen: (title: string) => void;
+    closeMobileMenu: () => void;
 };
 
 export type CheckBoxPropsType = {
@@ -46,8 +47,9 @@ export type ResponsiveModalPropsType = {
     handleCancel: () => void;
 };
 
-export type PaymentStepPropsType = {
+export type StepPropsType = {
     handleNextStep: () => void;
+    handlePrevStep: () => void;
 };
 
 export type SelectPropsType = {

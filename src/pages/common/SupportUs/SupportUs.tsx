@@ -11,17 +11,25 @@ const SupportUs = () => {
                 <div className="form-wrapper">
                     <h1>Support Us</h1>
                     <p>
-                        Let's join hands to eliminate blindness from Africa. We are early looking to fund and improve the technology day by day.
+                        Let's join hands to eliminate blindness from Africa. We are early looking to fund and improve
+                        the technology day by day.
                         <br />
                         <br />
-                        We aim to cure and relieve 200,000 patients including pregnant women,kids and babies. Help us in achieving our mission.
+                        We aim to cure and relieve 200,000 patients including pregnant women,kids and babies. Help us in
+                        achieving our mission.
                     </p>
-                    <Button className="donate-button" title="Donate for a better vision" buttonType="button" type="primary" arrow />
+                    <Button
+                        className="donate-button"
+                        title="Donate for a better vision"
+                        buttonType="button"
+                        type="primary"
+                        arrow
+                    />
 
                     <h2>Join our support group</h2>
                     <p>
-                        With a community of over 20,000 members we're continuously expanding to reach out for awareness programs and free diagnosis camps across
-                        Africa!
+                        With a community of over 20,000 members we're continuously expanding to reach out for awareness
+                        programs and free diagnosis camps across Africa!
                     </p>
                     <div className="group-wrapper">
                         <div className="white-board">

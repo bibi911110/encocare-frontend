@@ -13,7 +13,8 @@ const Thanks = () => {
                 Thank you
             </h1>
             <p>
-                Thank you for your support in curing blindness! If you wish to subscribe to our latest <br className="desktop-only" />
+                Thank you for your support in curing blindness! If you wish to subscribe to our latest{' '}
+                <br className="desktop-only" />
                 updates and news please enter yoru email below!
             </p>
             <div>

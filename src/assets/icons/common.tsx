@@ -74,7 +74,14 @@ export const rightArrowIcon2 = (
 export const copyrightIcon = (
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
         <g id="Group_13464" data-name="Group 13464" transform="translate(-893.89 -3397.9)">
-            <rect id="Rectangle_2589" data-name="Rectangle 2589" width="22" height="22" transform="translate(893.89 3397.9)" fill="#fff" />
+            <rect
+                id="Rectangle_2589"
+                data-name="Rectangle 2589"
+                width="22"
+                height="22"
+                transform="translate(893.89 3397.9)"
+                fill="#fff"
+            />
             <path
                 id="Icon_material-copyright"
                 data-name="Icon material-copyright"
@@ -87,7 +94,13 @@ export const copyrightIcon = (
 );
 
 export const toggleMenuIcon = (
-    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="34" height="34" viewBox="0 0 34 34">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        width="34"
+        height="34"
+        viewBox="0 0 34 34"
+    >
         <defs>
             <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 24 24">
                 <image

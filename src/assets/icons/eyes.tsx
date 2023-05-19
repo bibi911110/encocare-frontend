@@ -1,5 +1,11 @@
 export const eyeIcon1 = (
-    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="126.665" height="73.118" viewBox="0 0 126.665 73.118">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        width="126.665"
+        height="73.118"
+        viewBox="0 0 126.665 73.118"
+    >
         <defs>
             <clipPath id="clip-path">
                 <path
@@ -126,7 +132,14 @@ export const eyeIcon1 = (
 );
 
 export const eyeIcon2 = (
-    <svg id="Group_13452" data-name="Group 13452" xmlns="http://www.w3.org/2000/svg" width="121.563" height="76.97" viewBox="0 0 121.563 76.97">
+    <svg
+        id="Group_13452"
+        data-name="Group 13452"
+        xmlns="http://www.w3.org/2000/svg"
+        width="121.563"
+        height="76.97"
+        viewBox="0 0 121.563 76.97"
+    >
         <path
             id="Path_5043"
             data-name="Path 5043"
@@ -145,7 +158,14 @@ export const eyeIcon2 = (
 );
 
 export const eyeIcon3 = (
-    <svg id="Group_13451" data-name="Group 13451" xmlns="http://www.w3.org/2000/svg" width="127.175" height="73.118" viewBox="0 0 127.175 73.118">
+    <svg
+        id="Group_13451"
+        data-name="Group 13451"
+        xmlns="http://www.w3.org/2000/svg"
+        width="127.175"
+        height="73.118"
+        viewBox="0 0 127.175 73.118"
+    >
         <path
             id="Path_5039"
             data-name="Path 5039"

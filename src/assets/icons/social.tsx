@@ -47,8 +47,22 @@ export const linkedinIcon = (
 );
 
 export const facebookButtonIcon = (
-    <svg id="Group_833" data-name="Group 833" xmlns="http://www.w3.org/2000/svg" width="24.141" height="24.139" viewBox="0 0 24.141 24.139">
-        <g id="Rectangle_78" data-name="Rectangle 78" transform="translate(1.11 1.508)" fill="#fff" stroke="#fff" strokeWidth="1">
+    <svg
+        id="Group_833"
+        data-name="Group 833"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24.141"
+        height="24.139"
+        viewBox="0 0 24.141 24.139"
+    >
+        <g
+            id="Rectangle_78"
+            data-name="Rectangle 78"
+            transform="translate(1.11 1.508)"
+            fill="#fff"
+            stroke="#fff"
+            strokeWidth="1"
+        >
             <rect width="21.532" height="22.511" stroke="none" />
             <rect x="0.5" y="0.5" width="20.532" height="21.511" fill="none" />
         </g>
@@ -63,7 +77,14 @@ export const facebookButtonIcon = (
 );
 
 export const googleButtonIcon = (
-    <svg id="Group_830" data-name="Group 830" xmlns="http://www.w3.org/2000/svg" width="18.575" height="18.958" viewBox="0 0 18.575 18.958">
+    <svg
+        id="Group_830"
+        data-name="Group 830"
+        xmlns="http://www.w3.org/2000/svg"
+        width="18.575"
+        height="18.958"
+        viewBox="0 0 18.575 18.958"
+    >
         <path
             id="Path_2424"
             data-name="Path 2424"

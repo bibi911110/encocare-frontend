@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import Button from '../../../components/common/Button/Button';
 import PaymentSelect from '../../../components/common/PaymentSelect/PaymentSelect';
-import { PaymentStepPropsType } from '../../../types/basicComponents';
+import { StepPropsType } from '../../../types/basicComponents';
 
-const PaymentStep1 = ({ handleNextStep }: PaymentStepPropsType) => {
+const PaymentStep1 = ({ handleNextStep }: StepPropsType) => {
     return (
         <>
             <div className="payment-main">

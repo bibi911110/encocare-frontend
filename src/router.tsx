@@ -8,6 +8,7 @@ import SetPassword from './pages/common/SetPassword/SetPassword';
 import SupportUs from './pages/common/SupportUs/SupportUs';
 import Donate from './pages/common/Donate/Donate';
 import Thanks from './pages/common/Thanks/Thanks';
+import BusinessSignup from './pages/business/Signup/BusinessSignup';
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
         children: [
             { path: '', element: <Home /> },
             { path: 'signup', element: <Signup /> },
+            { path: 'signup-business', element: <BusinessSignup /> },
             { path: 'login', element: <Login /> },
             { path: 'forget-password', element: <ForgetPassword /> },
             { path: 'set-password', element: <SetPassword /> },

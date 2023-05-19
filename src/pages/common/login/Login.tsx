@@ -38,6 +38,9 @@ const Login = () => {
                         <p>Not a member?</p>
                         <Link to="/signup">Sign Up</Link>
                     </div>
+                    <p className="policy">
+                        By signing up you agree to Encocare <span>terms & conditions</span> and privacy policy.
+                    </p>
                 </div>
             </div>
             <div className="right-section"></div>

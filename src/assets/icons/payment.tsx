@@ -41,7 +41,13 @@ export const paypalIcon = (
                 transform="translate(-237.015 -433.196)"
                 fill="#192281"
             />
-            <path id="Path_6400" data-name="Path 6400" d="M259.514,315.475l-.2.173Z" transform="translate(-255.193 -315.185)" fill="#404a93" />
+            <path
+                id="Path_6400"
+                data-name="Path 6400"
+                d="M259.514,315.475l-.2.173Z"
+                transform="translate(-255.193 -315.185)"
+                fill="#404a93"
+            />
             <path
                 id="Path_6401"
                 data-name="Path 6401"
@@ -54,7 +60,14 @@ export const paypalIcon = (
 );
 
 export const stripeIcon = (
-    <svg id="Group_16497" data-name="Group 16497" xmlns="http://www.w3.org/2000/svg" width="55.499" height="23.021" viewBox="0 0 55.499 23.021">
+    <svg
+        id="Group_16497"
+        data-name="Group 16497"
+        xmlns="http://www.w3.org/2000/svg"
+        width="55.499"
+        height="23.021"
+        viewBox="0 0 55.499 23.021"
+    >
         <path
             id="Path_6389"
             data-name="Path 6389"
@@ -90,7 +103,13 @@ export const stripeIcon = (
             transform="translate(-165.598 -324.732)"
             fill="#6772e5"
         />
-        <path id="Path_6394" data-name="Path 6394" d="M253.549,344.254h-4.078V331.513h4.078Z" transform="translate(-222.5 -325.957)" fill="#6772e5" />
+        <path
+            id="Path_6394"
+            data-name="Path 6394"
+            d="M253.549,344.254h-4.078V331.513h4.078Z"
+            transform="translate(-222.5 -325.957)"
+            fill="#6772e5"
+        />
         <path
             id="Path_6395"
             data-name="Path 6395"
@@ -102,7 +121,14 @@ export const stripeIcon = (
 );
 
 export const backIcon = (
-    <svg id="Group_891" data-name="Group 891" xmlns="http://www.w3.org/2000/svg" width="35.141" height="28.137" viewBox="0 0 35.141 28.137">
+    <svg
+        id="Group_891"
+        data-name="Group 891"
+        xmlns="http://www.w3.org/2000/svg"
+        width="35.141"
+        height="28.137"
+        viewBox="0 0 35.141 28.137"
+    >
         <path
             id="Path_2495"
             data-name="Path 2495"
@@ -110,7 +136,13 @@ export const backIcon = (
             transform="translate(-220.876 -354.822)"
             fill="#0092bd"
         />
-        <path id="Path_2496" data-name="Path 2496" d="M251.762,397.058H218.248V394.49h33.514Z" transform="translate(-217.464 -386.205)" fill="#0092bd" />
+        <path
+            id="Path_2496"
+            data-name="Path 2496"
+            d="M251.762,397.058H218.248V394.49h33.514Z"
+            transform="translate(-217.464 -386.205)"
+            fill="#0092bd"
+        />
         <path
             id="Path_2497"
             data-name="Path 2497"
@@ -139,6 +171,12 @@ export const backIcon = (
             transform="translate(-284.596 -398.159)"
             fill="#0092bd"
         />
-        <path id="Path_2501" data-name="Path 2501" d="M214.495,484.469v-1.337h35.14v1.337Z" transform="translate(-214.495 -456.333)" fill="#0092bd" />
+        <path
+            id="Path_2501"
+            data-name="Path 2501"
+            d="M214.495,484.469v-1.337h35.14v1.337Z"
+            transform="translate(-214.495 -456.333)"
+            fill="#0092bd"
+        />
     </svg>
 );

@@ -4,7 +4,14 @@ import { Carousel } from 'react-responsive-carousel';
 import Button from '../../../components/common/Button/Button';
 import CheckBox from '../../../components/common/CheckBox/CheckBox';
 import NormalInput from '../../../components/common/NormalInput/NormalInput';
-import { copyIcon, directionIcon, locationIcon, mapIcon, rightArrowIcon2, searchIcon } from '../../../assets/icons/common';
+import {
+    copyIcon,
+    directionIcon,
+    locationIcon,
+    mapIcon,
+    rightArrowIcon2,
+    searchIcon,
+} from '../../../assets/icons/common';
 import { eyeIcon1, eyeIcon2, eyeIcon3 } from '../../../assets/icons/eyes';
 import slideImage1 from '../../../assets/images/carousel.png';
 import avatarImage1 from '../../../assets/images/avatar/1.png';
@@ -39,7 +46,10 @@ const Home = () => {
                             </span>
                             Technology!
                         </h1>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna{' '}
+                        </p>
                         <div className="button-wrapper">
                             <Button type="primary" arrow title="Get Started" buttonType="button" />
                             <Link to="/">Learn more</Link>
@@ -70,8 +80,8 @@ const Home = () => {
                 <div className="title-wrapper">
                     <h1>Revolutionizing the Eye Testing Technology!</h1>
                     <p>
-                        We at encore believe in making African people quality of life better by giving them better and sustainable{' '}
-                        <br className="desktop-only" />
+                        We at encore believe in making African people quality of life better by giving them better and
+                        sustainable <br className="desktop-only" />
                         vision!
                     </p>
                 </div>
@@ -86,13 +96,17 @@ const Home = () => {
                         Take our Test! It's <span>Free and Easy</span>
                     </h1>
                     <p>
-                        Encocare aims to cater the increasing eye diseases in the African countries! We are powered by AI (Artificial Intelligence) interface
-                        that diagnosis leading causes if visual impairments with 90% accuracy rate.
+                        Encocare aims to cater the increasing eye diseases in the African countries! We are powered by
+                        AI (Artificial Intelligence) interface that diagnosis leading causes if visual impairments with
+                        90% accuracy rate.
                     </p>
                     <div className="link-wrapper">
                         <div className="link-item">
                             <h2>Cataract</h2>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut;</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut;
+                            </p>
                             <div className="link">
                                 <Link to="/">Test yourself</Link>
                                 {rightArrowIcon2}
@@ -100,7 +114,10 @@ const Home = () => {
                         </div>
                         <div className="link-item">
                             <h2>Macular Degeneration</h2>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut;</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut;
+                            </p>
                             <div className="link">
                                 <Link to="/">Test yourself</Link>
                                 {rightArrowIcon2}
@@ -110,7 +127,10 @@ const Home = () => {
                     <div className="link-wrapper">
                         <div className="link-item">
                             <h2>Glaucoma</h2>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut;</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut;
+                            </p>
                             <div className="link">
                                 <Link to="/">Test yourself</Link>
                                 {rightArrowIcon2}
@@ -118,7 +138,10 @@ const Home = () => {
                         </div>
                         <div className="link-item">
                             <h2>Stargardt's Disease</h2>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut;</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut;
+                            </p>
                             <div className="link">
                                 <Link to="/">Test yourself</Link>
                                 {rightArrowIcon2}
@@ -135,7 +158,8 @@ const Home = () => {
                             Test your vision! It's <span>free and easy!</span>
                         </h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <br className="desktop-only" />
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod{' '}
+                            <br className="desktop-only" />
                             tempor invidunt ut labore et dolore magna
                         </p>
                         <div className="checkbox-wrapper">
@@ -192,7 +216,8 @@ const Home = () => {
                             Find an <span>ophthalmologist</span> near you!
                         </h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy <br className="desktop-only" />
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy{' '}
+                            <br className="desktop-only" />
                             eirmod tempor invidunt ut labore et dolore magna
                         </p>
                         <div className="input-wrapper">
@@ -211,7 +236,8 @@ const Home = () => {
                 <div className="container">
                     <h1>Consult with the best we got!</h1>
                     <p>
-                        Encocare authorized specialists can guide you throughout the course of the treatment. <br className="desktop-only" />
+                        Encocare authorized specialists can guide you throughout the course of the treatment.{' '}
+                        <br className="desktop-only" />
                         Get involved!
                     </p>
 
@@ -290,8 +316,8 @@ const Home = () => {
                 <div className="title-wrapper">
                     <h1>How it works?</h1>
                     <p>
-                        Encocare is working on making eye testing more accessible and cost effective than ever before. This is how{' '}
-                        <br className="desktop-only" />
+                        Encocare is working on making eye testing more accessible and cost effective than ever before.
+                        This is how <br className="desktop-only" />
                         our AI powered system strives to achieve perfection!
                     </p>
                     <div className="link-wrapper">
