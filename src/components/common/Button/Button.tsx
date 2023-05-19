@@ -1,5 +1,5 @@
-import { rightArrowIcon2 } from '../../../assets/icons/common';
 import { ButtonPropsType } from '../../../types/basicComponents';
+import { rightArrowIcon2 } from '../../../assets/icons/common';
 import './Button.scss';
 
 const Button = ({ title, type, icon, arrow, className, submit, onClick, ...props }: ButtonPropsType) => {

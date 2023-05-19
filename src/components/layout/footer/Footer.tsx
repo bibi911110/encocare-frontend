@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
+import NormalInput from '../../common/NormalInput/NormalInput';
+import Button from '../../common/Button/Button';
 import logoImage from '../../../assets/images/logo.png';
 import { copyrightIcon, phoneIcon } from '../../../assets/icons/common';
 import { facebookIcon, instagramIcon, linkedinIcon, twitterIcon } from '../../../assets/icons/social';
-import NormalInput from '../../common/NormalInput/NormalInput';
-import Button from '../../common/Button/Button';
 import './Footer.scss';
 
 const links = [
@@ -86,7 +86,7 @@ const Footer = () => {
                     </p>
                     <div className="email-input-section">
                         <NormalInput placeHolder="Email Address" />
-                        <Button title="Subscribe" type="primary" arrow  />
+                        <Button title="Subscribe" type="primary" arrow />
                     </div>
                 </div>
             </div>

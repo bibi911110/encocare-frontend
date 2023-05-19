@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import Button from '../../../components/common/Button/Button';
+import SocialButton from '../../../components/common/SocialButton/SocialButton';
 import FormDivider from '../../../components/common/FormDivider/FormDivider';
 import NormalInput from '../../../components/common/NormalInput/NormalInput';
 import PasswordInput from '../../../components/common/PasswordInput/PasswordInput';
-import SocialButton from '../../../components/common/SocialButton/SocialButton';
-import './Login.scss';
 import CheckBox from '../../../components/common/CheckBox/CheckBox';
+import './Login.scss';
 
 const Login = () => {
     return (

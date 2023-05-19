@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
+import Button from '../../../components/common/Button/Button';
 import CheckBox from '../../../components/common/CheckBox/CheckBox';
 import NormalInput from '../../../components/common/NormalInput/NormalInput';
-import Button from '../../../components/common/Button/Button';
 import PasswordInput from '../../../components/common/PasswordInput/PasswordInput';
 import { rightArrowIcon2 } from '../../../assets/icons/common';
 import './IndividualLogin.scss';

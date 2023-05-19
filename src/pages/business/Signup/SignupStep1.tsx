@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import Button from '../../../components/common/Button/Button';
+import SocialButton from '../../../components/common/SocialButton/SocialButton';
 import FormDivider from '../../../components/common/FormDivider/FormDivider';
 import NormalInput from '../../../components/common/NormalInput/NormalInput';
 import PasswordInput from '../../../components/common/PasswordInput/PasswordInput';
-import SocialButton from '../../../components/common/SocialButton/SocialButton';
 import { StepPropsType } from '../../../types/basicComponents';
 
 const SignupStep1 = ({ handleNextStep }: StepPropsType) => {
@@ -21,13 +21,7 @@ const SignupStep1 = ({ handleNextStep }: StepPropsType) => {
                     <NormalInput placeHolder="Email Address" />
                     <PasswordInput placeHolder="Password" />
                 </div>
-                <Button
-                    
-                    title="Create Business Account"
-                    type="primary"
-                    onClick={handleNextStep}
-                    arrow
-                />
+                <Button title="Create Business Account" type="primary" onClick={handleNextStep} arrow />
             </form>
             <div className="link-wrapper">
                 <p>Business</p>

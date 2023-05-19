@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import './Donate.scss';
 import PaymentStep1 from './PaymentStep1';
 import PaymentStep2 from './PaymentStep2';
+import './Donate.scss';
 
 const Donate = () => {
     const [paymentStep, setPaymentStep] = useState(0);

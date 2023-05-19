@@ -1,0 +1,19 @@
+.navbar-auth {
+    display: flex;
+
+    button {
+        width: 162px;
+
+        @include devices(large) {
+            width: 126px;
+        }
+
+        @include devices(desktop) {
+            width: 100px;
+        }
+    }
+
+    @include devices(tablet) {
+        display: none;
+    }
+}

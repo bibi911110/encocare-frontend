@@ -1,5 +1,5 @@
-import { facebookButtonIcon, googleButtonIcon, twitterButtonIcon } from '../../../assets/icons/social';
 import { SocialButtonPropsType } from '../../../types/basicComponents';
+import { facebookButtonIcon, googleButtonIcon, twitterButtonIcon } from '../../../assets/icons/social';
 import './SocialButton.scss';
 
 const SocialButton = ({ type, title }: SocialButtonPropsType) => {

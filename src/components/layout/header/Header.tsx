@@ -1,5 +1,5 @@
-import { facebookIcon, instagramIcon, linkedinIcon, twitterIcon } from '../../../assets/icons/social';
 import { phoneIcon } from '../../../assets/icons/common';
+import { facebookIcon, instagramIcon, linkedinIcon, twitterIcon } from '../../../assets/icons/social';
 import './Header.scss';
 
 const Header = () => {

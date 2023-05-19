@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Button from '../../common/Button/Button';
 import NavbarItem from '../../navbar/NavbarItem/NavbarItem';
 import NavbarMobileItem from '../../navbar/NavbarMobileItem/NavbarMobileItem';
+import NavbarAuth from '../../navbar/NavbarAuth/NavbarAuth';
 import logoImage from '../../../assets/images/logo.png';
 import { toggleMenuIcon } from '../../../assets/icons/common';
 import './Navbar.scss';
@@ -84,14 +85,7 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className="navbar-auth">
-                    <Link to="/signup">
-                        <Button title="Sign up" type="light" />
-                    </Link>
-                    <Link to="/login">
-                        <Button title="Login" type="primary" />
-                    </Link>
-                </div>
+                <NavbarAuth />
             </nav>
             {mobileMenuOpen && (
                 <div className="navbar-mobile">

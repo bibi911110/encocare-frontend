@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { backIcon, cardIcon, paypalIcon, stripeIcon } from '../../../assets/icons/payment';
 import CheckBox from '../CheckBox/CheckBox';
+import { backIcon, cardIcon, paypalIcon, stripeIcon } from '../../../assets/icons/payment';
 import './PaymentSelect.scss';
 
 const payments = [

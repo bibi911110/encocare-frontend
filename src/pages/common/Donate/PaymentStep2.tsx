@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import usdImage from '../../../assets/images/payments/usd.png';
-import cardImage from '../../../assets/images/payments/card.png';
 import Button from '../../../components/common/Button/Button';
 import Select from '../../../components/common/Select/Select';
 import NormalInput from '../../../components/common/NormalInput/NormalInput';
 import DatePicker from '../../../components/common/DatePicker/DatePicker';
 import { StepPropsType } from '../../../types/basicComponents';
+import usdImage from '../../../assets/images/payments/usd.png';
+import cardImage from '../../../assets/images/payments/card.png';
 
 const selectOptions = [
     <div className="cost-type">
@@ -36,7 +36,7 @@ const PaymentStep2 = ({ handlePrevStep }: StepPropsType) => {
                 </div>
             </div>
             <div className="link-wrapper">
-                <Button title="Pay Now"  type="primary" onClick={handlePrevStep} arrow />
+                <Button title="Pay Now" type="primary" onClick={handlePrevStep} arrow />
                 <br />
                 <Link to="/">Back</Link>
             </div>
