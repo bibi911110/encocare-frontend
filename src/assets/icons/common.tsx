@@ -188,3 +188,70 @@ export const passwordShowIcon = (
         />
     </svg>
 );
+
+export const selectArrowIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16.812" height="9.906" viewBox="0 0 16.812 9.906">
+        <path
+            id="Path_7738"
+            data-name="Path 7738"
+            d="M407.911,710.432l6.285,6.285,6.285-6.285"
+            transform="translate(-405.789 -708.31)"
+            fill="none"
+            stroke="#0092bd"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="3"
+        />
+    </svg>
+);
+
+export const datePickerIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="20.976" height="23.084" viewBox="0 0 20.976 23.084">
+        <g id="Icon_feather-calendar" data-name="Icon feather-calendar" transform="translate(-3.5 -2)">
+            <path
+                id="Path_7740"
+                data-name="Path 7740"
+                d="M6.608,6H21.367a2.108,2.108,0,0,1,2.108,2.108V22.867a2.108,2.108,0,0,1-2.108,2.108H6.608A2.108,2.108,0,0,1,4.5,22.867V8.108A2.108,2.108,0,0,1,6.608,6Z"
+                transform="translate(0 -0.892)"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+            />
+            <path
+                id="Path_7741"
+                data-name="Path 7741"
+                d="M24,3V7.217"
+                transform="translate(-5.795)"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+            />
+            <path
+                id="Path_7742"
+                data-name="Path 7742"
+                d="M12,3V7.217"
+                transform="translate(-2.229)"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+            />
+            <path
+                id="Path_7743"
+                data-name="Path 7743"
+                d="M4.5,15H23.476"
+                transform="translate(0 -3.566)"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+            />
+        </g>
+    </svg>
+);

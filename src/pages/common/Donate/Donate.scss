@@ -14,10 +14,10 @@
         width: 662px;
         text-align: center;
         margin-top: 69px;
-        padding: 0 20px;
 
         @include devices(tablet) {
             margin-top: 36px;
+            width: 100%;
         }
 
         & > h1 {
@@ -49,6 +49,7 @@
 
             @include devices(tablet) {
                 background-color: white;
+                padding: 0 20px;
             }
 
             .payment-main {
@@ -61,12 +62,70 @@
                     background-color: #f6f6f7;
                 }
 
-                & > p {
+                p {
                     font-size: 19px;
                     margin-bottom: 20px;
 
                     @include devices(tablet) {
                         font-size: 16px;
+                    }
+                }
+
+                .form-wrapper {
+                    width: 424px;
+
+                    @include devices(tablet) {
+                        width: 100%;
+                    }
+
+                    .payment-amount {
+                        display: flex;
+                        width: 100%;
+                        margin-bottom: 24px;
+
+                        .amount-input {
+                            flex: 1;
+                        }
+                    }
+
+                    .card-number-wrapper {
+                        position: relative;
+                        margin-bottom: 12px;
+
+                        .card-number-input {
+                            width: 100%;
+                            padding-right: 200px;
+                        }
+
+                        img {
+                            position: absolute;
+                            right: 12px;
+                            top: 11px;
+                        }
+                    }
+
+                    .datepicker-cvv {
+                        display: flex;
+                        gap: 12px;
+                        width: 100%;
+
+                        .date-input {
+                            // flex: 1;
+
+                            @include devices(tablet) {
+                                // width: unset;
+                                // flex: 1.5;
+                            }
+                        }
+
+                        .cvv-input {
+                            width: 183px;
+
+                            @include devices(tablet) {
+                                width: unset;
+                                // flex: 1;
+                            }
+                        }
                     }
                 }
             }
@@ -94,6 +153,22 @@
                     }
                 }
             }
+        }
+    }
+
+    .cost-type {
+        display: flex;
+        align-items: center;
+
+        .cost-type-icon {
+            width: 38px;
+            height: 25px;
+        }
+
+        .cost-type-title {
+            font-size: 16px;
+            margin-left: 12px;
+            margin-right: 18px;
         }
     }
 }

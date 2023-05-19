@@ -139,7 +139,7 @@ const Home = () => {
                             tempor invidunt ut labore et dolore magna
                         </p>
                         <div className="checkbox-wrapper">
-                            <CheckBox checked={false} />
+                            <CheckBox />
                             <span>I agree to the terms and conditions.</span>
                         </div>
                         <div className="button-wrapper">

@@ -26,7 +26,7 @@ const Login = () => {
                             <PasswordInput placeHolder="Password" />
                             <div className="sub-links-wrapper">
                                 <div className="remember-check">
-                                    <CheckBox checked={false} />
+                                    <CheckBox />
                                     <span>Remember me</span>
                                 </div>
                                 <Link to="/forget-password">Forgot Password?</Link>

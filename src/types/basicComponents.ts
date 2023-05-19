@@ -7,6 +7,7 @@ export type ButtonPropsType = {
     icon?: React.ReactNode;
     className?: string;
     arrow?: boolean;
+    onClick?: () => void;
 };
 
 export type NormalInputPropsType = {
@@ -29,7 +30,8 @@ export type NavbarMobileItemPropsType = {
 };
 
 export type CheckBoxPropsType = {
-    checked: boolean;
+    checked?: boolean;
+    readonly?: boolean;
     className?: string;
 };
 
@@ -42,4 +44,12 @@ export type ResponsiveModalPropsType = {
     open: boolean;
     handleOk: () => void;
     handleCancel: () => void;
+};
+
+export type PaymentStepPropsType = {
+    handleNextStep: () => void;
+};
+
+export type SelectPropsType = {
+    options: Array<React.ReactElement | string>;
 };

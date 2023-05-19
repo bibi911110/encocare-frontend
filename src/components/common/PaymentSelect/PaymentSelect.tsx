@@ -43,7 +43,7 @@ const PaymentSelect = () => {
                         onClick={() => handlePayment(item.value)}
                     >
                         <div className="checkbox-title">
-                            <CheckBox checked={payment === item.value} />
+                            <CheckBox checked={payment === item.value} readonly />
                             <span className="payment-title">{item.title}</span>
                         </div>
                         <span className="payment-icon">{item.icon}</span>
