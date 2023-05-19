@@ -16,7 +16,7 @@ const BusinessSignup = () => {
 
     return (
         <div className="business-signup">
-            <div className="form-wrapper">
+            <div className={`form-wrapper signup-step-${signupStep}`}>
                 <h1>Business Sign Up</h1>
                 {signupStep === 0 && (
                     <SignupStep1 handleNextStep={handleNextSignupStep} handlePrevStep={handlePrevSignupStep} />

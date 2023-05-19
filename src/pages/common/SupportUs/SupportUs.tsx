@@ -21,7 +21,7 @@ const SupportUs = () => {
                     <Button
                         className="donate-button"
                         title="Donate for a better vision"
-                        buttonType="button"
+                        
                         type="primary"
                         arrow
                     />

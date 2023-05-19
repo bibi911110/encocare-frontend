@@ -1,12 +1,12 @@
 import React from 'react';
 
 export type ButtonPropsType = {
-    buttonType: 'button' | 'submit';
     title: string;
-    type: 'primary' | 'outline' | 'light' | 'gray';
+    type: 'primary' | 'outline' | 'light' | 'gray' | 'link';
     icon?: React.ReactNode;
     className?: string;
     arrow?: boolean;
+    submit?: boolean;
     onClick?: () => void;
 };
 

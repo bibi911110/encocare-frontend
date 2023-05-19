@@ -21,7 +21,7 @@ const Thanks = () => {
                 <NormalInput placeHolder="Email Address" />
             </div>
             <div>
-                <Button title="Subscribe" type="primary" buttonType="button" arrow />
+                <Button title="Subscribe" type="primary"  arrow />
             </div>
             <div>
                 <Link to="/">Return to homepage</Link>

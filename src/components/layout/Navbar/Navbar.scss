@@ -12,11 +12,11 @@ nav {
     background-color: #f6f6f7;
 
     @include devices(large) {
-        padding: 0 72px;
+        padding: 0 46px;
     }
 
     @include devices(desktop) {
-        padding: 0 36px;
+        padding: 0 24px;
     }
 
     @include devices(tablet) {

@@ -36,7 +36,7 @@ const PaymentStep2 = ({ handlePrevStep }: StepPropsType) => {
                 </div>
             </div>
             <div className="link-wrapper">
-                <Button title="Pay Now" buttonType="button" type="primary" onClick={handlePrevStep} arrow />
+                <Button title="Pay Now"  type="primary" onClick={handlePrevStep} arrow />
                 <br />
                 <Link to="/">Back</Link>
             </div>

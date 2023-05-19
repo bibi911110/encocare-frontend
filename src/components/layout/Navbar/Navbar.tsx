@@ -152,10 +152,10 @@ const Navbar = () => {
 
                 <div className="navbar-auth">
                     <Link to="/signup">
-                        <Button title="Sign up" type="light" buttonType="button" />
+                        <Button title="Sign up" type="light"  />
                     </Link>
                     <Link to="/login">
-                        <Button title="Login" type="primary" buttonType="button" />
+                        <Button title="Login" type="primary"  />
                     </Link>
                 </div>
             </nav>
@@ -179,10 +179,10 @@ const Navbar = () => {
                     <div className="navbar-mobile-buttons">
                         <div className="auth-buttons-wrapper">
                             <Link to="/login" onClick={handleCloseMobileMenu}>
-                                <Button title="Login" type="primary" buttonType="button" />
+                                <Button title="Login" type="primary"  />
                             </Link>
                             <Link to="/signup" onClick={handleCloseMobileMenu}>
-                                <Button title="Sign up" type="light" buttonType="button" />
+                                <Button title="Sign up" type="light"  />
                             </Link>
                         </div>
                         <div className="lang-switch">

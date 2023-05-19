@@ -32,7 +32,7 @@ const Login = () => {
                                 <Link to="/forget-password">Forgot Password?</Link>
                             </div>
                         </div>
-                        <Button buttonType="button" title="Login" type="primary" arrow />
+                        <Button title="Login" type="primary" arrow />
                     </form>
                     <div className="link-wrapper">
                         <p>Not a member?</p>

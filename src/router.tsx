@@ -9,6 +9,8 @@ import SupportUs from './pages/common/SupportUs/SupportUs';
 import Donate from './pages/common/Donate/Donate';
 import Thanks from './pages/common/Thanks/Thanks';
 import BusinessSignup from './pages/business/Signup/BusinessSignup';
+import BusinessLogin from './pages/business/Login/BusinessLogin';
+import AdminLogin from './pages/admin/AdminLogin/AdminLogin';
 
 const router = createBrowserRouter([
     {
@@ -19,6 +21,8 @@ const router = createBrowserRouter([
             { path: 'signup', element: <Signup /> },
             { path: 'signup-business', element: <BusinessSignup /> },
             { path: 'login', element: <Login /> },
+            { path: 'login-business', element: <BusinessLogin /> },
+            { path: 'login-admin', element: <AdminLogin /> },
             { path: 'forget-password', element: <ForgetPassword /> },
             { path: 'set-password', element: <SetPassword /> },
             { path: 'support-us', element: <SupportUs /> },

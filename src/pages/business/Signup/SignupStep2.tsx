@@ -1,10 +1,9 @@
 import { useDropzone } from 'react-dropzone';
-import { Link } from 'react-router-dom';
 import Button from '../../../components/common/Button/Button';
-import NormalInput from '../../../components/common/NormalInput/NormalInput';
-import { StepPropsType } from '../../../types/basicComponents';
 import Select from '../../../components/common/Select/Select';
+import NormalInput from '../../../components/common/NormalInput/NormalInput';
 import TextArea from '../../../components/common/TextArea/TextArea';
+import { StepPropsType } from '../../../types/basicComponents';
 import { dropzoneImageIcon, uploadIcon } from '../../../assets/icons/common';
 
 const SignupStep2 = ({ handlePrevStep }: StepPropsType) => {
@@ -32,13 +31,7 @@ const SignupStep2 = ({ handlePrevStep }: StepPropsType) => {
                         </div>
                     </div>
                 </div>
-                <Button
-                    title="Create Business Account"
-                    type="primary"
-                    buttonType="button"
-                    onClick={handlePrevStep}
-                    arrow
-                />
+                <Button title="Create Business Account" type="primary" onClick={handlePrevStep} arrow />
             </form>
             <p className="policy">
                 By signing up you agree to Encocare <span>terms & conditions</span> and privacy policy.

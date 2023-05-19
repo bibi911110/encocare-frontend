@@ -24,7 +24,7 @@ const Signup = () => {
                             <NormalInput placeHolder="Email Address" />
                             <PasswordInput placeHolder="Password" />
                         </div>
-                        <Button buttonType="button" title="Sign Up" type="primary" arrow />
+                        <Button  title="Sign Up" type="primary" arrow />
                     </form>
                     <div className="link-wrapper">
                         <p>Already a member?</p>

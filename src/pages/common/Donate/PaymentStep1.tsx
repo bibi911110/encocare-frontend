@@ -11,7 +11,7 @@ const PaymentStep1 = ({ handleNextStep }: StepPropsType) => {
                 <PaymentSelect />
             </div>
             <div className="link-wrapper">
-                <Button title="Continue" buttonType="button" type="primary" onClick={handleNextStep} arrow />
+                <Button title="Continue"  type="primary" onClick={handleNextStep} arrow />
                 <br />
                 <Link to="/">Can't find your payment method?</Link>
             </div>

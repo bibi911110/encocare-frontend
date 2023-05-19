@@ -22,7 +22,7 @@ const SignupStep1 = ({ handleNextStep }: StepPropsType) => {
                     <PasswordInput placeHolder="Password" />
                 </div>
                 <Button
-                    buttonType="button"
+                    
                     title="Create Business Account"
                     type="primary"
                     onClick={handleNextStep}
@@ -31,7 +31,7 @@ const SignupStep1 = ({ handleNextStep }: StepPropsType) => {
             </form>
             <div className="link-wrapper">
                 <p>Business</p>
-                <Link to="/login">Login</Link>
+                <Link to="/login-business">Login</Link>
             </div>
             <p className="policy">
                 By signing up you agree to Encocare <span>terms & conditions</span> and privacy policy.

@@ -86,7 +86,7 @@ const Footer = () => {
                     </p>
                     <div className="email-input-section">
                         <NormalInput placeHolder="Email Address" />
-                        <Button title="Subscribe" type="primary" arrow buttonType="button" />
+                        <Button title="Subscribe" type="primary" arrow  />
                     </div>
                 </div>
             </div>

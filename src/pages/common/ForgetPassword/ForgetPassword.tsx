@@ -18,7 +18,7 @@ const ForgetPassword = () => {
                                 <NormalInput placeHolder="Email Address" />
                             </div>
                             <Link to="/set-password">
-                                <Button buttonType="button" title="Get magic link" type="primary" arrow />
+                                <Button  title="Get magic link" type="primary" arrow />
                             </Link>
                         </form>
                     </div>
