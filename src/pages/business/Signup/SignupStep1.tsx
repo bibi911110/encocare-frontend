@@ -16,7 +16,7 @@ const SignupStep1 = ({ handleNextStep }: StepPropsType) => {
                 <SocialButton type="twitter" title="Sign up using Twitter" />
             </div>
             <FormDivider />
-            <form>
+            <form className="step1-from">
                 <div className="input-wrapper">
                     <NormalInput placeHolder="Email Address" />
                     <PasswordInput placeHolder="Password" />

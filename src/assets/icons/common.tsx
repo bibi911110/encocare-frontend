@@ -268,3 +268,78 @@ export const datePickerIcon = (
         </g>
     </svg>
 );
+
+export const dropzoneImageIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="61.25" height="61.25" viewBox="0 0 61.25 61.25">
+        <g id="Icon_ionic-ios-image" data-name="Icon ionic-ios-image" transform="translate(-3.375 -3.375)">
+            <path
+                id="Path_7841"
+                data-name="Path 7841"
+                d="M8.349,34.62H36.427a.82.82,0,0,0,.663-1.3L23.043,10.739a.812.812,0,0,0-1.34,0L7.672,33.324A.825.825,0,0,0,8.349,34.62Z"
+                transform="translate(4.537 7.669)"
+                fill="#0092bd"
+            />
+            <path
+                id="Path_7842"
+                data-name="Path 7842"
+                d="M21.641,21.019l5.153,8.2a.8.8,0,0,0,.663.353H35.29a.82.82,0,0,0,.663-1.3l-9.07-12.913a.812.812,0,0,0-1.34,0l-3.916,4.726A.849.849,0,0,0,21.641,21.019Z"
+                transform="translate(19.824 12.731)"
+                fill="#0092bd"
+            />
+            <path
+                id="Path_7843"
+                data-name="Path 7843"
+                d="M27.059,16.1a4.122,4.122,0,1,0-4.52-4.52A4.137,4.137,0,0,0,27.059,16.1Z"
+                transform="translate(20.944 4.927)"
+                fill="#0092bd"
+            />
+            <path
+                id="Path_7844"
+                data-name="Path 7844"
+                d="M59.913,3.375H8.087A4.706,4.706,0,0,0,3.375,8.087V59.913a4.706,4.706,0,0,0,4.712,4.712H59.913a4.706,4.706,0,0,0,4.712-4.712V8.087A4.706,4.706,0,0,0,59.913,3.375Zm-.4,41.226a1.181,1.181,0,0,1-1.178,1.178H9.662A1.181,1.181,0,0,1,8.484,44.6V9.662A1.181,1.181,0,0,1,9.662,8.484H58.353a1.181,1.181,0,0,1,1.178,1.178V44.6Z"
+                transform="translate(0 0)"
+                fill="#0092bd"
+            />
+        </g>
+    </svg>
+);
+
+export const uploadIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16.996" height="16.996" viewBox="0 0 16.996 16.996">
+        <g id="Icon_feather-upload" data-name="Icon feather-upload" transform="translate(-3.75 -3.75)">
+            <path
+                id="Path_7845"
+                data-name="Path 7845"
+                d="M20,22.5v3.444a1.722,1.722,0,0,1-1.722,1.722H6.222A1.722,1.722,0,0,1,4.5,25.944V22.5"
+                transform="translate(0 -7.669)"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+            />
+            <path
+                id="Path_7846"
+                data-name="Path 7846"
+                d="M19.109,8.8,14.8,4.5,10.5,8.8"
+                transform="translate(-2.556)"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+            />
+            <path
+                id="Path_7847"
+                data-name="Path 7847"
+                d="M18,4.5V14.831"
+                transform="translate(-5.752)"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+            />
+        </g>
+    </svg>
+);

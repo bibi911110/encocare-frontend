@@ -21,7 +21,7 @@ const PaymentStep2 = ({ handlePrevStep }: StepPropsType) => {
                 <p>Please select a payment method</p>
                 <div className="form-wrapper">
                     <div className="payment-amount">
-                        <Select options={selectOptions} />
+                        <Select options={selectOptions} defaultValue={0} />
                         <NormalInput placeHolder="Enter Amount" className="amount-input" />
                     </div>
                     <p>Please enter card details</p>

@@ -83,6 +83,10 @@
                         width: 100%;
                         margin-bottom: 24px;
 
+                        .select {
+                            padding-left: 14px;
+                        }
+
                         .amount-input {
                             flex: 1;
                         }
@@ -169,6 +173,10 @@
             font-size: 16px;
             margin-left: 12px;
             margin-right: 18px;
+
+            @include devices(tablet) {
+                font-size: 14px;
+            }
         }
     }
 }

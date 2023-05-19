@@ -22,7 +22,9 @@
         .button-arrow-icon {
             position: absolute;
             display: flex;
-            top: 15px;
+            align-items: center;
+            height: 100%;
+            top: 0;
             right: 10%;
 
             svg {

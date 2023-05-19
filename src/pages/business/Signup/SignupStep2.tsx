@@ -1,38 +1,45 @@
+import { useDropzone } from 'react-dropzone';
 import { Link } from 'react-router-dom';
 import Button from '../../../components/common/Button/Button';
-import FormDivider from '../../../components/common/FormDivider/FormDivider';
 import NormalInput from '../../../components/common/NormalInput/NormalInput';
-import PasswordInput from '../../../components/common/PasswordInput/PasswordInput';
-import SocialButton from '../../../components/common/SocialButton/SocialButton';
 import { StepPropsType } from '../../../types/basicComponents';
+import Select from '../../../components/common/Select/Select';
+import TextArea from '../../../components/common/TextArea/TextArea';
+import { dropzoneImageIcon, uploadIcon } from '../../../assets/icons/common';
 
 const SignupStep2 = ({ handlePrevStep }: StepPropsType) => {
+    const selectOptions = [''];
+    const { getRootProps, getInputProps } = useDropzone();
+
     return (
         <>
-            <p>Sign Up as a business!</p>
-            <div className="social-buttons">
-                <SocialButton type="facebook" title="Sign up using Facebook" />
-                <SocialButton type="google" title="Sign up using Google" />
-                <SocialButton type="twitter" title="Sign up using Twitter" />
-            </div>
-            <FormDivider />
-            <form>
-                <div className="input-wrapper">
-                    <NormalInput placeHolder="Email Address" />
-                    <PasswordInput placeHolder="Password" />
+            <p>Just a few more details about your business!</p>
+            <form className="step2-form">
+                <div className="main-form">
+                    <div className="input-wrapper">
+                        <NormalInput placeHolder="Business Name" />
+                        <NormalInput placeHolder="Business Address" />
+                        <Select options={selectOptions} placeHolder="Country of Operations" />
+                        <TextArea placeHolder="Add a description about your business" rows={4} />
+                    </div>
+                    <div {...getRootProps({ className: 'dropzone' })}>
+                        <input {...getInputProps()} />
+                        <span>{dropzoneImageIcon}</span>
+                        <p>Drag and drop to upload an image</p>
+                        <div className="dropzone-button">
+                            {uploadIcon}
+                            Upload from computer
+                        </div>
+                    </div>
                 </div>
                 <Button
-                    buttonType="button"
-                    title="Create Business Account111"
+                    title="Create Business Account"
                     type="primary"
+                    buttonType="button"
                     onClick={handlePrevStep}
                     arrow
                 />
             </form>
-            <div className="link-wrapper">
-                <p>Business</p>
-                <Link to="/login">Login</Link>
-            </div>
             <p className="policy">
                 By signing up you agree to Encocare <span>terms & conditions</span> and privacy policy.
             </p>

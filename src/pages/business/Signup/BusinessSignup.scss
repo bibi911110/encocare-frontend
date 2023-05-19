@@ -4,17 +4,20 @@
 .business-signup {
     display: flex;
     justify-content: center;
-    height: max(768px, calc(100vh - 111px));
+    min-height: max(768px, calc(100vh - 111px));
     background-color: #f6f6f7;
 
+    @include devices(tablet) {
+        background-color: #ffffff;
+        min-height: calc(100vh - 111px);
+    }
+
     .form-wrapper {
-        width: 420px;
         text-align: center;
-        margin-top: 69px;
-        padding: 0 20px;
+        padding: 69px 20px 0 20px;
 
         @include devices(tablet) {
-            margin-top: 40px;
+            padding-top: 40px;
         }
 
         & > h1 {
@@ -48,7 +51,7 @@
             }
         }
 
-        form {
+        .step1-from {
             margin-bottom: 20px;
 
             .input-wrapper {
@@ -66,6 +69,97 @@
                 @include devices(tablet) {
                     width: 288px;
                     margin-top: max(0px, calc(100vh - 740px));
+                }
+            }
+        }
+
+        .step2-form {
+            .main-form {
+                display: flex;
+                gap: 30px;
+
+                @include devices(tablet) {
+                    flex-direction: column;
+                    gap: 12px;
+                }
+
+                .input-wrapper {
+                    width: 420px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+
+                    @include devices(tablet) {
+                        width: 100%;
+                    }
+
+                    input {
+                        width: 100%;
+                    }
+                }
+
+                .dropzone {
+                    width: 420px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    border: 2px dashed $primaryColor;
+                    background-color: #ffffff;
+                    box-sizing: border-box;
+                    padding: 24px 20px 12px 20px;
+
+                    @include devices(tablet) {
+                        width: 100%;
+                    }
+
+                    span {
+                        margin-bottom: 8px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        color: rgba(0, 0, 0, 0.5);
+                        margin-bottom: 20px;
+
+                        @include devices(tablet) {
+                            font-size: 13px;
+                            margin-bottom: 12px;
+                        }
+                    }
+
+                    .dropzone-button {
+                        height: 40px;
+                        width: 231px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $primaryColor;
+                        color: #ffffff;
+                        font-size: 14px;
+                        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+                        @include devices(tablet) {
+                            width: 100%;
+                        }
+
+                        svg {
+                            margin-right: 12px;
+                            transform: scale(0.9);
+                        }
+                    }
+                }
+            }
+
+            button {
+                width: 337px;
+                margin-top: 54px;
+                margin-bottom: 36px;
+
+                @include devices(tablet) {
+                    margin-top: 36px;
+                    margin-bottom: 24px;
+                    width: 100%;
                 }
             }
         }

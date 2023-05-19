@@ -3,10 +3,16 @@ import { SelectPropsType } from '../../../types/basicComponents';
 import { selectArrowIcon } from '../../../assets/icons/common';
 import './Select.scss';
 
-const Select = ({ options }: SelectPropsType) => {
-    const [selected, setSelect] = useState(0);
+const Select = ({ options, defaultValue, placeHolder }: SelectPropsType) => {
+    const [selected, setSelectIndex] = useState(-1);
     const selectRef = useRef<HTMLDivElement>(null);
     const [dropdownVisible, setDropdownVisible] = useState(false);
+
+    useEffect(() => {
+        if (defaultValue !== undefined && defaultValue > -1) {
+            setSelectIndex(defaultValue);
+        }
+    }, []);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -27,7 +33,7 @@ const Select = ({ options }: SelectPropsType) => {
     };
 
     const handleSelectOption = (index: number) => {
-        setSelect(index);
+        setSelectIndex(index);
         setDropdownVisible(false);
     };
 
@@ -40,7 +46,7 @@ const Select = ({ options }: SelectPropsType) => {
     return (
         <div className="select" ref={selectRef}>
             <div className="select-selected" onClick={handleDropdown} onBlur={() => setDropdownVisible(false)}>
-                {options[selected]}
+                {selected > -1 ? options[selected] : <span className="select-placeholder">{placeHolder}</span>}
                 <span className="select-dropdown-icon">{selectArrowIcon}</span>
             </div>
             <div className={`select-dropdown ${dropdownVisible ? 'select-dropdown-show' : ''}`}>{optionElement}</div>

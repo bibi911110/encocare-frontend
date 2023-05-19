@@ -15,6 +15,11 @@ export type NormalInputPropsType = {
     className?: string;
 };
 
+export type TextAreaPropsType = {
+    placeHolder: string;
+    className?: string;
+    rows: number;
+};
 export type NavbarItemPropsType = {
     title: string;
     link?: string;
@@ -54,4 +59,6 @@ export type StepPropsType = {
 
 export type SelectPropsType = {
     options: Array<React.ReactElement | string>;
+    placeHolder?: string;
+    defaultValue?: number;
 };
