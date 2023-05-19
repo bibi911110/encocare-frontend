@@ -29,6 +29,7 @@ export type NavbarMobileItemPropsType = {
 };
 
 export type CheckBoxPropsType = {
+    checked: boolean;
     className?: string;
 };
 

@@ -21,7 +21,7 @@
         }
 
         & > h1 {
-            font-size: 31px;
+            font-size: 27px;
             font-weight: 100;
             margin: 0;
             color: $primaryColor;
@@ -34,10 +34,11 @@
 
         & > p {
             font-size: 16px;
-            padding-bottom: 20px;
+            padding: 0 20px 20px 20px;
 
             @include devices(tablet) {
                 font-size: 14px;
+                padding: 0 0 20px 0;
             }
         }
 
@@ -73,7 +74,7 @@
             .link-wrapper {
                 & > button {
                     width: 264px;
-                    margin-bottom: 24px;
+                    margin-bottom: 20px;
 
                     @include devices(tablet) {
                         width: 216px;

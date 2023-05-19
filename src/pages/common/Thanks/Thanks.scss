@@ -1,0 +1,67 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.thanks {
+    text-align: center;
+    padding: 0 20px;
+    min-height: calc(100vh - 111px);
+
+    img {
+        width: 190px;
+        height: 203px;
+        margin-top: 83px;
+        margin-bottom: 12px;
+
+        @include devices(tablet) {
+            width: 172px;
+            height: 168px;
+            margin-top: 36px;
+        }
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 27px;
+        color: $primaryColor;
+        margin-bottom: 20px;
+
+        @include devices(tablet) {
+            font-size: 20px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        padding-bottom: 36px;
+
+        @include devices(tablet) {
+            font-size: 14px;
+        }
+    }
+
+    input {
+        width: 400px;
+        text-align: center;
+
+        @include devices(tablet) {
+            width: 100%;
+        }
+    }
+
+    button {
+        width: 270px;
+        margin-top: 46px;
+        margin-bottom: 12px;
+
+        @include devices(tablet) {
+            width: 220px;
+            margin-top: max(28px, calc(100vh - 664px));
+        }
+    }
+
+    a {
+        font-size: 14px;
+        color: #000000;
+        text-decoration: underline;
+    }
+}
