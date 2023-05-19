@@ -10,7 +10,8 @@ import Donate from './pages/common/Donate/Donate';
 import Thanks from './pages/common/Thanks/Thanks';
 import BusinessSignup from './pages/business/Signup/BusinessSignup';
 import BusinessLogin from './pages/business/Login/BusinessLogin';
-import AdminLogin from './pages/admin/AdminLogin/AdminLogin';
+import AdminLogin from './pages/admin/Login/AdminLogin';
+import IndividualLogin from './pages/Individual/Login/IndividualLogin';
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
             { path: 'login', element: <Login /> },
             { path: 'login-business', element: <BusinessLogin /> },
             { path: 'login-admin', element: <AdminLogin /> },
+            { path: 'login-individual', element: <IndividualLogin /> },
             { path: 'forget-password', element: <ForgetPassword /> },
             { path: 'set-password', element: <SetPassword /> },
             { path: 'support-us', element: <SupportUs /> },
