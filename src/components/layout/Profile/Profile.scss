@@ -39,14 +39,14 @@
 
         @include devices(tablet) {
             display: none;
-        }
-
-        &.active {
-            display: flex;
             position: fixed;
             top: 176px;
             padding: 26px 0 10px 0;
             left: 0;
+        }
+
+        &.active {
+            display: flex;
         }
 
         .back {

@@ -1,12 +1,10 @@
-#root {
-    & > header {
-        position: fixed;
-        width: 100%;
-        z-index: 9999;
-        top: 0;
-    }
+header[data-layout='base'] {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+}
 
-    & > main {
-        margin-top: 111px;
-    }
+main[data-layout='base'] {
+    margin-top: 111px;
 }

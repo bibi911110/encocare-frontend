@@ -8,11 +8,11 @@ import './ProfileLayout.scss';
 const ProfileLayout = () => {
     return (
         <>
-            <header>
+            <header data-layout="profile">
                 <Header />
                 <Navbar />
             </header>
-            <main>
+            <main data-layout="profile">
                 <Profile />
                 <div className="main-content">
                     <Outlet />

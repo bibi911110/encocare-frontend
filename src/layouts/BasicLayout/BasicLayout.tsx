@@ -7,11 +7,11 @@ import './BasicLayout.scss';
 const BasicLayout = () => {
     return (
         <>
-            <header>
+            <header data-layout="base">
                 <Header />
                 <Navbar />
             </header>
-            <main>
+            <main data-layout="base">
                 <Outlet />
             </main>
             <Footer />
