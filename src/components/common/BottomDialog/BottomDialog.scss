@@ -1,0 +1,46 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.bottom-dialog {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 28px;
+    display: none;
+    justify-content: center;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+    box-sizing: border-box;
+
+    &.active {
+        display: flex;
+    }
+
+    .button-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 20px;
+
+        button {
+            width: 320px;
+
+            @include devices(desktop) {
+                width: 100%;
+            }
+
+            svg {
+                transform: scale(0.8);
+            }
+        }
+    }
+
+    .close {
+        position: absolute;
+        right: 4px;
+        display: flex;
+        top: 8px;
+        cursor: pointer;
+    }
+}

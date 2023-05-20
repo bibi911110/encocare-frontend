@@ -508,3 +508,30 @@ export const rightArrowIcon3 = (
         </g>
     </svg>
 );
+
+export const closeIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="14.495" height="14.495" viewBox="0 0 14.495 14.495">
+        <g id="Group_16472" data-name="Group 16472" transform="translate(-1891.784 -970.473)">
+            <path
+                id="Path_5167"
+                data-name="Path 5167"
+                d="M3882.844,967.534l12.374,12.374"
+                transform="translate(-1990 4)"
+                fill="none"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeWidth="1.5"
+            />
+            <path
+                id="Path_5168"
+                data-name="Path 5168"
+                d="M3895.218,967.534l-12.374,12.374"
+                transform="translate(-1990 4)"
+                fill="none"
+                stroke="#000"
+                strokeLinecap="round"
+                strokeWidth="1.5"
+            />
+        </g>
+    </svg>
+);
