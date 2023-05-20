@@ -11,7 +11,7 @@ nav {
     box-shadow: 0 3px 6px 0 $boxShadowColor;
     background-color: #f6f6f7;
 
-    @include devices(large) {
+    @include devices(display) {
         padding: 0 46px;
     }
 

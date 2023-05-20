@@ -27,7 +27,7 @@
             margin-left: 160px;
             box-sizing: border-box;
 
-            @include devices(large) {
+            @include devices(display) {
                 margin: 0;
             }
 
@@ -109,7 +109,7 @@
             position: relative;
             box-sizing: border-box;
 
-            @include devices(large) {
+            @include devices(display) {
                 // width: unset;
             }
 

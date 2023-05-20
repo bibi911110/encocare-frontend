@@ -1,10 +1,13 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
 .navbar-auth {
     display: flex;
 
     button {
         width: 162px;
 
-        @include devices(large) {
+        @include devices(display) {
             width: 126px;
         }
 
@@ -15,5 +18,146 @@
 
     @include devices(tablet) {
         display: none;
+    }
+}
+
+.navbar-auth-profile {
+    height: 69px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: -32px;
+
+    @include devices(display) {
+        margin: 0;
+    }
+
+    @include devices(tablet) {
+        position: absolute;
+        right: 14px;
+    }
+
+    .profile-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        .profile-info {
+            padding-right: 16px;
+            text-align: right;
+
+            @include devices(tablet) {
+                display: none;
+            }
+
+            .email {
+                font-size: 14px;
+                color: #4d4d4d;
+            }
+
+            .account-id {
+                font-size: 13px;
+                color: #868686;
+
+                span {
+                    color: #2100f6;
+                }
+            }
+        }
+
+        img {
+            height: 50px;
+            width: 50px;
+
+            @include devices(tablet) {
+                height: 40px;
+                width: 40px;
+            }
+        }
+
+        & > span {
+            display: flex;
+            padding-left: 10px;
+
+            svg > path {
+                stroke: #0070b5;
+            }
+        }
+    }
+
+    .profile-dropdown {
+        display: none;
+        position: absolute;
+        top: 69px;
+        right: 0;
+        background-color: #ffffff;
+        box-shadow: 0 3px 6px $boxShadowColor;
+        width: 310px;
+
+        @include devices(tablet) {
+            width: 330px;
+            font-size: 15px;
+        }
+
+        .profile-mobile-detail {
+            display: none;
+            padding: 8px 12px;
+            align-items: center;
+
+            @include devices(tablet) {
+                display: flex;
+            }
+
+            img {
+                height: 72px;
+                width: 72px;
+                padding-right: 8px;
+            }
+
+            .profile-mobile-info {
+                .email {
+                    font-size: 15px;
+                    color: #4d4d4d;
+                }
+
+                .account-id {
+                    font-size: 13px;
+                    color: #868686;
+
+                    span {
+                        color: #2100f6;
+                    }
+                }
+            }
+        }
+
+        .dropdown-item {
+            padding: 12px 16px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: #000000;
+            font-size: 16;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $primaryColor;
+                color: #ffffff;
+
+                svg > path {
+                    stroke: #ffffff;
+                }
+            }
+
+            span {
+                display: flex;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    .profile-dropdown-open {
+        display: block;
     }
 }

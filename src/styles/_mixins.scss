@@ -1,5 +1,5 @@
 @mixin devices($breakpoint) {
-    @if $breakpoint == large {
+    @if $breakpoint == display {
         @media only screen and (max-width: 1680px) {
             @content;
         }

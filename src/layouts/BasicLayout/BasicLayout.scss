@@ -1,10 +1,12 @@
-.fixed-header {
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
-    top: 0;
-}
+#root {
+    & > header {
+        position: fixed;
+        width: 100%;
+        z-index: 9999;
+        top: 0;
+    }
 
-.main-content {
-    margin-top: 111px;
+    & > main {
+        margin-top: 111px;
+    }
 }

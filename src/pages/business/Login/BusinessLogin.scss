@@ -10,7 +10,7 @@
         gap: 32px;
         padding: 90px 0 0 0;
 
-        @include devices(large) {
+        @include devices(display) {
             padding: 90px 60px 0 60px;
         }
 
@@ -31,7 +31,7 @@
             margin-left: 160px;
             box-sizing: border-box;
 
-            @include devices(large) {
+            @include devices(display) {
                 margin: 0;
                 width: 100%;
                 flex: 1;
@@ -141,7 +141,7 @@
             position: relative;
             box-sizing: border-box;
 
-            @include devices(large) {
+            @include devices(display) {
                 width: 100%;
                 flex: 1.7;
             }

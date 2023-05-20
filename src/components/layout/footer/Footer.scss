@@ -64,7 +64,7 @@ footer {
         padding: 40px 234px 28px 234px;
         gap: 22px;
 
-        @include devices(large) {
+        @include devices(display) {
             padding: 40px 144px 28px 144px;
         }
 
@@ -83,7 +83,7 @@ footer {
         .logo-section {
             max-width: 630px;
 
-            @include devices(large) {
+            @include devices(display) {
                 max-width: 480px;
             }
 
@@ -150,7 +150,7 @@ footer {
         .subscribe-detail {
             max-width: 512px;
 
-            @include devices(large) {
+            @include devices(display) {
                 max-width: 414px;
             }
 

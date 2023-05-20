@@ -343,3 +343,168 @@ export const uploadIcon = (
         </g>
     </svg>
 );
+
+export const dashboardIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16.304" height="17.949" viewBox="0 0 16.304 17.949">
+        <g id="Icon_feather-home" data-name="Icon feather-home" transform="translate(-3.75 -2.25)">
+            <path
+                id="Path_7716"
+                data-name="Path 7716"
+                d="M4.5,8.757,11.9,3l7.4,5.757V17.8a1.645,1.645,0,0,1-1.645,1.645H6.145A1.645,1.645,0,0,1,4.5,17.8Z"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+            />
+            <path
+                id="Path_7717"
+                data-name="Path 7717"
+                d="M13.5,26.225V18h4.935v8.225"
+                transform="translate(-4.065 -6.775)"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+            />
+        </g>
+    </svg>
+);
+
+export const starIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="19.239" height="18.37" viewBox="0 0 19.239 18.37">
+        <path
+            id="Icon_feather-star"
+            data-name="Icon feather-star"
+            d="M11.87,3,14.61,8.552l6.129.9L16.3,13.768l1.047,6.1L11.87,16.987,6.388,19.87l1.047-6.1L3,9.448l6.129-.9Z"
+            transform="translate(-2.25 -2.25)"
+            fill="rgba(0,0,0,0)"
+            stroke="#0092bd"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="1.5"
+        />
+    </svg>
+);
+
+export const plusIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="13.241" height="13.241" viewBox="0 0 13.241 13.241">
+        <g id="Icon_feather-plus" data-name="Icon feather-plus" transform="translate(-6.75 -6.75)">
+            <path
+                id="Path_7720"
+                data-name="Path 7720"
+                d="M18,7.5V19.241"
+                transform="translate(-4.629)"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+            />
+            <path
+                id="Path_7721"
+                data-name="Path 7721"
+                d="M7.5,18H19.241"
+                transform="translate(0 -4.629)"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+            />
+        </g>
+    </svg>
+);
+
+export const settingIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="19.949" height="19.949" viewBox="0 0 19.949 19.949">
+        <g id="Icon_feather-settings" data-name="Icon feather-settings" transform="translate(0.75 0.75)">
+            <path
+                id="Path_7718"
+                data-name="Path 7718"
+                d="M18.532,16.016A2.516,2.516,0,1,1,16.016,13.5,2.516,2.516,0,0,1,18.532,16.016Z"
+                transform="translate(-6.791 -6.791)"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+            />
+            <path
+                id="Path_7719"
+                data-name="Path 7719"
+                d="M16.93,13.24a1.384,1.384,0,0,0,.277,1.526l.05.05a1.678,1.678,0,1,1-2.373,2.373l-.05-.05a1.395,1.395,0,0,0-2.365.99v.143a1.677,1.677,0,1,1-3.354,0V18.2a1.384,1.384,0,0,0-.906-1.266,1.384,1.384,0,0,0-1.526.277l-.05.05a1.678,1.678,0,1,1-2.373-2.373l.05-.05a1.395,1.395,0,0,0-.99-2.365H3.177a1.677,1.677,0,1,1,0-3.354h.075a1.384,1.384,0,0,0,1.266-.906,1.384,1.384,0,0,0-.277-1.526l-.05-.05A1.678,1.678,0,1,1,6.565,4.259l.05.05a1.384,1.384,0,0,0,1.526.277h.067A1.384,1.384,0,0,0,9.047,3.32V3.177a1.677,1.677,0,1,1,3.354,0v.075a1.395,1.395,0,0,0,2.365.99l.05-.05A1.678,1.678,0,1,1,17.19,6.565l-.05.05a1.384,1.384,0,0,0-.277,1.526v.067a1.384,1.384,0,0,0,1.266.839h.143a1.677,1.677,0,1,1,0,3.354H18.2a1.384,1.384,0,0,0-1.266.839Z"
+                transform="translate(-1.5 -1.5)"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+            />
+        </g>
+    </svg>
+);
+
+export const userIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="13.033" height="13.033" viewBox="0 0 13.033 13.033">
+        <path
+            id="Icon_material-account-circle"
+            data-name="Icon material-account-circle"
+            d="M9.517,3a6.517,6.517,0,1,0,6.517,6.517A6.519,6.519,0,0,0,9.517,3Zm0,1.955A1.955,1.955,0,1,1,7.562,6.91,1.952,1.952,0,0,1,9.517,4.955Zm0,9.254a4.692,4.692,0,0,1-3.91-2.1c.02-1.3,2.607-2.007,3.91-2.007s3.89.71,3.91,2.007a4.692,4.692,0,0,1-3.91,2.1Z"
+            transform="translate(-3 -3)"
+            fill="#0092bd"
+        />
+    </svg>
+);
+
+export const securityIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="12.636" height="15.444" viewBox="0 0 12.636 15.444">
+        <path
+            id="Icon_material-security"
+            data-name="Icon material-security"
+            d="M10.818,1.5,4.5,4.308V8.52a8.736,8.736,0,0,0,6.318,8.424A8.736,8.736,0,0,0,17.136,8.52V4.308Zm0,7.715h4.914a7.515,7.515,0,0,1-4.914,6.276V9.222H5.9v-4l4.914-2.183Z"
+            transform="translate(-4.5 -1.5)"
+            fill="#0092bd"
+        />
+    </svg>
+);
+
+export const logoutIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="14.247" height="12.466" viewBox="0 0 14.247 12.466">
+        <path
+            id="Icon_open-account-logout"
+            data-name="Icon open-account-logout"
+            d="M5.343,0V1.781h7.124v8.9H5.343v1.781h8.9V0ZM3.562,3.562,0,6.233,3.562,8.9V7.124h7.124V5.343H3.562Z"
+            fill="#0092bd"
+        />
+    </svg>
+);
+
+export const rightArrowIcon3 = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="22.18" height="20.692" viewBox="0 0 22.18 20.692">
+        <g id="Group_20934" data-name="Group 20934" transform="translate(13438.414 1009.346)">
+            <path
+                id="Path_60204"
+                data-name="Path 60204"
+                d="M8523.02,320.129l-8.93,8.932,8.93,8.932"
+                transform="translate(-4903.559 -669.939) rotate(180)"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeWidth="2"
+            />
+            <path
+                id="Path_60205"
+                data-name="Path 60205"
+                d="M8521.135,320.129l-7.045,7.046,7.045,7.047"
+                transform="translate(-4915.865 -671.825) rotate(180)"
+                fill="none"
+                stroke="rgba(255,255,255,0.25)"
+                strokeLinecap="round"
+                strokeWidth="2"
+                opacity="0.5"
+            />
+        </g>
+    </svg>
+);

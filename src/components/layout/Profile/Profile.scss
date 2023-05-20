@@ -1,0 +1,157 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.profile {
+    .float-button {
+        display: none;
+        width: 58px;
+        height: 44px;
+        position: fixed;
+        top: 132px;
+        left: 0;
+
+        span {
+            display: flex;
+            align-items: center;
+
+            svg {
+                transform: scale(0.9);
+            }
+        }
+
+        @include devices(tablet) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primaryColor;
+        }
+    }
+
+    .main-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 0 12px 24px 12px;
+        box-sizing: border-box;
+        width: 310px;
+
+        @include devices(tablet) {
+            display: none;
+        }
+
+        &.active {
+            display: flex;
+            position: fixed;
+            top: 176px;
+            padding: 26px 0 10px 0;
+            left: 0;
+        }
+
+        .back {
+            position: absolute;
+            bottom: 0;
+            height: 92%;
+            width: 100%;
+            background-color: #f6f6f7;
+            z-index: 0;
+
+            @include devices(tablet) {
+                height: 100%;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+            }
+        }
+
+        .front {
+            z-index: 999;
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 120px;
+                height: 120px;
+                padding-bottom: 24px;
+            }
+
+            h1 {
+                margin: 0;
+                font-size: 21px;
+                color: $primaryColor;
+                padding-bottom: 6px;
+            }
+
+            p {
+                font-size: 14px;
+                color: #4d4d4d;
+                padding-bottom: 16px;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                width: 100%;
+
+                & > li {
+                    &:last-child {
+                        margin-top: max(0px, calc(100vh - 680px));
+                    }
+
+                    a {
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: space-between;
+                        background-color: #ffffff;
+                        padding: 12px 16px;
+                        box-sizing: border-box;
+
+                        &:hover,
+                        &.active {
+                            color: #ffffff !important;
+                            background-color: $primaryColor;
+                            box-shadow: 0 3px 6px $boxShadowColor;
+
+                            svg {
+                                path {
+                                    stroke: #ffffff;
+                                }
+                            }
+
+                            & > div > .menu-title {
+                                color: #ffffff;
+                            }
+                        }
+
+                        & > div {
+                            display: flex;
+
+                            .menu-icon {
+                                display: flex;
+                                align-items: center;
+                                width: 20px;
+                                height: 20px;
+                                justify-content: center;
+                                margin-right: 14px;
+                            }
+
+                            .menu-title {
+                                font-size: 14px;
+                                color: #000000;
+                            }
+                        }
+
+                        .arrow-icon {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

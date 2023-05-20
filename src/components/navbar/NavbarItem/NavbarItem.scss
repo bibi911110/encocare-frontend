@@ -9,7 +9,7 @@
     align-items: center;
     cursor: pointer;
 
-    @include devices(large) {
+    @include devices(display) {
         padding: 0 22px;
     }
 
