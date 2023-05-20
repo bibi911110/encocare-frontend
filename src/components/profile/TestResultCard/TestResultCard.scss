@@ -1,0 +1,97 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.test-result-card {
+    background-color: #ffffff;
+    padding: 20px;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+    box-shadow: 0 3px 6px $boxShadowColor;
+
+    @include devices(desktop) {
+        width: 100%;
+    }
+
+    .result-content {
+        .content-row {
+            display: flex;
+            margin-bottom: 16px;
+
+            .col-name {
+                flex: 2;
+                width: 36.36%;
+            }
+
+            .col-date {
+                flex: 3.5;
+                width: 63.63;
+            }
+
+            .col-result {
+                flex: 2;
+                width: 36.36%;
+            }
+
+            .col-type {
+                flex: 2.5;
+                width: 45.45%;
+            }
+
+            .col-id {
+                flex: 1;
+                width: 18.18%;
+            }
+
+            p {
+                &:first-child {
+                    font-size: 14px;
+                    overflow: hidden;
+
+                    @include devices(tablet) {
+                        font-size: 12px;
+                    }
+                }
+
+                &:last-child {
+                    font-size: 16px;
+                    color: $primaryColor;
+                    overflow: hidden;
+
+                    @include devices(tablet) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .link-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        a {
+            color: #000000;
+            font-size: 14px;
+            text-decoration: underline;
+            display: flex;
+            align-items: center;
+
+            @include devices(tablet) {
+                font-size: 13px;
+            }
+
+            span {
+                display: flex;
+                svg {
+                    transform: scale(0.8);
+                    margin-left: 12px;
+
+                    path {
+                        stroke: $primaryColor;
+                    }
+                }
+            }
+        }
+    }
+}

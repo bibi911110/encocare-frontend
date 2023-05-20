@@ -1,7 +1,7 @@
 @import '../../../styles/variables';
 @import '../../../styles/mixins';
 
-.password-input {
+.search-input {
     position: relative;
     display: inline;
 
@@ -24,12 +24,24 @@
         }
     }
 
-    .toggle-password {
+    .search-icon {
         position: absolute;
         display: flex;
         top: 50%;
         right: 10px;
         transform: translateY(-50%);
         cursor: pointer;
+
+        svg {
+            transform: scale(0.8);
+
+            @include devices(tablet) {
+                transform: scale(0.7);
+            }
+
+            path {
+                stroke: $primaryColor;
+            }
+        }
     }
 }

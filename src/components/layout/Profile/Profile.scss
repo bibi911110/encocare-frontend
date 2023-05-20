@@ -4,7 +4,7 @@
 .profile {
     .float-button {
         display: none;
-        width: 58px;
+        width: 52px;
         height: 44px;
         position: fixed;
         top: 132px;
@@ -43,6 +43,7 @@
             top: 176px;
             padding: 26px 0 10px 0;
             left: 0;
+            z-index: 9999;
         }
 
         &.active {
@@ -64,7 +65,6 @@
         }
 
         .front {
-            z-index: 999;
             width: 100%;
             position: relative;
             display: flex;

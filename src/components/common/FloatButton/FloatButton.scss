@@ -1,0 +1,12 @@
+.accessibility-float-button {
+    position: fixed;
+    bottom: 42px;
+    left: 42px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+
+    svg {
+        transform: scale(0.8);
+    }
+}

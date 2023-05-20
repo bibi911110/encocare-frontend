@@ -1,2 +1,185 @@
 @import '../../../styles/variables';
 @import '../../../styles/mixins';
+
+.dashboard {
+    .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+
+        @include devices(tablet) {
+            margin-left: 52px;
+        }
+
+        .title-wrapper {
+            & > h1 {
+                font-size: 23px;
+                margin: 0;
+                padding-bottom: 10px;
+
+                @include devices(tablet) {
+                    padding-bottom: 0;
+                    font-size: 21px;
+                }
+            }
+
+            & > p {
+                font-size: 14px;
+
+                @include devices(tablet) {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        button {
+            width: 227px;
+
+            @include devices(desktop) {
+                width: 160px;
+            }
+
+            @include devices(tablet) {
+                display: none;
+            }
+        }
+    }
+
+    .dashboard-content {
+        background-color: #f6f6f7;
+        padding: 32px 30px;
+
+        @include devices(tablet) {
+            padding: 20px 12px;
+        }
+
+        .search-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 12px;
+
+            @include devices(tablet) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 24px;
+            }
+
+            .title-wrapper {
+                & > h2 {
+                    font-size: 18px;
+                    margin: 0;
+                    color: $primaryColor;
+                    padding-bottom: 8px;
+                }
+
+                & > p {
+                    font-size: 14px;
+                }
+            }
+
+            .search-input {
+                width: 420px;
+
+                @include devices(display) {
+                    width: 360px;
+                }
+
+                @include devices(desktop) {
+                    width: 240px;
+                }
+
+                @include devices(tablet) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .filter-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 36px;
+            padding-bottom: 10px;
+
+            @include devices(tablet) {
+                gap: 18px;
+            }
+
+            .filter-item {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                color: #4d4d4d;
+
+                @include devices(tablet) {
+                    font-size: 13px;
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 14px;
+
+                    @include devices(tablet) {
+                        margin-right: 8px;
+
+                        svg {
+                            transform: scale(0.9);
+                        }
+                    }
+                }
+            }
+        }
+
+        .test-card-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            height: calc(100vh - 546px);
+            overflow-y: scroll;
+            padding: 0px 8px 8px 0;
+            margin-right: -10px;
+
+            @include devices(desktop) {
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+        }
+    }
+
+    .mobile-test-button {
+        display: none;
+
+        @include devices(tablet) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 16px;
+
+            button {
+                width: 215px;
+            }
+        }
+    }
+
+    .support-link {
+        font-size: 14px;
+        padding-top: 20px;
+        color: #707070;
+
+        @include devices(tablet) {
+            text-align: center;
+            font-size: 13px;
+            padding-top: 14px;
+        }
+
+        span {
+            color: $primaryColor;
+            text-decoration: underline;
+        }
+    }
+}

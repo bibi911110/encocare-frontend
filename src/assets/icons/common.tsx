@@ -535,3 +535,97 @@ export const closeIcon = (
         </g>
     </svg>
 );
+
+export const filterIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="16.867" height="15.331" viewBox="0 0 16.867 15.331">
+        <path
+            id="Icon_feather-filter"
+            data-name="Icon feather-filter"
+            d="M18.367,4.5H3l6.147,7.269v5.025l3.073,1.537V11.769Z"
+            transform="translate(-2.25 -3.75)"
+            fill="none"
+            stroke="#0092bd"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="1.5"
+        />
+    </svg>
+);
+
+export const sortIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="17.391" height="13.265" viewBox="0 0 17.391 13.265">
+        <g id="Group_13339" data-name="Group 13339" transform="translate(1.061 0.75)">
+            <g id="Icon_feather-arrow-down" data-name="Icon feather-arrow-down" transform="translate(8.483 0)">
+                <path
+                    id="Path_4943"
+                    data-name="Path 4943"
+                    d="M18,7.5V18.2"
+                    transform="translate(-14.607 -7.5)"
+                    fill="none"
+                    stroke="#0092bd"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                />
+                <path
+                    id="Path_4944"
+                    data-name="Path 4944"
+                    d="M14.286,18l-3.393,3.393L7.5,18"
+                    transform="translate(-7.5 -9.629)"
+                    fill="none"
+                    stroke="#0092bd"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                />
+            </g>
+            <g id="Icon_feather-arrow-down-2" data-name="Icon feather-arrow-down" transform="translate(0 0.001)">
+                <path
+                    id="Path_4943-2"
+                    data-name="Path 4943"
+                    d="M18,18.205V7.5"
+                    transform="translate(-14.607 -6.441)"
+                    fill="none"
+                    stroke="#0092bd"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                />
+                <path
+                    id="Path_4944-2"
+                    data-name="Path 4944"
+                    d="M14.286,21.393,10.893,18,7.5,21.393"
+                    transform="translate(-7.5 -18)"
+                    fill="none"
+                    stroke="#0092bd"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                />
+            </g>
+        </g>
+    </svg>
+);
+
+export const accessibilityIcon = (
+    <svg
+        id="Group_21109"
+        data-name="Group 21109"
+        xmlns="http://www.w3.org/2000/svg"
+        width="66"
+        height="66"
+        viewBox="0 0 66 66"
+    >
+        <g id="Ellipse_155" data-name="Ellipse 155" fill="#fff" stroke="#0092bd" strokeWidth="3">
+            <circle cx="33" cy="33" r="33" stroke="none" />
+            <circle cx="33" cy="33" r="31.5" fill="none" />
+        </g>
+        <path
+            id="Icon_material-accessibility"
+            data-name="Icon material-accessibility"
+            d="M21.888,3a3.864,3.864,0,1,1-3.864,3.864A3.875,3.875,0,0,1,21.888,3ZM39.275,16.524H27.683V41.639H23.819V30.047H19.956V41.639H16.092V16.524H4.5V12.66H39.275Z"
+            transform="translate(11.613 10.681)"
+            fill="#0092bd"
+        />
+    </svg>
+);

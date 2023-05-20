@@ -3,6 +3,7 @@ import Header from '../../components/layout/Header/Header';
 import Footer from '../../components/layout/Footer/Footer';
 import Navbar from '../../components/layout/Navbar/Navbar';
 import Profile from '../../components/layout/Profile/Profile';
+import BottomDialog from '../../components/common/BottomDialog/BottomDialog';
 import './ProfileLayout.scss';
 
 const ProfileLayout = () => {
@@ -18,6 +19,7 @@ const ProfileLayout = () => {
                     <Outlet />
                 </div>
             </main>
+            <BottomDialog />
             <Footer />
         </>
     );

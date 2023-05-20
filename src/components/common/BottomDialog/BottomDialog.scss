@@ -17,6 +17,10 @@
         display: flex;
     }
 
+    @include devices(tablet) {
+        display: none !important;
+    }
+
     .button-wrapper {
         display: flex;
         justify-content: center;
