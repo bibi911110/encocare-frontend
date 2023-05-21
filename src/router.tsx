@@ -19,13 +19,14 @@ import IndividualLogin from './pages/Individual/Login/IndividualLogin';
 import Dashboard from './pages/profile/Dashboard/Dashboard';
 import TestHistory from './pages/profile/TestHistory/TestHistory';
 import Membership from './pages/profile/Membership/Membership';
+import Payment from './pages/profile/Payment/Payment';
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <BasicLayout />,
         children: [
-            { path: '', element: <Home /> },
+            { path: '/', element: <Home /> },
             { path: 'signup', element: <Signup /> },
             { path: 'signup-business', element: <BusinessSignup /> },
             { path: 'login', element: <Login /> },
@@ -40,12 +41,13 @@ const router = createBrowserRouter([
         ],
     },
     {
-        path: '/profile',
+        path: 'profile',
         element: <ProfileLayout />,
         children: [
             { path: 'dashboard', element: <Dashboard /> },
             { path: 'test-history', element: <TestHistory /> },
             { path: 'membership', element: <Membership /> },
+            { path: 'membership/payment', element: <Payment /> },
         ],
     },
 ]);

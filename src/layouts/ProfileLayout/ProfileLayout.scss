@@ -20,13 +20,13 @@ main[data-layout='profile'] {
     position: relative;
 
     @include devices(display) {
-        margin-left: 120px;
-        margin-right: 120px;
+        margin-left: 100px;
+        margin-right: 100px;
     }
 
     @include devices(desktop) {
-        margin-left: 60px;
-        margin-right: 60px;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 
     @include devices(tablet) {

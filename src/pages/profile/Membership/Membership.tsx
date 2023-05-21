@@ -1,5 +1,5 @@
-import paymentMethodImage from '../../../assets/images/payments/method.png';
 import MembershipCard from '../../../components/profile/MembershipCard/MembershipCard';
+import paymentMethodImage from '../../../assets/images/payments/method.png';
 import './Membership.scss';
 
 const membershipData = [

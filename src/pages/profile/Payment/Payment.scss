@@ -1,0 +1,294 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.profile-membership-payment {
+    .main-section {
+        padding: 20px;
+        background-color: #fdfdfd;
+        position: relative;
+
+        @include devices(tablet) {
+            padding: 16px 6px 82px 6px;
+            background-color: unset;
+        }
+
+        & > h1 {
+            font-size: 23px;
+            text-align: center;
+            margin: 0;
+            padding-bottom: 6px;
+
+            @include devices(tablet) {
+                font-size: 16px;
+            }
+        }
+
+        & > p {
+            font-size: 14px;
+            text-align: center;
+            padding-bottom: 24px;
+
+            @include devices(tablet) {
+                font-size: 13px;
+            }
+        }
+
+        .card-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 30px;
+
+            @include devices(tablet) {
+                flex-direction: column;
+            }
+
+            .left-section {
+                background-color: #f6f6f7;
+            }
+
+            .right-section {
+                width: 346px;
+
+                @include devices(desktop) {
+                    width: 300px;
+                }
+
+                @include devices(tablet) {
+                    width: 100%;
+                }
+
+                .plan-card {
+                    margin-bottom: 20px;
+
+                    .card-header {
+                        background-color: #00c770;
+                        font-size: 19px;
+                        font-weight: bolder;
+                        color: #ffffff;
+                        text-align: center;
+                        padding: 8px;
+                    }
+
+                    .card-body {
+                        background-color: #ccf4e2;
+                        padding: 22px 20px 12px 20px;
+
+                        .price-title {
+                            display: flex;
+                            align-items: center;
+
+                            & > span {
+                                &:nth-child(1) {
+                                    font-size: 24px;
+                                    padding-bottom: 28px;
+                                    line-height: 24px;
+                                    color: #00c770;
+                                }
+
+                                &:nth-child(2) {
+                                    font-size: 48px;
+                                    line-height: 48px;
+                                    font-weight: bolder;
+                                    color: #00c770;
+
+                                    @include devices(tablet) {
+                                        font-size: 42px;
+                                        line-height: 42px;
+                                    }
+                                }
+
+                                &:nth-child(3) {
+                                    font-size: 13px;
+                                    color: rgba(0, 0, 0, 0.3);
+
+                                    @include devices(tablet) {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .link-title {
+                            display: flex;
+                            justify-content: space-between;
+
+                            span {
+                                &:first-child {
+                                    font-size: 13px;
+                                    color: rgba(0, 0, 0, 0.3);
+                                }
+
+                                &:last-child {
+                                    font-size: 13px;
+                                    color: #000000;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .detail-card {
+                    @include devices(tablet) {
+                        box-shadow: 0 3px 6px $boxShadowColor;
+                    }
+
+                    & > div {
+                        background-color: #ffffff;
+                    }
+
+                    .between-content {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+
+                    .detail-1 {
+                        border-bottom: 2px solid #f6f6f7;
+                        padding: 24px 20px 20px 20px;
+
+                        & > h3 {
+                            font-size: 18px;
+                            margin: 0;
+                            text-align: center;
+                            padding-bottom: 20px;
+
+                            @include devices(tablet) {
+                                display: none;
+                            }
+                        }
+
+                        & > div > div > p {
+                            &:first-child {
+                                font-size: 16px;
+                            }
+
+                            &:last-child {
+                                font-size: 14px;
+                                color: #a6a6a6;
+                            }
+                        }
+
+                        & > div > p {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .detail-2 {
+                        border-bottom: 2px solid #f6f6f7;
+                        padding: 20px;
+
+                        & > div > p {
+                            &:first-child {
+                                font-size: 15px;
+                                color: #a6a6a6;
+                            }
+
+                            &:last-child {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    .detail-3 {
+                        padding: 20px;
+
+                        & > div > p {
+                            &:first-child {
+                                font-size: 14px;
+                            }
+
+                            &:last-child {
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .button-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            @include devices(tablet) {
+                background-color: #ffffff;
+                position: fixed;
+                bottom: 32px;
+                left: 0;
+                width: 100%;
+                padding-top: 12px;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+            }
+
+            & > button {
+                width: 242px;
+                margin-bottom: 8px;
+            }
+
+            & > a {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                color: #000000;
+                text-decoration: underline;
+
+                @include devices(tablet) {
+                    font-size: 13px;
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        .method-wrapper {
+            position: absolute;
+            bottom: 8px;
+            right: 12px;
+            text-align: right;
+
+            @include devices(tablet) {
+                display: none;
+            }
+
+            & > p {
+                font-size: 14px;
+                color: #656565;
+                padding-bottom: 4px;
+            }
+
+            & > img {
+                height: 34px;
+            }
+        }
+    }
+
+    .support-link {
+        font-size: 14px;
+        padding-top: 20px;
+        color: #707070;
+
+        @include devices(tablet) {
+            background-color: #ffffff;
+            padding: 8px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        span {
+            color: $primaryColor;
+            text-decoration: underline;
+        }
+    }
+}

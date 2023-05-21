@@ -1,0 +1,82 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.select-bank {
+    width: 380px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+    @include devices(desktop) {
+        width: 320px;
+    }
+
+    @include devices(tablet) {
+        width: 100%;
+    }
+
+    & > h2 {
+        font-size: 19px;
+        margin: 0;
+        padding-bottom: 20px;
+        text-align: center;
+        position: relative;
+
+        & > span {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 9px;
+            left: 0;
+            transform: scale(1.1);
+
+            path {
+                stroke: #000000;
+            }
+        }
+    }
+
+    input {
+        margin-bottom: 8px;
+    }
+
+    .select-bank-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        height: 264px;
+        overflow: auto;
+        padding-right: 4px;
+        margin-right: -10px;
+
+        .bank-item {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 4px 16px;
+            border: 1px solid rgba($color: #000000, $alpha: 0);
+
+            &:hover {
+                border-color: $primaryColor;
+                box-shadow: 0 3px 6px $boxShadowColor;
+                cursor: pointer;
+            }
+
+            & > img {
+                width: 34px;
+                height: 34px;
+                margin-right: 24px;
+            }
+
+            & > span {
+                font-size: 14px;
+            }
+        }
+    }
+
+    & > p {
+        font-size: 14px;
+        text-decoration: underline;
+        text-align: center;
+        margin-top: 18px;
+    }
+}

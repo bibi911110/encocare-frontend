@@ -5,7 +5,7 @@ import NormalInput from '../../../components/common/NormalInput/NormalInput';
 import DatePicker from '../../../components/common/DatePicker/DatePicker';
 import { StepPropsType } from '../../../types/basicComponents';
 import usdImage from '../../../assets/images/payments/usd.png';
-import cardImage from '../../../assets/images/payments/card.png';
+import CardNumberInput from '../../../components/common/CardNumberInput/CardNumberInput';
 
 const selectOptions = [
     <div className="cost-type">
@@ -25,10 +25,7 @@ const PaymentStep2 = ({ handlePrevStep }: StepPropsType) => {
                         <NormalInput placeHolder="Enter Amount" className="amount-input" />
                     </div>
                     <p>Please enter card details</p>
-                    <div className="card-number-wrapper">
-                        <NormalInput placeHolder="Card Number" className="card-number-input" />
-                        <img src={cardImage} alt="" />
-                    </div>
+                    <CardNumberInput placeHolder="Card Number" />
                     <div className="date-picker-cvv">
                         <DatePicker placeHolder="Expiry Date" className="date-input" />
                         <NormalInput placeHolder="CVV" className="cvv-input" />

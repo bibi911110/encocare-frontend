@@ -786,3 +786,36 @@ export const fireIcon = (
         </g>
     </svg>
 );
+
+export const leftArrowIcon2 = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="11.957" height="12.785" viewBox="0 0 11.957 12.785">
+        <g
+            id="Icon_feather-arrow-right"
+            data-name="Icon feather-arrow-right"
+            transform="translate(10.957 11.371) rotate(180)"
+        >
+            <path
+                id="Path_4827"
+                data-name="Path 4827"
+                d="M7.5,18h9.957"
+                transform="translate(-7.5 -13.022)"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+            />
+            <path
+                id="Path_4828"
+                data-name="Path 4828"
+                d="M18,7.5l4.978,4.978L18,17.457"
+                transform="translate(-13.022 -7.5)"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+            />
+        </g>
+    </svg>
+);

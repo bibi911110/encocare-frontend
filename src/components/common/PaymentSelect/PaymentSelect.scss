@@ -4,12 +4,8 @@
 .payment-select {
     display: flex;
     flex-direction: column;
-    width: 364px;
+    width: 100%;
     gap: 14px;
-
-    @include devices(tablet) {
-        width: 100%;
-    }
 
     .payment-item {
         display: flex;
@@ -19,7 +15,7 @@
         padding: 0px 8px 0px 12px;
         background-color: #ffffff;
         box-shadow: 0 3px 6px $boxShadowColor;
-        border: 2px solid rgba(0, 0, 0, 0);
+        border: 1px solid rgba(0, 0, 0, 0);
         cursor: pointer;
 
         @include devices(tablet) {
@@ -28,7 +24,7 @@
         }
 
         &:hover {
-            border: 2px solid $primaryColor;
+            border: 1px solid $primaryColor;
         }
 
         .checkbox-title {
@@ -57,6 +53,6 @@
     }
 
     .payment-item-active {
-        border: 2px solid $primaryColor;
+        border: 1px solid $primaryColor;
     }
 }

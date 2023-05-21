@@ -38,7 +38,6 @@
 
             @include devices(tablet) {
                 font-size: 14px;
-                padding: 0 0 20px 0;
             }
         }
 
@@ -46,6 +45,7 @@
             background-color: #f6f6f7;
             display: flex;
             flex-direction: column;
+            align-items: center;
 
             @include devices(tablet) {
                 background-color: white;
@@ -57,9 +57,12 @@
                 flex-direction: column;
                 align-items: center;
                 padding: 36px 20px 28px 20px;
+                width: 380px;
+                box-sizing: border-box;
 
                 @include devices(tablet) {
                     background-color: #f6f6f7;
+                    width: 100%;
                 }
 
                 p {
@@ -92,20 +95,8 @@
                         }
                     }
 
-                    .card-number-wrapper {
-                        position: relative;
+                    .card-number-input {
                         margin-bottom: 12px;
-
-                        .card-number-input {
-                            width: 100%;
-                            padding-right: 200px;
-                        }
-
-                        img {
-                            position: absolute;
-                            right: 12px;
-                            top: 11px;
-                        }
                     }
 
                     .date-picker-cvv {

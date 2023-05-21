@@ -1,0 +1,43 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.billing-detail {
+    width: 480px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+    @include devices(desktop) {
+        width: 400px;
+    }
+
+    @include devices(tablet) {
+        width: 100%;
+    }
+
+    & > h2 {
+        font-size: 19px;
+        margin: 0;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .input-wrapper {
+        input {
+            width: 100%;
+            margin-bottom: 12px;
+        }
+    }
+
+    .date-picker-cvv {
+        display: flex;
+        gap: 12px;
+
+        .date-input {
+            flex: 1.8;
+        }
+
+        .cvv-input {
+            flex: 1;
+        }
+    }
+}
