@@ -1,0 +1,22 @@
+@import '../../styles/mixins';
+
+header[data-layout='test'] {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+}
+
+main[data-layout='test'] {
+    margin-top: 111px;
+    min-height: calc(100vh - 169px);
+    padding-top: 38px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+
+    @include devices(tablet) {
+        padding-top: 24px;
+        padding-bottom: 20px;
+    }
+}

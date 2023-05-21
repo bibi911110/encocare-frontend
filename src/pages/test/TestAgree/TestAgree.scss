@@ -1,0 +1,110 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.test-agree {
+    width: 880px;
+
+    @include devices(tablet) {
+        width: 100%;
+    }
+
+    & > h1 {
+        font-size: 24px;
+        margin: 0;
+        padding-bottom: 10px;
+        text-align: center;
+
+        @include devices(tablet) {
+            font-size: 18px;
+            padding-bottom: 14px;
+        }
+    }
+
+    & > p {
+        font-size: 15px;
+        text-align: center;
+        padding-bottom: 20px;
+
+        @include devices(tablet) {
+            font-size: 14px;
+            padding-bottom: 28px;
+        }
+    }
+
+    .agree-wrapper {
+        background-color: #f6f6f7;
+        padding: 28px 20px;
+        box-sizing: border-box;
+
+        @include devices(tablet) {
+            background-color: #ffffff;
+            width: 100%;
+            padding: 0 16px;
+        }
+
+        .agree-content {
+            height: calc(100vh - 520px);
+            box-shadow: inset 0 3px 6px $boxShadowColor;
+            overflow: auto;
+            padding: 16px;
+            background-color: #ffffff;
+            margin-bottom: 32px;
+
+            & > p {
+                font-size: 15px;
+            }
+
+            @include devices(tablet) {
+                background-color: #f6f6f7;
+            }
+        }
+
+        .agree-check {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 16px;
+
+            @include devices(tablet) {
+                padding-bottom: 20px;
+            }
+
+            & > p {
+                margin-left: 16px;
+                font-size: 15px;
+
+                @include devices(tablet) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .button-wrapper {
+            text-align: center;
+            padding-bottom: 16px;
+
+            & > button {
+                width: 280px;
+
+                @include devices(tablet) {
+                    width: 260px;
+                }
+            }
+        }
+
+        & > p {
+            text-align: center;
+            font-size: 15px;
+            color: #9a9a9a;
+
+            span {
+                color: $primaryColor;
+                text-decoration: underline;
+            }
+
+            @include devices(tablet) {
+                font-size: 14px;
+            }
+        }
+    }
+}

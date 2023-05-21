@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import BasicLayout from './layouts/BasicLayout/BasicLayout';
 import ProfileLayout from './layouts/ProfileLayout/ProfileLayout';
+import TestLayout from './layouts/TestLayout/TestLayout';
 
 import Home from './pages/common/Home/Home';
 import Signup from './pages/common/Signup/Signup';
@@ -15,19 +16,20 @@ import BusinessSignup from './pages/business/Signup/BusinessSignup';
 import BusinessLogin from './pages/business/Login/BusinessLogin';
 import AdminLogin from './pages/admin/Login/AdminLogin';
 import IndividualLogin from './pages/Individual/Login/IndividualLogin';
-
 import Dashboard from './pages/profile/Dashboard/Dashboard';
 import TestHistory from './pages/profile/TestHistory/TestHistory';
 import Membership from './pages/profile/Membership/Membership';
 import Payment from './pages/profile/Payment/Payment';
 import PaymentSuccess from './pages/profile/PaymentSuccess/PaymentSuccess';
+import TestAgree from './pages/test/TestAgree/TestAgree';
+import TestProgress from './pages/test/TestProgress/TestProgress';
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <BasicLayout />,
         children: [
-            { path: '/', element: <Home /> },
+            { index: true, element: <Home /> },
             { path: 'signup', element: <Signup /> },
             { path: 'signup-business', element: <BusinessSignup /> },
             { path: 'login', element: <Login /> },
@@ -50,6 +52,14 @@ const router = createBrowserRouter([
             { path: 'membership', element: <Membership /> },
             { path: 'membership/payment', element: <Payment /> },
             { path: 'membership/payment/success', element: <PaymentSuccess /> },
+        ],
+    },
+    {
+        path: 'test',
+        element: <TestLayout />,
+        children: [
+            { path: 'agree', element: <TestAgree /> },
+            { path: 'progress', element: <TestProgress /> },
         ],
     },
 ]);
