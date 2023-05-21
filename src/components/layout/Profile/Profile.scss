@@ -50,6 +50,16 @@
             display: flex;
         }
 
+        &.is-test-history {
+            display: none;
+
+            @include devices(tablet) {
+                &.active {
+                    display: flex;
+                }
+            }
+        }
+
         .back {
             position: absolute;
             bottom: 0;

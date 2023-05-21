@@ -15,7 +15,9 @@ import BusinessSignup from './pages/business/Signup/BusinessSignup';
 import BusinessLogin from './pages/business/Login/BusinessLogin';
 import AdminLogin from './pages/admin/Login/AdminLogin';
 import IndividualLogin from './pages/Individual/Login/IndividualLogin';
+
 import Dashboard from './pages/profile/Dashboard/Dashboard';
+import TestHistory from './pages/profile/TestHistory/TestHistory';
 
 const router = createBrowserRouter([
     {
@@ -39,7 +41,10 @@ const router = createBrowserRouter([
     {
         path: '/profile',
         element: <ProfileLayout />,
-        children: [{ path: 'dashboard', element: <Dashboard /> }],
+        children: [
+            { path: 'dashboard', element: <Dashboard /> },
+            { path: 'test-history', element: <TestHistory /> },
+        ],
     },
 ]);
 

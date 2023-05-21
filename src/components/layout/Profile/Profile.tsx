@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { ProfilePropsType } from '../../../types/profileComponents';
 import {
     dashboardIcon,
     plusIcon,
@@ -18,7 +19,7 @@ const menu = [
     { title: 'Account Settings', icon: settingIcon, link: '/profile/setting' },
 ];
 
-const Profile = () => {
+const Profile = ({ isTestHistory }: ProfilePropsType) => {
     const [isMobileOpen, setMobileOpen] = useState(false);
     const profileRef = useRef<HTMLDivElement>(null);
 
@@ -41,7 +42,7 @@ const Profile = () => {
             <div className="float-button" onClick={() => setMobileOpen(!isMobileOpen)}>
                 <span>{rightArrowIcon3}</span>
             </div>
-            <div className={`main-section ${isMobileOpen ? 'active' : ''}`}>
+            <div className={`main-section${isMobileOpen ? ' active' : ''}${isTestHistory ? ' is-test-history' : ''}`}>
                 <div className="back" />
                 <div className="front">
                     <img src={profileImage} alt="" />

@@ -16,7 +16,7 @@ const data = {
 
 const Dashboard = () => {
     return (
-        <div className="dashboard">
+        <div className="profile-dashboard">
             <div className="dashboard-header">
                 <div className="title-wrapper">
                     <h1>Welcome to Encocare</h1>

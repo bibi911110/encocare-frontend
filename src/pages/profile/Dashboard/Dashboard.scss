@@ -1,7 +1,7 @@
 @import '../../../styles/variables';
 @import '../../../styles/mixins';
 
-.dashboard {
+.profile-dashboard {
     .dashboard-header {
         display: flex;
         justify-content: space-between;
@@ -145,8 +145,8 @@
             margin-right: -10px;
 
             @include devices(desktop) {
-                flex-direction: column;
-                flex-wrap: nowrap;
+                // flex-direction: column;
+                // flex-wrap: nowrap;
             }
         }
     }

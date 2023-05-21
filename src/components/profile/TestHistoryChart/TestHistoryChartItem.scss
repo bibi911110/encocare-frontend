@@ -1,0 +1,37 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.test-history-chart-item {
+    width: calc(50% - 10px);
+    display: flex;
+    flex-direction: column;
+
+    @include devices(tablet) {
+        width: 100%;
+    }
+
+    .title-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+
+        span {
+            font-size: 12px;
+        }
+    }
+
+    .bar-wrapper {
+        height: 12px;
+        width: 100%;
+        background-color: #efefef;
+        position: relative;
+
+        .main-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 12px;
+        }
+    }
+}
