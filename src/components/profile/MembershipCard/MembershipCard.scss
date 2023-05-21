@@ -1,0 +1,200 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.membership-card {
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px $boxShadowColor;
+    overflow: hidden;
+
+    .card-header {
+        padding: 24px 12px 12px 12px;
+        text-align: center;
+
+        @include devices(tablet) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        & > h1 {
+            font-size: 22px;
+            font-weight: bolder;
+            color: #000000;
+            margin: 0;
+            padding-bottom: 18px;
+
+            @include devices(tablet) {
+                font-size: 18px;
+            }
+        }
+
+        .price-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 8px;
+
+            & > span {
+                &:nth-child(1) {
+                    font-size: 24px;
+                    padding-bottom: 28px;
+                    line-height: 24px;
+                }
+
+                &:nth-child(2) {
+                    font-size: 48px;
+                    line-height: 48px;
+                    font-weight: bolder;
+
+                    @include devices(tablet) {
+                        font-size: 42px;
+                        line-height: 42px;
+                    }
+                }
+
+                &:nth-child(3) {
+                    font-size: 13px;
+                    color: rgba(0, 0, 0, 0.3);
+                    padding-left: 14px;
+
+                    @include devices(tablet) {
+                        padding-left: 4px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .bill-title {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.3);
+
+            @include devices(tablet) {
+                position: absolute;
+                margin-top: 32px;
+                font-size: 13px;
+            }
+        }
+    }
+
+    .card-content {
+        padding: 12px 28px;
+
+        @include devices(tablet) {
+            font-size: 13px;
+            padding: 20px 14px;
+        }
+
+        .card-child-item {
+            border: 1px solid;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+
+            @include devices(tablet) {
+                font-size: 13px;
+            }
+
+            &[data-type='true'] {
+                border-color: rgba($color: #00c770, $alpha: 0.3);
+            }
+
+            &[data-type='false'] {
+                border-color: rgba($color: #ff004c, $alpha: 0.3);
+            }
+
+            span {
+                width: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 16px;
+
+                svg {
+                    @include devices(tablet) {
+                        transform: scale(0.9);
+                    }
+                }
+            }
+        }
+
+        .subscribe-mobile {
+            display: none;
+            font-size: 16px;
+            color: #ffffff;
+            text-align: center;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-top: 18px;
+            margin-bottom: 12px;
+
+            @include devices(tablet) {
+                display: block;
+            }
+        }
+
+        & > a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: #000000;
+            text-decoration: underline;
+            margin-top: 30px;
+
+            @include devices(tablet) {
+                margin-top: 0;
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                margin-left: 18px;
+
+                svg {
+                    path {
+                        stroke: $primaryColor;
+                    }
+                }
+            }
+        }
+    }
+
+    .card-footer {
+        color: #ffffff;
+        font-size: 18px;
+        padding: 12px;
+        text-align: center;
+
+        @include devices(tablet) {
+            display: none;
+        }
+    }
+
+    .popular {
+        position: absolute;
+        height: 24px;
+        font-size: 14px;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 24px;
+        right: -40px;
+        transform: rotate(45deg);
+        padding: 0 40px;
+
+        @include devices(tablet) {
+            height: 20px;
+            font-size: 11px;
+            top: 14px;
+            right: -46px;
+
+            span > svg {
+                transform: scale(0.8);
+            }
+        }
+    }
+}

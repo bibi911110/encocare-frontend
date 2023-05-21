@@ -45,15 +45,16 @@ const Dashboard = () => {
                 </div>
                 <div className="test-card-wrapper">
                     {[0, 1, 2, 3, 4, 5, 6, 7].map((item) => (
-                        <TestResultCard
-                            key={item}
-                            id={data.id}
-                            name={data.name}
-                            date={data.date}
-                            result={data.result}
-                            type={data.type}
-                            link={data.link}
-                        />
+                        <div className="test-card-col" key={item}>
+                            <TestResultCard
+                                id={data.id}
+                                name={data.name}
+                                date={data.date}
+                                result={data.result}
+                                type={data.type}
+                                link={data.link}
+                            />
+                        </div>
                     ))}
                 </div>
             </div>

@@ -242,6 +242,14 @@
                         flex-wrap: wrap;
                         gap: 20px;
                         width: 100%;
+
+                        .chart-content-col {
+                            width: calc(50% - 10px);
+
+                            @include devices(tablet) {
+                                width: 100%;
+                            }
+                        }
                     }
                 }
 

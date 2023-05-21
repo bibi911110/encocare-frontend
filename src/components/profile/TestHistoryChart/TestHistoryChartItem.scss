@@ -2,13 +2,9 @@
 @import '../../../styles/mixins';
 
 .test-history-chart-item {
-    width: calc(50% - 10px);
+    width: 100%;
     display: flex;
     flex-direction: column;
-
-    @include devices(tablet) {
-        width: 100%;
-    }
 
     .title-wrapper {
         display: flex;

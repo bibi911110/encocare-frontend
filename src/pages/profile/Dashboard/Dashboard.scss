@@ -144,9 +144,12 @@
             padding: 0px 8px 8px 0;
             margin-right: -10px;
 
-            @include devices(desktop) {
-                // flex-direction: column;
-                // flex-wrap: nowrap;
+            .test-card-col {
+                width: calc(50% - 10px);
+
+                @include devices(tablet) {
+                    width: 100%;
+                }
             }
         }
     }

@@ -1,0 +1,112 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.profile-membership {
+    .membership-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 20px;
+
+        @include devices(tablet) {
+            margin-left: 52px;
+        }
+
+        .title-wrapper {
+            & > h1 {
+                font-size: 23px;
+                margin: 0;
+                padding-bottom: 10px;
+
+                @include devices(tablet) {
+                    padding-bottom: 0;
+                    font-size: 21px;
+                }
+            }
+
+            & > p {
+                font-size: 14px;
+
+                @include devices(tablet) {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .method-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            @include devices(tablet) {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                z-index: 9998;
+                background-color: #ffffff;
+                justify-content: center;
+                align-items: center;
+                padding: 6px;
+                box-shadow: 0 3px 6px $boxShadowColor;
+            }
+
+            & > p {
+                font-size: 14px;
+                text-align: right;
+
+                @include devices(tablet) {
+                    font-size: 13px;
+                }
+            }
+
+            & > img {
+                height: 36px;
+
+                @include devices(tablet) {
+                    height: 28px;
+                }
+            }
+        }
+    }
+
+    .membership-content {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        background-color: #f6f6f7;
+        padding: 20px 26px;
+
+        @include devices(tablet) {
+            padding: 20px 24px 64px 24px;
+            margin: 0 -10px;
+        }
+
+        .content-col {
+            width: calc(33% - 10px);
+
+            @include devices(desktop) {
+                width: calc(50% - 8px);
+            }
+
+            @include devices(tablet) {
+                width: 100%;
+            }
+        }
+    }
+
+    .support-link {
+        font-size: 14px;
+        padding-top: 20px;
+        color: #707070;
+
+        @include devices(tablet) {
+            display: none;
+        }
+
+        span {
+            color: $primaryColor;
+            text-decoration: underline;
+        }
+    }
+}

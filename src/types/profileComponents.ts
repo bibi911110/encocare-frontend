@@ -17,3 +17,12 @@ export type TestHistoryChartItemPropsType = {
     color: string;
     arrow: string;
 };
+
+export type MembershipCardPropsType = {
+    title: string;
+    primaryColor: string;
+    secondColor: string;
+    iconType: 'circle' | 'normal';
+    popular: boolean;
+    price: number;
+};

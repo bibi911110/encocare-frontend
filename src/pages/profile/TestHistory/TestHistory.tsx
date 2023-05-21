@@ -104,13 +104,14 @@ const TestHistory = () => {
 
                                 <div className="chart-content">
                                     {chartData.map((item) => (
-                                        <TestHistoryChartItem
-                                            key={item.title}
-                                            title={item.title}
-                                            arrow={item.arrow}
-                                            color={item.color}
-                                            percent={item.percent}
-                                        />
+                                        <div className="chart-content-col" key={item.title}>
+                                            <TestHistoryChartItem
+                                                title={item.title}
+                                                arrow={item.arrow}
+                                                color={item.color}
+                                                percent={item.percent}
+                                            />
+                                        </div>
                                     ))}
                                 </div>
                             </div>

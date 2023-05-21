@@ -4,13 +4,9 @@
 .test-result-card {
     background-color: #ffffff;
     padding: 20px;
-    width: calc(50% - 10px);
+    width: 100%;
     box-sizing: border-box;
     box-shadow: 0 3px 6px $boxShadowColor;
-
-    @include devices(desktop) {
-        width: 100%;
-    }
 
     .result-content {
         .content-row {

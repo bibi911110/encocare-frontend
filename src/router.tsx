@@ -18,6 +18,7 @@ import IndividualLogin from './pages/Individual/Login/IndividualLogin';
 
 import Dashboard from './pages/profile/Dashboard/Dashboard';
 import TestHistory from './pages/profile/TestHistory/TestHistory';
+import Membership from './pages/profile/Membership/Membership';
 
 const router = createBrowserRouter([
     {
@@ -44,6 +45,7 @@ const router = createBrowserRouter([
         children: [
             { path: 'dashboard', element: <Dashboard /> },
             { path: 'test-history', element: <TestHistory /> },
+            { path: 'membership', element: <Membership /> },
         ],
     },
 ]);
