@@ -15,8 +15,12 @@ const PaymentSuccess = () => {
                     <br className="desktop-only" />
                     with details of your dashboard login credentials!
                 </p>
-                <Button title="Go to Dashboard" type="primary" />
-                <Link to="/">Didn't receive the email?</Link>
+                <Link to="/profile/dashboard" className="dashboard-link">
+                    <Button title="Go to Dashboard" type="primary" />
+                </Link>
+                <Link to="/" className="email-link">
+                    Didn't receive the email?
+                </Link>
 
                 <div className="method-wrapper">
                     <p>Accepted Methods:</p>

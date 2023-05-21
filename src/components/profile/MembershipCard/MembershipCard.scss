@@ -163,10 +163,10 @@
     }
 
     .card-footer {
-        color: #ffffff;
-        font-size: 18px;
         padding: 12px;
         text-align: center;
+        color: #ffffff;
+        font-size: 18px;
 
         @include devices(tablet) {
             display: none;

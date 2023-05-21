@@ -6,7 +6,7 @@ import bankImage3 from '../../../assets/images/bank/3.png';
 import bankImage4 from '../../../assets/images/bank/4.png';
 import bankImage5 from '../../../assets/images/bank/5.png';
 import bankImage6 from '../../../assets/images/bank/6.png';
-import './SelectBank.scss';
+import './BankSelect.scss';
 
 const banks = [
     {
@@ -43,14 +43,14 @@ const banks = [
     },
 ];
 
-const SelectBank = () => {
+const BankSelect = () => {
     return (
-        <div className="select-bank">
+        <div className="bank-select">
             <h2>
                 <span>{leftArrowIcon2}</span>Select your bank
             </h2>
             <SearchInput placeHolder="Search a bank" />
-            <div className="select-bank-list">
+            <div className="bank-select-list">
                 {banks.map((item) => (
                     <div className="bank-item" key={item.title}>
                         <img src={item.logo} alt="" />
@@ -63,4 +63,4 @@ const SelectBank = () => {
     );
 };
 
-export default SelectBank;
+export default BankSelect;

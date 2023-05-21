@@ -53,9 +53,11 @@ const MembershipCard = ({ title, primaryColor, secondColor, iconType, popular, p
                     Request more Information<span>{rightArrowIcon2}</span>
                 </Link>
             </div>
-            <div className="card-footer" style={{ backgroundColor: primaryColor }}>
-                <span>Subscribe</span>
-            </div>
+            <Link to="/profile/membership/payment">
+                <div className="card-footer" style={{ backgroundColor: primaryColor }}>
+                    Subscribe
+                </div>
+            </Link>
             {popular && (
                 <div className="popular" style={{ backgroundColor: primaryColor }}>
                     <span>{fireIcon}</span>

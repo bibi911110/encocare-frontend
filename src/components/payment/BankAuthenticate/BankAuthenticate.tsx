@@ -10,7 +10,7 @@ const BankAuthenticate = () => {
     const [step, setStep] = useState(0);
 
     const tabHeader = ['Internet Banking ID', 'QR Code'].map((item, index) => (
-        <span className={`${step === index ? 'active' : ''}`} onClick={() => setStep(index)}>
+        <span className={`${step === index ? 'active' : ''}`} onClick={() => setStep(index)} key={item}>
             {item}
         </span>
     ));

@@ -62,3 +62,7 @@ export type SelectPropsType = {
     placeHolder?: string;
     defaultValue?: number;
 };
+
+export type PaymentSelectPropsType = {
+    onChange?: (type: string) => void;
+};

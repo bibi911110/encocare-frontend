@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { PaymentSelectPropsType } from '../../../types/basicComponents';
 import CheckBox from '../CheckBox/CheckBox';
 import { backIcon, cardIcon, paypalIcon, stripeIcon } from '../../../assets/icons/payment';
 import './PaymentSelect.scss';
@@ -26,11 +27,14 @@ const payments = [
     },
 ];
 
-const PaymentSelect = () => {
+const PaymentSelect = ({ onChange }: PaymentSelectPropsType) => {
     const [payment, setPayment] = useState('card');
 
     const handlePayment = (paymentType: string) => {
         setPayment(paymentType);
+        if (onChange) {
+            onChange(paymentType);
+        }
     };
 
     return (

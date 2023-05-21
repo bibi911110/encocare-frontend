@@ -230,12 +230,12 @@
                 margin-bottom: 8px;
             }
 
-            & > a {
+            & > p {
                 display: flex;
                 align-items: center;
                 font-size: 14px;
-                color: #000000;
                 text-decoration: underline;
+                cursor: pointer;
 
                 @include devices(tablet) {
                     font-size: 13px;

@@ -1,11 +1,12 @@
+import { BillingMethodPropsType } from '../../../types/paymentComponent';
 import PaymentSelect from '../../common/PaymentSelect/PaymentSelect';
 import './BillingMethod.scss';
 
-const BillingMethod = () => {
+const BillingMethod = ({ handleMethod }: BillingMethodPropsType) => {
     return (
         <div className="billing-method">
             <h2>Billing Method</h2>
-            <PaymentSelect />
+            <PaymentSelect onChange={handleMethod} />
             <p>Can't find your payment method?</p>
         </div>
     );

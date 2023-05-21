@@ -51,16 +51,18 @@
             padding-bottom: 32px;
         }
 
-        & > button {
-            width: 242px;
-            margin-bottom: 10px;
+        .dashboard-link {
+            & > button {
+                width: 242px;
+                margin-bottom: 10px;
 
-            @include devices(tablet) {
-                width: 216px;
+                @include devices(tablet) {
+                    width: 216px;
+                }
             }
         }
 
-        & > a {
+        .email-link {
             font-size: 15px;
             color: #000000;
             text-decoration: underline;
