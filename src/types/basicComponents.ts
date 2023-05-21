@@ -63,6 +63,16 @@ export type SelectPropsType = {
     defaultValue?: number;
 };
 
+export type MultiSelectPropsType = {
+    options: Array<React.ReactElement | string>;
+    placeHolder?: string;
+    defaultValue?: Array<number>;
+};
+
 export type PaymentSelectPropsType = {
     onChange?: (type: string) => void;
+};
+
+export type StepperPropsType = {
+    current: number;
 };

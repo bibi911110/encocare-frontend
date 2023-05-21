@@ -1,0 +1,68 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.stepper {
+    display: flex;
+
+    .step-item {
+        width: 190px;
+        position: relative;
+
+        @include devices(tablet) {
+            width: 92px;
+        }
+
+        .step-divider {
+            position: absolute;
+            border-bottom: 2px dashed $primaryColor;
+            height: 1px;
+            width: 100%;
+            top: 16px;
+            left: 95px;
+
+            @include devices(tablet) {
+                left: 50px;
+            }
+
+            &.last {
+                display: none;
+            }
+        }
+
+        .step-main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .step-icon {
+                display: flex;
+                align-items: center;
+                margin-bottom: 16px;
+                z-index: 99;
+
+                @include devices(tablet) {
+                    margin-bottom: 4px;
+                }
+
+                svg {
+                    @include devices(tablet) {
+                        transform: scale(0.7);
+                    }
+                }
+            }
+
+            .step-title {
+                font-size: 16px;
+
+                &.current {
+                    color: $primaryColor;
+                }
+
+                @include devices(tablet) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

@@ -4,7 +4,6 @@
 .select {
     font-size: 16px;
     height: 51px;
-    padding: 14px 30px 14px 24px;
     background-color: #ffffff;
     box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16);
     box-sizing: border-box;
@@ -17,7 +16,19 @@
         height: 48px;
     }
 
-    .select-selected {
+    .select-main {
+        padding: 14px 30px 14px 24px;
+        height: 51px;
+        box-sizing: border-box;
+
+        @include devices(tablet) {
+            height: 48px;
+        }
+
+        .select-placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
         .select-dropdown-icon {
             position: absolute;
             right: 12px;
@@ -36,22 +47,19 @@
         left: 0;
         background-color: #ffffff;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    }
+        z-index: 9999;
 
-    .select-dropdown-show {
-        display: block;
-    }
-
-    .select-option {
-        padding: 12px 14px;
-
-        &:hover {
-            background-color: $primaryColor;
-            color: #ffffff;
+        &.show {
+            display: block;
         }
-    }
 
-    .select-placeholder {
-        color: rgba(0, 0, 0, 0.5);
+        .select-option {
+            padding: 12px 14px 12px 24px;
+
+            &:hover {
+                background-color: $primaryColor;
+                color: #ffffff;
+            }
+        }
     }
 }

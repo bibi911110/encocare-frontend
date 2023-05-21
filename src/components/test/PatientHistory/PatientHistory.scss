@@ -1,0 +1,105 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.patient-history {
+    width: 580px;
+    background-color: #f6f6f7;
+    text-align: center;
+    padding: 36px 76px 20px 76px;
+    box-sizing: border-box;
+
+    @include devices(tablet) {
+        padding: 36px 20px 18px 20px;
+        width: 100%;
+    }
+
+    & > h1 {
+        font-size: 24px;
+        margin: 0;
+        margin-bottom: 24px;
+
+        @include devices(tablet) {
+            font-size: 18px;
+        }
+    }
+
+    .input-wrapper {
+        margin-bottom: 24px;
+
+        & > p {
+            font-size: 18px;
+            margin-bottom: 20px;
+
+            @include devices(tablet) {
+                font-size: 15px;
+            }
+        }
+
+        .choose-wrapper {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 38px;
+
+            .choose-item {
+                flex: 1;
+                width: calc(50% - 6px);
+                background-color: #ffffff;
+                box-shadow: 0 3px 6px $boxShadowColor;
+                display: flex;
+                align-items: center;
+                padding: 14px;
+                cursor: pointer;
+
+                & > span {
+                    margin-left: 16px;
+
+                    @include devices(tablet) {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    & > button {
+        width: 210px;
+
+        @include devices(tablet) {
+            width: 180px;
+        }
+    }
+
+    & > span {
+        display: none;
+        margin-top: 12px;
+        font-size: 13px;
+        text-decoration: underline;
+        cursor: pointer;
+
+        @include devices(tablet) {
+            display: block;
+        }
+    }
+
+    .company-badge {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 12px;
+        background-color: #ffffff;
+
+        & > img {
+            height: 48px;
+        }
+
+        @include devices(tablet) {
+            width: 100%;
+            text-align: center;
+            padding: 8px;
+
+            & > img {
+                height: 30px;
+            }
+        }
+    }
+}

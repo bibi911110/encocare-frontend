@@ -1,0 +1,121 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.multi-select {
+    .multi-select-wrapper {
+        font-size: 15px;
+        height: 51px;
+        background-color: #ffffff;
+        box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16);
+        box-sizing: border-box;
+        position: relative;
+        cursor: pointer;
+        text-align: left;
+
+        @include devices(tablet) {
+            font-size: 14px;
+            height: 48px;
+        }
+
+        .multi-select-main {
+            padding: 14px 30px 14px 24px;
+            height: 51px;
+            box-sizing: border-box;
+
+            @include devices(tablet) {
+                height: 48px;
+            }
+
+            .multi-select-placeholder {
+                color: rgba(0, 0, 0, 0.5);
+            }
+
+            .multi-select-dropdown-icon {
+                position: absolute;
+                right: 12px;
+                top: 0;
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .multi-select-dropdown {
+            display: none;
+            position: absolute;
+            width: 100%;
+            top: 53px;
+            left: 0;
+            background-color: #ffffff;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+            z-index: 9999;
+
+            &.show {
+                display: block;
+            }
+
+            .multi-select-option {
+                padding: 12px 14px 12px 24px;
+                position: relative;
+
+                &:hover {
+                    background-color: $primaryColor;
+                    color: #ffffff;
+                }
+
+                .checked-icon {
+                    display: flex;
+                    position: absolute;
+                    top: 36%;
+                    right: 12px;
+
+                    svg {
+                        transform: scale(0.8);
+                    }
+                }
+            }
+        }
+    }
+
+    .selected-items-wrapper {
+        width: 100%;
+        margin-top: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+
+        .selected-item {
+            display: inline;
+            background-color: #ffffff;
+            box-shadow: 0 3px 6px $boxShadowColor;
+            padding: 10px 36px 10px 24px;
+            position: relative;
+            font-size: 15px;
+            text-align: left;
+
+            @include devices(tablet) {
+                font-size: 14px;
+            }
+
+            .remove-icon {
+                display: flex;
+                cursor: pointer;
+                position: absolute;
+                right: 8px;
+                top: 34%;
+
+                @include devices(tablet) {
+                    top: 30%;
+                }
+
+                svg {
+                    transform: scale(0.8);
+
+                    @include devices(tablet) {
+                        transform: scale(0.7);
+                    }
+                }
+            }
+        }
+    }
+}

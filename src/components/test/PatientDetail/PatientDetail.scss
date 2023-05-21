@@ -1,0 +1,135 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.patient-detail {
+    width: 580px;
+    background-color: #f6f6f7;
+    text-align: center;
+    padding: 36px 76px 20px 76px;
+    box-sizing: border-box;
+
+    @include devices(tablet) {
+        padding: 36px 20px 18px 20px;
+        width: 100%;
+    }
+
+    & > h1 {
+        font-size: 24px;
+        margin: 0;
+        margin-bottom: 8px;
+
+        @include devices(tablet) {
+            font-size: 17px;
+        }
+    }
+
+    & > p {
+        font-size: 15px;
+        margin-bottom: 28px;
+
+        @include devices(tablet) {
+            font-size: 14px;
+            margin-bottom: 36px;
+        }
+    }
+
+    .input-wrapper {
+        & > input {
+            width: 100%;
+            margin-bottom: 18px;
+
+            @include devices(tablet) {
+                margin-bottom: 10px;
+            }
+        }
+
+        .name {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 18px;
+
+            @include devices(tablet) {
+                margin-bottom: 10px;
+            }
+
+            & > input {
+                width: calc(50% - 5px);
+            }
+        }
+
+        .phone-number {
+            display: flex;
+            margin-bottom: 18px;
+
+            @include devices(tablet) {
+                margin-bottom: 10px;
+            }
+
+            .select {
+                flex: 1;
+            }
+
+            .normal-input {
+                flex: 5;
+            }
+        }
+
+        .gender-birth {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 42px;
+
+            .select {
+                flex: 1;
+                width: calc(25% - 5px);
+            }
+
+            .date-picker {
+                flex: 3;
+                width: calc(75% - 5px);
+            }
+        }
+    }
+
+    & > button {
+        width: 210px;
+
+        @include devices(tablet) {
+            width: 180px;
+        }
+    }
+
+    & > span {
+        display: none;
+        margin-top: 12px;
+        font-size: 13px;
+        text-decoration: underline;
+        cursor: pointer;
+
+        @include devices(tablet) {
+            display: block;
+        }
+    }
+
+    .company-badge {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 12px;
+        background-color: #ffffff;
+
+        & > img {
+            height: 48px;
+        }
+
+        @include devices(tablet) {
+            width: 100%;
+            text-align: center;
+            padding: 8px;
+
+            & > img {
+                height: 30px;
+            }
+        }
+    }
+}

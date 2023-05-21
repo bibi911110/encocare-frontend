@@ -45,7 +45,7 @@ const Select = ({ options, defaultValue, placeHolder }: SelectPropsType) => {
 
     return (
         <div className="select" ref={selectRef}>
-            <div className="select-selected" onClick={handleDropdown} onBlur={() => setDropdownVisible(false)}>
+            <div className="select-main" onClick={handleDropdown} onBlur={() => setDropdownVisible(false)}>
                 {selected > -1 ? options[selected] : <span className="select-placeholder">{placeHolder}</span>}
                 <span className="select-dropdown-icon">{selectArrowIcon}</span>
             </div>

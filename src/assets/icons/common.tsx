@@ -830,3 +830,68 @@ export const lockIcon = (
         />
     </svg>
 );
+
+export const stepDoneIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+        <g id="Group_16507" data-name="Group 16507" transform="translate(-353 -278)">
+            <circle
+                id="Ellipse_193"
+                data-name="Ellipse 193"
+                cx="18"
+                cy="18"
+                r="18"
+                transform="translate(353 278)"
+                fill="#00c770"
+            />
+            <path
+                id="Path_7744"
+                data-name="Path 7744"
+                d="M-6597.851,9634.442l5.228,5.228,12.953-12.952"
+                transform="translate(6959.351 -9337.218)"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+            />
+        </g>
+    </svg>
+);
+
+export const stepCurrentIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+        <g id="Group_16508" data-name="Group 16508" transform="translate(-335 -278)">
+            <g
+                id="Ellipse_192"
+                data-name="Ellipse 192"
+                transform="translate(335 278)"
+                fill="#fff"
+                stroke="#0092bd"
+                strokeWidth="2"
+            >
+                <circle cx="18" cy="18" r="18" stroke="none" />
+                <circle cx="18" cy="18" r="17" fill="none" />
+            </g>
+            <g
+                id="Ellipse_194"
+                data-name="Ellipse 194"
+                transform="translate(342 285)"
+                fill="#0092bd"
+                stroke="#0092bd"
+                strokeWidth="2"
+            >
+                <circle cx="11" cy="11" r="11" stroke="none" />
+                <circle cx="11" cy="11" r="10" fill="none" />
+            </g>
+        </g>
+    </svg>
+);
+
+export const stepPendingIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+        <g id="Ellipse_195" data-name="Ellipse 195" fill="#fff" stroke="#0092bd" strokeWidth="2" strokeDasharray="5">
+            <circle cx="18" cy="18" r="18" stroke="none" />
+            <circle cx="18" cy="18" r="17" fill="none" />
+        </g>
+    </svg>
+);
