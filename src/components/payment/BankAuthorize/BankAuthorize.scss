@@ -1,0 +1,127 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.bank-authorize {
+    width: 380px;
+    padding: 30px 20px 12px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    @include devices(desktop) {
+        width: 320px;
+    }
+
+    @include devices(tablet) {
+        width: 100%;
+    }
+
+    & > h2 {
+        font-size: 16px;
+        margin: 0;
+        padding-bottom: 20px;
+        text-align: center;
+        position: relative;
+
+        & > span {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 6px;
+            left: 0;
+            transform: scale(1.1);
+
+            path {
+                stroke: #000000;
+            }
+        }
+    }
+
+    .bank-authorize-content {
+        text-align: center;
+
+        & > img {
+            width: 34px;
+            height: 34px;
+        }
+
+        & > h3 {
+            font-size: 15px;
+            margin: 0;
+            padding-bottom: 8px;
+        }
+
+        & > h4 {
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding-bottom: 52px;
+
+            span {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+            }
+        }
+
+        & > h5 {
+            font-size: 18px;
+            color: $primaryColor;
+            margin: 0;
+            padding-bottom: 16px;
+
+            @include devices(tablet) {
+                font-size: 16px;
+            }
+        }
+
+        .opt-code-phone {
+            font-size: 16px;
+            padding-bottom: 28px;
+
+            @include devices(tablet) {
+                font-size: 14px;
+            }
+        }
+
+        .input-wrapper {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 36px;
+
+            & > div {
+                gap: 12px;
+            }
+
+            .opt-code-input {
+                font-size: 20px;
+                border: none;
+                outline: none;
+                background-color: #ffffff;
+                box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16);
+                box-sizing: border-box;
+                padding: 8px;
+                width: 52px !important;
+                height: 50px !important;
+
+                &::placeholder {
+                    color: rgba(0, 0, 0, 0.5);
+                }
+
+                @include devices(tablet) {
+                    font-size: 18px !important;
+                }
+            }
+        }
+
+        .resend-code {
+            font-size: 13px;
+            color: $primaryColor;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}

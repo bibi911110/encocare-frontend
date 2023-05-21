@@ -3,6 +3,11 @@ import BillingMethod from '../../../components/payment/BillingMethod/BillingMeth
 import BillingDetail from '../../../components/payment/BillingDetail/BillingDetail';
 import SelectBank from '../../../components/payment/SelectBank/SelectBank';
 import BankAlert from '../../../components/payment/BankAlert/BankAlert';
+import BankAuthenticate from '../../../components/payment/BankAuthenticate/BankAuthenticate';
+import BankAuthorize from '../../../components/payment/BankAuthorize/BankAuthorize';
+import BankFinalStep from '../../../components/payment/BankFinalStep/BankFinalStep';
+import BankConfirm from '../../../components/payment/BankConfirm/BankConfirm';
+import BankSuccess from '../../../components/payment/BankSuccess/BankSuccess';
 import Button from '../../../components/common/Button/Button';
 import paymentMethodImage from '../../../assets/images/payments/method.png';
 import { leftArrowIcon2 } from '../../../assets/icons/common';
@@ -20,7 +25,12 @@ const Payment = () => {
                         {/* <BillingMethod /> */}
                         {/* <BillingDetail /> */}
                         {/* <SelectBank /> */}
-                        <BankAlert />
+                        {/* <BankAlert /> */}
+                        {/* {<BankAuthenticate />} */}
+                        {/* <BankAuthorize /> */}
+                        {/* <BankFinalStep /> */}
+                        {/* <BankConfirm /> */}
+                        <BankSuccess />
                     </div>
                     <div className="right-section">
                         <div className="plan-card">

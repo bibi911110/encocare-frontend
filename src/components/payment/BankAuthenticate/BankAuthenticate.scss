@@ -1,0 +1,106 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.bank-authenticate {
+    width: 380px;
+    padding: 30px 20px 12px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    @include devices(desktop) {
+        width: 320px;
+    }
+
+    @include devices(tablet) {
+        width: 100%;
+    }
+
+    & > h2 {
+        font-size: 16px;
+        margin: 0;
+        padding-bottom: 20px;
+        text-align: center;
+        position: relative;
+
+        & > span {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 6px;
+            left: 0;
+            transform: scale(1.1);
+
+            path {
+                stroke: #000000;
+            }
+        }
+    }
+
+    .bank-authenticate-content {
+        text-align: center;
+
+        & > img {
+            width: 34px;
+            height: 34px;
+        }
+
+        & > h3 {
+            font-size: 15px;
+            margin: 0;
+            padding-bottom: 8px;
+        }
+
+        & > h4 {
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding-bottom: 28px;
+
+            span {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+            }
+        }
+
+        & > p {
+            font-size: 15px;
+            color: $primaryColor;
+            padding-bottom: 20px;
+        }
+
+        .tab-header {
+            & > span {
+                background-color: #ebebeb;
+                padding: 4px 20px;
+                font-size: 15px;
+                cursor: pointer;
+
+                &.active {
+                    background-color: $primaryColor !important;
+                    box-shadow: 0 3px 6px $boxShadowColor;
+                    color: #ffffff;
+                }
+            }
+        }
+
+        .tab-content {
+            .tab-item {
+                & > p {
+                    padding-top: 28px;
+                    padding-bottom: 20px;
+                    font-size: 15px;
+                }
+
+                input {
+                    width: 100%;
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+}

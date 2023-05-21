@@ -6,7 +6,7 @@ const BankAlert = () => {
     return (
         <div className="bank-alert">
             <h2>
-                <span>{leftArrowIcon2}</span>Select your bank
+                <span>{leftArrowIcon2}</span> Select your bank
             </h2>
             <div className="alert-content">
                 <img src={alertImage} alt="" />

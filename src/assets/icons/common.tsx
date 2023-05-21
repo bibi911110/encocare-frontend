@@ -819,3 +819,14 @@ export const leftArrowIcon2 = (
         </g>
     </svg>
 );
+
+export const lockIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="15.544" height="17.764" viewBox="0 0 15.544 17.764">
+        <path
+            id="Icon_awesome-lock"
+            data-name="Icon awesome-lock"
+            d="M13.878,7.772h-.833v-2.5a5.274,5.274,0,0,0-10.548,0v2.5H1.665A1.666,1.666,0,0,0,0,9.437V16.1a1.666,1.666,0,0,0,1.665,1.665H13.878A1.666,1.666,0,0,0,15.544,16.1V9.437A1.666,1.666,0,0,0,13.878,7.772Zm-3.608,0h-5v-2.5a2.5,2.5,0,1,1,5,0Z"
+            fill="#0092bd"
+        />
+    </svg>
+);

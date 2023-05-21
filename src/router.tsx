@@ -20,6 +20,7 @@ import Dashboard from './pages/profile/Dashboard/Dashboard';
 import TestHistory from './pages/profile/TestHistory/TestHistory';
 import Membership from './pages/profile/Membership/Membership';
 import Payment from './pages/profile/Payment/Payment';
+import PaymentSuccess from './pages/profile/PaymentSuccess/PaymentSuccess';
 
 const router = createBrowserRouter([
     {
@@ -48,6 +49,7 @@ const router = createBrowserRouter([
             { path: 'test-history', element: <TestHistory /> },
             { path: 'membership', element: <Membership /> },
             { path: 'membership/payment', element: <Payment /> },
+            { path: 'membership/payment/success', element: <PaymentSuccess /> },
         ],
     },
 ]);

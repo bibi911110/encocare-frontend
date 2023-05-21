@@ -14,6 +14,8 @@
         "react-custom-single-select": "^1.0.3",
         "react-dom": "^18.2.0",
         "react-dropzone": "^14.2.3",
+        "react-otp-input": "^3.0.2",
+        "react-qr-code": "^2.0.11",
         "react-responsive-carousel": "^3.2.23",
         "react-responsive-modal": "^6.4.1",
         "react-router-dom": "^6.11.1",
