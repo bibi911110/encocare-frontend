@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from '../../../components/common/Button/Button';
 import CheckBox from '../../../components/common/CheckBox/CheckBox';
 import './TestAgree.scss';
@@ -71,7 +72,9 @@ const TestAgree = () => {
                 </div>
 
                 <div className="button-wrapper">
-                    <Button title="Agree & Continue" type="primary" arrow />
+                    <Link to="/test/progress">
+                        <Button title="Agree & Continue" type="primary" arrow />
+                    </Link>
                 </div>
                 <p>
                     For more details please, read your <br className="mobile-only" />

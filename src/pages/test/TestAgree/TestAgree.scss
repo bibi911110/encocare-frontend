@@ -83,7 +83,7 @@
             text-align: center;
             padding-bottom: 16px;
 
-            & > button {
+            & > a > button {
                 width: 280px;
 
                 @include devices(tablet) {

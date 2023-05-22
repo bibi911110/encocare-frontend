@@ -5,7 +5,7 @@ import Select from '../../common/Select/Select';
 import companyImage from '../../../assets/images/company.png';
 import './PatientDetail.scss';
 
-const PatientDetail = () => {
+const PatientDetail = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => void }) => {
     return (
         <div className="patient-detail">
             <h1>Patient Details</h1>
@@ -27,8 +27,8 @@ const PatientDetail = () => {
                 </div>
             </div>
 
-            <Button title="Continue" type="primary" arrow />
-            <span>Back</span>
+            <Button title="Continue" type="primary" onClick={onNext} arrow />
+            <span onClick={onPrev}>Back</span>
 
             <div className="company-badge">
                 <img src={companyImage} alt="" />

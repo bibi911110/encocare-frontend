@@ -6,7 +6,7 @@ import MultiSelect from '../../common/MultiSelect/MultiSelect';
 
 const options = ['Age Related Macular Degeneration', 'Cataract', 'Test'];
 
-const PatientHistory = () => {
+const PatientHistory = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => void }) => {
     return (
         <div className="patient-history">
             <h1>Patient History</h1>
@@ -26,8 +26,8 @@ const PatientHistory = () => {
                 <MultiSelect options={options} defaultValue={[0, 1]} placeHolder="Search for a condition " />
             </div>
 
-            <Button title="Continue" type="primary" arrow />
-            <span>Back</span>
+            <Button title="Continue" type="primary" onClick={onNext} arrow />
+            <span onClick={onPrev}>Back</span>
 
             <div className="company-badge">
                 <img src={companyImage} alt="" />

@@ -3,7 +3,7 @@ import colorBlindImage from '../../../assets/images/color-blind.png';
 import Button from '../../common/Button/Button';
 import './ColorBlindTest.scss';
 
-const ColorBlindTest = () => {
+const ColorBlindTest = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => void }) => {
     return (
         <div className="color-blind-test">
             <p>Please indicate the number you can see below</p>
@@ -22,8 +22,8 @@ const ColorBlindTest = () => {
                 <div className="select-item">21</div>
             </div>
 
-            <Button title="Continue" type="primary" arrow />
-            <span>Back</span>
+            <Button title="Continue" type="primary" onClick={onNext} arrow />
+            <span onClick={onPrev}>Back</span>
 
             <div className="audio-wrapper">
                 <p>

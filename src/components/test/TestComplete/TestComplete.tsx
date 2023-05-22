@@ -3,7 +3,7 @@ import logoImage from '../../../assets/images/logo.png';
 import testResultImage from '../../../assets/images/result.png';
 import Button from '../../common/Button/Button';
 import TestHistoryChartItem from '../../profile/TestHistoryChart/TestHistoryChartItem';
-import './TestResult.scss';
+import './TestComplete.scss';
 import avatarImage1 from '../../../assets/images/avatar/1.png';
 import { Link } from 'react-router-dom';
 
@@ -34,9 +34,9 @@ const chartData = [
     },
 ];
 
-const TestResult = () => {
+const TestComplete = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => void }) => {
     return (
-        <div className="test-result">
+        <div className="test-complete">
             <div className="left-section">
                 <div className="scroll-wrapper">
                     <div className="result-info">
@@ -134,8 +134,8 @@ const TestResult = () => {
                     </div>
                 </div>
                 <div className="button-wrapper">
-                    <Button title="Download PDF" type="primary" icon={pdfIcon} />
-                    <Button title="Share Results" type="primary" icon={shareIcon} />
+                    <Button title="Download PDF" type="primary" icon={pdfIcon} onClick={onPrev} />
+                    <Button title="Share Results" type="primary" icon={shareIcon} onClick={onNext} />
                 </div>
             </div>
 
@@ -148,4 +148,4 @@ const TestResult = () => {
     );
 };
 
-export default TestResult;
+export default TestComplete;

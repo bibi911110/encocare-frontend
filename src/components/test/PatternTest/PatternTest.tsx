@@ -3,7 +3,7 @@ import patternImage from '../../../assets/images/pattern.png';
 import Button from '../../common/Button/Button';
 import './PatternTest.scss';
 
-const PatternTest = () => {
+const PatternTest = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => void }) => {
     return (
         <div className="pattern-test">
             <p>
@@ -24,8 +24,8 @@ const PatternTest = () => {
                 <div className="select-item">Distorted</div>
             </div>
 
-            <Button title="Continue" type="primary" arrow />
-            <span>Back</span>
+            <Button title="Continue" type="primary" onClick={onNext} arrow />
+            <span onClick={onPrev}>Back</span>
 
             <div className="audio-wrapper">
                 <p>

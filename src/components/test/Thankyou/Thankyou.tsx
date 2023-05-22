@@ -5,7 +5,7 @@ import Button from '../../common/Button/Button';
 import NormalInput from '../../common/NormalInput/NormalInput';
 import './Thankyou.scss';
 
-const Thankyou = () => {
+const Thankyou = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => void }) => {
     return (
         <div className="thanks-test">
             <img src={successImage} alt="" />
@@ -60,7 +60,7 @@ const Thankyou = () => {
 
             <h6>Add alternate email address</h6>
             <NormalInput placeHolder="Enter Email Address" />
-            <Button title="Conduct another test" type="primary" />
+            <Button title="Conduct another test" type="primary" onClick={onPrev} />
             <Link to="/">Didn't receive an email?</Link>
 
             <div className="audio-wrapper">

@@ -3,7 +3,7 @@ import { instruction1, instruction2, instruction3, instruction4 } from '../../..
 import Button from '../../common/Button/Button';
 import './Instructions1.scss';
 
-const Instructions1 = () => {
+const Instructions1 = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => void }) => {
     return (
         <div className="instructions1">
             <h1>Instructions</h1>
@@ -45,8 +45,8 @@ const Instructions1 = () => {
             </div>
 
             <div className="button-wrapper">
-                <Button title="Start the Test" type="primary" arrow />
-                <span>Back</span>
+                <Button title="Start the Test" type="primary" onClick={onNext} arrow />
+                <span onClick={onPrev}>Back</span>
             </div>
             <div className="audio-wrapper">
                 <p>

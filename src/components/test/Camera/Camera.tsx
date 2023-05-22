@@ -4,7 +4,7 @@ import Button from '../../common/Button/Button';
 import cameraImage from '../../../assets/images/camera.png';
 import './Camera.scss';
 
-const Camera = () => {
+const Camera = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => void }) => {
     const [step, setStep] = useState(0);
 
     return (
@@ -25,7 +25,7 @@ const Camera = () => {
                         Encore needs to access your camera to continue with the test. <br className="desktop-only" />
                         Please read our <span>privacy policy</span> for details.
                     </p>
-                    <Button title="Allow Access" type="green" onClick={() => setStep(1)} />
+                    <Button title="Allow Access" type="green" onClick={onNext} />
                 </div>
             </div>
 
