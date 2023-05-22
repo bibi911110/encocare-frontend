@@ -1,0 +1,141 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.pattern-test {
+    background-color: #f6f6f7;
+    padding: 36px 12px 24px 12px;
+    width: 570px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+
+    @include devices(tablet) {
+        width: 100%;
+        padding: 28px 12px 8px 12px;
+        margin-top: 28px;
+    }
+
+    & > p {
+        font-size: 20px;
+        margin-bottom: 18px;
+
+        @include devices(tablet) {
+            font-size: 18px;
+            margin-bottom: 36px;
+        }
+    }
+
+    .image-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        position: relative;
+        margin-bottom: 28px;
+
+        & > img {
+            width: 210px;
+            height: 210px;
+        }
+
+        .refresh {
+            position: absolute;
+            right: -27px;
+            bottom: 0;
+            width: 27px;
+            height: 54px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+            @include devices(tablet) {
+                width: 24px;
+                height: 48px;
+                right: -24px;
+
+                span > svg {
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+
+    .select-wrapper {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 42px;
+
+        .select-item {
+            padding: 8px 44px;
+            background-color: #ffffff;
+            box-shadow: 0 3px 6px $boxShadowColor;
+            display: flex;
+            font-size: 20px;
+            border: 1px solid rgba($color: #000000, $alpha: 0);
+            cursor: pointer;
+
+            @include devices(tablet) {
+                font-size: 16px;
+                padding: 6px 28px;
+            }
+
+            &.active,
+            &:hover {
+                border-color: $primaryColor;
+            }
+        }
+    }
+
+    & > button {
+        width: 210px;
+
+        @include devices(tablet) {
+            width: 180px;
+            margin-top: 32px;
+        }
+    }
+
+    & > span {
+        display: none;
+        margin-top: 12px;
+        font-size: 13px;
+        text-decoration: underline;
+        cursor: pointer;
+
+        @include devices(tablet) {
+            display: block;
+        }
+    }
+
+    .audio-wrapper {
+        position: fixed;
+        bottom: 12px;
+        right: 12px;
+
+        @include devices(tablet) {
+            display: none;
+        }
+
+        & > p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            text-align: center;
+
+            & > span {
+                display: flex;
+                align-items: center;
+                padding: 0 10px 0 14px;
+
+                svg {
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+}

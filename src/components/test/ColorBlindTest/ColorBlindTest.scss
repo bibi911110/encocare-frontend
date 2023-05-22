@@ -1,0 +1,137 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.color-blind-test {
+    background-color: #f6f6f7;
+    padding: 36px 12px 24px 12px;
+    width: 570px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+
+    @include devices(tablet) {
+        width: 100%;
+        padding: 28px 12px 8px 12px;
+        margin-top: 28px;
+    }
+
+    & > p {
+        font-size: 20px;
+        margin-bottom: 36px;
+
+        @include devices(tablet) {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .image-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        position: relative;
+        padding: 8px;
+        margin-bottom: 28px;
+
+        & > img {
+            width: 210px;
+            height: 210px;
+
+            @include devices(tablet) {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        .refresh {
+            position: absolute;
+            right: -27px;
+            bottom: 0;
+            width: 27px;
+            height: 54px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+    }
+
+    .select-wrapper {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 42px;
+
+        .select-item {
+            padding: 12px 28px;
+            background-color: #ffffff;
+            box-shadow: 0 3px 6px $boxShadowColor;
+            display: flex;
+            font-size: 20px;
+            border: 1px solid rgba($color: #000000, $alpha: 0);
+            cursor: pointer;
+
+            @include devices(tablet) {
+                font-size: 16px;
+                padding: 6px 24px;
+            }
+
+            &.active,
+            &:hover {
+                border-color: $primaryColor;
+            }
+        }
+    }
+
+    & > button {
+        width: 210px;
+
+        @include devices(tablet) {
+            width: 180px;
+            margin-top: 48px;
+        }
+    }
+
+    & > span {
+        display: none;
+        margin-top: 12px;
+        font-size: 13px;
+        text-decoration: underline;
+        cursor: pointer;
+
+        @include devices(tablet) {
+            display: block;
+        }
+    }
+
+    .audio-wrapper {
+        position: fixed;
+        bottom: 12px;
+        right: 12px;
+
+        @include devices(tablet) {
+            display: none;
+        }
+
+        & > p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            text-align: center;
+
+            & > span {
+                display: flex;
+                align-items: center;
+                padding: 0 10px 0 14px;
+
+                svg {
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+}

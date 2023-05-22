@@ -40,12 +40,18 @@
 
 .button-primary {
     background-color: $primaryColor;
-    color: white;
+    color: #ffffff;
+    box-shadow: 0 3px 6px 0 $boxShadowColor;
+}
+
+.button-green {
+    background-color: #00c770;
+    color: #ffffff;
     box-shadow: 0 3px 6px 0 $boxShadowColor;
 }
 
 .button-outline {
-    background-color: white;
+    background-color: #ffffff;
     color: $primaryColor;
     border: 1px solid $primaryColor;
 }
@@ -57,7 +63,7 @@
 
 .button-gray {
     background-color: #42474d;
-    color: white;
+    color: #ffffff;
     box-shadow: 0 3px 6px 0 $boxShadowColor;
 }
 

@@ -7,8 +7,14 @@
     align-items: center;
 
     .component-wrapper {
-        margin-top: 48px;
+        margin-top: 36px;
         padding-left: 10px;
         padding-right: 10px;
+        box-sizing: border-box;
+
+        @include devices(tablet) {
+            margin-top: 24px;
+            width: 100%;
+        }
     }
 }

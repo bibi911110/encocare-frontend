@@ -2,7 +2,7 @@ import React from 'react';
 
 export type ButtonPropsType = {
     title: string;
-    type: 'primary' | 'outline' | 'light' | 'gray' | 'link';
+    type: 'primary' | 'outline' | 'light' | 'gray' | 'link' | 'green';
     icon?: React.ReactNode;
     className?: string;
     arrow?: boolean;

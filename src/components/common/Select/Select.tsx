@@ -49,7 +49,7 @@ const Select = ({ options, defaultValue, placeHolder }: SelectPropsType) => {
                 {selected > -1 ? options[selected] : <span className="select-placeholder">{placeHolder}</span>}
                 <span className="select-dropdown-icon">{selectArrowIcon}</span>
             </div>
-            <div className={`select-dropdown ${dropdownVisible ? 'select-dropdown-show' : ''}`}>{optionElement}</div>
+            <div className={`select-dropdown ${dropdownVisible ? 'show' : ''}`}>{optionElement}</div>
         </div>
     );
 };

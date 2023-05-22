@@ -46,6 +46,8 @@
                 }
 
                 svg {
+                    transform: scale(0.9);
+
                     @include devices(tablet) {
                         transform: scale(0.7);
                     }
