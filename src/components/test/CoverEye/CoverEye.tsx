@@ -1,6 +1,6 @@
+import Button from '../../common/Button/Button';
 import { soundIcon } from '../../../assets/icons/common';
 import coverEyeImage from '../../../assets/images/cover-eye.png';
-import Button from '../../common/Button/Button';
 import './CoverEye.scss';
 
 const CoverEye = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => void }) => {

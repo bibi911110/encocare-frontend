@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { cameraIcon, soundIcon } from '../../../assets/icons/common';
 import Button from '../../common/Button/Button';
+import { cameraIcon, soundIcon } from '../../../assets/icons/common';
 import cameraImage from '../../../assets/images/camera.png';
 import './Camera.scss';
 

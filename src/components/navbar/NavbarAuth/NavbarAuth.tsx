@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../common/Button/Button';
-import avatarImage from '../../../assets/images/avatar.png';
 import { downArrowIcon } from '../../../assets/icons/common';
 import { logoutIcon, securityIcon, userIcon } from '../../../assets/icons/common';
+import avatarImage from '../../../assets/images/avatar.png';
 import './NavbarAuth.scss';
 
 const links = [

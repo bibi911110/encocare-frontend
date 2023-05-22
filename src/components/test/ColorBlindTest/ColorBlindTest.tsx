@@ -1,6 +1,6 @@
+import Button from '../../common/Button/Button';
 import { refreshIcon, soundIcon } from '../../../assets/icons/common';
 import colorBlindImage from '../../../assets/images/color-blind.png';
-import Button from '../../common/Button/Button';
 import './ColorBlindTest.scss';
 
 const ColorBlindTest = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => void }) => {

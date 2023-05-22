@@ -3,9 +3,9 @@ import Button from '../../../components/common/Button/Button';
 import Select from '../../../components/common/Select/Select';
 import NormalInput from '../../../components/common/NormalInput/NormalInput';
 import DatePicker from '../../../components/common/DatePicker/DatePicker';
+import CardNumberInput from '../../../components/common/CardNumberInput/CardNumberInput';
 import { StepPropsType } from '../../../types/basicComponents';
 import usdImage from '../../../assets/images/payments/usd.png';
-import CardNumberInput from '../../../components/common/CardNumberInput/CardNumberInput';
 
 const selectOptions = [
     <div className="cost-type">

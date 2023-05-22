@@ -18,13 +18,7 @@ const SupportUs = () => {
                         We aim to cure and relieve 200,000 patients including pregnant women,kids and babies. Help us in
                         achieving our mission.
                     </p>
-                    <Button
-                        className="donate-button"
-                        title="Donate for a better vision"
-                        
-                        type="primary"
-                        arrow
-                    />
+                    <Button className="donate-button" title="Donate for a better vision" type="primary" arrow />
 
                     <h2>Join our support group</h2>
                     <p>

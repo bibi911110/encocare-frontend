@@ -3,10 +3,8 @@ import { Carousel } from 'react-responsive-carousel';
 import Button from '../../../components/common/Button/Button';
 import CheckBox from '../../../components/common/CheckBox/CheckBox';
 import NormalInput from '../../../components/common/NormalInput/NormalInput';
+import ConsultantCardItem from '../../../components/common/ConsultantCard/ConsultantCard';
 import slideImage1 from '../../../assets/images/carousel.png';
-import avatarImage1 from '../../../assets/images/avatar/1.png';
-import avatarImage2 from '../../../assets/images/avatar/2.png';
-import avatarImage3 from '../../../assets/images/avatar/3.png';
 import tabletDesktopImage from '../../../assets/images/tablet/tablet-desktop.png';
 import tabletMobileImage from '../../../assets/images/tablet/tablet-mobile.png';
 import appStoreImage1 from '../../../assets/images/stores/appStore1.png';
@@ -17,14 +15,7 @@ import logoImage3 from '../../../assets/images/partners/logo3.png';
 import logoImage4 from '../../../assets/images/partners/logo4.png';
 import logoImage5 from '../../../assets/images/partners/logo5.png';
 import logoImage6 from '../../../assets/images/partners/logo6.png';
-import {
-    copyIcon,
-    directionIcon,
-    locationIcon,
-    mapIcon,
-    rightArrowIcon2,
-    searchIcon,
-} from '../../../assets/icons/common';
+import { copyIcon, locationIcon, rightArrowIcon2, searchIcon } from '../../../assets/icons/common';
 import { eyeIcon1, eyeIcon2, eyeIcon3 } from '../../../assets/icons/eyes';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './Home.scss';
@@ -231,7 +222,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="avatar-section">
+            <div className="consultant-section">
                 <div className="container">
                     <h1>Consult with the best we got!</h1>
                     <p>
@@ -241,69 +232,9 @@ const Home = () => {
                     </p>
 
                     <div className="card-wrapper">
-                        <div className="card ">
-                            <div className="main">
-                                <img src={avatarImage1} alt="" />
-                                <div className="personal-info">
-                                    <h3>Dr. Alison West</h3>
-                                    <p>Eye Specialist, Eye Surgeon</p>
-                                    <span>MBBS, MRC, FRCS</span>
-                                </div>
-                            </div>
-                            <div className="address-wrapper">
-                                {mapIcon}
-                                <span>468 Ezequiel Oval, Danykabury 72017, Guam</span>
-                            </div>
-                            <div className="link-wrapper">
-                                <div className="direction-wrapper">
-                                    {directionIcon}
-                                    <Link to="/">Get Directions</Link>
-                                </div>
-                                <Button title="Connect" arrow type="primary" />
-                            </div>
-                        </div>
-                        <div className="card ">
-                            <div className="main">
-                                <img src={avatarImage2} alt="" />
-                                <div className="personal-info">
-                                    <h3>Dr. Saul Parisian</h3>
-                                    <p>Eye Specialist, Eye Surgeon</p>
-                                    <span>MBBS, MRC, FRCS</span>
-                                </div>
-                            </div>
-                            <div className="address-wrapper">
-                                {mapIcon}
-                                <span>356 Pollich Ville, West Cheyenne, Venezuela</span>
-                            </div>
-                            <div className="link-wrapper">
-                                <div className="direction-wrapper">
-                                    {directionIcon}
-                                    <Link to="/">Get Directions</Link>
-                                </div>
-                                <Button title="Connect" arrow type="primary" />
-                            </div>
-                        </div>
-                        <div className="card ">
-                            <div className="main">
-                                <img src={avatarImage3} alt="" />
-                                <div className="personal-info">
-                                    <h3>Dr. Alison West</h3>
-                                    <p>Eye Specialist, Eye Surgeon</p>
-                                    <span>MBBS, MRC, FRCS</span>
-                                </div>
-                            </div>
-                            <div className="address-wrapper">
-                                {mapIcon}
-                                <span>5509 Green Rapids, Jerdeton, Mozambique</span>
-                            </div>
-                            <div className="link-wrapper">
-                                <div className="direction-wrapper">
-                                    {directionIcon}
-                                    <Link to="/">Get Directions</Link>
-                                </div>
-                                <Button title="Connect" arrow type="primary" />
-                            </div>
-                        </div>
+                        {[0, 1, 2].map((item) => (
+                            <ConsultantCardItem key={item} />
+                        ))}
                     </div>
 
                     <div className="more-wrapper">

@@ -1,8 +1,8 @@
 import Button from '../../common/Button/Button';
-import companyImage from '../../../assets/images/company.png';
-import './PatientHistory.scss';
 import CheckBox from '../../common/CheckBox/CheckBox';
 import MultiSelect from '../../common/MultiSelect/MultiSelect';
+import companyImage from '../../../assets/images/company.png';
+import './PatientHistory.scss';
 
 const options = ['Age Related Macular Degeneration', 'Cataract', 'Test'];
 

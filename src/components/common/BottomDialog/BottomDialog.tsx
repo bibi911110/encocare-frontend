@@ -1,7 +1,7 @@
-import Button from '../Button/Button';
-import { bottomDialogIcon1, bottomDialogIcon2, bottomDialogIcon3 } from '../../../assets/icons/dialog';
-import { closeIcon } from '../../../assets/icons/common';
 import { useState } from 'react';
+import Button from '../Button/Button';
+import { closeIcon } from '../../../assets/icons/common';
+import { bottomDialogIcon1, bottomDialogIcon2, bottomDialogIcon3 } from '../../../assets/icons/dialog';
 import './BottomDialog.scss';
 
 const BottomDialog = () => {

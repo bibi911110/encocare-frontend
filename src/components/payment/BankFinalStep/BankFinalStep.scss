@@ -81,7 +81,8 @@
                 border: 1px solid rgba($color: #000000, $alpha: 0);
                 cursor: pointer;
 
-                &.active, &:hover {
+                &.active,
+                &:hover {
                     border-color: $primaryColor;
                     box-shadow: 0 3px 6px $boxShadowColor;
                 }

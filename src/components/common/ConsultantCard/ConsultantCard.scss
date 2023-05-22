@@ -1,0 +1,136 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.consultant-card {
+    padding: 24px 16px;
+    background-color: #f6f6f7;
+    box-sizing: border-box;
+
+    @include devices(tablet) {
+        padding: 20px 14px;
+    }
+
+    .main {
+        display: flex;
+        padding-bottom: 32px;
+
+        @include devices(tablet) {
+            padding-bottom: 20px;
+        }
+
+        & > img {
+            width: 110px;
+            height: 110px;
+            border-radius: 6px;
+
+            @include devices(tablet) {
+                width: 82px;
+                height: 82px;
+            }
+        }
+
+        .personal-info {
+            padding-left: 14px;
+
+            & > h3 {
+                margin: 14px 0 10px 0;
+                font-size: 23px;
+
+                color: $primaryColor;
+
+                @include devices(tablet) {
+                    font-size: 16px;
+                    margin: 4px 0;
+                }
+            }
+
+            & > p {
+                font-size: 15px;
+                padding-bottom: 4px;
+
+                @include devices(tablet) {
+                    font-size: 12px;
+                }
+            }
+
+            & > span {
+                font-size: 14px;
+                color: #4d4d4d;
+
+                @include devices(tablet) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .address-wrapper {
+        display: flex;
+        align-items: center;
+        padding-bottom: 24px;
+
+        @include devices(tablet) {
+            padding-bottom: 20px;
+        }
+
+        svg {
+            margin-right: 16px;
+
+            @include devices(tablet) {
+                transform: scale(0.9);
+                margin-right: 10px;
+            }
+        }
+
+        & > span {
+            color: #4d4d4d;
+            font-size: 15px;
+            overflow: hidden;
+
+            @include devices(tablet) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .link-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @include devices(tablet) {
+            justify-content: space-between;
+        }
+
+        .direction-wrapper {
+            display: flex;
+            align-items: center;
+
+            svg {
+                padding-right: 9px;
+
+                @include devices(tablet) {
+                    transform: scale(0.9);
+                }
+            }
+
+            & > a {
+                color: #1475f5;
+                text-decoration: underline;
+                font-size: 14px;
+
+                @include devices(tablet) {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        & > button {
+            width: 138px;
+
+            @include devices(tablet) {
+                width: 164px;
+            }
+        }
+    }
+}

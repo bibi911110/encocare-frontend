@@ -4,8 +4,8 @@ import Button from '../../common/Button/Button';
 import NavbarItem from '../../navbar/NavbarItem/NavbarItem';
 import NavbarMobileItem from '../../navbar/NavbarMobileItem/NavbarMobileItem';
 import NavbarAuth from '../../navbar/NavbarAuth/NavbarAuth';
-import logoImage from '../../../assets/images/logo.png';
 import { toggleMenuIcon } from '../../../assets/icons/common';
+import logoImage from '../../../assets/images/logo.png';
 import './Navbar.scss';
 
 const links = [

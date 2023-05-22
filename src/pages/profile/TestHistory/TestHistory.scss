@@ -193,68 +193,6 @@
                 height: calc(100% - 50px);
                 margin-bottom: 12px;
                 padding-right: 4px;
-
-                .logo-image {
-                    height: 24px;
-                    padding-bottom: 20px;
-                }
-
-                h1 {
-                    font-size: 16px;
-                    font-weight: 400;
-                    margin: 0;
-                    padding-bottom: 6px;
-                }
-
-                p {
-                    font-size: 13px;
-                    padding-bottom: 12px;
-
-                    @include devices(tablet) {
-                        padding-bottom: 24px;
-                    }
-                }
-
-                .chart-wrapper {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    border: 1px solid #b7b7b7;
-                    padding: 20px;
-                    margin-bottom: 20px;
-
-                    .chart-title {
-                        width: 90%;
-                        border-bottom: 1px solid #b7b7b7;
-                        margin-bottom: 20px;
-
-                        h2 {
-                            font-size: 14px;
-                            margin: 0;
-                            padding-bottom: 8px;
-                        }
-                    }
-
-                    .chart-content {
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: 20px;
-                        width: 100%;
-
-                        .chart-content-col {
-                            width: calc(50% - 10px);
-
-                            @include devices(tablet) {
-                                width: 100%;
-                            }
-                        }
-                    }
-                }
-
-                .result-image {
-                    width: 100%;
-                }
             }
 
             .button-wrapper {

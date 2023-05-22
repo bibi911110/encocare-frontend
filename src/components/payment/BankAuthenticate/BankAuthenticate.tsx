@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import QRCode from 'react-qr-code';
-import { leftArrowIcon2, lockIcon } from '../../../assets/icons/common';
 import NormalInput from '../../common/NormalInput/NormalInput';
 import PasswordInput from '../../common/PasswordInput/PasswordInput';
+import { leftArrowIcon2, lockIcon } from '../../../assets/icons/common';
 import bankImage from '../../../assets/images/bank/6.png';
 import './BankAuthenticate.scss';
 

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Button from '../../../components/common/Button/Button';
 import BillingMethod from '../../../components/payment/BillingMethod/BillingMethod';
 import BillingDetail from '../../../components/payment/BillingDetail/BillingDetail';
 import BankAlert from '../../../components/payment/BankAlert/BankAlert';
@@ -9,7 +10,6 @@ import BankFinalStep from '../../../components/payment/BankFinalStep/BankFinalSt
 import BankConfirm from '../../../components/payment/BankConfirm/BankConfirm';
 import BankSuccess from '../../../components/payment/BankSuccess/BankSuccess';
 import BankSelect from '../../../components/payment/BankSelect/BankSelect';
-import Button from '../../../components/common/Button/Button';
 import paymentMethodImage from '../../../assets/images/payments/method.png';
 import { leftArrowIcon2 } from '../../../assets/icons/common';
 import './Payment.scss';

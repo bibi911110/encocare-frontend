@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import { soundIcon } from '../../../assets/icons/common';
-import successImage from '../../../assets/images/success2.png';
 import Button from '../../common/Button/Button';
 import NormalInput from '../../common/NormalInput/NormalInput';
+import successImage from '../../../assets/images/success2.png';
+import { soundIcon } from '../../../assets/icons/common';
 import './Thankyou.scss';
 
 const Thankyou = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => void }) => {

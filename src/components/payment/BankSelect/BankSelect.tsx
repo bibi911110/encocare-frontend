@@ -1,5 +1,5 @@
-import { leftArrowIcon2 } from '../../../assets/icons/common';
 import SearchInput from '../../common/SearchInput/SearchInput';
+import { leftArrowIcon2 } from '../../../assets/icons/common';
 import bankImage1 from '../../../assets/images/bank/1.png';
 import bankImage2 from '../../../assets/images/bank/2.png';
 import bankImage3 from '../../../assets/images/bank/3.png';

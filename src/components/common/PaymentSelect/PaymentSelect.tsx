@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { PaymentSelectPropsType } from '../../../types/basicComponents';
 import CheckBox from '../CheckBox/CheckBox';
+import { PaymentSelectPropsType } from '../../../types/basicComponents';
 import { backIcon, cardIcon, paypalIcon, stripeIcon } from '../../../assets/icons/payment';
 import './PaymentSelect.scss';
 

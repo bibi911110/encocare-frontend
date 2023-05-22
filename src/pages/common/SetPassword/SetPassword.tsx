@@ -18,7 +18,7 @@ const SetPassword = () => {
                             <PasswordInput placeHolder="Confirm Password" />
                         </div>
                         <Link to="/login">
-                            <Button  title="Continue & Login" type="primary" arrow />
+                            <Button title="Continue & Login" type="primary" arrow />
                         </Link>
                     </form>
                 </div>

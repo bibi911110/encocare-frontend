@@ -1,6 +1,6 @@
+import Button from '../../common/Button/Button';
 import { soundIcon } from '../../../assets/icons/common';
 import { instruction5, instruction6, instruction7, instruction8 } from '../../../assets/icons/test';
-import Button from '../../common/Button/Button';
 import './Instructions2.scss';
 
 const Instructions2 = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => void }) => {

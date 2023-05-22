@@ -47,6 +47,8 @@
             }
 
             .result-info {
+                margin-bottom: 24px;
+
                 & > h1 {
                     font-size: 21px;
                     margin: 0;
@@ -69,68 +71,54 @@
                 }
 
                 .result-info-card {
+                    padding: 0 18px 20px 18px;
                     background-color: #ffffff;
-                    padding: 20px 20px 6px 20px;
                     box-sizing: border-box;
-                    margin-bottom: 20px;
 
                     @include devices(tablet) {
-                        margin-bottom: 28px;
+                        padding: 0 18px;
                     }
 
                     .card-row {
                         display: flex;
-                        padding-bottom: 14px;
+                        padding: 16px 0px;
                         border-bottom: 1px solid #dbdbdb;
-                        margin-bottom: 14px;
-                        gap: 16px;
 
                         @include devices(tablet) {
-                            justify-content: space-between;
+                            padding: 10px 0px;
                         }
 
-                        .card-row-middle {
+                        &.mobile-card-row {
+                            display: block;
+                            padding: 0;
+                            border: none;
+                        }
+
+                        .row-col {
                             display: flex;
-                            width: 100%;
-                            gap: 16px;
+                            flex-direction: column;
 
-                            @include devices(tablet) {
-                                flex-direction: column;
-                            }
-                        }
-
-                        .card-row-col {
                             & > p {
-                                &:first-child {
-                                    font-size: 14px;
-                                    color: #8c8c8c;
-                                    margin-bottom: 8px;
+                                font-size: 15px;
+                                color: #8c8c8c;
+                                margin-bottom: 6px;
+                            }
 
-                                    @include devices(tablet) {
-                                        font-size: 12px;
-                                    }
-                                }
+                            & > span {
+                                font-size: 16px;
+                                color: $primaryColor;
+                            }
+
+                            &.mobile-row {
+                                flex: unset !important;
+                                width: 100% !important;
+                                flex-basis: 100%;
+                                padding: 10px 0px;
+                                border-bottom: 1px solid #dbdbdb;
 
                                 &:last-child {
-                                    font-size: 16px;
-                                    color: $primaryColor;
-
-                                    @include devices(tablet) {
-                                        font-size: 14px;
-                                    }
+                                    border: none;
                                 }
-                            }
-
-                            &.first-col {
-                                border-bottom: 1px solid #dbdbdb;
-                                padding-bottom: 12px;
-                            }
-                        }
-
-                        &.last-row {
-                            @include devices(tablet) {
-                                border: none;
-                                padding: 0;
                             }
                         }
                     }
@@ -170,144 +158,75 @@
                         padding-right: 6px;
                     }
 
-                    .card-item {
+                    .list-item {
                         flex-basis: calc(100% / 2 - 6px);
-                        box-sizing: border-box;
-                        padding: 16px 12px;
-                        background-color: #ffffff;
 
-                        @include devices(desktop) {
+                        @include devices(tablet) {
                             flex-basis: 100%;
                         }
 
-                        @include devices(tablet) {
-                            padding: 20px 14px;
-                        }
+                        .consultant-card {
+                            padding: 16px 12px;
+                            background-color: #ffffff;
 
-                        .main {
-                            display: flex;
-                            padding-bottom: 8px;
+                            .main {
+                                padding-bottom: 8px;
 
-                            @include devices(tablet) {
-                                padding-bottom: 20px;
+                                & > img {
+                                    width: 85px;
+                                    height: 85px;
+                                }
+
+                                .personal-info {
+                                    padding-left: 10px;
+
+                                    & > h3 {
+                                        font-size: 18px;
+                                        line-height: 18px;
+                                        margin: 0;
+                                    }
+
+                                    & > p {
+                                        font-size: 14px;
+                                    }
+
+                                    & > span {
+                                        font-size: 13px;
+                                    }
+                                }
                             }
 
-                            & > img {
-                                width: 85px;
-                                height: 85px;
-                                border-radius: 6px;
+                            .address-wrapper {
+                                padding-bottom: 6px;
 
                                 @include devices(tablet) {
-                                    width: 82px;
-                                    height: 82px;
-                                }
-                            }
-
-                            .personal-info {
-                                padding-left: 10px;
-
-                                & > h3 {
-                                    font-size: 18px;
-                                    line-height: 18px;
-                                    margin: 0;
-
-                                    color: $primaryColor;
-
-                                    @include devices(tablet) {
-                                        font-size: 16px;
-                                        margin: 4px 0;
-                                    }
+                                    padding-bottom: 8px;
                                 }
 
-                                & > p {
-                                    font-size: 14px;
-                                    padding-bottom: 4px;
-
-                                    @include devices(tablet) {
-                                        font-size: 12px;
-                                    }
+                                svg {
+                                    margin-right: 12px;
                                 }
 
                                 & > span {
-                                    font-size: 13px;
-                                    color: #4d4d4d;
+                                    font-size: 14px;
+                                }
+                            }
 
-                                    @include devices(tablet) {
+                            .link-wrapper {
+                                .direction-wrapper {
+                                    svg {
+                                        transform: scale(0.8);
+                                    }
+
+                                    & > a {
                                         font-size: 12px;
                                     }
                                 }
-                            }
-                        }
 
-                        .address-wrapper {
-                            display: flex;
-                            align-items: center;
-                            padding-bottom: 6px;
-
-                            @include devices(tablet) {
-                                padding-bottom: 8px;
-                            }
-
-                            svg {
-                                margin-right: 12px;
-
-                                @include devices(tablet) {
-                                    transform: scale(0.9);
-                                    margin-right: 10px;
-                                }
-                            }
-
-                            & > span {
-                                color: #4d4d4d;
-                                font-size: 14px;
-                                overflow: hidden;
-
-                                @include devices(tablet) {
-                                    font-size: 12px;
-                                }
-                            }
-                        }
-
-                        .link-wrapper {
-                            display: flex;
-                            justify-content: space-around;
-                            align-items: center;
-
-                            @include devices(tablet) {
-                                justify-content: space-between;
-                            }
-
-                            .direction-wrapper {
-                                display: flex;
-                                align-items: center;
-
-                                svg {
-                                    padding-right: 9px;
-                                    transform: scale(0.8);
-
-                                    @include devices(tablet) {
-                                        transform: scale(0.7);
-                                    }
-                                }
-
-                                & > a {
-                                    color: #1475f5;
-                                    text-decoration: underline;
-                                    font-size: 12px;
-
-                                    @include devices(tablet) {
-                                        font-size: 12px;
-                                    }
-                                }
-                            }
-
-                            & > button {
-                                width: 118px;
-                                font-size: 14px;
-                                height: 38px;
-
-                                @include devices(tablet) {
-                                    width: 164px;
+                                & > button {
+                                    width: 118px;
+                                    font-size: 14px;
+                                    height: 38px;
                                 }
                             }
                         }
@@ -339,72 +258,6 @@
 
             @include devices(tablet) {
                 height: unset;
-            }
-
-            & > div {
-                padding: 36px 20px 8px 20px;
-
-                .logo-image {
-                    height: 24px;
-                    padding-bottom: 20px;
-                }
-
-                h1 {
-                    font-size: 16px;
-                    font-weight: 400;
-                    margin: 0;
-                    padding-bottom: 6px;
-                }
-
-                p {
-                    font-size: 13px;
-                    padding-bottom: 12px;
-
-                    @include devices(tablet) {
-                        padding-bottom: 24px;
-                    }
-                }
-
-                .chart-wrapper {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    border: 1px solid #b7b7b7;
-                    padding: 20px;
-                    margin-bottom: 20px;
-
-                    .chart-title {
-                        width: 90%;
-                        border-bottom: 1px solid #b7b7b7;
-                        margin-bottom: 20px;
-
-                        h2 {
-                            font-size: 14px;
-                            margin: 0;
-                            padding-bottom: 8px;
-                        }
-                    }
-
-                    .chart-content {
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: 20px;
-                        width: 100%;
-
-                        .chart-content-col {
-                            width: calc(50% - 10px);
-
-                            @include devices(tablet) {
-                                width: 100%;
-                            }
-                        }
-                    }
-                }
-
-                .result-image {
-                    width: 100%;
-                }
             }
         }
 

@@ -1,6 +1,6 @@
+import Button from '../../common/Button/Button';
 import { refreshIcon, soundIcon } from '../../../assets/icons/common';
 import patternImage from '../../../assets/images/pattern.png';
-import Button from '../../common/Button/Button';
 import './PatternTest.scss';
 
 const PatternTest = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => void }) => {

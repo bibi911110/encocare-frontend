@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
+import Button from '../../../components/common/Button/Button';
 import NormalInput from '../../../components/common/NormalInput/NormalInput';
 import thanksImage from '../../../assets/images/thankyou.png';
-import Button from '../../../components/common/Button/Button';
 import './Thanks.scss';
 
 const Thanks = () => {

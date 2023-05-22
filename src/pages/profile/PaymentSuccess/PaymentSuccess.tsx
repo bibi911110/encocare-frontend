@@ -1,8 +1,8 @@
+import { Link } from 'react-router-dom';
 import Button from '../../../components/common/Button/Button';
 import successImage from '../../../assets/images/success2.png';
 import paymentMethodImage from '../../../assets/images/payments/method.png';
 import './PaymentSuccess.scss';
-import { Link } from 'react-router-dom';
 
 const PaymentSuccess = () => {
     return (

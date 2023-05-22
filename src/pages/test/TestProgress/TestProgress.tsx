@@ -3,7 +3,6 @@ import Stepper from '../../../components/common/Stepper/Stepper';
 import PatientDetail from '../../../components/test/PatientDetail/PatientDetail';
 import PatientHistory from '../../../components/test/PatientHistory/PatientHistory';
 import Instructions1 from '../../../components/test/Instructions1/Instructions1';
-import './TestProgress.scss';
 import ColorBlindTest from '../../../components/test/ColorBlindTest/ColorBlindTest';
 import CoverEye from '../../../components/test/CoverEye/CoverEye';
 import PatternTest from '../../../components/test/PatternTest/PatternTest';
@@ -11,9 +10,10 @@ import Instructions2 from '../../../components/test/Instructions2/Instructions2'
 import Camera from '../../../components/test/Camera/Camera';
 import TestComplete from '../../../components/test/TestComplete/TestComplete';
 import Thankyou from '../../../components/test/Thankyou/Thankyou';
+import './TestProgress.scss';
 
 const TestProgress = () => {
-    const [step, setStep] = useState(0);
+    const [step, setStep] = useState(8);
 
     const steps = [
         { component: <PatientDetail onNext={() => setStep(1)} onPrev={() => setStep(0)} /> },

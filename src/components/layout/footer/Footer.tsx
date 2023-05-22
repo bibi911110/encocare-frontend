@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import NormalInput from '../../common/NormalInput/NormalInput';
 import Button from '../../common/Button/Button';
-import logoImage from '../../../assets/images/logo.png';
 import { copyrightIcon, phoneIcon } from '../../../assets/icons/common';
 import { facebookIcon, instagramIcon, linkedinIcon, twitterIcon } from '../../../assets/icons/social';
+import logoImage from '../../../assets/images/logo.png';
 import './Footer.scss';
 
 const links = [

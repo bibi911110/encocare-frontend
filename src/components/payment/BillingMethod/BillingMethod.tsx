@@ -1,5 +1,5 @@
-import { BillingMethodPropsType } from '../../../types/paymentComponent';
 import PaymentSelect from '../../common/PaymentSelect/PaymentSelect';
+import { BillingMethodPropsType } from '../../../types/paymentComponent';
 import './BillingMethod.scss';
 
 const BillingMethod = ({ handleMethod }: BillingMethodPropsType) => {
