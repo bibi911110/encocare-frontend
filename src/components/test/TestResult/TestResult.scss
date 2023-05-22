@@ -1,0 +1,466 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.test-result {
+    display: flex;
+    width: 1396px;
+    box-sizing: border-box;
+
+    @include devices(display) {
+        width: 100%;
+        padding: 0 40px;
+    }
+
+    @include devices(desktop) {
+        padding: 0 20px;
+    }
+
+    @include devices(tablet) {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .left-section {
+        width: 603px;
+        overflow: auto;
+        padding: 20px 10px 20px 32px;
+        background-color: #f6f6f7;
+        box-sizing: border-box;
+
+        @include devices(display) {
+            flex: 1;
+            width: unset;
+        }
+
+        @include devices(tablet) {
+            width: 100%;
+            padding: 20px 8px;
+        }
+
+        .scroll-wrapper {
+            height: calc(100vh - 356px);
+            overflow: auto;
+            padding-right: 6px;
+
+            @include devices(tablet) {
+                height: unset;
+            }
+
+            .result-info {
+                & > h1 {
+                    font-size: 21px;
+                    margin: 0;
+                    margin-bottom: 6px;
+
+                    @include devices(tablet) {
+                        font-size: 16px;
+                        text-align: center;
+                    }
+                }
+
+                & > p {
+                    font-size: 14px;
+                    margin-bottom: 16px;
+
+                    @include devices(tablet) {
+                        font-size: 13px;
+                        text-align: center;
+                    }
+                }
+
+                .result-info-card {
+                    background-color: #ffffff;
+                    padding: 20px 20px 6px 20px;
+                    box-sizing: border-box;
+                    margin-bottom: 20px;
+
+                    @include devices(tablet) {
+                        margin-bottom: 28px;
+                    }
+
+                    .card-row {
+                        display: flex;
+                        padding-bottom: 14px;
+                        border-bottom: 1px solid #dbdbdb;
+                        margin-bottom: 14px;
+                        gap: 16px;
+
+                        @include devices(tablet) {
+                            justify-content: space-between;
+                        }
+
+                        .card-row-middle {
+                            display: flex;
+                            width: 100%;
+                            gap: 16px;
+
+                            @include devices(tablet) {
+                                flex-direction: column;
+                            }
+                        }
+
+                        .card-row-col {
+                            & > p {
+                                &:first-child {
+                                    font-size: 14px;
+                                    color: #8c8c8c;
+                                    margin-bottom: 8px;
+
+                                    @include devices(tablet) {
+                                        font-size: 12px;
+                                    }
+                                }
+
+                                &:last-child {
+                                    font-size: 16px;
+                                    color: $primaryColor;
+
+                                    @include devices(tablet) {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+
+                            &.first-col {
+                                border-bottom: 1px solid #dbdbdb;
+                                padding-bottom: 12px;
+                            }
+                        }
+
+                        &.last-row {
+                            @include devices(tablet) {
+                                border: none;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .consultant-info {
+                & > h1 {
+                    font-size: 21px;
+                    margin: 0;
+                    margin-bottom: 6px;
+
+                    @include devices(tablet) {
+                        font-size: 16px;
+                        text-align: center;
+                    }
+                }
+
+                & > p {
+                    font-size: 14px;
+                    margin-bottom: 16px;
+
+                    @include devices(tablet) {
+                        font-size: 13px;
+                        text-align: center;
+                    }
+                }
+
+                .list-section {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 12px;
+
+                    @include devices(tablet) {
+                        height: 220px;
+                        overflow: auto;
+                        padding-right: 6px;
+                    }
+
+                    .card-item {
+                        flex-basis: calc(100% / 2 - 6px);
+                        box-sizing: border-box;
+                        padding: 16px 12px;
+                        background-color: #ffffff;
+
+                        @include devices(desktop) {
+                            flex-basis: 100%;
+                        }
+
+                        @include devices(tablet) {
+                            padding: 20px 14px;
+                        }
+
+                        .main {
+                            display: flex;
+                            padding-bottom: 8px;
+
+                            @include devices(tablet) {
+                                padding-bottom: 20px;
+                            }
+
+                            & > img {
+                                width: 85px;
+                                height: 85px;
+                                border-radius: 6px;
+
+                                @include devices(tablet) {
+                                    width: 82px;
+                                    height: 82px;
+                                }
+                            }
+
+                            .personal-info {
+                                padding-left: 10px;
+
+                                & > h3 {
+                                    font-size: 18px;
+                                    line-height: 18px;
+                                    margin: 0;
+
+                                    color: $primaryColor;
+
+                                    @include devices(tablet) {
+                                        font-size: 16px;
+                                        margin: 4px 0;
+                                    }
+                                }
+
+                                & > p {
+                                    font-size: 14px;
+                                    padding-bottom: 4px;
+
+                                    @include devices(tablet) {
+                                        font-size: 12px;
+                                    }
+                                }
+
+                                & > span {
+                                    font-size: 13px;
+                                    color: #4d4d4d;
+
+                                    @include devices(tablet) {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .address-wrapper {
+                            display: flex;
+                            align-items: center;
+                            padding-bottom: 6px;
+
+                            @include devices(tablet) {
+                                padding-bottom: 8px;
+                            }
+
+                            svg {
+                                margin-right: 12px;
+
+                                @include devices(tablet) {
+                                    transform: scale(0.9);
+                                    margin-right: 10px;
+                                }
+                            }
+
+                            & > span {
+                                color: #4d4d4d;
+                                font-size: 14px;
+                                overflow: hidden;
+
+                                @include devices(tablet) {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+
+                        .link-wrapper {
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+
+                            @include devices(tablet) {
+                                justify-content: space-between;
+                            }
+
+                            .direction-wrapper {
+                                display: flex;
+                                align-items: center;
+
+                                svg {
+                                    padding-right: 9px;
+                                    transform: scale(0.8);
+
+                                    @include devices(tablet) {
+                                        transform: scale(0.7);
+                                    }
+                                }
+
+                                & > a {
+                                    color: #1475f5;
+                                    text-decoration: underline;
+                                    font-size: 12px;
+
+                                    @include devices(tablet) {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+
+                            & > button {
+                                width: 118px;
+                                font-size: 14px;
+                                height: 38px;
+
+                                @include devices(tablet) {
+                                    width: 164px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .right-section {
+        flex: 1;
+        padding: 20px 20px 20px 10px;
+        text-align: center;
+        box-sizing: border-box;
+        background-color: #f6f6f7;
+
+        @include devices(tablet) {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        .result-detail-wrapper {
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: calc(100vh - 406px);
+            margin-bottom: 12px;
+            padding-right: 4px;
+            background-color: #ffffff;
+
+            @include devices(tablet) {
+                height: unset;
+            }
+
+            & > div {
+                padding: 36px 20px 8px 20px;
+
+                .logo-image {
+                    height: 24px;
+                    padding-bottom: 20px;
+                }
+
+                h1 {
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin: 0;
+                    padding-bottom: 6px;
+                }
+
+                p {
+                    font-size: 13px;
+                    padding-bottom: 12px;
+
+                    @include devices(tablet) {
+                        padding-bottom: 24px;
+                    }
+                }
+
+                .chart-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid #b7b7b7;
+                    padding: 20px;
+                    margin-bottom: 20px;
+
+                    .chart-title {
+                        width: 90%;
+                        border-bottom: 1px solid #b7b7b7;
+                        margin-bottom: 20px;
+
+                        h2 {
+                            font-size: 14px;
+                            margin: 0;
+                            padding-bottom: 8px;
+                        }
+                    }
+
+                    .chart-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 20px;
+                        width: 100%;
+
+                        .chart-content-col {
+                            width: calc(50% - 10px);
+
+                            @include devices(tablet) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .result-image {
+                    width: 100%;
+                }
+            }
+        }
+
+        .button-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+
+            @include devices(tablet) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            button {
+                width: 200px;
+
+                @include devices(tablet) {
+                    width: 216px;
+                }
+
+                &:last-child {
+                    background-color: #00bd6a;
+                }
+
+                svg {
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
+
+    .audio-wrapper {
+        position: fixed;
+        bottom: 12px;
+        right: 12px;
+
+        @include devices(tablet) {
+            display: none;
+        }
+
+        & > p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            text-align: center;
+
+            & > span {
+                display: flex;
+                align-items: center;
+                padding: 0 10px 0 14px;
+
+                svg {
+                    transform: scale(0.9);
+                }
+            }
+        }
+    }
+}

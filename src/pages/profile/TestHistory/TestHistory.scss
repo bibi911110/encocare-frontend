@@ -4,7 +4,6 @@
 .profile-test-history {
     margin-left: 90px;
     margin-right: 184px;
-    min-height: calc(100vh - 111px);
 
     @include devices(display) {
         margin-right: 90px;

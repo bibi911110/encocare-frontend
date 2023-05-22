@@ -9,9 +9,11 @@ import CoverEye from '../../../components/test/CoverEye/CoverEye';
 import PatternTest from '../../../components/test/PatternTest/PatternTest';
 import Instructions2 from '../../../components/test/Instructions2/Instructions2';
 import Camera from '../../../components/test/Camera/Camera';
+import TestResult from '../../../components/test/TestResult/TestResult';
+import Thankyou from '../../../components/test/Thankyou/Thankyou';
 
 const TestProgress = () => {
-    const [step, steStep] = useState(7);
+    const [step, steStep] = useState(9);
 
     const steps = [
         { component: <PatientDetail /> },
@@ -22,6 +24,8 @@ const TestProgress = () => {
         { component: <PatternTest /> },
         { component: <Instructions2 /> },
         { component: <Camera /> },
+        { component: <TestResult /> },
+        { component: <Thankyou /> },
     ];
 
     return (
