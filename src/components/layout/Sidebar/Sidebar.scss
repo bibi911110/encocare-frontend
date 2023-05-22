@@ -1,0 +1,123 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+aside {
+    height: calc(100vh - 111px);
+    width: 280px;
+    background-color: #0092bd;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+    z-index: 9999;
+
+    @include devices(tablet) {
+        display: none;
+
+        &.mobile-open {
+            display: block;
+            position: fixed;
+            top: 111px;
+            left: 0;
+            box-shadow: 0 3px 6px $boxShadowColor;
+        }
+    }
+
+    .main-title {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 16px 32px 36px;
+
+        & > p {
+            color: #ffffff;
+            font-size: 18px;
+        }
+
+        & > span {
+            display: flex;
+            align-items: center;
+
+            svg {
+                transform: scale(0.8) rotate(-180deg);
+            }
+        }
+    }
+
+    .main-menu {
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 206px);
+
+        & > li {
+            &.parent {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                font-size: 16px;
+                color: #80c8de;
+                height: 42px;
+                padding: 0 16px 0 36px;
+            }
+
+            &.child {
+                & > a {
+                    height: 42px;
+                    padding: 0 16px 0 36px;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 15px;
+                    color: #ffffff;
+
+                    &.active,
+                    &:hover {
+                        background-color: #00a0cd;
+                    }
+
+                    & > div {
+                        display: flex;
+                        align-items: center;
+
+                        .child-icon {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-left: 8px;
+                            margin-right: 14px;
+                            width: 20px;
+                            height: 20px;
+                            flex-shrink: 1;
+                        }
+                    }
+
+                    & > span {
+                        display: flex;
+                        align-items: center;
+
+                        svg {
+                            path {
+                                stroke: #ffffff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .divider {
+            flex: 1;
+        }
+    }
+}
+
+.sidebar-toggle-menu {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 24px;
+    z-index: 9999;
+    cursor: pointer;
+
+    @include devices(tablet) {
+        display: block;
+    }
+}

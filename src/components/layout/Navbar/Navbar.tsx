@@ -7,6 +7,7 @@ import NavbarAuth from '../../navbar/NavbarAuth/NavbarAuth';
 import { toggleMenuIcon } from '../../../assets/icons/common';
 import logoImage from '../../../assets/images/logo.png';
 import './Navbar.scss';
+import { NavbarPropsType } from '../../../types/basicComponents';
 
 const links = [
     { title: 'Take Test', link: '/take-test' },
@@ -45,7 +46,7 @@ const links = [
     },
 ];
 
-const Navbar = () => {
+const Navbar = ({ mode }: NavbarPropsType) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [mobileSubMenuOpen, setMobileSubMenuOpen] = useState('');
 
@@ -64,14 +65,16 @@ const Navbar = () => {
     return (
         <>
             <nav>
-                <div
-                    className="toggle-menu"
-                    onClick={() => {
-                        setMobileMenuOpen(!mobileMenuOpen);
-                    }}
-                >
-                    {toggleMenuIcon}
-                </div>
+                {mode === 'user' && (
+                    <div
+                        className="toggle-menu"
+                        onClick={() => {
+                            setMobileMenuOpen(!mobileMenuOpen);
+                        }}
+                    >
+                        {toggleMenuIcon}
+                    </div>
+                )}
                 <div className="navbar-main">
                     <div className="menubar">
                         <Link className="logo" to="/">

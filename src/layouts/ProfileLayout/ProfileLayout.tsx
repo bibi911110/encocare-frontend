@@ -14,7 +14,7 @@ const ProfileLayout = () => {
         <>
             <header data-layout="profile">
                 <Header />
-                <Navbar />
+                <Navbar mode="user" />
             </header>
             <main data-layout="profile">
                 <Profile isTestHistory={isTestHistory} />

@@ -734,6 +734,10 @@
                 @include devices(tablet) {
                     flex-direction: column;
                 }
+
+                .card-item {
+                    flex: 1;
+                }
             }
 
             .more-wrapper {

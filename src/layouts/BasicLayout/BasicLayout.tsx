@@ -10,7 +10,7 @@ const BasicLayout = () => {
         <>
             <header data-layout="base">
                 <Header />
-                <Navbar />
+                <Navbar mode="user" />
             </header>
             <main data-layout="base">
                 <Outlet />

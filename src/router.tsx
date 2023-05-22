@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import BasicLayout from './layouts/BasicLayout/BasicLayout';
 import ProfileLayout from './layouts/ProfileLayout/ProfileLayout';
 import TestLayout from './layouts/TestLayout/TestLayout';
+import AdminLayout from './layouts/AdminLayout/AdminLayout';
 
 import Home from './pages/common/Home/Home';
 import Signup from './pages/common/Signup/Signup';
@@ -23,6 +24,7 @@ import Payment from './pages/profile/Payment/Payment';
 import PaymentSuccess from './pages/profile/PaymentSuccess/PaymentSuccess';
 import TestAgree from './pages/test/TestAgree/TestAgree';
 import TestProgress from './pages/test/TestProgress/TestProgress';
+import AdminDashboard from './pages/admin/Dashboard/AdminDashboard';
 
 const router = createBrowserRouter([
     {
@@ -61,6 +63,11 @@ const router = createBrowserRouter([
             { path: 'agree', element: <TestAgree /> },
             { path: 'progress', element: <TestProgress /> },
         ],
+    },
+    {
+        path: 'admin',
+        element: <AdminLayout />,
+        children: [{ path: 'dashboard', element: <AdminDashboard /> }],
     },
 ]);
 

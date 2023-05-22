@@ -233,7 +233,9 @@ const Home = () => {
 
                     <div className="card-wrapper">
                         {[0, 1, 2].map((item) => (
-                            <ConsultantCardItem key={item} />
+                            <div className="card-item" key={item}>
+                                <ConsultantCardItem />
+                            </div>
                         ))}
                     </div>
 

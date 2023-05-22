@@ -8,7 +8,7 @@ const TestLayout = () => {
         <>
             <header data-layout="test">
                 <Header />
-                <Navbar />
+                <Navbar mode="user" />
             </header>
             <main data-layout="test">
                 <Outlet />

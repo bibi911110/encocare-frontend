@@ -1,0 +1,25 @@
+@import '../../styles/mixins';
+
+header[data-layout='admin'] {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+}
+
+main[data-layout='admin'] {
+    display: flex;
+    min-height: calc(100vh - 111px);
+    margin-top: 111px;
+    position: relative;
+
+    & > .main-content {
+        flex-grow: 1;
+        box-sizing: border-box;
+        padding: 24px 36px;
+
+        @include devices(tablet) {
+            padding: 20px 8px;
+        }
+    }
+}

@@ -1,5 +1,13 @@
 import React from 'react';
 
+export type NavbarPropsType = {
+    mode: 'user' | 'admin';
+};
+
+export type SidebarPropsType = {
+    type: 'admin' | 'business' | 'individual';
+};
+
 export type ButtonPropsType = {
     title: string;
     type: 'primary' | 'outline' | 'light' | 'gray' | 'link' | 'green';
