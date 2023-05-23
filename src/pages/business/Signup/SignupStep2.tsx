@@ -1,14 +1,12 @@
-import { useDropzone } from 'react-dropzone';
 import Button from '../../../components/common/Button/Button';
 import Select from '../../../components/common/Select/Select';
+import Dropzone from '../../../components/common/Dropzone/Dropzone';
 import NormalInput from '../../../components/common/NormalInput/NormalInput';
 import TextArea from '../../../components/common/TextArea/TextArea';
 import { StepPropsType } from '../../../types/basicComponents';
-import { dropzoneImageIcon, uploadIcon } from '../../../assets/icons/common';
 
 const SignupStep2 = ({ handlePrevStep }: StepPropsType) => {
     const selectOptions = [''];
-    const { getRootProps, getInputProps } = useDropzone();
 
     return (
         <>
@@ -21,15 +19,7 @@ const SignupStep2 = ({ handlePrevStep }: StepPropsType) => {
                         <Select options={selectOptions} placeHolder="Country of Operations" />
                         <TextArea placeHolder="Add a description about your business" rows={4} />
                     </div>
-                    <div {...getRootProps({ className: 'dropzone' })}>
-                        <input {...getInputProps()} />
-                        <span>{dropzoneImageIcon}</span>
-                        <p>Drag and drop to upload an image</p>
-                        <div className="dropzone-button">
-                            {uploadIcon}
-                            Upload from computer
-                        </div>
-                    </div>
+                    <Dropzone />
                 </div>
                 <Button title="Create Business Account" type="primary" onClick={handlePrevStep} arrow />
             </form>

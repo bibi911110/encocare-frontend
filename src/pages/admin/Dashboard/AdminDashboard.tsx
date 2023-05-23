@@ -48,14 +48,17 @@ const columns = [
     {
         key: 'name',
         title: 'Entity Name/Contact',
+        center: true,
     },
     {
         key: 'test',
         title: 'Total Tests',
+        center: true,
     },
     {
         key: 'action',
         title: 'Action',
+        center: true,
     },
 ];
 

@@ -10,7 +10,7 @@ export type SidebarPropsType = {
 
 export type ButtonPropsType = {
     title: string;
-    type: 'primary' | 'outline' | 'light' | 'gray' | 'link' | 'green';
+    type: 'primary' | 'outline' | 'light' | 'gray' | 'link' | 'green' | 'danger';
     icon?: React.ReactNode;
     className?: string;
     arrow?: boolean;
@@ -86,7 +86,7 @@ export type StepperPropsType = {
 };
 
 export type TablePropsType = {
-    columns: Array<{ key: string; title: string; width?: string }>;
+    columns: Array<{ key: string; title: string; width?: string; center?: boolean }>;
     rows: Array<any>;
     filter: string;
     checked: boolean;

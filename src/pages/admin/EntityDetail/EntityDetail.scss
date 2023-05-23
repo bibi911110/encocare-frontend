@@ -1,0 +1,91 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.entity-detail {
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title-wrapper {
+            margin-top: 16px;
+            margin-bottom: 20px;
+            margin-left: 18px;
+
+            @include devices(tablet) {
+                margin-top: 0;
+                margin-left: 0;
+                padding: 0 12px;
+            }
+
+            & > h1 {
+                margin: 0;
+                font-size: 22px;
+                display: flex;
+                align-items: center;
+
+                @include devices(tablet) {
+                    font-size: 16px;
+                    color: $primaryColor;
+                }
+
+                & > span {
+                    display: none;
+                    margin-right: 10px;
+
+                    @include devices(tablet) {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+
+            & > p {
+                font-size: 18px;
+
+                @include devices(tablet) {
+                    font-size: 14px;
+                    margin-left: 22px;
+                }
+            }
+        }
+
+        .button-wrapper {
+            display: flex;
+            gap: 16px;
+
+            & > button {
+                width: 156px;
+            }
+        }
+    }
+
+    .main-content {
+        .card-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .card {
+                &.first-card {
+                    height: 400px;
+                }
+
+                &.second-card {
+                    height: 400px;
+                }
+
+                &.thrid-card {
+                    height: 250px;
+                }
+
+                &.fourth-card {
+                    height: 250px;
+                }
+
+                &.fifth-card {
+                    height: 250px;
+                }
+            }
+        }
+    }
+}

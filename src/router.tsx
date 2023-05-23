@@ -27,6 +27,8 @@ import TestProgress from './pages/test/TestProgress/TestProgress';
 import AdminDashboard from './pages/admin/Dashboard/AdminDashboard';
 import NotFound from './pages/common/NotFound/NotFound';
 import EntityList from './pages/admin/EntityList/EntityList';
+import AddEntity from './pages/admin/AddEntity/AddEntity';
+import EntityDetail from './pages/admin/EntityDetail/EntityDetail';
 
 const router = createBrowserRouter([
     {
@@ -72,8 +74,9 @@ const router = createBrowserRouter([
         element: <AdminLayout />,
         children: [
             { path: 'dashboard', element: <AdminDashboard /> },
-            { path: 'entity', element: <EntityList /> },
+            { path: 'entity/add', element: <AddEntity /> },
             { path: 'entity/:sortType', element: <EntityList /> },
+            { path: 'entity/detail/:id', element: <EntityDetail /> },
         ],
     },
 ]);

@@ -2,14 +2,14 @@ import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../common/Button/Button';
 import { downArrowIcon } from '../../../assets/icons/common';
-import { logoutIcon, securityIcon, userIcon } from '../../../assets/icons/common';
+import { logoutIcon, securityIcon, userCircleIcon } from '../../../assets/icons/common';
 import avatarImage from '../../../assets/images/avatar.png';
 import './NavbarAuth.scss';
 
 const links = [
     {
         title: 'Account Settings',
-        icon: userIcon,
+        icon: userCircleIcon,
         link: '/',
     },
     {

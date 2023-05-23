@@ -35,7 +35,7 @@ const adminLinks = [
             {
                 title: 'All Entities',
                 icon: entityIcon,
-                link: '/admin/entity',
+                link: '/admin/entity/all',
             },
             {
                 title: 'Governments',
@@ -65,7 +65,7 @@ const adminLinks = [
             {
                 title: 'Add an Entity',
                 icon: plusCircleIcon,
-                link: '/admin/add_entity',
+                link: '/admin/entity/add',
             },
             {
                 title: 'Remove/Block Entity',

@@ -14,7 +14,8 @@ const columns = [
     },
     {
         key: 'type',
-        title: 'Entity TYPE',
+        title: 'Entity Type',
+        center: true,
     },
     {
         key: 'admin',
@@ -36,6 +37,7 @@ const columns = [
     {
         key: 'action',
         title: 'Action',
+        center: true,
     },
 ];
 
@@ -93,7 +95,7 @@ const TableMobileCard = ({ id, name, date, type, address, admin, email, contact 
                 </div>
                 <div className="entity-date">
                     <p className="table-text-second">Entity Name/ID</p>
-                    <p className="table-text-primary">{date}</p>
+                    <p className="table-text-primary">{'15/03/2022'}</p>
                 </div>
                 <div className="entity-type">
                     <p className="table-text-second">Entity TYPE</p>
@@ -133,6 +135,7 @@ const EntityList = () => {
                 <div className="search-wrapper">
                     <SearchInput placeHolder="Search for a entity ID/Name etc" />
                     <Button title="&nbsp;&nbsp;Add Entity" type="primary" icon={plusCircleIcon} />
+                    <span className="mobile-filter">{filterIcon}</span>
                 </div>
                 <div className="filter-wrapper">
                     <div className="check-wrapper">

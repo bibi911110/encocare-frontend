@@ -12,7 +12,11 @@ const Table = ({ columns, rows, checked, filter, source, mobileComponent: Mobile
                     <tr>
                         {checked && <th></th>}
                         {columns.map((item) => (
-                            <th key={item.key} style={item.width ? { width: item.width } : {}}>
+                            <th
+                                key={item.key}
+                                style={item.width ? { width: item.width } : {}}
+                                className={item.center ? 'center-head' : ''}
+                            >
                                 <p>
                                     {item.title}
                                     {item.key == filter ? <span>{tableSortIcon}</span> : ''}
@@ -30,7 +34,9 @@ const Table = ({ columns, rows, checked, filter, source, mobileComponent: Mobile
                                 </td>
                             )}
                             {columns.map((item) => (
-                                <td key={item.key}>{(row as any)[item['key']] as any}</td>
+                                <td key={item.key} className={item.center ? 'center-item' : ''}>
+                                    {(row as any)[item['key']] as any}
+                                </td>
                             ))}
                         </tr>
                     ))}

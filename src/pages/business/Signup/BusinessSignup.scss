@@ -104,54 +104,6 @@
 
                 .dropzone {
                     width: 420px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    border: 2px dashed $primaryColor;
-                    background-color: #ffffff;
-                    box-sizing: border-box;
-                    padding: 24px 20px 12px 20px;
-
-                    @include devices(tablet) {
-                        width: 100%;
-                    }
-
-                    span {
-                        margin-bottom: 8px;
-                    }
-
-                    p {
-                        font-size: 14px;
-                        color: rgba(0, 0, 0, 0.5);
-                        margin-bottom: 20px;
-
-                        @include devices(tablet) {
-                            font-size: 13px;
-                            margin-bottom: 12px;
-                        }
-                    }
-
-                    .dropzone-button {
-                        height: 40px;
-                        width: 231px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        background-color: $primaryColor;
-                        color: #ffffff;
-                        font-size: 14px;
-                        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-
-                        @include devices(tablet) {
-                            width: 100%;
-                        }
-
-                        svg {
-                            margin-right: 12px;
-                            transform: scale(0.9);
-                        }
-                    }
                 }
             }
 

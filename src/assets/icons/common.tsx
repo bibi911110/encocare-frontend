@@ -446,7 +446,7 @@ export const settingIcon = (
     </svg>
 );
 
-export const userIcon = (
+export const userCircleIcon = (
     <svg xmlns="http://www.w3.org/2000/svg" width="13.033" height="13.033" viewBox="0 0 13.033 13.033">
         <path
             id="Icon_material-account-circle"
@@ -1035,6 +1035,30 @@ export const eyeIcon = (
             d="M24.077,11.96A13.489,13.489,0,0,0,12.112,4.5,13.491,13.491,0,0,0,.146,11.961a1.36,1.36,0,0,0,0,1.228,13.489,13.489,0,0,0,11.965,7.46,13.491,13.491,0,0,0,11.965-7.461A1.36,1.36,0,0,0,24.077,11.96ZM12.112,18.63a6.056,6.056,0,1,1,6.056-6.056A6.056,6.056,0,0,1,12.112,18.63Zm0-10.093a4.008,4.008,0,0,0-1.064.159A2.012,2.012,0,0,1,8.234,11.51a4.028,4.028,0,1,0,3.878-2.973Z"
             transform="translate(0 -4.5)"
             fill="#ffbe08"
+        />
+    </svg>
+);
+
+export const userIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="23.816" height="23.816" viewBox="0 0 23.816 23.816">
+        <path
+            id="Icon_material-person"
+            data-name="Icon material-person"
+            d="M17.908,17.908a5.954,5.954,0,1,0-5.954-5.954A5.952,5.952,0,0,0,17.908,17.908Zm0,2.977C13.934,20.885,6,22.88,6,26.839v2.977H29.816V26.839C29.816,22.88,21.882,20.885,17.908,20.885Z"
+            transform="translate(-6 -6)"
+            fill="#0092bd"
+        />
+    </svg>
+);
+
+export const imageIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+        <path
+            id="Icon_material-image"
+            data-name="Icon material-image"
+            d="M29.5,26.722V7.278A2.786,2.786,0,0,0,26.722,4.5H7.278A2.786,2.786,0,0,0,4.5,7.278V26.722A2.786,2.786,0,0,0,7.278,29.5H26.722A2.786,2.786,0,0,0,29.5,26.722ZM12.139,19.083l3.472,4.181L20.472,17l6.25,8.333H7.278Z"
+            transform="translate(-4.5 -4.5)"
+            fill="#0092bd"
         />
     </svg>
 );

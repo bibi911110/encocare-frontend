@@ -13,6 +13,7 @@
         thead {
             position: sticky;
             top: 0;
+            z-index: 999;
 
             &::after {
                 content: '-';
@@ -46,6 +47,12 @@
                             }
                         }
                     }
+
+                    &.center-head {
+                        & > p {
+                            justify-content: center;
+                        }
+                    }
                 }
             }
         }
@@ -58,6 +65,10 @@
                     padding: 12px 8px;
                     font-size: 15px;
                     color: #4d4d4d;
+
+                    &.center-item {
+                        text-align: center;
+                    }
                 }
 
                 .checkbox-td {
