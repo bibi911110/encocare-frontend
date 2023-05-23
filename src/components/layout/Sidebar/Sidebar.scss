@@ -3,7 +3,7 @@
 
 aside {
     height: calc(100vh - 111px);
-    width: 280px;
+    width: 280px !important;
     background-color: #0092bd;
     overflow-x: hidden;
     overflow-y: auto;

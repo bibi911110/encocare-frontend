@@ -1,3 +1,25 @@
+.card {
+    background-color: #f6f6f6;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    box-sizing: border-box;
+}
+
+.text-green {
+    color: #01cd45;
+}
+
+.text-blue {
+    color: #0092bd;
+}
+
+.text-red {
+    color: #ff001a;
+}
+
+.text-yellow {
+    color: #ffaa00;
+}
+
 .desktop-only {
     display: inherit;
 }

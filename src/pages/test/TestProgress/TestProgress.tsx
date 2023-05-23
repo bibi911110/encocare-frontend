@@ -13,7 +13,7 @@ import Thankyou from '../../../components/test/Thankyou/Thankyou';
 import './TestProgress.scss';
 
 const TestProgress = () => {
-    const [step, setStep] = useState(8);
+    const [step, setStep] = useState(0);
 
     const steps = [
         { component: <PatientDetail onNext={() => setStep(1)} onPrev={() => setStep(0)} /> },

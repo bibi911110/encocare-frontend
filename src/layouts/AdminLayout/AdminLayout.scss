@@ -14,9 +14,11 @@ main[data-layout='admin'] {
     position: relative;
 
     & > .main-content {
-        flex-grow: 1;
+        flex: 1;
         box-sizing: border-box;
-        padding: 24px 36px;
+        padding: 24px 32px;
+        height: calc(100vh - 111px);
+        overflow: auto;
 
         @include devices(tablet) {
             padding: 20px 8px;

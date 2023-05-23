@@ -2,4 +2,296 @@
 @import '../../../styles/mixins';
 
 .admin-dashboard {
+    display: flex;
+    gap: 24px;
+
+    .left-section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .summary-card {
+            padding: 20px 26px;
+            margin-top: 36px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            .card-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                .title-wrapper {
+                    & > h1 {
+                        font-size: 16px;
+                        color: $primaryColor;
+                        margin: 0;
+                        margin-bottom: 8px;
+                    }
+
+                    & > p {
+                        font-size: 13px;
+                        color: #868686;
+                    }
+                }
+
+                .date-select {
+                    border: 1px solid $primaryColor;
+                    padding: 8px;
+                    cursor: pointer;
+                    font-size: 12px;
+                    color: $primaryColor;
+                    display: flex;
+                    align-items: center;
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        margin-left: 8px;
+
+                        svg {
+                            transform: scale(0.8);
+
+                            path {
+                                stroke: $primaryColor;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .main-title {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                flex: 1;
+
+                & > h1 {
+                    position: relative;
+                    text-align: center;
+                    font-size: 44px;
+                    font-weight: bolder;
+                    margin: 0;
+
+                    & > span {
+                        position: absolute;
+                        top: 30%;
+                        right: -36px;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+
+                & > p {
+                    font-size: 14px;
+                    color: #8c8c8c;
+                }
+            }
+
+            .sub-title {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+
+                .col {
+                    & > h3 {
+                        font-size: 24px;
+                        font-weight: bolder;
+                        margin: 0;
+                        margin-bottom: 8px;
+                    }
+                    & > p {
+                        font-size: 15px;
+                        color: #8c8c8c;
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+
+        .chart-card {
+            width: 100%;
+            height: 360px;
+            position: relative;
+            flex: 1;
+
+            .card-header {
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 26px;
+                box-sizing: border-box;
+
+                .title-wrapper {
+                    & > h1 {
+                        font-size: 16px;
+                        color: $primaryColor;
+                        margin: 0;
+                        margin-bottom: 8px;
+                    }
+
+                    & > p {
+                        font-size: 13px;
+                        color: #868686;
+                    }
+                }
+            }
+        }
+    }
+
+    .right-section {
+        flex: 2;
+
+        .right-header {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+
+            & > button {
+                width: 172px;
+            }
+        }
+
+        .table-card {
+            padding: 20px;
+
+            .card-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+
+                & > h1 {
+                    font-size: 16px;
+                    color: $primaryColor;
+                    margin: 0;
+                    margin-bottom: 8px;
+                }
+
+                .button-wrapper {
+                    display: flex;
+                    gap: 10px;
+
+                    & > div {
+                        padding: 8px 12px;
+                        cursor: pointer;
+                        font-size: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 80px;
+
+                        span {
+                            display: flex;
+                            align-items: center;
+                            margin-left: 18px;
+
+                            svg {
+                                transform: scale(0.8);
+                            }
+                        }
+
+                        &.date-select {
+                            background-color: #dec5dc;
+                            color: #7c0074;
+
+                            path {
+                                stroke: #7c0074;
+                            }
+                        }
+
+                        &.type-select {
+                            background-color: #c5dbe9;
+                            color: #0874c2;
+
+                            path {
+                                stroke: #0874c2;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card-body {
+                .table-wrapper {
+                    height: calc(100vh - 318px);
+                    overflow: auto;
+
+                    tbody {
+                        .entity-type {
+                            text-align: left;
+
+                            & > p {
+                                &:first-child {
+                                    font-size: 15px;
+                                    color: #4d4d4d;
+                                }
+
+                                &:last-child {
+                                    font-size: 13px;
+                                    color: #868686;
+                                }
+                            }
+                        }
+
+                        .entity-contact {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+
+                            & > img {
+                                width: 48px;
+                                height: 48px;
+                            }
+
+                            & > div {
+                                text-align: left;
+                                margin-left: 8px;
+
+                                & > p {
+                                    &:first-child {
+                                        font-size: 15px;
+                                        color: #4d4d4d;
+                                        line-height: 15px;
+                                        margin-bottom: 8px;
+                                    }
+
+                                    &:last-child {
+                                        font-size: 13px;
+                                        color: #868686;
+                                        max-width: 240px;
+                                        line-height: 13px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .entity-action {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            & > span {
+                                display: flex;
+                                align-items: center;
+                            }
+
+                            .vertical-divider {
+                                margin: 0 14px;
+                                border-left: 1px solid #b7b7b7;
+                                height: 32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

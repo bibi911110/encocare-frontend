@@ -954,3 +954,87 @@ export const cameraIcon = (
         />
     </svg>
 );
+
+export const upCircleIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+        <g id="Group_16564" data-name="Group 16564" transform="translate(-719.814 -412.814)">
+            <circle
+                id="Ellipse_208"
+                data-name="Ellipse 208"
+                cx="10"
+                cy="10"
+                r="10"
+                transform="translate(719.814 412.814)"
+                fill="#01cd45"
+            />
+            <path
+                id="Polygon_65"
+                data-name="Polygon 65"
+                d="M5,0l5,6H0Z"
+                transform="translate(724.814 419.814)"
+                fill="#fff"
+            />
+        </g>
+    </svg>
+);
+
+export const menuIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="7" viewBox="0 0 31 7">
+        <g id="Group_1591" data-name="Group 1591" transform="translate(-1795.589 -307.982)">
+            <circle
+                id="Ellipse_14"
+                data-name="Ellipse 14"
+                cx="3.5"
+                cy="3.5"
+                r="3.5"
+                transform="translate(1795.589 307.982)"
+                fill="#0092bd"
+            />
+            <circle
+                id="Ellipse_15"
+                data-name="Ellipse 15"
+                cx="3.5"
+                cy="3.5"
+                r="3.5"
+                transform="translate(1807.589 307.982)"
+                fill="#0092bd"
+            />
+            <circle
+                id="Ellipse_16"
+                data-name="Ellipse 16"
+                cx="3.5"
+                cy="3.5"
+                r="3.5"
+                transform="translate(1819.589 307.982)"
+                fill="#0092bd"
+            />
+        </g>
+    </svg>
+);
+
+export const tableSortIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16">
+        <g id="Group_16561" data-name="Group 16561" transform="translate(-1334 -489)">
+            <path id="Polygon_4" data-name="Polygon 4" d="M5,0l5,6H0Z" transform="translate(1334 489)" fill="#0092bd" />
+            <path
+                id="Polygon_5"
+                data-name="Polygon 5"
+                d="M5,0l5,6H0Z"
+                transform="translate(1344 505) rotate(180)"
+                fill="#0092bd"
+            />
+        </g>
+    </svg>
+);
+
+export const eyeIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24.223" height="16.149" viewBox="0 0 24.223 16.149">
+        <path
+            id="Icon_awesome-eye"
+            data-name="Icon awesome-eye"
+            d="M24.077,11.96A13.489,13.489,0,0,0,12.112,4.5,13.491,13.491,0,0,0,.146,11.961a1.36,1.36,0,0,0,0,1.228,13.489,13.489,0,0,0,11.965,7.46,13.491,13.491,0,0,0,11.965-7.461A1.36,1.36,0,0,0,24.077,11.96ZM12.112,18.63a6.056,6.056,0,1,1,6.056-6.056A6.056,6.056,0,0,1,12.112,18.63Zm0-10.093a4.008,4.008,0,0,0-1.064.159A2.012,2.012,0,0,1,8.234,11.51a4.028,4.028,0,1,0,3.878-2.973Z"
+            transform="translate(0 -4.5)"
+            fill="#ffbe08"
+        />
+    </svg>
+);

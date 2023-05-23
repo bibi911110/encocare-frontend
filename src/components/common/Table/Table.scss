@@ -1,0 +1,62 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.table-wrapper {
+    table {
+        width: 100%;
+        text-align: center;
+        border-spacing: 0 !important;
+
+        thead {
+            position: sticky;
+            top: 0;
+
+            &::after {
+                content: '-';
+                display: block;
+                line-height: 16px;
+                color: transparent;
+            }
+
+            tr {
+                th {
+                    background-color: #ebebeb;
+                    color: #868686;
+                    padding: 8px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+
+                    p {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: 100;
+
+                        & > span {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    background-color: #ffffff;
+                    border-bottom: 6px solid #f6f6f6;
+                    padding: 12px 14px;
+                    font-size: 15px;
+                    color: #4d4d4d;
+                }
+
+                .checkbox-td {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

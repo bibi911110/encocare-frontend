@@ -84,3 +84,10 @@ export type PaymentSelectPropsType = {
 export type StepperPropsType = {
     current: number;
 };
+
+export type TablePropsType = {
+    columns: Array<{ key: string; title: string }>;
+    rows: Array<any>;
+    filter: string;
+    checked: boolean;
+};
