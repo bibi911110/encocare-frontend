@@ -24,3 +24,14 @@ export type EntityDetailCardPropsType = {
     group: string;
     address: string;
 };
+
+export type EntityTestResultTableCardPropsType = {
+    id: number;
+    name: string;
+    test: number;
+    email: string;
+    contact: string;
+    date: string;
+    time: string;
+    address: string;
+};

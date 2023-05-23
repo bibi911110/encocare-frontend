@@ -29,6 +29,7 @@ import NotFound from './pages/common/NotFound/NotFound';
 import EntityList from './pages/admin/EntityList/EntityList';
 import AddEntity from './pages/admin/AddEntity/AddEntity';
 import EntityDetail from './pages/admin/EntityDetail/EntityDetail';
+import EntityTestResult from './pages/admin/EntityTestResult/EntityTestResult';
 
 const router = createBrowserRouter([
     {
@@ -77,6 +78,7 @@ const router = createBrowserRouter([
             { path: 'entity/add', element: <AddEntity /> },
             { path: 'entity/:sortType', element: <EntityList /> },
             { path: 'entity/detail/:id', element: <EntityDetail /> },
+            { path: 'entity/detail/:id/test-result', element: <EntityTestResult /> },
         ],
     },
 ]);
