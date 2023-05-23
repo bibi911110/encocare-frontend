@@ -1,9 +1,10 @@
+import { Fragment } from 'react';
 import { tableSortIcon } from '../../../assets/icons/common';
 import { TablePropsType } from '../../../types/basicComponents';
 import CheckBox from '../CheckBox/CheckBox';
 import './Table.scss';
 
-const Table = ({ columns, rows, checked, filter }: TablePropsType) => {
+const Table = ({ columns, rows, checked, filter, source, mobileComponent: MobileCard }: TablePropsType) => {
     return (
         <div className="table-wrapper">
             <table>
@@ -35,6 +36,13 @@ const Table = ({ columns, rows, checked, filter }: TablePropsType) => {
                     ))}
                 </tbody>
             </table>
+            <div className="mobile-table-section">
+                {source.map((item) => (
+                    <Fragment key={item['key']}>
+                        <MobileCard {...item} />
+                    </Fragment>
+                ))}
+            </div>
         </div>
     );
 };

@@ -90,4 +90,6 @@ export type TablePropsType = {
     rows: Array<any>;
     filter: string;
     checked: boolean;
+    source: Array<any>;
+    mobileComponent: React.FC<any>;
 };

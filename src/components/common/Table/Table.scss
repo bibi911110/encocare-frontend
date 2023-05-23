@@ -7,6 +7,10 @@
         text-align: center;
         border-spacing: 0 !important;
 
+        @include devices(tablet) {
+            display: none;
+        }
+
         thead {
             position: sticky;
             top: 0;
@@ -37,6 +41,10 @@
                             align-items: center;
                             justify-content: center;
                             margin-left: 10px;
+
+                            svg {
+                                transform: scale(0.9);
+                            }
                         }
                     }
                 }
@@ -57,6 +65,14 @@
                     text-align: left;
                 }
             }
+        }
+    }
+
+    .mobile-table-section {
+        display: none;
+
+        @include devices(tablet) {
+            display: block;
         }
     }
 }

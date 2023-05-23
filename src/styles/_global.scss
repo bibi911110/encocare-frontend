@@ -20,6 +20,31 @@
     color: #ffaa00;
 }
 
+.table-text-primary {
+    font-size: 15px;
+    line-height: 15px;
+    color: #4d4d4d;
+}
+
+.table-text-second {
+    font-size: 13px;
+    line-height: 13px;
+    color: #868686;
+
+    @include devices(tablet) {
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
+.mobile-table-wrapper {
+    display: none;
+
+    @include devices(tablet) {
+        display: block;
+    }
+}
+
 .desktop-only {
     display: inherit;
 }
