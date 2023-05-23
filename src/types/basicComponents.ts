@@ -86,7 +86,7 @@ export type StepperPropsType = {
 };
 
 export type TablePropsType = {
-    columns: Array<{ key: string; title: string }>;
+    columns: Array<{ key: string; title: string; width?: string }>;
     rows: Array<any>;
     filter: string;
     checked: boolean;

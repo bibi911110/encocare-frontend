@@ -25,6 +25,8 @@ import PaymentSuccess from './pages/profile/PaymentSuccess/PaymentSuccess';
 import TestAgree from './pages/test/TestAgree/TestAgree';
 import TestProgress from './pages/test/TestProgress/TestProgress';
 import AdminDashboard from './pages/admin/Dashboard/AdminDashboard';
+import NotFound from './pages/common/NotFound/NotFound';
+import EntityList from './pages/admin/EntityList/EntityList';
 
 const router = createBrowserRouter([
     {
@@ -43,6 +45,7 @@ const router = createBrowserRouter([
             { path: 'support-us', element: <SupportUs /> },
             { path: 'donate', element: <Donate /> },
             { path: 'thanks', element: <Thanks /> },
+            { path: '*', element: <NotFound /> },
         ],
     },
     {
@@ -67,7 +70,11 @@ const router = createBrowserRouter([
     {
         path: 'admin',
         element: <AdminLayout />,
-        children: [{ path: 'dashboard', element: <AdminDashboard /> }],
+        children: [
+            { path: 'dashboard', element: <AdminDashboard /> },
+            { path: 'entity', element: <EntityList /> },
+            { path: 'entity/:sortType', element: <EntityList /> },
+        ],
     },
 ]);
 

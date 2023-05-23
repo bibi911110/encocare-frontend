@@ -11,6 +11,7 @@ import {
     plusCircleIcon,
     userCircleIcon,
     securityIcon,
+    entityIcon,
 } from '../../../assets/icons/sidebar';
 import { rightArrowIcon, rightArrowIcon3 } from '../../../assets/icons/common';
 import { SidebarPropsType } from '../../../types/basicComponents';
@@ -32,24 +33,29 @@ const adminLinks = [
         title: 'YOUR ENTITIES',
         children: [
             {
+                title: 'All Entities',
+                icon: entityIcon,
+                link: '/admin/entity',
+            },
+            {
                 title: 'Governments',
                 icon: governmentIcon,
-                link: '/admin/governments',
+                link: '/admin/entity/government',
             },
             {
                 title: 'Hospitals',
                 icon: hospitalIcon,
-                link: '/admin/hospitals',
+                link: '/admin/entity/hospitals',
             },
             {
                 title: 'Laboratories',
                 icon: laboratoryIcon,
-                link: '/admin/laboratories',
+                link: '/admin/entity/laboratories',
             },
             {
                 title: 'Doctors',
                 icon: doctorIcon,
-                link: '/admin/doctors',
+                link: '/admin/entity/doctors',
             },
         ],
     },

@@ -2,6 +2,10 @@
 @import '../../../styles/mixins';
 
 .admin-dashboard {
+    @include devices(tablet) {
+        padding: 0 8px;
+    }
+
     .main-header {
         display: flex;
         justify-content: flex-end;
@@ -373,10 +377,6 @@
                                         &:first-child {
                                             margin-bottom: 8px;
                                         }
-
-                                        &:last-child {
-                                            max-width: 240px;
-                                        }
                                     }
                                 }
                             }
@@ -384,29 +384,33 @@
                             .entity-action {
                                 display: flex;
                                 align-items: center;
-                                justify-content: center;
+                                justify-content: flex-start;
 
                                 & > span {
                                     display: flex;
                                     align-items: center;
+
+                                    svg {
+                                        transform: scale(0.9);
+                                    }
                                 }
 
                                 .vertical-divider {
-                                    margin: 0 14px;
+                                    margin: 0 10px;
                                     border-left: 1px solid #b7b7b7;
-                                    height: 32px;
+                                    height: 24px;
                                 }
                             }
                         }
 
                         .mobile-table-section {
-                            .table-mobile-card {
+                            .dashboard-table-mobile-card {
                                 display: flex;
                                 align-items: center;
                                 background-color: #ffffff;
                                 padding: 18px 12px;
                                 position: relative;
-                                margin-top: 6px;
+                                margin-bottom: 6px;
 
                                 .checkbox {
                                     margin-right: 20px;

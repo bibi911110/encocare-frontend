@@ -4,7 +4,6 @@
 .table-wrapper {
     table {
         width: 100%;
-        text-align: center;
         border-spacing: 0 !important;
 
         @include devices(tablet) {
@@ -32,7 +31,7 @@
 
                     p {
                         display: flex;
-                        justify-content: center;
+                        justify-content: flex-start;
                         align-items: center;
                         font-weight: 100;
 
@@ -56,13 +55,14 @@
                 td {
                     background-color: #ffffff;
                     border-bottom: 6px solid #f6f6f6;
-                    padding: 12px 14px;
+                    padding: 12px 8px;
                     font-size: 15px;
                     color: #4d4d4d;
                 }
 
                 .checkbox-td {
                     text-align: left;
+                    padding-left: 16px;
                 }
             }
         }

@@ -1,12 +1,12 @@
 import { AreaChart, Area, Tooltip, ResponsiveContainer } from 'recharts';
-import { crossCircleIcon, downArrowIcon, eyeIcon, menuIcon, upCircleIcon } from '../../../assets/icons/common';
-import { plusCircleIcon } from '../../../assets/icons/sidebar';
 import Button from '../../../components/common/Button/Button';
-import './AdminDashboard.scss';
 import Table from '../../../components/common/Table/Table';
-import contactImage from '../../../assets/images/contact.png';
 import CheckBox from '../../../components/common/CheckBox/CheckBox';
 import { DashboardTableCardPropsType } from '../../../types/tableComponent';
+import contactImage from '../../../assets/images/contact.png';
+import { crossCircleIcon, downArrowIcon, eyeIcon, menuIcon, upCircleIcon } from '../../../assets/icons/common';
+import { plusCircleIcon } from '../../../assets/icons/sidebar';
+import './AdminDashboard.scss';
 
 const data = [
     {
@@ -43,6 +43,7 @@ const columns = [
     {
         key: 'type',
         title: 'Entity ID/Type',
+        width: '200px',
     },
     {
         key: 'name',
@@ -101,7 +102,7 @@ const rows = source.map((item) => {
 
 const TableMobileCard = ({ id, type, name, contact, test, logo }: DashboardTableCardPropsType) => {
     return (
-        <div className="table-mobile-card">
+        <div className="dashboard-table-mobile-card">
             <CheckBox />
             <div className="card-body">
                 <p className="table-text-second">ENTITY NAME/CONTACT</p>

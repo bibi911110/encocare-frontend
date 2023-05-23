@@ -1,0 +1,282 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.entity-list {
+    .main-header {
+        display: none;
+        margin: 0 10px 12px 10px;
+
+        @include devices(tablet) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        & > div {
+            display: flex;
+
+            & > span {
+                display: flex;
+                align-items: center;
+                margin-right: 8px;
+            }
+        }
+
+        & > button {
+            width: 160px;
+        }
+    }
+
+    .card {
+        padding: 24px;
+
+        @include devices(tablet) {
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .search-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+
+            @include devices(tablet) {
+                margin: 0;
+                padding: 24px 18px 2px 18px;
+                background-color: #f6f6f6;
+            }
+
+            .search-input {
+                flex: 1;
+            }
+
+            & > button {
+                height: 51px;
+                width: 174px;
+
+                @include devices(tablet) {
+                    display: none;
+                    margin-bottom: 12px;
+                }
+            }
+        }
+
+        .filter-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 14px 26px 14px;
+
+            @include devices(tablet) {
+                margin: 0;
+                padding: 8px 18px 14px 18px;
+                box-shadow: 0 3px 6px $boxShadowColor;
+                background-color: #f6f6f6;
+            }
+
+            .check-wrapper {
+                display: flex;
+                align-items: center;
+
+                @include devices(tablet) {
+                    justify-content: space-between;
+                    width: 100%;
+                }
+
+                .check-item {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 30px;
+                    color: #868686;
+
+                    @include devices(tablet) {
+                        margin-right: 0;
+
+                        &:last-child {
+                            display: none;
+                        }
+
+                        .checkbox .checkmark {
+                            width: 14px;
+                            height: 14px;
+                        }
+
+                        .checkbox input:checked + .checkmark:before {
+                            top: 2px;
+                            left: 2px;
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+
+                    &.active {
+                        color: #000000;
+                    }
+
+                    & > span {
+                        margin-left: 10px;
+                        font-size: 14px;
+
+                        @include devices(tablet) {
+                            font-size: 12px;
+                            margin-left: 4px;
+                        }
+                    }
+                }
+            }
+
+            .advanced-filter {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                text-decoration: underline;
+
+                @include devices(tablet) {
+                    display: none;
+                }
+
+                & > span {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 10px;
+
+                    svg {
+                        transform: scale(0.9);
+
+                        path {
+                            fill: $primaryColor;
+                        }
+                    }
+                }
+            }
+        }
+
+        .table-wrapper {
+            height: calc(100vh - 332px);
+            overflow: auto;
+
+            @include devices(tablet) {
+                height: calc(100vh - 318px);
+                background-color: #f6f6f6;
+                margin-top: 10px;
+            }
+
+            tbody {
+                .entity-name-id {
+                    text-align: left;
+
+                    & > p {
+                        &:first-child {
+                            margin-bottom: 8px;
+                        }
+                    }
+                }
+
+                .entity-contact {
+                    & > p {
+                        &:first-child {
+                            margin-bottom: 8px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .entity-action {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    & > span {
+                        display: flex;
+                        align-items: center;
+
+                        svg {
+                            transform: scale(0.9);
+                        }
+                    }
+
+                    .vertical-divider {
+                        margin: 0 10px;
+                        border-left: 1px solid #b7b7b7;
+                        height: 24px;
+                    }
+                }
+            }
+
+            .mobile-table-section {
+                padding: 10px;
+
+                .entity-table-mobile-card {
+                    background-color: #ffffff;
+                    padding: 28px 12px 20px 12px;
+                    position: relative;
+                    margin-bottom: 12px;
+
+                    .first-section {
+                        display: flex;
+                        gap: 12px;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        margin-bottom: 20px;
+
+                        & > div {
+                            & > p {
+                                &:first-child {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }
+
+                        .entity-name-id {
+                            & > p {
+                                &:nth-child(2) {
+                                    margin-bottom: 8px;
+                                }
+                            }
+                        }
+                    }
+
+                    .second-section {
+                        margin-bottom: 20px;
+
+                        & > p {
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    .third-section {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+
+                        & > div {
+                            & > p {
+                                &:first-child {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }
+
+                        .entity-contact {
+                            & > p {
+                                &:nth-child(2) {
+                                    margin-bottom: 8px;
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+
+                    .remove {
+                        position: absolute;
+                        font-size: 12px;
+                        color: red;
+                        top: 4px;
+                        right: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

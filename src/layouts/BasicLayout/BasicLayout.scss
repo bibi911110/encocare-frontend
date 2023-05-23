@@ -7,4 +7,6 @@ header[data-layout='base'] {
 
 main[data-layout='base'] {
     margin-top: 111px;
+    min-height: calc(100vh - 111px);
+    box-sizing: border-box;
 }

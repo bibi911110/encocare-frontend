@@ -24,16 +24,21 @@
     font-size: 15px;
     line-height: 15px;
     color: #4d4d4d;
+
+    @include devices(tablet) {
+        font-size: 14px;
+        line-height: 14px;
+    }
 }
 
 .table-text-second {
     font-size: 13px;
-    line-height: 13px;
+    line-height: 15px;
     color: #868686;
 
     @include devices(tablet) {
         font-size: 12px;
-        line-height: 12px;
+        line-height: 13px;
     }
 }
 

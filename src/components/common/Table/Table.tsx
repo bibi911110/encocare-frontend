@@ -12,7 +12,7 @@ const Table = ({ columns, rows, checked, filter, source, mobileComponent: Mobile
                     <tr>
                         {checked && <th></th>}
                         {columns.map((item) => (
-                            <th key={item.key}>
+                            <th key={item.key} style={item.width ? { width: item.width } : {}}>
                                 <p>
                                     {item.title}
                                     {item.key == filter ? <span>{tableSortIcon}</span> : ''}
