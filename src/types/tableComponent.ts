@@ -17,3 +17,10 @@ export type EntityTableCardPropsType = {
     email: string;
     contact: string;
 };
+
+export type EntityDetailCardPropsType = {
+    id: string;
+    test: number;
+    group: string;
+    address: string;
+};

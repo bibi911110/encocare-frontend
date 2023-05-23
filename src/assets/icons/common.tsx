@@ -1062,3 +1062,27 @@ export const imageIcon = (
         />
     </svg>
 );
+
+export const cardIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="27.418" height="21.325" viewBox="0 0 27.418 21.325">
+        <path
+            id="Icon_awesome-credit-card"
+            data-name="Icon awesome-credit-card"
+            d="M0,21.291a2.285,2.285,0,0,0,2.285,2.285H25.134a2.285,2.285,0,0,0,2.285-2.285V12.913H0Zm9.139-3.237a.573.573,0,0,1,.571-.571h6.474a.573.573,0,0,1,.571.571v1.9a.573.573,0,0,1-.571.571H9.711a.573.573,0,0,1-.571-.571Zm-6.093,0a.573.573,0,0,1,.571-.571H7.045a.573.573,0,0,1,.571.571v1.9a.573.573,0,0,1-.571.571H3.618a.573.573,0,0,1-.571-.571ZM27.418,4.535V6.82H0V4.535A2.285,2.285,0,0,1,2.285,2.25H25.134A2.285,2.285,0,0,1,27.418,4.535Z"
+            transform="translate(0 -2.25)"
+            fill="#0092bd"
+        />
+    </svg>
+);
+
+export const downloadIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="23.824" height="15.883" viewBox="0 0 23.824 15.883">
+        <path
+            id="Icon_ionic-md-cloud-download"
+            data-name="Icon ionic-md-cloud-download"
+            d="M20.333,12.756a7.433,7.433,0,0,0-13.9-1.985,5.948,5.948,0,0,0,.645,11.862h12.9a4.978,4.978,0,0,0,4.963-4.963A4.9,4.9,0,0,0,20.333,12.756Zm-8.885,2.531V11.515h3.177v3.772H18L13.037,20.25,8.074,15.287Z"
+            transform="translate(-1.125 -6.75)"
+            fill="#0092bd"
+        />
+    </svg>
+);

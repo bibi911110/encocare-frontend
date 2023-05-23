@@ -2,6 +2,12 @@
 @import '../../../styles/mixins';
 
 .entity-detail {
+    box-sizing: border-box;
+
+    @include devices(tablet) {
+        padding: 10px 10px 76px 10px;
+    }
+
     .main-header {
         display: flex;
         justify-content: space-between;
@@ -57,35 +63,529 @@
             & > button {
                 width: 156px;
             }
+
+            @include devices(tablet) {
+                display: none;
+            }
         }
     }
 
     .main-content {
-        .card-wrapper {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        gap: 20px;
 
-            .card {
-                &.first-card {
-                    height: 400px;
+        @include devices(tablet) {
+            flex-direction: column;
+        }
+
+        .card {
+            padding: 24px 28px;
+
+            @include devices(tablet) {
+                padding: 24px 16px;
+            }
+
+            .card-title {
+                margin-bottom: 24px;
+                font-size: 16px;
+                color: $primaryColor;
+                display: flex;
+                align-items: center;
+
+                @include devices(tablet) {
+                    justify-content: center !important;
                 }
 
-                &.second-card {
-                    height: 400px;
-                }
-
-                &.thrid-card {
-                    height: 250px;
-                }
-
-                &.fourth-card {
-                    height: 250px;
-                }
-
-                &.fifth-card {
-                    height: 250px;
+                span {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 16px;
+                    width: 20px;
+                    height: 20px;
+                    flex-shrink: 0;
                 }
             }
+
+            .card-body {
+                .grid-card-row {
+                    display: flex;
+                    margin-bottom: 20px;
+                    gap: 10px;
+
+                    &:first-child {
+                        margin-bottom: 38px;
+                    }
+
+                    &:last-child {
+                        @include devices(tablet) {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    .grid-row-col {
+                        flex-basis: 50%;
+                    }
+                }
+            }
+        }
+
+        .left-section {
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .entity-card {
+                .card-title {
+                    & > span {
+                        svg {
+                            transform: scale(1.4);
+
+                            path {
+                                fill: $primaryColor;
+                            }
+                        }
+                    }
+                }
+
+                .card-body {
+                    .entity-name-id-type {
+                        display: flex;
+                        margin-bottom: 24px;
+                        align-items: center;
+
+                        & > img {
+                            height: 80px;
+                            width: 80px;
+                            margin-right: 12px;
+
+                            @include devices(tablet) {
+                                width: 66px;
+                                height: 66px;
+                            }
+                        }
+
+                        .title-wrapper {
+                            flex: 1;
+                            display: flex;
+
+                            .entity-name-id {
+                                flex-basis: 75%;
+
+                                @include devices(tablet) {
+                                    flex-basis: 100%;
+                                }
+
+                                & > p {
+                                    &:nth-child(1) {
+                                        margin-bottom: 24px;
+
+                                        @include devices(tablet) {
+                                            margin-bottom: 16px;
+                                        }
+                                    }
+
+                                    &:nth-child(2) {
+                                        margin-bottom: 10px;
+                                    }
+
+                                    &:nth-child(3) {
+                                        margin-bottom: 0;
+
+                                        & > span {
+                                            color: #0033ff;
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .entity-type {
+                                flex-basis: 25%;
+
+                                @include devices(tablet) {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+
+                    .entity-location-type {
+                        display: flex;
+                        margin-bottom: 38px;
+
+                        @include devices(tablet) {
+                            justify-content: space-between;
+                            margin-bottom: 30px;
+                            gap: 10px;
+                        }
+
+                        .entity-location {
+                            @include devices(tablet) {
+                                flex-basis: 75%;
+                            }
+                        }
+
+                        .entity-type-mobile {
+                            display: none;
+
+                            @include devices(tablet) {
+                                display: block;
+                                flex-basis: 25%;
+                            }
+                        }
+                    }
+
+                    .entity-number-address {
+                        display: flex;
+                        margin-bottom: 20px;
+                        gap: 10px;
+
+                        @include devices(tablet) {
+                            margin-bottom: 8px;
+                            justify-content: space-between;
+                        }
+
+                        .entity-number {
+                            flex-basis: 50%;
+                        }
+
+                        .entity-address {
+                            flex-basis: 50%;
+                        }
+                    }
+                }
+            }
+
+            .table-card {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+
+                .card-title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .left-title {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .right-title {
+                        display: flex;
+                        align-items: center;
+
+                        @include devices(tablet) {
+                            display: none;
+                        }
+
+                        & > p {
+                            font-size: 12px;
+                            color: $primaryColor;
+                        }
+
+                        & > div {
+                            display: flex;
+                            align-items: center;
+                            margin-left: 10px;
+
+                            svg {
+                                transform: scale(0.9);
+
+                                path {
+                                    stroke: $primaryColor;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .card-body {
+                    flex: 1 auto;
+                    height: 100px;
+
+                    @include devices(tablet) {
+                        min-height: 600px;
+                    }
+
+                    .table-wrapper {
+                        height: 100%;
+                        overflow: auto;
+
+                        tbody {
+                            .entity-date {
+                                & > p {
+                                    &:first-child {
+                                        margin-bottom: 8px;
+                                    }
+                                }
+                            }
+
+                            .entity-test {
+                                font-size: 14px;
+                                text-decoration: underline;
+                                color: #0033ff;
+                            }
+
+                            .entity-action {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                & > span {
+                                    display: flex;
+                                    align-items: center;
+
+                                    svg {
+                                        transform: scale(0.9);
+                                    }
+                                }
+
+                                .vertical-divider {
+                                    margin: 0 10px;
+                                    border-left: 1px solid #b7b7b7;
+                                    height: 24px;
+                                }
+                            }
+                        }
+
+                        .mobile-table-section {
+                            .entity-detail-table-mobile-card {
+                                background-color: #ffffff;
+                                padding: 28px 12px 20px 12px;
+                                position: relative;
+                                margin-bottom: 10px;
+
+                                .first-section {
+                                    display: flex;
+                                    margin-bottom: 20px;
+
+                                    .entity-id {
+                                        flex-basis: 40%;
+                                    }
+
+                                    .entity-test {
+                                        flex-basis: 30%;
+
+                                        & > p {
+                                            &:last-child {
+                                                color: #0033ff;
+                                                text-decoration: underline;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .second-section {
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    & > p {
+                                        &:nth-child(2) {
+                                            margin-bottom: 8px;
+                                        }
+
+                                        &:nth-child(3) {
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+
+                                .table-text-second {
+                                    margin-bottom: 12px;
+                                }
+
+                                .remove {
+                                    position: absolute;
+                                    font-size: 12px;
+                                    color: red;
+                                    top: 4px;
+                                    right: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .right-section {
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .admin-card {
+                .card-title {
+                    & > span {
+                        svg {
+                            transform: scale(0.8);
+                        }
+                    }
+                }
+            }
+
+            .security-card {
+                .card-title {
+                    justify-content: space-between;
+                    margin-bottom: 32px;
+
+                    .left-title {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .right-title {
+                        & > button {
+                            width: 198px;
+                        }
+
+                        @include devices(tablet) {
+                            display: none;
+                        }
+                    }
+                }
+
+                .card-body {
+                    margin-bottom: 20px;
+
+                    @include devices(tablet) {
+                        margin-bottom: 0;
+                    }
+
+                    .check-item {
+                        font-size: 14px;
+                        margin-bottom: 10px;
+
+                        &:first-child {
+                            margin-bottom: 20px;
+                        }
+
+                        .checkbox {
+                            margin-right: 16px;
+                        }
+                    }
+
+                    .mobile-button {
+                        display: none;
+                        margin-top: 28px;
+
+                        & > button {
+                            width: 216px;
+                        }
+
+                        @include devices(tablet) {
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+
+            .membership-payment-card {
+                .card-title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .left-title {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .right-title {
+                        display: flex;
+                        align-items: center;
+
+                        @include devices(tablet) {
+                            display: none;
+                        }
+
+                        & > p {
+                            font-size: 12px;
+                            color: $primaryColor;
+                        }
+
+                        & > div {
+                            display: flex;
+                            align-items: center;
+                            margin-left: 10px;
+
+                            svg {
+                                transform: scale(0.9);
+
+                                path {
+                                    stroke: $primaryColor;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .card-body {
+                    .card-number {
+                        color: #0033ff;
+                        text-decoration: underline;
+                        margin-left: 20px;
+                    }
+
+                    .payment-col {
+                        flex-basis: 100%;
+                    }
+
+                    .mobile-link {
+                        display: none;
+                        font-size: 14px;
+                        color: $primaryColor;
+
+                        @include devices(tablet) {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        & > span {
+                            display: flex;
+                            align-items: center;
+                            margin-left: 10px;
+
+                            svg {
+                                transform: scale(0.9);
+
+                                path {
+                                    stroke: $primaryColor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .title-text {
+        font-size: 14px;
+        line-height: 14px;
+        color: #7a7a7a;
+        margin-bottom: 18px;
+
+        @include devices(tablet) {
+            font-size: 12px;
+            line-height: 12px;
+            margin-bottom: 14px;
+        }
+    }
+
+    .value-text {
+        font-size: 15px;
+        line-height: 15px;
+        color: #4d4d4d;
+        word-break: break-all;
+
+        @include devices(tablet) {
+            font-size: 14px;
+            line-height: 14px;
         }
     }
 }
