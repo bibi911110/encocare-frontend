@@ -2,11 +2,10 @@ import { AreaChart, Area, Tooltip, ResponsiveContainer } from 'recharts';
 import Button from '../../../components/common/Button/Button';
 import Table from '../../../components/common/Table/Table';
 import CheckBox from '../../../components/common/CheckBox/CheckBox';
-import { AdminDashboardTableCardPropsType } from '../../../types/tableComponent';
-import contactImage from '../../../assets/images/contact.png';
+import { IndividualDashboardTableCardPropsType } from '../../../types/tableComponent';
 import { crossCircleIcon, downArrowIcon, eyeIcon, menuIcon, upCircleIcon } from '../../../assets/icons/common';
 import { plusCircleIcon } from '../../../assets/icons/sidebar';
-import './AdminDashboard.scss';
+import './IndividualDashboard.scss';
 
 const data = [
     {
@@ -41,18 +40,21 @@ const data = [
 
 const columns = [
     {
-        key: 'type',
-        title: 'Entity ID/Type',
+        key: 'id',
+        title: 'patient ID',
         width: '200px',
     },
     {
         key: 'name',
-        title: 'Entity Name/Contact',
-        center: true,
+        title: 'patient Name/Contact',
+    },
+    {
+        key: 'date',
+        title: 'test date/time',
     },
     {
         key: 'test',
-        title: 'Total Tests',
+        title: 'RESULTS',
         center: true,
     },
     {
@@ -66,33 +68,30 @@ const source = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
     return {
         key: item,
         id: 53735401,
-        type: 'Individual',
-        name: 'Pouros Group',
-        contact: '7739 Ondricka Gateway, North Sheridan, KY, NF',
-        test: 9634,
-        logo: contactImage,
+        name: 'Wilfred Casper',
+        email: 'Myron72@hotmail.com',
+        date: 'January 23, 2023',
+        test: 52910770,
     };
 });
 
 const rows = source.map((item) => {
     return {
         key: item.key,
-        type: (
-            <div className="entity-type">
-                <p className="table-text-primary">{item.id}</p>
-                <p className="table-text-second">{item.type}</p>
-            </div>
-        ),
+        id: <span className="entity-id">{item.id}</span>,
         name: (
-            <div className="entity-contact">
-                <img src={contactImage} alt="" />
-                <div>
-                    <p className="table-text-primary">{item.name}</p>
-                    <p className="table-text-second">{item.contact}</p>
-                </div>
+            <div className="entity-name">
+                <p className="table-text-primary">{item.name}</p>
+                <p className="table-text-second">{item.email}</p>
             </div>
         ),
-        test: item.test,
+        date: (
+            <div className="entity-date">
+                <p className="table-text-primary">{item.date}</p>
+                <p className="table-text-second">{item.date}</p>
+            </div>
+        ),
+        test: <span className="entity-test">{item.test}</span>,
         action: (
             <div className="entity-action">
                 <span>{eyeIcon}</span>
@@ -103,44 +102,43 @@ const rows = source.map((item) => {
     };
 });
 
-const TableMobileCard = ({ id, type, name, contact, test, logo }: AdminDashboardTableCardPropsType) => {
+const TableMobileCard = ({ id, test, name, email, date }: IndividualDashboardTableCardPropsType) => {
     return (
         <div className="dashboard-table-mobile-card">
             <CheckBox />
             <div className="card-body">
-                <p className="table-text-second">ENTITY NAME/CONTACT</p>
-                <div className="entity-contact">
-                    <img src={logo} alt="" />
-                    <div>
-                        <p className="table-text-primary">{name}</p>
-                        <p className="table-text-second">{contact}</p>
+                <div className="card-row">
+                    <div className="card-row-col">
+                        <p className="table-text-second">PATIENT ID</p>
+                        <p className="entity-id">{id}</p>
+                    </div>
+                    <div className="card-row-col">
+                        <p className="table-text-second">RESULT REPORT</p>
+                        <p className="entity-test">{test}</p>
                     </div>
                 </div>
-
-                <div className="card-footer">
-                    <div className="entity-test">
-                        <p className="table-text-second">TOTAL TESTS</p>
-                        <p className="table-text-primary">{test}</p>
+                <div className="card-row">
+                    <div className="card-row-col">
+                        <p className="table-text-second">PATIENT NAME/CONTACT</p>
+                        <p className="table-text-primary second-text">{name}</p>
+                        <p className="table-text-second">{email}</p>
                     </div>
-                    <div className="entity-type">
-                        <p className="table-text-second">ENTITY ID/TYPE</p>
-                        <div>
-                            <span>{id}</span>
-                            <span>{type}</span>
-                        </div>
+                    <div className="card-row-col">
+                        <p className="table-text-second">TEST DATE/TIME</p>
+                        <p className="table-text-primary second-text">{date}</p>
+                        <p className="table-text-second">{date}</p>
                     </div>
                 </div>
             </div>
-            <div className="remove">Delete</div>
         </div>
     );
 };
 
-const AdminDashboard = () => {
+const IndividualDashboard = () => {
     return (
-        <div className="admin-dashboard">
+        <div className="individual-dashboard">
             <div className="main-header">
-                <Button title="&nbsp;&nbsp;Add Entity" type="primary" icon={plusCircleIcon} />
+                <Button title="&nbsp;&nbsp;Conduct a Test" type="primary" icon={plusCircleIcon} />
             </div>
             <div className="main-section">
                 <div className="left-section">
@@ -221,7 +219,7 @@ const AdminDashboard = () => {
                                 columns={columns}
                                 rows={rows}
                                 source={source}
-                                filter="test"
+                                filter="date"
                                 checked
                                 mobileComponent={TableMobileCard}
                             />
@@ -233,4 +231,4 @@ const AdminDashboard = () => {
     );
 };
 
-export default AdminDashboard;
+export default IndividualDashboard;

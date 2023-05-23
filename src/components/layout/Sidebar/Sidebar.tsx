@@ -12,6 +12,9 @@ import {
     userCircleIcon,
     securityIcon,
     entityIcon,
+    membershipIcon,
+    userIcon,
+    linkIcon,
 } from '../../../assets/icons/sidebar';
 import { rightArrowIcon, rightArrowIcon3 } from '../../../assets/icons/common';
 import { SidebarPropsType } from '../../../types/basicComponents';
@@ -101,8 +104,84 @@ const adminLinks = [
     },
 ];
 
+const individualLinks = [
+    {
+        title: 'YOUR DASHBOARD',
+        children: [
+            {
+                title: 'My Dashboard',
+                icon: dashboardIcon,
+                link: '/individual/dashboard',
+            },
+        ],
+    },
+    {
+        title: 'PATIENTS DATABASE',
+        children: [
+            {
+                title: 'All Patients',
+                icon: userIcon,
+                link: '/individual/patient',
+            },
+        ],
+    },
+    {
+        title: 'TESTING',
+        children: [
+            {
+                title: 'Conduct a test',
+                icon: plusCircleIcon,
+                link: '/individual/conduct-test',
+            },
+            {
+                title: 'Share referral link',
+                icon: linkIcon,
+                link: '/individual/share-link',
+            },
+        ],
+    },
+    {
+        title: 'SETTINGS',
+        children: [
+            {
+                title: 'Account Settings',
+                icon: userCircleIcon,
+                link: '/individual/setting',
+            },
+            {
+                title: 'Security Settings',
+                icon: securityIcon,
+                link: '/individual/security',
+            },
+            {
+                title: 'Membership',
+                icon: membershipIcon,
+                link: '/individual/membership',
+            },
+        ],
+    },
+    {
+        title: 'MY PROFILE',
+        children: [
+            {
+                title: 'Message',
+                icon: messageIcon,
+                link: '/individual/message',
+            },
+        ],
+    },
+];
+
 const Sidebar = ({ type }: SidebarPropsType) => {
     const [isMobileOpen, setMobileOpen] = useState(false);
+
+    let linkData = adminLinks;
+
+    if (type == 'admin') {
+        linkData = adminLinks;
+    } else if (type == 'individual') {
+        linkData = individualLinks;
+    }
 
     return (
         <>
@@ -112,7 +191,7 @@ const Sidebar = ({ type }: SidebarPropsType) => {
                     <span>{rightArrowIcon3}</span>
                 </div>
                 <ul className="main-menu">
-                    {adminLinks.map((item) => (
+                    {linkData.map((item) => (
                         <Fragment key={item.title}>
                             {item.title === 'SETTINGS' && <div className="divider" />}
                             <li className="parent">{item.title}</li>

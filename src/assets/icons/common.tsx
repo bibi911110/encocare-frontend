@@ -1086,3 +1086,60 @@ export const downloadIcon = (
         />
     </svg>
 );
+
+export const linkIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="25.98" height="25.957" viewBox="0 0 25.98 25.957">
+        <g id="Icon_feather-link" data-name="Icon feather-link" transform="translate(-1.493 -1.507)">
+            <path
+                id="Path_7878"
+                data-name="Path 7878"
+                d="M15,15.634a5.742,5.742,0,0,0,8.659.62L27.1,12.809a5.742,5.742,0,1,0-8.12-8.12L17.01,6.654"
+                transform="translate(-2.814)"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="3"
+            />
+            <path
+                id="Path_7879"
+                data-name="Path 7879"
+                d="M16.779,15.8a5.742,5.742,0,0,0-8.659-.62L4.675,18.62a5.742,5.742,0,1,0,8.12,8.12l1.963-1.964"
+                transform="translate(0 -2.457)"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="3"
+            />
+        </g>
+    </svg>
+);
+
+export const copyIcon2 = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="22.631" height="22.631" viewBox="0 0 22.631 22.631">
+        <g id="Icon_feather-copy" data-name="Icon feather-copy" transform="translate(-2 -2)">
+            <path
+                id="Path_7883"
+                data-name="Path 7883"
+                d="M15.563,13.5h9.284a2.063,2.063,0,0,1,2.063,2.063v9.284a2.063,2.063,0,0,1-2.063,2.063H15.563A2.063,2.063,0,0,1,13.5,24.847V15.563A2.063,2.063,0,0,1,15.563,13.5Z"
+                transform="translate(-3.279 -3.279)"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+            />
+            <path
+                id="Path_7884"
+                data-name="Path 7884"
+                d="M6.095,16.41H5.063A2.063,2.063,0,0,1,3,14.347V5.063A2.063,2.063,0,0,1,5.063,3h9.284A2.063,2.063,0,0,1,16.41,5.063V6.095"
+                fill="none"
+                stroke="#fff"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+            />
+        </g>
+    </svg>
+);

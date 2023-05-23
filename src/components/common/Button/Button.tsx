@@ -14,18 +14,18 @@ const Button = ({ title, type, icon, arrow, className, submit, onClick, ...props
         buttonContent = (
             <>
                 <span className="button-icon">{icon}</span>
-                {title}
+                <span className="button-title">{title}</span>
             </>
         );
     } else if (arrow) {
         buttonContent = (
             <>
-                {title}
+                <span className="button-title">{title}</span>
                 <span className="button-arrow-icon">{rightArrowIcon2}</span>
             </>
         );
     } else {
-        buttonContent = <>{title}</>;
+        buttonContent = <span className="button-title">{title}</span>;
     }
 
     return (

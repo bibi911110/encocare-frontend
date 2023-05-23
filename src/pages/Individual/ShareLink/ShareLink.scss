@@ -1,0 +1,209 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.share-link {
+    @include devices(tablet) {
+        padding: 8px;
+    }
+
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title-wrapper {
+            margin-top: 16px;
+            margin-bottom: 20px;
+
+            @include devices(tablet) {
+                margin-top: 0;
+                padding: 0 12px;
+            }
+
+            & > h1 {
+                margin: 0;
+                font-size: 22px;
+                display: flex;
+                align-items: center;
+
+                @include devices(tablet) {
+                    font-size: 16px;
+                    color: $primaryColor;
+                }
+
+                & > span {
+                    display: none;
+                    margin-right: 10px;
+
+                    @include devices(tablet) {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-content {
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+
+        @include devices(desktop) {
+            flex-direction: column;
+        }
+
+        .card {
+            padding: 46px 42px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include devices(tablet) {
+                padding: 36px 24px;
+            }
+
+            & > img {
+                width: 98px;
+                height: 106px;
+                margin-bottom: 28px;
+
+                @include devices(tablet) {
+                    width: 68px;
+                    height: 72px;
+                }
+            }
+
+            & > h1 {
+                font-size: 21px;
+                margin: 0;
+                margin-bottom: 20px;
+
+                @include devices(tablet) {
+                    font-size: 16px;
+                }
+            }
+
+            & > p {
+                font-size: 16px;
+                margin-bottom: 46px;
+                text-align: center;
+
+                @include devices(tablet) {
+                    font-size: 14px;
+                }
+            }
+
+            &.left-card {
+                flex-basis: 40%;
+
+                @include devices(desktop) {
+                    flex-basis: 100%;
+                }
+
+                & > button {
+                    width: 278px;
+
+                    @include devices(desktop) {
+                        width: 216px;
+                    }
+                }
+
+                .input-wrapper {
+                    margin-bottom: 12px;
+
+                    & > input {
+                        width: 100%;
+                        margin-bottom: 12px;
+                    }
+                }
+
+                .link-text {
+                    font-size: 15px;
+                    color: #02c623;
+
+                    @include devices(desktop) {
+                        font-size: 14px;
+                    }
+
+                    svg {
+                        path {
+                            stroke: #02c623;
+                        }
+                    }
+                }
+            }
+
+            &.right-card {
+                flex-basis: 60%;
+
+                @include devices(desktop) {
+                    flex-basis: 100%;
+                }
+
+                .input-wrapper {
+                    display: flex;
+                    width: 100%;
+                    position: relative;
+
+                    & > span {
+                        position: absolute;
+                        left: 12px;
+                        top: 12px;
+
+                        svg {
+                            transform: scale(0.9);
+
+                            @include devices(tablet) {
+                                transform: scale(0.8);
+                            }
+                        }
+                    }
+
+                    & > input {
+                        flex: 1;
+                        padding-left: 64px;
+
+                        @include devices(tablet) {
+                            padding-left: 42px;
+                        }
+                    }
+
+                    & > button {
+                        @include devices(tablet) {
+                            .button-title {
+                                display: none;
+                            }
+                        }
+
+                        svg {
+                            transform: scale(0.9);
+                        }
+                    }
+                }
+
+                & > button {
+                    margin-top: 156px;
+                    width: 278px;
+
+                    @include devices(tablet) {
+                        margin-top: 82px;
+                        width: 215px;
+                    }
+
+                    svg {
+                        transform: scale(0.9);
+
+                        circle {
+                            fill: #ffffff;
+                        }
+
+                        path {
+                            stroke: #02c623;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

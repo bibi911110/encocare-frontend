@@ -1,0 +1,249 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.patient-list {
+    box-sizing: border-box;
+
+    .main-header {
+        margin: 0 10px 12px 10px;
+        font-size: 22px;
+        display: none;
+        align-items: center;
+
+        @include devices(tablet) {
+            display: flex;
+            font-size: 16px;
+            color: $primaryColor;
+            margin: 0 18px 12px 18px;
+        }
+
+        & > span {
+            display: flex;
+            align-items: center;
+            margin-right: 16px;
+
+            svg {
+                transform: scale(1.2);
+
+                @include devices(tablet) {
+                    transform: unset;
+                }
+
+                path {
+                    stroke: #000000;
+
+                    @include devices(tablet) {
+                        stroke: $primaryColor;
+                    }
+                }
+            }
+        }
+    }
+
+    .card {
+        padding: 24px;
+
+        @include devices(tablet) {
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .search-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            position: relative;
+
+            @include devices(tablet) {
+                margin: 0;
+                padding: 24px 18px 24px 18px;
+                background-color: #f6f6f6;
+            }
+
+            .search-input {
+                flex: 1;
+
+                .search-icon {
+                    @include devices(tablet) {
+                        display: none;
+                    }
+                }
+            }
+
+            .advanced-filter {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                text-decoration: underline;
+
+                @include devices(tablet) {
+                    display: none;
+                }
+
+                & > span {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 10px;
+
+                    svg {
+                        transform: scale(0.9);
+
+                        path {
+                            fill: $primaryColor;
+                        }
+                    }
+                }
+            }
+
+            .mobile-filter {
+                display: none;
+                position: absolute;
+                right: 28px;
+
+                @include devices(tablet) {
+                    display: block;
+                }
+
+                svg {
+                    transform: scale(0.8);
+
+                    path {
+                        fill: $primaryColor;
+                    }
+                }
+            }
+        }
+
+        .table-wrapper {
+            height: calc(100vh - 330px);
+            overflow: auto;
+
+            @include devices(tablet) {
+                height: calc(100vh - 276px);
+                background-color: #f6f6f6;
+                margin-top: 10px;
+            }
+
+            tbody {
+                .patient-id-name,
+                .patient-contact,
+                .patient-date {
+                    & > p {
+                        &:first-child {
+                            margin-bottom: 8px;
+                        }
+                    }
+                }
+
+                .patient-id,
+                .patient-test {
+                    color: #0033ff;
+                    text-decoration: underline;
+                    font-size: 14px;
+                }
+
+                .patient-action {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    & > span {
+                        display: flex;
+                        align-items: center;
+
+                        svg {
+                            transform: scale(0.9);
+                        }
+                    }
+
+                    .vertical-divider {
+                        margin: 0 10px;
+                        border-left: 1px solid #b7b7b7;
+                        height: 24px;
+                    }
+                }
+            }
+
+            .mobile-table-section {
+                padding: 10px;
+
+                .patient-table-mobile-card {
+                    background-color: #ffffff;
+                    padding: 28px 12px 20px 12px;
+                    position: relative;
+                    margin-bottom: 14px;
+
+                    .patient-id-text,
+                    .patient-test-text {
+                        color: #0033ff;
+                        text-decoration: underline;
+                    }
+
+                    .first-section {
+                        display: flex;
+                        gap: 12px;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        margin-bottom: 20px;
+
+                        & > div {
+                            & > p {
+                                &:first-child {
+                                    margin-bottom: 10px;
+                                }
+                                &:nth-child(2) {
+                                    margin-bottom: 12px;
+                                }
+                            }
+                        }
+                    }
+
+                    .second-section {
+                        margin-bottom: 20px;
+
+                        & > p {
+                            &:first-child {
+                                margin-bottom: 14px;
+                            }
+                        }
+                    }
+
+                    .third-section {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        gap: 12px;
+
+                        & > div {
+                            & > p {
+                                &:nth-child(1) {
+                                    margin-bottom: 10px;
+                                }
+
+                                &:nth-child(2) {
+                                    margin-bottom: 12px;
+                                }
+                            }
+                        }
+
+                        .patient-date {
+                            flex-basis: 50%;
+                        }
+                        .patient-address {
+                            flex-basis: 50%;
+                        }
+                    }
+
+                    .remove {
+                        position: absolute;
+                        font-size: 12px;
+                        color: red;
+                        top: 4px;
+                        right: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

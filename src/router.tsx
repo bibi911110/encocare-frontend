@@ -16,7 +16,6 @@ import Thanks from './pages/common/Thanks/Thanks';
 import BusinessSignup from './pages/business/Signup/BusinessSignup';
 import BusinessLogin from './pages/business/Login/BusinessLogin';
 import AdminLogin from './pages/admin/Login/AdminLogin';
-import IndividualLogin from './pages/Individual/Login/IndividualLogin';
 import Dashboard from './pages/profile/Dashboard/Dashboard';
 import TestHistory from './pages/profile/TestHistory/TestHistory';
 import Membership from './pages/profile/Membership/Membership';
@@ -30,6 +29,13 @@ import EntityList from './pages/admin/EntityList/EntityList';
 import AddEntity from './pages/admin/AddEntity/AddEntity';
 import EntityDetail from './pages/admin/EntityDetail/EntityDetail';
 import EntityTestResult from './pages/admin/EntityTestResult/EntityTestResult';
+import IndividualLayout from './layouts/IndividualLayout/IndividualLayout';
+import IndividualDashboard from './pages/individual/Dashboard/IndividualDashboard';
+import IndividualLogin from './pages/individual/Login/IndividualLogin';
+import PatientList from './pages/individual/PatientList/PatientList';
+import PatientDetail from './pages/individual/PatientDetail/PatientDetail';
+import ShareLink from './pages/individual/ShareLink/ShareLink';
+import SecuritySetting from './pages/individual/SecuritySetting/SecuritySetting';
 
 const router = createBrowserRouter([
     {
@@ -79,6 +85,17 @@ const router = createBrowserRouter([
             { path: 'entity/:sortType', element: <EntityList /> },
             { path: 'entity/detail/:id', element: <EntityDetail /> },
             { path: 'entity/detail/:id/test-result', element: <EntityTestResult /> },
+        ],
+    },
+    {
+        path: 'individual',
+        element: <IndividualLayout />,
+        children: [
+            { path: 'dashboard', element: <IndividualDashboard /> },
+            { path: 'patient', element: <PatientList /> },
+            { path: 'patient/detail/:id', element: <PatientDetail /> },
+            { path: 'share-link', element: <ShareLink /> },
+            { path: 'security-setting', element: <SecuritySetting /> },
         ],
     },
 ]);

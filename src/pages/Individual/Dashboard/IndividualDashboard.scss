@@ -1,0 +1,455 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.individual-dashboard {
+    @include devices(tablet) {
+        padding: 0 8px;
+    }
+
+    .main-header {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+
+        & > button {
+            width: 216px;
+        }
+    }
+
+    .main-section {
+        display: flex;
+        gap: 24px;
+
+        @include devices(desktop) {
+            flex-direction: column;
+        }
+
+        @include devices(tablet) {
+            gap: 16px;
+        }
+
+        .left-section {
+            flex: 1;
+            width: calc(100% / 3);
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            @include devices(desktop) {
+                width: 100%;
+                flex-direction: row;
+            }
+
+            @include devices(tablet) {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .summary-card {
+                padding: 20px 26px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                margin-top: -46px;
+
+                @include devices(desktop) {
+                    margin-top: 0;
+                }
+
+                @include devices(tablet) {
+                    padding: 20px 12px;
+                }
+
+                .card-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    margin-bottom: 12px;
+
+                    .title-wrapper {
+                        & > h1 {
+                            font-size: 16px;
+                            color: $primaryColor;
+                            margin: 0;
+                            margin-bottom: 8px;
+
+                            @include devices(tablet) {
+                                font-size: 14px;
+                            }
+                        }
+
+                        & > p {
+                            font-size: 13px;
+                            color: #868686;
+
+                            @include devices(tablet) {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    .date-select {
+                        border: 1px solid $primaryColor;
+                        padding: 8px;
+                        cursor: pointer;
+                        font-size: 12px;
+                        color: $primaryColor;
+                        display: flex;
+                        align-items: center;
+
+                        @include devices(tablet) {
+                            font-size: 11px;
+                            padding: 6px;
+                        }
+
+                        span {
+                            display: flex;
+                            align-items: center;
+                            margin-left: 8px;
+
+                            svg {
+                                transform: scale(0.8);
+
+                                path {
+                                    stroke: $primaryColor;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .main-title {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 24px;
+                    flex: 1;
+
+                    & > h1 {
+                        position: relative;
+                        text-align: center;
+                        font-size: 44px;
+                        font-weight: bolder;
+                        margin: 0;
+
+                        @include devices(tablet) {
+                            font-size: 36px;
+                        }
+
+                        & > span {
+                            position: absolute;
+                            top: 30%;
+                            right: -36px;
+                            display: flex;
+                            align-items: center;
+
+                            svg {
+                                @include devices(tablet) {
+                                    transform: scale(0.8);
+                                }
+                            }
+                        }
+                    }
+
+                    & > p {
+                        font-size: 14px;
+                        color: #8c8c8c;
+
+                        @include devices(tablet) {
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                .sub-title {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    text-align: center;
+
+                    .col {
+                        & > h3 {
+                            font-size: 24px;
+                            font-weight: bolder;
+                            margin: 0;
+                            margin-bottom: 8px;
+
+                            @include devices(tablet) {
+                                font-size: 20px;
+                            }
+                        }
+                        & > p {
+                            font-size: 15px;
+                            color: #8c8c8c;
+                            margin-bottom: 16px;
+
+                            @include devices(tablet) {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .chart-card {
+                position: relative;
+                flex: 1.2;
+
+                @include devices(desktop) {
+                    flex: 1;
+                }
+
+                @include devices(tablet) {
+                    .recharts-responsive-container {
+                        height: 68vw !important;
+                    }
+                }
+
+                .card-header {
+                    position: absolute;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 20px 26px;
+                    box-sizing: border-box;
+
+                    @include devices(tablet) {
+                        padding: 20px 12px;
+                    }
+
+                    .title-wrapper {
+                        & > h1 {
+                            font-size: 16px;
+                            color: $primaryColor;
+                            margin: 0;
+                            margin-bottom: 8px;
+
+                            @include devices(tablet) {
+                                font-size: 14px;
+                            }
+                        }
+
+                        & > p {
+                            font-size: 13px;
+                            color: #868686;
+
+                            @include devices(tablet) {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    & > span {
+                        display: flex;
+                        align-items: flex-start;
+
+                        svg {
+                            transform: scale(0.9);
+
+                            @include devices(tablet) {
+                                transform: scale(0.8);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .right-section {
+            flex: 2;
+            width: calc(100% / 3 * 2);
+
+            @include devices(desktop) {
+                width: 100%;
+                flex: unset;
+            }
+
+            .table-card {
+                padding: 20px;
+
+                @include devices(tablet) {
+                    padding: 20px 0 0 0;
+                }
+
+                .card-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 20px;
+
+                    @include devices(tablet) {
+                        flex-direction: column;
+                    }
+
+                    & > h1 {
+                        font-size: 16px;
+                        color: $primaryColor;
+                        margin: 0;
+                        margin-bottom: 8px;
+
+                        @include devices(tablet) {
+                            font-size: 15px;
+                        }
+                    }
+
+                    .button-wrapper {
+                        display: flex;
+                        gap: 10px;
+
+                        & > div {
+                            padding: 8px 16px;
+                            cursor: pointer;
+                            font-size: 12px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 80px;
+
+                            span {
+                                display: flex;
+                                align-items: center;
+                                margin-left: 18px;
+
+                                svg {
+                                    transform: scale(0.8);
+                                }
+                            }
+
+                            &.date-select {
+                                background-color: #dec5dc;
+                                color: #7c0074;
+
+                                path {
+                                    stroke: #7c0074;
+                                }
+                            }
+
+                            &.type-select {
+                                background-color: #c5dbe9;
+                                color: #0874c2;
+
+                                path {
+                                    stroke: #0874c2;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .card-body {
+                    .table-wrapper {
+                        height: calc(100vh - 318px);
+                        overflow: auto;
+
+                        @include devices(tablet) {
+                            height: auto;
+                        }
+
+                        tbody {
+                            .entity-id,
+                            .entity-test {
+                                color: #0033ff;
+                                text-decoration: underline;
+                            }
+
+                            .entity-name {
+                                & > p {
+                                    &:first-child {
+                                        margin-bottom: 8px;
+                                    }
+                                }
+                            }
+
+                            .entity-date {
+                                & > p {
+                                    &:first-child {
+                                        margin-bottom: 8px;
+                                    }
+                                }
+                            }
+
+                            .entity-action {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                & > span {
+                                    display: flex;
+                                    align-items: center;
+
+                                    svg {
+                                        transform: scale(0.9);
+                                    }
+                                }
+
+                                .vertical-divider {
+                                    margin: 0 10px;
+                                    border-left: 1px solid #b7b7b7;
+                                    height: 24px;
+                                }
+                            }
+                        }
+
+                        .mobile-table-section {
+                            .dashboard-table-mobile-card {
+                                display: flex;
+                                align-items: center;
+                                background-color: #ffffff;
+                                padding: 18px 12px;
+                                position: relative;
+                                margin-bottom: 6px;
+
+                                .checkbox {
+                                    margin-right: 16px;
+                                }
+
+                                .card-body {
+                                    flex: 1;
+
+                                    & > p {
+                                        margin-bottom: 24px;
+                                    }
+
+                                    .card-row {
+                                        display: flex;
+                                        gap: 0px;
+                                        margin-bottom: 18px;
+
+                                        .card-row-col {
+                                            &:first-child {
+                                                flex-basis: 60%;
+                                            }
+
+                                            &:last-child {
+                                                flex-basis: 40%;
+                                            }
+
+                                            & > p {
+                                                &:first-child {
+                                                    margin-bottom: 10px;
+                                                }
+                                            }
+
+                                            .entity-id,
+                                            .entity-test {
+                                                color: #0033ff;
+                                                text-decoration: underline;
+                                            }
+
+                                            .second-text {
+                                                margin-bottom: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

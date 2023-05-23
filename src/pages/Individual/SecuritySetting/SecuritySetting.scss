@@ -1,0 +1,139 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.security-setting {
+    @include devices(tablet) {
+        padding: 8px;
+    }
+
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title-wrapper {
+            margin-top: 16px;
+            margin-bottom: 20px;
+
+            @include devices(tablet) {
+                margin-top: 0;
+                padding: 0 12px;
+            }
+
+            & > h1 {
+                margin: 0;
+                font-size: 22px;
+                display: flex;
+                align-items: center;
+
+                @include devices(tablet) {
+                    font-size: 16px;
+                    color: $primaryColor;
+                }
+
+                & > span {
+                    display: none;
+                    margin-right: 10px;
+
+                    @include devices(tablet) {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-content {
+        display: flex;
+
+        .card {
+            padding: 24px 28px;
+
+            @include devices(tablet) {
+                padding: 24px 20px;
+            }
+
+            &.left-card {
+                flex-basis: 33%;
+
+                @include devices(desktop) {
+                    flex-basis: 100%;
+                }
+
+                .card-title {
+                    margin-bottom: 24px;
+                    font-size: 16px;
+                    color: $primaryColor;
+                    display: flex;
+                    align-items: center;
+
+                    @include devices(tablet) {
+                        justify-content: center !important;
+                    }
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        margin-right: 16px;
+                        width: 20px;
+                        height: 20px;
+                        flex-shrink: 0;
+                    }
+                }
+
+                .card-body {
+                    .input-wrapper {
+                        @include devices(tablet) {
+                            padding: 8px;
+                            margin-bottom: 20px;
+                        }
+
+                        input {
+                            margin-bottom: 12px;
+                            width: 100%;
+                        }
+                    }
+
+                    .button-wrapper {
+                        margin-top: 36px;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;
+
+                        @include devices(tablet) {
+                            position: fixed;
+                            bottom: 0;
+                            left: 0;
+                            background-color: #ffffff;
+                            padding: 12px 0;
+                            width: 100%;
+                        }
+
+                        & > button {
+                            width: 146px;
+                        }
+
+                        & > p {
+                            display: none;
+                            font-size: 13px;
+                            margin-top: 8px;
+
+                            @include devices(tablet) {
+                                display: flex;
+                                align-items: center;
+
+                                & > span {
+                                    margin-right: 12px;
+                                    display: flex;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
