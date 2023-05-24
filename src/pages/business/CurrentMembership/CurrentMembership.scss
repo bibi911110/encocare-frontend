@@ -1,0 +1,475 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.current-membership {
+    .main-header {
+        margin-top: 16px;
+        margin-bottom: 20px;
+        margin-left: 18px;
+
+        @include devices(tablet) {
+            margin-top: 0;
+            margin-left: 0;
+            padding: 0 12px;
+        }
+
+        & > h1 {
+            margin: 0;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+
+            @include devices(tablet) {
+                font-size: 16px;
+                // color: $primaryColor;
+            }
+
+            & > span {
+                display: none;
+                margin-right: 10px;
+
+                @include devices(tablet) {
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        path {
+                            stroke: #000000;
+                        }
+                    }
+                }
+            }
+        }
+
+        & > p {
+            font-size: 16px;
+
+            @include devices(tablet) {
+                font-size: 14px;
+                margin-left: 22px;
+            }
+        }
+    }
+
+    .main-content {
+        .card-wrapper {
+            display: flex;
+            gap: 20px;
+
+            @include devices(desktop) {
+                flex-direction: column;
+            }
+
+            .card {
+                padding: 24px;
+
+                @include devices(tablet) {
+                    box-shadow: none;
+                }
+            }
+
+            .left-section {
+                width: 50%;
+                flex: 1;
+                height: fit-content;
+
+                @include devices(desktop) {
+                    width: 100%;
+                }
+
+                .card {
+                    margin-bottom: 36px;
+
+                    .card-title {
+                        margin-bottom: 24px;
+                        font-size: 16px;
+                        color: $primaryColor;
+                        display: flex;
+                        align-items: center;
+
+                        @include devices(tablet) {
+                            justify-content: center !important;
+                        }
+
+                        span {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 16px;
+                            width: 20px;
+                            height: 20px;
+                            flex-shrink: 0;
+                        }
+                    }
+
+                    .card-body {
+                        .plan-card {
+                            margin-bottom: 36px;
+                            box-shadow: 0 3px 6px $boxShadowColor;
+
+                            .plan-card-header {
+                                background-color: #ccf4e2;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 26px 30px;
+                                position: relative;
+
+                                @include devices(tablet) {
+                                    padding: 26px 20px;
+                                    align-items: flex-start;
+                                }
+
+                                & > h1 {
+                                    font-size: 22px;
+                                    margin: 0;
+                                    font-weight: bolder;
+
+                                    @include devices(tablet) {
+                                        font-size: 18px;
+                                        margin-top: 4px;
+                                    }
+                                }
+
+                                & > div {
+                                    text-align: center;
+
+                                    & > p {
+                                        &:first-child {
+                                            display: flex;
+                                            align-items: center;
+
+                                            .unit {
+                                                font-size: 25px;
+                                                color: #00c770;
+                                                margin-bottom: 20px;
+                                            }
+
+                                            .mount {
+                                                font-size: 46px;
+                                                font-weight: bolder;
+                                                color: #00c770;
+                                                line-height: 45px;
+                                            }
+
+                                            .per {
+                                                font-size: 13px;
+                                                color: #8fab9e;
+                                            }
+                                        }
+
+                                        &:last-child {
+                                            font-size: 13px;
+                                            color: #8fab9e;
+
+                                            @include devices(tablet) {
+                                                position: absolute;
+                                                top: 60px;
+                                                left: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .plan-card-body {
+                                padding: 24px 30px 16px 30px;
+                                display: flex;
+                                gap: 20px;
+                                background-color: #ffffff;
+
+                                @include devices(tablet) {
+                                    flex-direction: column;
+                                    padding: 18px 20px;
+                                    gap: 0;
+                                }
+
+                                & > div {
+                                    flex: 1;
+                                    width: 50%;
+
+                                    @include devices(tablet) {
+                                        width: 100%;
+                                    }
+                                }
+
+                                .child-item {
+                                    font-size: 16px;
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 12px 16px;
+                                    margin-bottom: 8px;
+
+                                    @include devices(tablet) {
+                                        font-size: 13px;
+                                    }
+
+                                    & > span {
+                                        margin-right: 12px;
+                                        display: flex;
+                                        align-items: center;
+                                    }
+                                }
+
+                                .check-section {
+                                    .child-item {
+                                        border: 1px solid rgba($color: #00c770, $alpha: 0.4);
+                                    }
+                                }
+
+                                .cross-section {
+                                    .child-item {
+                                        border: 1px solid rgba($color: #ff004c, $alpha: 0.4);
+                                    }
+                                }
+                            }
+
+                            .mobile-subscribe-button {
+                                display: none;
+                                height: 45px;
+                                color: #ffffff;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: #00c770;
+
+                                @include devices(tablet) {
+                                    display: flex;
+                                }
+                            }
+                        }
+
+                        .button-wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            text-align: center;
+
+                            & > button {
+                                width: 300px;
+                                margin-bottom: 12px;
+
+                                @include devices(tablet) {
+                                    display: none;
+                                }
+                            }
+
+                            & > p {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    .mobile-support-link {
+                        display: none;
+                        font-size: 13px;
+                        text-align: center;
+                        margin-top: 24px;
+
+                        & > span {
+                            color: $primaryColor;
+                        }
+
+                        @include devices(tablet) {
+                            display: block;
+                        }
+                    }
+                }
+
+                .support-link {
+                    font-size: 14px;
+
+                    @include devices(tablet) {
+                        display: none;
+                    }
+
+                    & > span {
+                        color: $primaryColor;
+                    }
+                }
+            }
+
+            .right-section {
+                width: 50%;
+                flex: 1;
+
+                @include devices(desktop) {
+                    width: 100%;
+                }
+
+                .card {
+                    .card-title {
+                        margin-bottom: 24px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .title-wrapper {
+                            @include devices(tablet) {
+                                justify-content: center !important;
+                                text-align: center;
+                            }
+
+                            & > h4 {
+                                font-size: 16px;
+                                color: $primaryColor;
+                                margin: 0;
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 4px;
+
+                                @include devices(tablet) {
+                                    justify-content: center !important;
+                                    margin-bottom: 12px;
+                                }
+
+                                & > span {
+                                    display: flex;
+                                    align-items: center;
+                                    margin-right: 16px;
+                                    width: 20px;
+                                    height: 20px;
+                                    flex-shrink: 0;
+                                }
+                            }
+
+                            & > p {
+                                font-size: 14px;
+                                margin-left: 36px;
+                            }
+                        }
+
+                        .button-wrapper {
+                            width: 264px;
+
+                            @include devices(tablet) {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .card-body {
+                        .text-title {
+                            font-size: 16px;
+                            color: #7f7f7f;
+                            margin-bottom: 12px;
+
+                            @include devices(tablet) {
+                                font-size: 12px;
+                                margin-bottom: 8px;
+                            }
+                        }
+
+                        .text-value {
+                            font-size: 17px;
+                            color: #4d4d4d;
+
+                            @include devices(tablet) {
+                                font-size: 14px;
+                            }
+                        }
+
+                        .method-card-list {
+                            height: calc(100vh - 386px);
+                            overflow: auto;
+
+                            @include devices(tablet) {
+                                height: auto;
+                                overflow: unset;
+                            }
+
+                            .method-card {
+                                padding: 28px 24px;
+                                background-color: #ffffff;
+                                box-shadow: 0 3px 6px $boxShadowColor;
+                                margin-bottom: 14px;
+
+                                @include devices(tablet) {
+                                    padding: 20px;
+                                }
+
+                                .first-section {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    margin-bottom: 24px;
+
+                                    @include devices(tablet) {
+                                        justify-content: center;
+                                    }
+
+                                    & > h4 {
+                                        font-size: 18px;
+                                        font-weight: bolder;
+                                        margin: 0;
+
+                                        @include devices(tablet) {
+                                            font-size: 13px;
+                                        }
+                                    }
+
+                                    & > span {
+                                        color: #ff0000;
+                                        text-decoration: underline;
+                                        font-size: 16px;
+
+                                        @include devices(tablet) {
+                                            display: none;
+                                        }
+                                    }
+                                }
+
+                                .second-section {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    margin-bottom: 24px;
+
+                                    & > img {
+                                        height: 26px;
+                                    }
+                                }
+
+                                .third-section {
+                                    display: flex;
+                                    gap: 10px;
+
+                                    .row-col {
+                                        width: 50%;
+                                        flex: 1;
+                                    }
+                                }
+
+                                .mobile-remove {
+                                    display: none;
+                                    color: #ff0000;
+                                    text-decoration: underline;
+                                    font-size: 13px;
+                                    margin-top: 20px;
+                                    text-align: center;
+
+                                    @include devices(tablet) {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+
+                        .button-wrapper-mobile {
+                            display: none;
+                            margin-top: 18px;
+
+                            @include devices(tablet) {
+                                display: flex;
+                                justify-content: center;
+                            }
+
+                            & > {
+                                width: 268px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

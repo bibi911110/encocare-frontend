@@ -3,11 +3,11 @@
 
 .button {
     position: relative;
-    height: 45px;
     font-size: 16px;
     border: none;
     outline: none;
-    padding: 0 20px;
+    padding: 10px 20px;
+    min-height: 45px;
     cursor: pointer;
 
     @include devices(tablet) {

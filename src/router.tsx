@@ -35,12 +35,19 @@ import IndividualLogin from './pages/individual/Login/IndividualLogin';
 import PatientList from './pages/individual/PatientList/PatientList';
 import PatientDetail from './pages/individual/PatientDetail/PatientDetail';
 import ShareLink from './pages/individual/ShareLink/ShareLink';
-import SecuritySetting from './pages/individual/SecuritySetting/SecuritySetting';
+import IndividualSecuritySetting from './pages/individual/SecuritySetting/IndividualSecuritySetting';
 import BusinessLayout from './layouts/BusinessLayout/BusinessLayout';
 import BusinessDashboard from './pages/business/Dashboard/BusinessDashboard';
 import HospitalList from './pages/business/HospitalList/HospitalList';
 import AddHospital from './pages/business/AddHospital/AddHospital';
-import HospitalDetail from './pages/business/HospitalDetail/hospitalDetail';
+import HospitalDetail from './pages/business/HospitalDetail/HospitalDetail';
+import DoctorList from './pages/business/DoctorList/DoctorList';
+import AddDoctor from './pages/business/AddDoctor/AddDoctor';
+import DoctorDetail from './pages/business/DoctorDetail/DoctorDetail';
+import AddTeamMember from './pages/business/AddTeamMember/AddTeamMember';
+import BusinessSecuritySetting from './pages/business/SecuritySetting/BusinessSecuritySetting';
+import MembershipList from './pages/business/MembershipList/MembershipList';
+import CurrentMembership from './pages/business/CurrentMembership/CurrentMembership';
 
 const router = createBrowserRouter([
     {
@@ -100,7 +107,7 @@ const router = createBrowserRouter([
             { path: 'patient', element: <PatientList /> },
             { path: 'patient/detail/:id', element: <PatientDetail /> },
             { path: 'share-link', element: <ShareLink /> },
-            { path: 'security-setting', element: <SecuritySetting /> },
+            { path: 'security-setting', element: <IndividualSecuritySetting /> },
         ],
     },
     {
@@ -111,6 +118,13 @@ const router = createBrowserRouter([
             { path: 'hospital', element: <HospitalList /> },
             { path: 'hospital/add', element: <AddHospital /> },
             { path: 'hospital/detail/:id', element: <HospitalDetail /> },
+            { path: 'doctor', element: <DoctorList /> },
+            { path: 'doctor/add', element: <AddDoctor /> },
+            { path: 'doctor/detail/:id', element: <DoctorDetail /> },
+            { path: 'member/add', element: <AddTeamMember /> },
+            { path: 'security-setting', element: <BusinessSecuritySetting /> },
+            { path: 'membership/list', element: <MembershipList /> },
+            { path: 'membership', element: <CurrentMembership /> },
         ],
     },
 ]);

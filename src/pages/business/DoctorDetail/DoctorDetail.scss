@@ -1,7 +1,7 @@
 @import '../../../styles/variables';
 @import '../../../styles/mixins';
 
-.hospital-detail {
+.doctor-detail {
     box-sizing: border-box;
 
     @include devices(tablet) {
@@ -146,7 +146,7 @@
             flex-direction: column;
             gap: 20px;
 
-            .hospital-card {
+            .doctor-card {
                 .card-title {
                     & > span {
                         svg {
@@ -160,29 +160,19 @@
                 }
 
                 .card-body {
-                    & > img {
-                        height: 230px;
-                        margin-bottom: 24px;
-
-                        @include devices(tablet) {
-                            width: 100%;
-                            height: unset;
-                        }
-                    }
-
-                    .hospital-name-id-type {
+                    .doctor-name-id-type {
                         display: flex;
                         margin-bottom: 24px;
-                        align-items: center;
+                        align-items: flex-start;
 
                         & > img {
-                            height: 80px;
-                            width: 80px;
+                            height: 180px;
+                            width: 180px;
                             margin-right: 12px;
 
                             @include devices(tablet) {
-                                width: 66px;
-                                height: 66px;
+                                width: 76px;
+                                height: 76px;
                             }
                         }
 
@@ -190,7 +180,7 @@
                             flex: 1;
                             display: flex;
 
-                            .hospital-name-id {
+                            .doctor-name-id {
                                 & > p {
                                     &:nth-child(1) {
                                         margin-bottom: 24px;
@@ -201,7 +191,7 @@
                                     }
 
                                     &:nth-child(2) {
-                                        margin-bottom: 10px;
+                                        margin-bottom: 16px;
                                     }
 
                                     &:nth-child(3) {
@@ -217,7 +207,7 @@
                         }
                     }
 
-                    .hospital-location-type {
+                    .doctor-location-type {
                         display: flex;
                         margin-bottom: 38px;
 
@@ -227,13 +217,13 @@
                             gap: 10px;
                         }
 
-                        .hospital-location {
+                        .doctor-location {
                             @include devices(tablet) {
                                 flex-basis: 75%;
                             }
                         }
 
-                        .hospital-type-mobile {
+                        .doctor-type-mobile {
                             display: none;
 
                             @include devices(tablet) {
@@ -243,7 +233,7 @@
                         }
                     }
 
-                    .hospital-number-address {
+                    .doctor-number-address {
                         display: flex;
                         margin-bottom: 20px;
                         gap: 10px;
@@ -253,11 +243,11 @@
                             justify-content: space-between;
                         }
 
-                        .hospital-number {
+                        .doctor-number {
                             flex-basis: 50%;
                         }
 
-                        .hospital-address {
+                        .doctor-address {
                             flex-basis: 50%;
                         }
                     }
@@ -321,7 +311,7 @@
                         overflow: auto;
 
                         tbody {
-                            .hospital-date {
+                            .doctor-date {
                                 & > p {
                                     &:first-child {
                                         margin-bottom: 8px;
@@ -329,13 +319,13 @@
                                 }
                             }
 
-                            .hospital-test {
+                            .doctor-test {
                                 font-size: 14px;
                                 text-decoration: underline;
                                 color: #0033ff;
                             }
 
-                            .hospital-action {
+                            .doctor-action {
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
@@ -358,7 +348,7 @@
                         }
 
                         .mobile-table-section {
-                            .hospital-detail-table-mobile-card {
+                            .doctor-detail-table-mobile-card {
                                 background-color: #ffffff;
                                 padding: 28px 12px 20px 12px;
                                 position: relative;
@@ -368,11 +358,11 @@
                                     display: flex;
                                     margin-bottom: 20px;
 
-                                    .hospital-id {
+                                    .doctor-id {
                                         flex-basis: 40%;
                                     }
 
-                                    .hospital-test {
+                                    .doctor-test {
                                         flex-basis: 30%;
 
                                         & > p {

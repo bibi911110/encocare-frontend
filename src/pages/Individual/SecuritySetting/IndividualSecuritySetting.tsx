@@ -1,11 +1,11 @@
 import { leftArrowIcon2, lockIcon } from '../../../assets/icons/common';
 import Button from '../../../components/common/Button/Button';
 import PasswordInput from '../../../components/common/PasswordInput/PasswordInput';
-import './SecuritySetting.scss';
+import './IndividualSecuritySetting.scss';
 
-const SecuritySetting = () => {
+const IndividualSecuritySetting = () => {
     return (
-        <div className="security-setting">
+        <div className="individual-security-setting">
             <div className="main-header">
                 <div className="title-wrapper">
                     <h1>
@@ -38,4 +38,4 @@ const SecuritySetting = () => {
     );
 };
 
-export default SecuritySetting;
+export default IndividualSecuritySetting;

@@ -1,6 +1,7 @@
 import MembershipCard from '../../../components/profile/MembershipCard/MembershipCard';
 import paymentMethodImage from '../../../assets/images/payments/method.png';
-import './Membership.scss';
+import './MembershipList.scss';
+import { leftArrowIcon2 } from '../../../assets/icons/common';
 
 const membershipData = [
     {
@@ -27,14 +28,24 @@ const membershipData = [
         iconType: 'circle',
         popular: false,
     },
+    {
+        title: 'Enterprise',
+        price: 20,
+        primaryColor: '#C7008B',
+        secondColor: '#F4CCE8',
+        iconType: 'circle',
+        popular: false,
+    },
 ];
 
-const Membership = () => {
+const MembershipList = () => {
     return (
-        <div className="profile-membership">
-            <div className="membership-header">
+        <div className="membership-list">
+            <div className="main-header">
                 <div className="title-wrapper">
-                    <h1>MEMBERSHIP PLANS</h1>
+                    <h1>
+                        <span>{leftArrowIcon2}</span>MEMBERSHIP PLANS
+                    </h1>
                     <p>Curated and discounted packages for individual, team or enterprise!</p>
                 </div>
                 <div className="method-wrapper">
@@ -43,9 +54,9 @@ const Membership = () => {
                 </div>
             </div>
 
-            <div className="membership-content">
-                {membershipData.map((item) => (
-                    <div className="content-col" key={item.title}>
+            <div className="main-content">
+                {membershipData.map((item, index) => (
+                    <div className="content-col" key={index}>
                         <MembershipCard
                             title={item.title}
                             price={item.price}
@@ -67,4 +78,4 @@ const Membership = () => {
     );
 };
 
-export default Membership;
+export default MembershipList;

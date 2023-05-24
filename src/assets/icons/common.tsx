@@ -1143,3 +1143,53 @@ export const copyIcon2 = (
         </g>
     </svg>
 );
+
+export const planIcon = (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24.702" height="27.3" viewBox="0 0 24.702 27.3">
+        <g id="Icon_feather-package" data-name="Icon feather-package" transform="translate(-3.473 -1.966)">
+            <path
+                id="Path_7863"
+                data-name="Path 7863"
+                d="M22.574,12.845,11.25,6.315"
+                transform="translate(-1.088 -0.534)"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+            />
+            <path
+                id="Path_7864"
+                data-name="Path 7864"
+                d="M27.148,20.616V10.55A2.516,2.516,0,0,0,25.89,8.373L17.082,3.34a2.516,2.516,0,0,0-2.516,0L5.758,8.373A2.516,2.516,0,0,0,4.5,10.55V20.616a2.516,2.516,0,0,0,1.258,2.177l8.808,5.033a2.516,2.516,0,0,0,2.516,0l8.808-5.033A2.516,2.516,0,0,0,27.148,20.616Z"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+            />
+            <path
+                id="Path_7865"
+                data-name="Path 7865"
+                d="M4.905,10.44l10.984,6.354L26.874,10.44"
+                transform="translate(-0.065 -1.199)"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+            />
+            <path
+                id="Path_7866"
+                data-name="Path 7866"
+                d="M18,30.683V18"
+                transform="translate(-2.176 -2.417)"
+                fill="none"
+                stroke="#0092bd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+            />
+        </g>
+    </svg>
+);

@@ -1,0 +1,200 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.add-doctor {
+    box-sizing: border-box;
+
+    @include devices(tablet) {
+        padding: 10px 10px 76px 10px;
+    }
+
+    .main-header {
+        margin-top: 16px;
+        margin-bottom: 20px;
+        margin-left: 18px;
+
+        @include devices(tablet) {
+            margin-top: 0;
+            margin-left: 0;
+            padding: 0 12px;
+        }
+
+        & > h1 {
+            margin: 0;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+
+            @include devices(tablet) {
+                font-size: 16px;
+                color: $primaryColor;
+            }
+
+            & > span {
+                display: none;
+                margin-right: 10px;
+
+                @include devices(tablet) {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        & > p {
+            font-size: 18px;
+
+            @include devices(tablet) {
+                font-size: 14px;
+                margin-left: 22px;
+            }
+        }
+    }
+
+    .main-content {
+        height: calc(100vh - 260px);
+        overflow: auto;
+        padding-right: 6px;
+
+        .card-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 36px;
+
+            @include devices(desktop) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            @include devices(tablet) {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+            .card {
+                padding: 24px 38px;
+
+                @include devices(tablet) {
+                    padding: 20px 12px 8px 12px;
+                }
+
+                &:last-child {
+                    height: fit-content;
+                }
+
+                .card-title {
+                    margin-bottom: 16px;
+                    font-size: 14px;
+                    color: $primaryColor;
+                    display: flex;
+                    align-items: center;
+
+                    @include devices(tablet) {
+                        justify-content: center;
+                    }
+
+                    & > span {
+                        display: flex;
+                        align-items: center;
+                        margin-right: 16px;
+                        margin-left: 12px;
+                        width: 20px;
+                        height: 20px;
+                        flex-shrink: 0;
+
+                        svg {
+                            transform: scale(0.8);
+
+                            path {
+                                fill: $primaryColor;
+                            }
+                        }
+
+                        &.doctor-icon {
+                            svg {
+                                transform: scale(1.4);
+
+                                path {
+                                    fill: $primaryColor;
+                                }
+                            }
+                        }
+
+                        &.lock-icon {
+                            svg {
+                                transform: scale(1);
+
+                                path {
+                                    fill: $primaryColor;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                input {
+                    margin-bottom: 18px;
+                    width: 100%;
+                }
+
+                .name-wrapper {
+                    display: flex;
+                    gap: 12px;
+
+                    & > input {
+                        width: 50%;
+                    }
+                }
+
+                .dropzone {
+                    height: 20vw;
+
+                    @include devices(desktop) {
+                        height: 36vw;
+                    }
+
+                    @include devices(tablet) {
+                        height: 64vw;
+                    }
+                }
+            }
+        }
+
+        .button-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include devices(tablet) {
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                background-color: #ffffff;
+                padding: 10px 0;
+            }
+
+            & > button {
+                width: 140px;
+
+                @include devices(tablet) {
+                    width: 216px;
+                }
+            }
+
+            & > a {
+                font-size: 14px;
+                color: #000000;
+                text-decoration: underline;
+                display: flex;
+                align-items: center;
+                margin-top: 12px;
+
+                svg {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

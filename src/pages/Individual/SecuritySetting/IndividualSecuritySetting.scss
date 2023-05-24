@@ -1,7 +1,7 @@
 @import '../../../styles/variables';
 @import '../../../styles/mixins';
 
-.security-setting {
+.individual-security-setting {
     @include devices(tablet) {
         padding: 8px;
     }

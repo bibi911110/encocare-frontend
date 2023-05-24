@@ -200,7 +200,7 @@ const businessLinks = [
             {
                 title: 'Remove/Block Hospital',
                 icon: blockIcon,
-                link: '/business/hospital/detail',
+                link: '/business/hospital/remove',
             },
         ],
     },
@@ -220,7 +220,7 @@ const businessLinks = [
             {
                 title: 'Remove/Block Doctor',
                 icon: blockIcon,
-                link: '/business/doctor/detail',
+                link: '/business/doctor/remove',
             },
         ],
     },
@@ -230,17 +230,17 @@ const businessLinks = [
             {
                 title: 'All Medical team',
                 icon: userIcon,
-                link: '/business/medical',
+                link: '/business/member',
             },
             {
                 title: 'Add a team member',
                 icon: plusCircleIcon,
-                link: '/business/medical/add',
+                link: '/business/member/add',
             },
             {
                 title: 'Manage Roles',
                 icon: userSettingIcon,
-                link: '/business/medical/role',
+                link: '/business/member/role',
             },
         ],
     },
@@ -303,7 +303,7 @@ const Sidebar = ({ type }: SidebarPropsType) => {
                             <li className="parent">{item.title}</li>
                             {item.children.map((child) => (
                                 <li className="child" key={child.title}>
-                                    <NavLink to={child.link}>
+                                    <NavLink to={child.link} end>
                                         <div>
                                             <span className="child-icon">{child.icon}</span>
                                             <span className="child-title">{child.title}</span>
