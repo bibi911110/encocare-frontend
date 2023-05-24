@@ -1,6 +1,6 @@
-import { leftArrowIcon2, lockIcon } from '../../../assets/icons/common';
 import Button from '../../../components/common/Button/Button';
 import PasswordInput from '../../../components/common/PasswordInput/PasswordInput';
+import { leftArrowIcon2, lockIcon } from '../../../assets/icons/common';
 import './BusinessSecuritySetting.scss';
 
 const BusinessSecuritySetting = () => {

@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import { imageIcon, leftArrowIcon2, userIcon } from '../../../assets/icons/common';
-import { hospitalIcon } from '../../../assets/icons/sidebar';
 import Button from '../../../components/common/Button/Button';
 import Dropzone from '../../../components/common/Dropzone/Dropzone';
 import NormalInput from '../../../components/common/NormalInput/NormalInput';
-import './AddTeamMember.scss';
 import CheckBox from '../../../components/common/CheckBox/CheckBox';
+import { imageIcon, leftArrowIcon2, userIcon } from '../../../assets/icons/common';
+import { hospitalIcon } from '../../../assets/icons/sidebar';
+import './AddTeamMember.scss';
 
 const roles = [
     {

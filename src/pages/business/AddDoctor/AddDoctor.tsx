@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import { imageIcon, leftArrowIcon2, userIcon } from '../../../assets/icons/common';
-import { doctorIcon } from '../../../assets/icons/sidebar';
 import Button from '../../../components/common/Button/Button';
 import Dropzone from '../../../components/common/Dropzone/Dropzone';
 import NormalInput from '../../../components/common/NormalInput/NormalInput';
+import { doctorIcon } from '../../../assets/icons/sidebar';
+import { imageIcon, leftArrowIcon2, userIcon } from '../../../assets/icons/common';
 import './AddDoctor.scss';
 
 const AddDoctor = () => {

@@ -7,13 +7,13 @@ import {
     rightArrowIcon,
     userIcon,
 } from '../../../assets/icons/common';
-import { hospitalIcon } from '../../../assets/icons/sidebar';
 import Button from '../../../components/common/Button/Button';
-import contactImage from '../../../assets/images/contact.png';
-import './EntityDetail.scss';
 import CheckBox from '../../../components/common/CheckBox/CheckBox';
 import Table from '../../../components/common/Table/Table';
 import { EntityDetailCardPropsType } from '../../../types/tableComponent';
+import { hospitalIcon } from '../../../assets/icons/sidebar';
+import contactImage from '../../../assets/images/contact.png';
+import './EntityDetail.scss';
 
 const columns = [
     {
@@ -178,7 +178,7 @@ const EntityDetail = () => {
                 <div className="right-section">
                     <div className="card admin-card">
                         <div className="card-title">
-                            <span className='header-icon'>{userIcon}</span>
+                            <span className="header-icon">{userIcon}</span>
                             Admin Details
                         </div>
                         <div className="card-body">

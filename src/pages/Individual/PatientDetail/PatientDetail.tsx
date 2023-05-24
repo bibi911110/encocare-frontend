@@ -1,3 +1,7 @@
+import Button from '../../../components/common/Button/Button';
+import Table from '../../../components/common/Table/Table';
+import TestReport from '../../../components/common/TestReport/TestReport';
+import { PatientDetailCardPropsType } from '../../../types/tableComponent';
 import {
     crossCircleIcon,
     downloadIcon,
@@ -7,11 +11,7 @@ import {
     shareIcon,
     userIcon,
 } from '../../../assets/icons/common';
-import Button from '../../../components/common/Button/Button';
 import './PatientDetail.scss';
-import Table from '../../../components/common/Table/Table';
-import { PatientDetailCardPropsType } from '../../../types/tableComponent';
-import TestReport from '../../../components/common/TestReport/TestReport';
 
 const columns = [
     {

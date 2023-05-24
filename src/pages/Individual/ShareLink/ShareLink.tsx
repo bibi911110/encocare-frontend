@@ -1,10 +1,9 @@
+import Button from '../../../components/common/Button/Button';
+import NormalInput from '../../../components/common/NormalInput/NormalInput';
+import { checkCircleIcon, copyIcon2, leftArrowIcon2, linkIcon, plusIcon } from '../../../assets/icons/common';
 import linkImage1 from '../../../assets/images/link/1.png';
 import linkImage2 from '../../../assets/images/link/2.png';
-import { checkCircleIcon, copyIcon2, leftArrowIcon2, linkIcon, plusIcon } from '../../../assets/icons/common';
 import './ShareLink.scss';
-import NormalInput from '../../../components/common/NormalInput/NormalInput';
-import Button from '../../../components/common/Button/Button';
-import { copyIcon } from '../../../assets/icons/common';
 
 const ShareLink = () => {
     return (

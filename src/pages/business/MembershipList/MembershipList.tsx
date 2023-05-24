@@ -1,7 +1,7 @@
 import MembershipCard from '../../../components/profile/MembershipCard/MembershipCard';
+import { leftArrowIcon2 } from '../../../assets/icons/common';
 import paymentMethodImage from '../../../assets/images/payments/method.png';
 import './MembershipList.scss';
-import { leftArrowIcon2 } from '../../../assets/icons/common';
 
 const membershipData = [
     {

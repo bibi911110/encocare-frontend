@@ -1,7 +1,7 @@
+import Button from '../../../components/common/Button/Button';
+import cardImage from '../../../assets/images/payments/card2.png';
 import { cardIcon, checkCircleIcon, crossCircleIcon, leftArrowIcon2, planIcon } from '../../../assets/icons/common';
 import { plusCircleIcon } from '../../../assets/icons/sidebar';
-import cardImage from '../../../assets/images/payments/card2.png';
-import Button from '../../../components/common/Button/Button';
 import './CurrentMembership.scss';
 
 const CurrentMembership = () => {

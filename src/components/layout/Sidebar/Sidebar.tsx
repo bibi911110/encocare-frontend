@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import {
     sidebarToggleIcon,
     blockIcon,
@@ -20,7 +21,6 @@ import {
 import { rightArrowIcon, rightArrowIcon3 } from '../../../assets/icons/common';
 import { SidebarPropsType } from '../../../types/basicComponents';
 import './Sidebar.scss';
-import { NavLink } from 'react-router-dom';
 
 const adminLinks = [
     {

@@ -1,12 +1,11 @@
 import Button from '../../../components/common/Button/Button';
 import SearchInput from '../../../components/common/SearchInput/SearchInput';
-import { plusCircleIcon } from '../../../assets/icons/sidebar';
-import './DoctorList.scss';
-import CheckBox from '../../../components/common/CheckBox/CheckBox';
-import { crossCircleIcon, eyeIcon, filterIcon, leftArrowIcon2 } from '../../../assets/icons/common';
 import Table from '../../../components/common/Table/Table';
 import { DoctorTableCardPropsType } from '../../../types/tableComponent';
+import { plusCircleIcon } from '../../../assets/icons/sidebar';
+import { crossCircleIcon, eyeIcon, filterIcon, leftArrowIcon2 } from '../../../assets/icons/common';
 import doctorImage from '../../../assets/images/doctor.png';
+import './DoctorList.scss';
 
 const columns = [
     {

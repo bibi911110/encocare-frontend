@@ -1,12 +1,12 @@
 import Button from '../../../components/common/Button/Button';
-import SearchInput from '../../../components/common/SearchInput/SearchInput';
-import { plusCircleIcon } from '../../../assets/icons/sidebar';
-import './HospitalList.scss';
-import CheckBox from '../../../components/common/CheckBox/CheckBox';
-import { crossCircleIcon, eyeIcon, filterIcon, leftArrowIcon2 } from '../../../assets/icons/common';
 import Table from '../../../components/common/Table/Table';
+import CheckBox from '../../../components/common/CheckBox/CheckBox';
+import SearchInput from '../../../components/common/SearchInput/SearchInput';
 import { HospitalTableCardPropsType } from '../../../types/tableComponent';
+import { crossCircleIcon, eyeIcon, filterIcon, leftArrowIcon2 } from '../../../assets/icons/common';
+import { plusCircleIcon } from '../../../assets/icons/sidebar';
 import hospitalImage from '../../../assets/images/hospital.png';
+import './HospitalList.scss';
 
 const columns = [
     {

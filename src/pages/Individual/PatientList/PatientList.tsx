@@ -1,11 +1,8 @@
-import Button from '../../../components/common/Button/Button';
-import SearchInput from '../../../components/common/SearchInput/SearchInput';
-import { plusCircleIcon } from '../../../assets/icons/sidebar';
-import './PatientList.scss';
-import CheckBox from '../../../components/common/CheckBox/CheckBox';
-import { crossCircleIcon, downloadIcon, eyeIcon, filterIcon, leftArrowIcon2 } from '../../../assets/icons/common';
 import Table from '../../../components/common/Table/Table';
+import SearchInput from '../../../components/common/SearchInput/SearchInput';
+import { crossCircleIcon, eyeIcon, filterIcon, leftArrowIcon2 } from '../../../assets/icons/common';
 import { PatientListTableCardPropsType } from '../../../types/tableComponent';
+import './PatientList.scss';
 
 const columns = [
     {

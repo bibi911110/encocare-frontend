@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import { imageIcon, leftArrowIcon2, lockIcon, userIcon } from '../../../assets/icons/common';
-import { hospitalIcon } from '../../../assets/icons/sidebar';
 import Button from '../../../components/common/Button/Button';
 import CheckBox from '../../../components/common/CheckBox/CheckBox';
 import Dropzone from '../../../components/common/Dropzone/Dropzone';
 import NormalInput from '../../../components/common/NormalInput/NormalInput';
 import PasswordInput from '../../../components/common/PasswordInput/PasswordInput';
 import Select from '../../../components/common/Select/Select';
+import { imageIcon, leftArrowIcon2, lockIcon, userIcon } from '../../../assets/icons/common';
+import { hospitalIcon } from '../../../assets/icons/sidebar';
 import './AddEntity.scss';
 
 const AddEntity = () => {

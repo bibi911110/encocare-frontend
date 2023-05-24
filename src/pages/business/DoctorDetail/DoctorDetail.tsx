@@ -1,3 +1,7 @@
+import Button from '../../../components/common/Button/Button';
+import CheckBox from '../../../components/common/CheckBox/CheckBox';
+import Table from '../../../components/common/Table/Table';
+import { DoctorDetailCardPropsType } from '../../../types/tableComponent';
 import {
     cardIcon,
     crossCircleIcon,
@@ -8,12 +12,8 @@ import {
     userIcon,
 } from '../../../assets/icons/common';
 import { doctorIcon } from '../../../assets/icons/sidebar';
-import Button from '../../../components/common/Button/Button';
-import './DoctorDetail.scss';
-import CheckBox from '../../../components/common/CheckBox/CheckBox';
-import Table from '../../../components/common/Table/Table';
 import doctorImage from '../../../assets/images/doctor.png';
-import { DoctorDetailCardPropsType } from '../../../types/tableComponent';
+import './DoctorDetail.scss';
 
 const columns = [
     {

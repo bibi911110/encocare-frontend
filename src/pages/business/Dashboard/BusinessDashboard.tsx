@@ -1,9 +1,9 @@
 import { AreaChart, Area, Tooltip, ResponsiveContainer, BarChart, XAxis, Bar, Cell } from 'recharts';
-import { downArrowIcon, eyeIcon, menuIcon } from '../../../assets/icons/common';
-import './BusinessDashboard.scss';
 import Table from '../../../components/common/Table/Table';
 import CheckBox from '../../../components/common/CheckBox/CheckBox';
 import { BusinessDashboardTableCardPropsType } from '../../../types/tableComponent';
+import { downArrowIcon, eyeIcon, menuIcon } from '../../../assets/icons/common';
+import './BusinessDashboard.scss';
 
 const data1 = [
     {

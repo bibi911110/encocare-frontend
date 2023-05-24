@@ -5,9 +5,9 @@ import NavbarItem from '../../navbar/NavbarItem/NavbarItem';
 import NavbarMobileItem from '../../navbar/NavbarMobileItem/NavbarMobileItem';
 import NavbarAuth from '../../navbar/NavbarAuth/NavbarAuth';
 import { toggleMenuIcon } from '../../../assets/icons/common';
+import { NavbarPropsType } from '../../../types/basicComponents';
 import logoImage from '../../../assets/images/logo.png';
 import './Navbar.scss';
-import { NavbarPropsType } from '../../../types/basicComponents';
 
 const links = [
     { title: 'Take Test', link: '/take-test' },
