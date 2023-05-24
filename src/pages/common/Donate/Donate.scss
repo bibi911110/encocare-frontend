@@ -96,6 +96,7 @@
 
                         .amount-input {
                             flex: 1;
+                            width: 100%;
                         }
                     }
 
@@ -112,8 +113,8 @@
                             // flex: 1;
 
                             @include devices(tablet) {
-                                // width: unset;
-                                // flex: 1.5;
+                                flex-basis: 50%;
+                                width: 50%;
                             }
                         }
 
@@ -121,8 +122,8 @@
                             width: 183px;
 
                             @include devices(tablet) {
-                                width: unset;
-                                // flex: 1;
+                                flex-basis: 50%;
+                                width: 50%;
                             }
                         }
                     }

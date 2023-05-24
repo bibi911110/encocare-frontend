@@ -7,6 +7,14 @@ import './Camera.scss';
 const Camera = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => void }) => {
     const [step, setStep] = useState(0);
 
+    const handleCamera = () => {
+        setStep(1);
+
+        setTimeout(() => {
+            onNext();
+        }, 2000);
+    };
+
     return (
         <div className="camera">
             <h1>Bring your right eye close the camera</h1>
@@ -25,7 +33,7 @@ const Camera = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => void }) 
                         Encore needs to access your camera to continue with the test. <br className="desktop-only" />
                         Please read our <span>privacy policy</span> for details.
                     </p>
-                    <Button title="Allow Access" type="green" onClick={onNext} />
+                    <Button title="Allow Access" type="green" onClick={handleCamera} />
                 </div>
             </div>
 

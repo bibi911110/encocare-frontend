@@ -36,6 +36,9 @@ import PatientList from './pages/individual/PatientList/PatientList';
 import PatientDetail from './pages/individual/PatientDetail/PatientDetail';
 import ShareLink from './pages/individual/ShareLink/ShareLink';
 import SecuritySetting from './pages/individual/SecuritySetting/SecuritySetting';
+import BusinessLayout from './layouts/BusinessLayout/BusinessLayout';
+import BusinessDashboard from './pages/business/Dashboard/BusinessDashboard';
+import HospitalList from './pages/business/HospitalList/HospitalList';
 
 const router = createBrowserRouter([
     {
@@ -96,6 +99,14 @@ const router = createBrowserRouter([
             { path: 'patient/detail/:id', element: <PatientDetail /> },
             { path: 'share-link', element: <ShareLink /> },
             { path: 'security-setting', element: <SecuritySetting /> },
+        ],
+    },
+    {
+        path: 'business',
+        element: <BusinessLayout />,
+        children: [
+            { path: 'dashboard', element: <BusinessDashboard /> },
+            { path: 'hospital', element: <HospitalList /> },
         ],
     },
 ]);

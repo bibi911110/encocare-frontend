@@ -7,7 +7,7 @@ import './PatientDetail.scss';
 
 const PatientDetail = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => void }) => {
     return (
-        <div className="patient-detail">
+        <div className="patient-detail-step">
             <h1>Patient Details</h1>
             <p>Please enter patient details!</p>
 

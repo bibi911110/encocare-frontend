@@ -5,7 +5,7 @@ export type NavbarPropsType = {
 };
 
 export type SidebarPropsType = {
-    type: 'admin' | 'business' | 'individual';
+    type: 'admin' | 'business' | 'individual' | 'business';
 };
 
 export type ButtonPropsType = {

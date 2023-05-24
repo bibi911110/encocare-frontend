@@ -25,7 +25,7 @@ const links = [
 ];
 
 const NavbarAuth = () => {
-    const isAuthorized = true;
+    const isAuthorized = false;
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const profileRef = useRef<HTMLDivElement>(null);
 

@@ -61,3 +61,21 @@ export type PatientDetailCardPropsType = {
     group: string;
     address: string;
 };
+
+export type BusinessDashboardTableCardPropsType = {
+    id: number;
+    name: string;
+    address: string;
+    test: number;
+};
+
+export type HospitalTableCardPropsType = {
+    id: number;
+    name: string;
+    date: string;
+    type: string;
+    address: string;
+    admin: string;
+    email: string;
+    contact: string;
+};

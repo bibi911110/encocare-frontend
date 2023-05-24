@@ -15,6 +15,7 @@ import {
     membershipIcon,
     userIcon,
     linkIcon,
+    userSettingIcon,
 } from '../../../assets/icons/sidebar';
 import { rightArrowIcon, rightArrowIcon3 } from '../../../assets/icons/common';
 import { SidebarPropsType } from '../../../types/basicComponents';
@@ -151,7 +152,7 @@ const individualLinks = [
             {
                 title: 'Security Settings',
                 icon: securityIcon,
-                link: '/individual/security',
+                link: '/individual/security-setting',
             },
             {
                 title: 'Membership',
@@ -172,6 +173,89 @@ const individualLinks = [
     },
 ];
 
+const businessLinks = [
+    {
+        title: 'YOUR DASHBOARD',
+        children: [
+            {
+                title: 'My Dashboard',
+                icon: dashboardIcon,
+                link: '/business/dashboard',
+            },
+        ],
+    },
+    {
+        title: 'HOSPITALS',
+        children: [
+            {
+                title: 'All Hospitals',
+                icon: hospitalIcon,
+                link: '/business/hospital',
+            },
+            {
+                title: 'Add a Hospital',
+                icon: plusCircleIcon,
+                link: '/business/hospital/add',
+            },
+            {
+                title: 'Remove/Block Hospital',
+                icon: blockIcon,
+                link: '/business/hospital/detail',
+            },
+        ],
+    },
+    {
+        title: 'MEDICAL TEAM',
+        children: [
+            {
+                title: 'All Medical team',
+                icon: userIcon,
+                link: '/business/medical',
+            },
+            {
+                title: 'Add a team member',
+                icon: plusCircleIcon,
+                link: '/business/medical/add',
+            },
+            {
+                title: 'Manage Roles',
+                icon: userSettingIcon,
+                link: '/business/medical/role',
+            },
+        ],
+    },
+    {
+        title: 'SETTINGS',
+        children: [
+            {
+                title: 'Account Settings',
+                icon: userCircleIcon,
+                link: '/business/setting',
+            },
+            {
+                title: 'Security Settings',
+                icon: securityIcon,
+                link: '/business/security-setting',
+            },
+            {
+                title: 'Membership',
+                icon: membershipIcon,
+                link: '/business/membership',
+            },
+        ],
+    },
+    {
+        title: 'MY PROFILE',
+        children: [
+            {
+                title: 'Message',
+                icon: messageIcon,
+                link: '/business/message',
+            },
+        ],
+    },
+];
+
 const Sidebar = ({ type }: SidebarPropsType) => {
     const [isMobileOpen, setMobileOpen] = useState(false);
 
@@ -181,6 +265,8 @@ const Sidebar = ({ type }: SidebarPropsType) => {
         linkData = adminLinks;
     } else if (type == 'individual') {
         linkData = individualLinks;
+    } else if (type == 'business') {
+        linkData = businessLinks;
     }
 
     return (

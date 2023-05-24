@@ -1,0 +1,249 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.business-dashboard {
+    box-sizing: border-box;
+
+    @include devices(tablet) {
+        padding: 0px 10px 12px 10px;
+    }
+
+    .first-section {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+
+        @include devices(desktop) {
+            flex-direction: column;
+        }
+
+        .card {
+            flex: 1;
+            width: 50%;
+            height: calc((100vh - 179px) / 2);
+            position: relative;
+            padding: 20px 24px;
+
+            @include devices(desktop) {
+                width: 100%;
+            }
+
+            @include devices(tablet) {
+                height: auto;
+                padding: 20px 12px;
+            }
+
+            .card-header {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 20px 24px 0 24px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 12px;
+                box-sizing: border-box;
+
+                @include devices(tablet) {
+                    height: auto;
+                    padding: 20px 12px;
+                }
+
+                .title-wrapper {
+                    & > h1 {
+                        font-size: 16px;
+                        color: $primaryColor;
+                        margin: 0;
+                        margin-bottom: 8px;
+
+                        @include devices(tablet) {
+                            font-size: 14px;
+                        }
+                    }
+
+                    & > p {
+                        font-size: 13px;
+                        color: #868686;
+
+                        @include devices(tablet) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .date-select {
+                    border: 1px solid $primaryColor;
+                    padding: 8px;
+                    cursor: pointer;
+                    font-size: 12px;
+                    color: $primaryColor;
+                    display: flex;
+                    align-items: center;
+
+                    @include devices(tablet) {
+                        font-size: 11px;
+                        padding: 6px;
+                    }
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        margin-left: 8px;
+
+                        svg {
+                            transform: scale(0.8);
+
+                            path {
+                                stroke: $primaryColor;
+                            }
+                        }
+                    }
+                }
+
+                & > span {
+                    svg {
+                        @include devices(tablet) {
+                            transform: scale(0.7);
+                        }
+                    }
+                }
+            }
+
+            .recharts-responsive-container {
+                @include devices(tablet) {
+                    height: 64vw !important;
+                }
+            }
+
+            &.summary-card {
+                .recharts-responsive-container {
+                    tspan {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            &.chart-card {
+            }
+        }
+    }
+
+    .second-section {
+        display: flex;
+        gap: 20px;
+
+        @include devices(desktop) {
+            flex-direction: column;
+        }
+
+        .card {
+            padding: 20px 24px;
+            flex: 1;
+            width: 50%;
+            height: calc((100vh - 179px) / 2);
+
+            @include devices(desktop) {
+                width: 100%;
+            }
+
+            @include devices(desktop) {
+                padding: 20px 12px;
+            }
+
+            .card-header {
+                font-size: 16px;
+                color: $primaryColor;
+                margin-bottom: 12px;
+
+                @include devices(desktop) {
+                    text-align: center;
+                }
+            }
+
+            .card-body {
+                height: calc(100% - 30px);
+                overflow-y: auto;
+
+                @include devices(tablet) {
+                    height: calc(100vh * 2 / 3);
+                }
+
+                .table-wrapper {
+                    .entity-id {
+                        color: #0033ff;
+                        font-size: 14px;
+                        text-decoration: underline;
+                    }
+
+                    .entity-contact {
+                        .table-text-primary {
+                            margin-bottom: 8px;
+                        }
+                    }
+
+                    .business-dashboard-table-mobile-card {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        background-color: #ffffff;
+                        padding: 16px 12px;
+                        margin-bottom: 10px;
+
+                        .checkbox {
+                            margin-right: 12px;
+                        }
+
+                        .mobile-card-body {
+                            display: flex;
+                            flex-direction: column;
+
+                            .first-card-row {
+                                margin-bottom: 20px;
+
+                                & > p {
+                                    &:first-child {
+                                        margin-bottom: 10px;
+                                    }
+                                }
+                            }
+
+                            .second-card-row {
+                                display: flex;
+                                gap: 10px;
+                                justify-content: space-between;
+
+                                .row-card-col {
+                                    &:first-child {
+                                        width: 70%;
+                                    }
+
+                                    &:last-child {
+                                        width: 30%;
+                                    }
+
+                                    & > p {
+                                        &:first-child {
+                                            margin-bottom: 10px;
+                                        }
+
+                                        &:nth-child(2) {
+                                            margin-bottom: 6px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .view-icon {
+                            position: absolute;
+                            font-size: 12px;
+                            top: 14px;
+                            right: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
