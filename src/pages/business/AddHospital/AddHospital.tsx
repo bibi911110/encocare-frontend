@@ -7,16 +7,16 @@ import Dropzone from '../../../components/common/Dropzone/Dropzone';
 import NormalInput from '../../../components/common/NormalInput/NormalInput';
 import PasswordInput from '../../../components/common/PasswordInput/PasswordInput';
 import Select from '../../../components/common/Select/Select';
-import './AddEntity.scss';
+import './AddHospital.scss';
 
-const AddEntity = () => {
+const AddHospital = () => {
     return (
-        <div className="add-entity">
+        <div className="add-hospital">
             <div className="main-header">
                 <h1>
-                    <span>{leftArrowIcon2}</span>Add an Entity
+                    <span>{leftArrowIcon2}</span>Add an Hospital
                 </h1>
-                <p>An an entity to add in your dashboard!</p>
+                <p>An an hospital to add in your dashboard!</p>
             </div>
 
             <div className="main-content">
@@ -24,27 +24,25 @@ const AddEntity = () => {
                     <div className="card first-card">
                         <div className="card-title">
                             <span className="hospital-icon">{hospitalIcon}</span>
-                            Entity Details
+                            Hospital Details
                         </div>
 
-                        <Select options={['Test']} placeHolder="Entity Type" />
-                        <NormalInput placeHolder="Entity name" />
-                        <NormalInput placeHolder="Entity Location" />
-                        <NormalInput placeHolder="Entity Contact Number" />
+                        <NormalInput placeHolder="Hospital name" />
+                        <NormalInput placeHolder="Hospital Location" />
+                        <NormalInput placeHolder="Hospital Contact Number" />
                     </div>
                     <div className="card second-card">
                         <div className="card-title">
                             <span>{userIcon}</span>
-                            Assign Admin
+                            Hospital Admin
                         </div>
 
                         <div className="name-wrapper">
                             <NormalInput placeHolder="First Name" />
                             <NormalInput placeHolder="Last Name" />
                         </div>
-                        <NormalInput placeHolder="Entity name" />
-                        <NormalInput placeHolder="Entity Location" />
-                        <NormalInput placeHolder="Entity Contact Number" />
+                        <NormalInput placeHolder="Admin Email Address" />
+                        <NormalInput placeHolder="Admin Contact Number" />
                     </div>
                     <div className="card third-card">
                         <div className="card-title">
@@ -53,26 +51,6 @@ const AddEntity = () => {
                         </div>
 
                         <Dropzone />
-                    </div>
-                    <div className="card fourth-card">
-                        <div className="card-title">
-                            <span className="lock-icon">{lockIcon}</span>
-                            Account Security
-                        </div>
-
-                        <PasswordInput placeHolder="Enter Password" />
-                        <PasswordInput placeHolder="Reenter Password" />
-
-                        <div className="check-wrapper">
-                            <div>
-                                <CheckBox />
-                                Allow access with OTP
-                            </div>
-                            <div>
-                                <CheckBox />
-                                Allow Multiple Logins
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -85,4 +63,4 @@ const AddEntity = () => {
     );
 };
 
-export default AddEntity;
+export default AddHospital;

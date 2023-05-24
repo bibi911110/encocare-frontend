@@ -19,7 +19,7 @@ export type EntityTableCardPropsType = {
 };
 
 export type EntityDetailCardPropsType = {
-    id: string;
+    id: number;
     test: number;
     group: string;
     address: string;
@@ -73,9 +73,15 @@ export type HospitalTableCardPropsType = {
     id: number;
     name: string;
     date: string;
-    type: string;
     address: string;
     admin: string;
     email: string;
     contact: string;
+};
+
+export type HospitalDetailCardPropsType = {
+    id: number;
+    test: number;
+    group: string;
+    address: string;
 };

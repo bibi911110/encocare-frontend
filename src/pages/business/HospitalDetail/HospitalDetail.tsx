@@ -10,10 +10,11 @@ import {
 import { hospitalIcon } from '../../../assets/icons/sidebar';
 import Button from '../../../components/common/Button/Button';
 import contactImage from '../../../assets/images/contact.png';
-import './EntityDetail.scss';
+import './HospitalDetail.scss';
 import CheckBox from '../../../components/common/CheckBox/CheckBox';
 import Table from '../../../components/common/Table/Table';
-import { EntityDetailCardPropsType } from '../../../types/tableComponent';
+import hospitalBannerImage from '../../../assets/images/hospital-banner.png';
+import { HospitalDetailCardPropsType } from '../../../types/tableComponent';
 
 const columns = [
     {
@@ -51,14 +52,14 @@ const rows = source.map((item) => {
         key: item.key,
         id: item.id,
         date: (
-            <div className="entity-date">
+            <div className="hospital-date">
                 <p className="table-text-primary">{item.group}</p>
                 <p className="table-text-second">{item.address}</p>
             </div>
         ),
-        test: <span className="entity-test">{item.test}</span>,
+        test: <span className="hospital-test">{item.test}</span>,
         action: (
-            <div className="entity-action">
+            <div className="hospital-action">
                 <span>{downloadIcon}</span>
                 <div className="vertical-divider" />
                 <span>{crossCircleIcon}</span>
@@ -67,15 +68,15 @@ const rows = source.map((item) => {
     };
 });
 
-const TableMobileCard = ({ id, test, group, address }: EntityDetailCardPropsType) => {
+const TableMobileCard = ({ id, test, group, address }: HospitalDetailCardPropsType) => {
     return (
-        <div className="entity-detail-table-mobile-card">
+        <div className="hospital-detail-table-mobile-card">
             <div className="first-section">
-                <div className="entity-id">
+                <div className="hospital-id">
                     <p className="table-text-second">TEST ID</p>
                     <p className="table-text-primary">{id}</p>
                 </div>
-                <div className="entity-test">
+                <div className="hospital-test">
                     <p className="table-text-second">RESULT REPORT</p>
                     <p className="table-text-primary">{test}</p>
                 </div>
@@ -90,65 +91,62 @@ const TableMobileCard = ({ id, test, group, address }: EntityDetailCardPropsType
     );
 };
 
-const EntityDetail = () => {
+const HospitalDetail = () => {
     return (
-        <div className="entity-detail">
+        <div className="hospital-detail">
             <div className="main-header">
                 <div className="title-wrapper">
                     <h1>
-                        <span>{leftArrowIcon2}</span>Entity View Page
+                        <span>{leftArrowIcon2}</span>Hospital View Page
                     </h1>
-                    <p>An an entity to add in your dashboard!</p>
+                    <p>An an hospital to add in your dashboard!</p>
                 </div>
                 <div className="button-wrapper">
-                    <Button title="Delete Entity" type="danger" />
-                    <Button title="Edit Entity" type="primary" />
+                    <Button title="Delete" type="danger" />
+                    <Button title="Edit Hospital" type="primary" />
                 </div>
             </div>
             <div className="main-content">
                 <div className="left-section">
-                    <div className="card entity-card">
+                    <div className="card hospital-card">
                         <div className="card-title">
-                            <span className="hospital-icon header-icon">{hospitalIcon}</span>
-                            Entity Details
+                            <span className="header-icon hospital-icon">{hospitalIcon}</span>
+                            Hospital Details
                         </div>
 
                         <div className="card-body">
-                            <div className="entity-name-id-type">
+                            <img src={hospitalBannerImage} alt="" />
+                            <div className="hospital-name-id-type">
                                 <img src={contactImage} alt="" />
                                 <div className="title-wrapper">
-                                    <div className="entity-name-id">
-                                        <p className="title-text">Entity name</p>
+                                    <div className="hospital-name-id">
+                                        <p className="title-text">Hospital name</p>
                                         <p className="value-text">Shifa Hospital Private Limited</p>
                                         <p className="title-text">
-                                            Entity ID: <span>12345678</span>
+                                            Hospital ID: <span>12345678</span>
                                         </p>
-                                    </div>
-                                    <div className="entity-type">
-                                        <p className="title-text">Entity Type</p>
-                                        <p className="value-text">NGO</p>
                                     </div>
                                 </div>
                             </div>
-                            <div className="entity-location-type">
-                                <div className="entity-location">
-                                    <p className="title-text">Entity Location</p>
+                            <div className="hospital-location-type">
+                                <div className="hospital-location">
+                                    <p className="title-text">Hospital Location</p>
                                     <p className="value-text">
                                         Plot 235, Regional Head Quaters. Blue Area, G-8, Lahore, Pakistan{' '}
                                     </p>
                                 </div>
-                                <div className="entity-type-mobile">
-                                    <p className="title-text">Entity Type</p>
+                                <div className="hospital-type-mobile">
+                                    <p className="title-text">Hospital Type</p>
                                     <p className="value-text">NGO</p>
                                 </div>
                             </div>
-                            <div className="entity-number-address">
-                                <div className="entity-number">
-                                    <p className="title-text">Entity Contact Number</p>
+                            <div className="hospital-number-address">
+                                <div className="hospital-number">
+                                    <p className="title-text">Hospital Contact Number</p>
                                     <p className="value-text">+92 1235 4569 789</p>
                                 </div>
-                                <div className="entity-address">
-                                    <p className="title-text">Entity Email Address</p>
+                                <div className="hospital-address">
+                                    <p className="title-text">Hospital Email Address</p>
                                     <p className="value-text">partner@shifaint.com</p>
                                 </div>
                             </div>
@@ -156,7 +154,7 @@ const EntityDetail = () => {
                     </div>
                     <div className="card table-card">
                         <div className="card-title">
-                            <div className="left-title">MEMBER SHIP & BILLING</div>
+                            <div className="left-title">TESTS Conducted BY HOSPITAL</div>
                             <div className="right-title">
                                 <p>View Billing History</p>
                                 <span>{rightArrowIcon}</span>
@@ -178,8 +176,8 @@ const EntityDetail = () => {
                 <div className="right-section">
                     <div className="card admin-card">
                         <div className="card-title">
-                            <span className='header-icon'>{userIcon}</span>
-                            Admin Details
+                            <span className="header-icon">{userIcon}</span>
+                            ADMIN DETAILS
                         </div>
                         <div className="card-body">
                             <div className="grid-card-row">
@@ -208,7 +206,7 @@ const EntityDetail = () => {
                         <div className="card-title">
                             <div className="left-title">
                                 <span className="lock-icon header-icon">{lockIcon}</span>
-                                Account Security
+                                ACCOUNT SECURITY
                             </div>
                             <div className="right-title">
                                 <Button title="Change Password" type="primary" />
@@ -250,14 +248,6 @@ const EntityDetail = () => {
                                     <p className="value-text">January 5, 2023</p>
                                 </div>
                             </div>
-                            <div className="grid-card-row">
-                                <div className="grid-row-col payment-col">
-                                    <p className="title-text">Payment Method</p>
-                                    <p className="value-text">
-                                        Debit Card<span className="card-number">1234 **** **** **** 5678</span>
-                                    </p>
-                                </div>
-                            </div>
                             <p className="mobile-link">
                                 View Billing History <span>{rightArrowIcon}</span>
                             </p>
@@ -269,4 +259,4 @@ const EntityDetail = () => {
     );
 };
 
-export default EntityDetail;
+export default HospitalDetail;

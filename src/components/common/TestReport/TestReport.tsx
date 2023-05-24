@@ -52,7 +52,7 @@ const TestReport = () => {
         <div className="test-result">
             <img className="logo-image" src={logoImage} alt="" />
             <h1>Encocare AI Generated Results</h1>
-            <p>Thank you for yoru patience! We've sent a copy of these results on your email address.</p>
+            <p>Thank you for your patience! We've sent a copy of these results on your email address.</p>
 
             <div className="chart-wrapper">
                 <div className="chart-title">

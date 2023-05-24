@@ -15,7 +15,7 @@ const Thanks = () => {
             <p>
                 Thank you for your support in curing blindness! If you wish to subscribe to our latest{' '}
                 <br className="desktop-only" />
-                updates and news please enter yoru email below!
+                updates and news please enter your email below!
             </p>
             <div>
                 <NormalInput placeHolder="Email Address" />

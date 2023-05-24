@@ -34,7 +34,7 @@ const ShareLink = () => {
                 <div className="card right-card">
                     <img src={linkImage2} alt="" />
                     <h1>Share via link</h1>
-                    <p>Share the link below to send patient yoru referral test link</p>
+                    <p>Share the link below to send patient your referral test link</p>
 
                     <div className="input-wrapper">
                         <span>{linkIcon}</span>

@@ -205,6 +205,26 @@ const businessLinks = [
         ],
     },
     {
+        title: 'DOCTORS',
+        children: [
+            {
+                title: 'All Hospitals',
+                icon: doctorIcon,
+                link: '/business/doctor',
+            },
+            {
+                title: 'Add a Doctor',
+                icon: plusCircleIcon,
+                link: '/business/doctor/add',
+            },
+            {
+                title: 'Remove/Block Doctor',
+                icon: blockIcon,
+                link: '/business/doctor/detail',
+            },
+        ],
+    },
+    {
         title: 'MEDICAL TEAM',
         children: [
             {

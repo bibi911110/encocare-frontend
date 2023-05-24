@@ -1,7 +1,7 @@
 @import '../../../styles/variables';
 @import '../../../styles/mixins';
 
-.entity-detail {
+.hospital-detail {
     box-sizing: border-box;
 
     @include devices(tablet) {
@@ -146,7 +146,7 @@
             flex-direction: column;
             gap: 20px;
 
-            .entity-card {
+            .hospital-card {
                 .card-title {
                     & > span {
                         svg {
@@ -160,7 +160,17 @@
                 }
 
                 .card-body {
-                    .entity-name-id-type {
+                    & > img {
+                        height: 230px;
+                        margin-bottom: 24px;
+
+                        @include devices(tablet) {
+                            width: 100%;
+                            height: unset;
+                        }
+                    }
+
+                    .hospital-name-id-type {
                         display: flex;
                         margin-bottom: 24px;
                         align-items: center;
@@ -180,7 +190,7 @@
                             flex: 1;
                             display: flex;
 
-                            .entity-name-id {
+                            .hospital-name-id {
                                 flex-basis: 75%;
 
                                 @include devices(tablet) {
@@ -210,18 +220,10 @@
                                     }
                                 }
                             }
-
-                            .entity-type {
-                                flex-basis: 25%;
-
-                                @include devices(tablet) {
-                                    display: none;
-                                }
-                            }
                         }
                     }
 
-                    .entity-location-type {
+                    .hospital-location-type {
                         display: flex;
                         margin-bottom: 38px;
 
@@ -231,13 +233,13 @@
                             gap: 10px;
                         }
 
-                        .entity-location {
+                        .hospital-location {
                             @include devices(tablet) {
                                 flex-basis: 75%;
                             }
                         }
 
-                        .entity-type-mobile {
+                        .hospital-type-mobile {
                             display: none;
 
                             @include devices(tablet) {
@@ -247,7 +249,7 @@
                         }
                     }
 
-                    .entity-number-address {
+                    .hospital-number-address {
                         display: flex;
                         margin-bottom: 20px;
                         gap: 10px;
@@ -257,11 +259,11 @@
                             justify-content: space-between;
                         }
 
-                        .entity-number {
+                        .hospital-number {
                             flex-basis: 50%;
                         }
 
-                        .entity-address {
+                        .hospital-address {
                             flex-basis: 50%;
                         }
                     }
@@ -296,7 +298,7 @@
                             color: $primaryColor;
                         }
 
-                        & > div {
+                        & > span {
                             display: flex;
                             align-items: center;
                             margin-left: 10px;
@@ -314,7 +316,7 @@
 
                 .card-body {
                     flex: 1 auto;
-                    height: 100px;
+                    height: 300px;
 
                     @include devices(tablet) {
                         min-height: 600px;
@@ -325,7 +327,7 @@
                         overflow: auto;
 
                         tbody {
-                            .entity-date {
+                            .hospital-date {
                                 & > p {
                                     &:first-child {
                                         margin-bottom: 8px;
@@ -333,13 +335,13 @@
                                 }
                             }
 
-                            .entity-test {
+                            .hospital-test {
                                 font-size: 14px;
                                 text-decoration: underline;
                                 color: #0033ff;
                             }
 
-                            .entity-action {
+                            .hospital-action {
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
@@ -362,7 +364,7 @@
                         }
 
                         .mobile-table-section {
-                            .entity-detail-table-mobile-card {
+                            .hospital-detail-table-mobile-card {
                                 background-color: #ffffff;
                                 padding: 28px 12px 20px 12px;
                                 position: relative;
@@ -372,11 +374,11 @@
                                     display: flex;
                                     margin-bottom: 20px;
 
-                                    .entity-id {
+                                    .hospital-id {
                                         flex-basis: 40%;
                                     }
 
-                                    .entity-test {
+                                    .hospital-test {
                                         flex-basis: 30%;
 
                                         & > p {
@@ -535,10 +537,9 @@
                 }
 
                 .card-body {
-                    .card-number {
-                        color: #0033ff;
-                        text-decoration: underline;
-                        margin-left: 20px;
+                    .grid-card-row {
+                        margin-top: 38px;
+                        margin-bottom: 12px;
                     }
 
                     .payment-col {

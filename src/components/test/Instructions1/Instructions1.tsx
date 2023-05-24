@@ -22,7 +22,7 @@ const Instructions1 = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => v
                         <span>{instruction2}</span>
                         <div className="title-wrapper">
                             <h2>Secure Posture</h2>
-                            <p>You should be in a upfront position with yoru eyes straight in front of screen</p>
+                            <p>You should be in a upfront position with your eyes straight in front of screen</p>
                         </div>
                     </div>
                 </div>

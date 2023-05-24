@@ -11,7 +11,7 @@ const TestComplete = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => vo
                 <div className="scroll-wrapper">
                     <div className="result-info">
                         <h1>Test Results</h1>
-                        <p>Thank you for yoru patience! We've sent a copy of these results on your email address.</p>
+                        <p>Thank you for your patience! We've sent a copy of these results on your email address.</p>
 
                         <div className="result-info-card">
                             <div className="card-row">

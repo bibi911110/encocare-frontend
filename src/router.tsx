@@ -39,6 +39,8 @@ import SecuritySetting from './pages/individual/SecuritySetting/SecuritySetting'
 import BusinessLayout from './layouts/BusinessLayout/BusinessLayout';
 import BusinessDashboard from './pages/business/Dashboard/BusinessDashboard';
 import HospitalList from './pages/business/HospitalList/HospitalList';
+import AddHospital from './pages/business/AddHospital/AddHospital';
+import HospitalDetail from './pages/business/HospitalDetail/hospitalDetail';
 
 const router = createBrowserRouter([
     {
@@ -107,6 +109,8 @@ const router = createBrowserRouter([
         children: [
             { path: 'dashboard', element: <BusinessDashboard /> },
             { path: 'hospital', element: <HospitalList /> },
+            { path: 'hospital/add', element: <AddHospital /> },
+            { path: 'hospital/detail/:id', element: <HospitalDetail /> },
         ],
     },
 ]);

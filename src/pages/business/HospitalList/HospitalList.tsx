@@ -87,31 +87,31 @@ const rows = source.map((item) => {
     };
 });
 
-const TableMobileCard = ({ id, name, date, type, address, admin, email, contact }: HospitalTableCardPropsType) => {
+const TableMobileCard = ({ id, name, address, admin, date, email, contact }: HospitalTableCardPropsType) => {
     return (
         <div className="hospital-table-mobile-card">
             <div className="first-section">
                 <div className="hospital-name-id">
-                    <p className="table-text-second">Hospital Name/ID</p>
+                    <p className="table-text-second">HOSPITAL Name/ID</p>
                     <p className="table-text-primary">{name}</p>
                     <p className="table-text-second">{id}</p>
                 </div>
                 <div className="hospital-date">
-                    <p className="table-text-second">Hospital Name/ID</p>
+                    <p className="table-text-second">ONBOARD DATE</p>
                     <p className="table-text-primary">{'15/03/2022'}</p>
                 </div>
             </div>
             <div className="second-section">
-                <p className="table-text-second">Hospital ADDRESS</p>
+                <p className="table-text-second">HOSPITAL ADDRESS</p>
                 <p className="table-text-primary">{address}</p>
             </div>
             <div className="third-section">
                 <div className="hospital-admin">
-                    <p className="table-text-second">Hospital ADMIN</p>
+                    <p className="table-text-second">HOSPITAL ADMIN</p>
                     <p className="table-text-primary">{admin}</p>
                 </div>
                 <div className="hospital-contact">
-                    <p className="table-text-second">Hospital CONTACT</p>
+                    <p className="table-text-second">HOSPITAL CONTACT</p>
                     <p className="table-text-primary">{email}</p>
                     <p className="table-text-second">{contact}</p>
                 </div>
